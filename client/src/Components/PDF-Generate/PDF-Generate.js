@@ -4,6 +4,7 @@ import jsPDF from 'jspdf'
 // import { useAuth0 } from '@auth0/auth0-react';
 import Axios from "axios";
 import Modal from "../Modal/Modal"
+// import PDFButton from "./PDF-Button"
 var data1 = [];
 
 class PDFGenerate extends React.Component {
@@ -42,18 +43,21 @@ class PDFGenerate extends React.Component {
     }
 
     openModal = () => {
-        var urlModal= document.getElementById("URLModal");
-        urlModal.className="visible"
+        var urlModal = document.getElementById("URLModal");
+        urlModal.className = "visible"
     }
 
     handleSubmit = (event) => {
-       var input = document.getElementById("urlInput").value;
-       console.log(input);
-       var urlModal= document.getElementById("URLModal");
-       urlModal.className="hidden"
-         if (input != null) {
-             data1.push(input)
-         }
+        var input = document.getElementById("urlInput").value;
+        console.log(input);
+        var urlModal = document.getElementById("URLModal");
+        urlModal.className = "hidden"
+        if (input.length === 0) {
+            input = "Url was not entered"
+        }
+        if (input != null) {
+            data1.push(input)
+        }
 
         this.generatePDF()
 
@@ -193,7 +197,9 @@ class PDFGenerate extends React.Component {
     render() {
         return (
             <div className="btn-container">
-                <button id="pdfBtn" className="btn" onClick={this.openModal} type="primary">PDF</button>
+                <button id="pdfBtn" className="btn" onClick={this.openModal} type="primary"><i className="fas fa-file-pdf fa-3x"></i>
+
+                </button>
                 <div id="URLModal" className="hidden">
                     <Modal>
                         <div className="form-group">

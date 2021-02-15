@@ -9,11 +9,11 @@ import Container5 from "../Container5/Container5"
 import Container6 from "../Container6/Container6"
 import Container7 from "../Container7/Container7"
 import Modal from "../Modal/Modal"
-import Header1 from "../Headers/Header1/Header1"
+// import Header1 from "../Headers/Header1/Header1"
 import { applyDrag, generateItems } from '../../utils';
 import PDFGenerate from "../PDF-Generate/PDF-Generate"
 var pageTitles = ["Home Page"]
-let header1 = document.getElementById("Header-0");
+// let header1 = document.getElementById("Header-0");
 
 const styles = {
     activeLinkStyle: {
@@ -62,7 +62,7 @@ class ContainerTabs extends Component {
         const name = target.name;
         const value = target.value;
         var modalBackground = event.target.parentElement.parentElement.parentElement.parentElement.parentElement;
-        console.log(modalBackground);
+        console.log(value.length);
         if(modalBackground.id === "modal1"){
             this.setState({
                 pageName2:value
@@ -98,38 +98,11 @@ class ContainerTabs extends Component {
 
     // Handles the submit button on the modal 
     handleSubmit = (event) => {
+        var modalName = event.target.parentElement.parentElement.parentElement.parentElement.parentElement;
+        console.log(modalName);
         
-        // Pushes page titles to pdf doc
-
-        var modal = event.target.parentElement.parentElement.parentElement.parentElement.parentElement
-        console.log(modal);
-        // this.modalClose();
-        if(this.state.pageName2.length > 1){
-            pageTitles.push(this.state.pageName2)
-            
-        }
-
-        if(this.state.pageName3.length > 1){
-            pageTitles.push(this.state.pageName3)
-        }
-
-        if(this.state.pageName4.length > 1){
-            pageTitles.push(this.state.pageName4)
-        }
-
-        if(this.state.pageName5.length > 1){
-            pageTitles.push(this.state.pageName5)
-        }
-
-        if(this.state.pageName6.length > 1){
-            pageTitles.push(this.state.pageName6)
-        }
-
-        if(this.state.pageName7.length > 1){
-            pageTitles.push(this.state.pageName7)
-        }
-
-        //  Shows the next tab after the one before it has been used
+        // Pushes page titles to pdf doc, if name is not inputed, it will autofill the number of the page
+        // Shows the next tab after the one before it has been used
 
         var divId = event.target.parentElement;
         var divParent = divId.parentElement
@@ -139,38 +112,81 @@ class ContainerTabs extends Component {
         console.log(oneINeed);
 
 
-        if (oneINeed.id == "tab-tab2" && oneINeed.dataset.clicks == 1) {
+        if (oneINeed.id == "tab-tab2" && oneINeed.dataset.clicks == 1 && this.state.pageName2.length > 1) {
+            pageTitles.push(this.state.pageName2)
             var link3 = document.getElementById("link-3")
             link3.style.visibility = "visible"
-
+        } else if (oneINeed.id == "tab-tab2" && oneINeed.dataset.clicks == 1 && this.state.pageName2.length === 1){
+            this.setState({
+                pageName2:"Page 2"
+            });
+            pageTitles.push(this.state.pageName2)
+            var link3 = document.getElementById("link-3")
+            link3.style.visibility = "visible"
         }
 
-        if (oneINeed.id == "tab-tab3" && oneINeed.dataset.clicks == 1) {
+        if (oneINeed.id == "tab-tab3" && oneINeed.dataset.clicks == 1 && this.state.pageName3.length > 1) {
+            pageTitles.push(this.state.pageName3)
+            var link4 = document.getElementById("link-4")
+            link4.style.visibility = "visible"
+        } else if (oneINeed.id == "tab-tab3" && oneINeed.dataset.clicks == 1 && this.state.pageName3.length === 1){
+            this.setState({
+                pageName3:"Page 3"
+            });
+            pageTitles.push(this.state.pageName3)
             var link4 = document.getElementById("link-4")
             link4.style.visibility = "visible"
         }
 
-        if (oneINeed.id == "tab-tab4" && oneINeed.dataset.clicks == 1) {
+        if (oneINeed.id == "tab-tab4" && oneINeed.dataset.clicks == 1 && this.state.pageName4.length > 1) {
+            pageTitles.push(this.state.pageName4)
+            var link5 = document.getElementById("link-5")
+            link5.style.visibility = "visible"
+        } else if (oneINeed.id == "tab-tab4" && oneINeed.dataset.clicks == 1 && this.state.pageName4.length === 1){
+            this.setState({
+                pageName4:"Page 4"
+            });
+            pageTitles.push(this.state.pageName4)
             var link5 = document.getElementById("link-5")
             link5.style.visibility = "visible"
         }
 
-        if (oneINeed.id == "tab-tab5" && oneINeed.dataset.clicks == 1) {
+        if (oneINeed.id == "tab-tab5" && oneINeed.dataset.clicks == 1 && this.state.pageName5.length > 1) {
+            pageTitles.push(this.state.pageName5)
+            var link6 = document.getElementById("link-6")
+            link6.style.visibility = "visible"
+        } else if (oneINeed.id == "tab-tab5" && oneINeed.dataset.clicks == 1 && this.state.pageName5.length === 1){
+            this.setState({
+                pageName5:"Page 5"
+            });
+            pageTitles.push(this.state.pageName5)
             var link6 = document.getElementById("link-6")
             link6.style.visibility = "visible"
         }
 
-        if (oneINeed.id == "tab-tab6" && oneINeed.dataset.clicks == 1) {
+        if (oneINeed.id == "tab-tab6" && oneINeed.dataset.clicks == 1 && this.state.pageName6.length > 1) {
+            pageTitles.push(this.state.pageName6)
+            var link7 = document.getElementById("link-7")
+            link7.style.visibility = "visible"
+        } else if (oneINeed.id == "tab-tab6" && oneINeed.dataset.clicks == 1 && this.state.pageName6.length === 1){
+            this.setState({
+                pageName6:"Page 6"
+            });
+            pageTitles.push(this.state.pageName6)
             var link7 = document.getElementById("link-7")
             link7.style.visibility = "visible"
         }
 
+        if(oneINeed.id == "tab-tab7" && oneINeed.dataset.clicks == 1 && this.state.pageName7.length > 1){
+            pageTitles.push(this.state.pageName6)
+        } else if (oneINeed.id == "tab-tab7" && oneINeed.dataset.clicks == 1 && this.state.pageName7.length === 1){
+            this.setState({
+                pageName7:"Page 7"
+            });
+            pageTitles.push(this.state.pageName6)
+        }
 
         // Closes the corresponding modal //
-
-
-        var modalName = event.target.parentElement.parentElement.parentElement.parentElement.parentElement;
-        console.log(modalName);
 
         if(modalName.id === "modal1"){
             this.setState({isHidden1:true})
@@ -626,7 +642,7 @@ class ContainerTabs extends Component {
                             </li>
                             <li className="nav-item" id="link-2">
                                 <TabLink data-clicks={0}  to="tab2">
-                                    <span onClick={this.modalOpen}>{this.state.pageName2} </span>
+                                    <span className="pageSpan" onClick={this.modalOpen}>{this.state.pageName2} </span>
                                     
                                     <div id="modal1" className={this.state.isHidden1 ? "hidden" : "visible"}>
                                     <Modal  modalClose={this.modalClose}>
@@ -650,7 +666,7 @@ class ContainerTabs extends Component {
                             </li>
                             <li className="nav-item" id="link-3" >
                             <TabLink data-clicks={0} onClick={this.modalOpen} to="tab3">
-                            <span onClick={this.modalOpen}>{this.state.pageName3}</span>
+                            <span className="pageSpan" onClick={this.modalOpen}>{this.state.pageName3}</span>
                                     
                                     <div id="modal2" className={this.state.isHidden2 ? "hidden" : "visible"}>
                                     <Modal   modalClose={this.modalClose}>
@@ -674,7 +690,7 @@ class ContainerTabs extends Component {
                             </li>
                             <li className="nav-item" id="link-4" >
                             <TabLink data-clicks={0} onClick={this.modalOpen} to="tab4">
-                            <span onClick={this.modalOpen}>{this.state.pageName4}</span>
+                            <span className="pageSpan" onClick={this.modalOpen}>{this.state.pageName4}</span>
                                     
                                     <div id="modal3" className={this.state.isHidden3 ? "hidden" : "visible"}>
                                     <Modal  modalClose={this.modalClose}>
@@ -699,7 +715,7 @@ class ContainerTabs extends Component {
                             </li>
                             <li className="nav-item" id="link-5">
                             <TabLink data-clicks={0} onClick={this.modalOpen} to="tab5">
-                            <span onClick={this.modalOpen}>{this.state.pageName5}</span>
+                            <span className="pageSpan" onClick={this.modalOpen}>{this.state.pageName5}</span>
                                     
                                     <div id="modal4" className={this.state.isHidden4 ? "hidden" : "visible"}>
                                     <Modal  modalClose={this.modalClose}>
@@ -723,7 +739,7 @@ class ContainerTabs extends Component {
                             </li>
                             <li className="nav-item" id="link-6" >
                             <TabLink data-clicks={0} onClick={this.modalOpen} to="tab6">
-                            <span onClick={this.modalOpen}>{this.state.pageName6}</span>
+                            <span className="pageSpan" onClick={this.modalOpen}>{this.state.pageName6}</span>
                                     
                                     <div  id="modal5" className={this.state.isHidden5 ? "hidden" : "visible"}>
                                     <Modal  modalClose={this.modalClose}>
@@ -747,7 +763,7 @@ class ContainerTabs extends Component {
                             </li>
                             <li className="nav-item" id="link-7">
                             <TabLink data-clicks={0} onClick={this.modalOpen} to="tab7">
-                            <span onClick={this.modalOpen}>{this.state.pageName7}</span>
+                            <span className="pageSpan" onClick={this.modalOpen}>{this.state.pageName7}</span>
                                     
                                     <div id="modal6" className={this.state.isHidden6 ? "hidden" : "visible"}>
                                     <Modal  modalClose={this.modalClose}>

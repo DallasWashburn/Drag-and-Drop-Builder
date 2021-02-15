@@ -71,9 +71,6 @@ min-width: 300px;
 }
 /* .color input{ background-color:#f1f1f1;} */
 
-.uploadBtn{
-  border: solid 1px #3c3c3c;
-}
 
 .FileUploader .files label{
   position: absolute;
@@ -117,13 +114,15 @@ input[type=file]::file-selector-button:hover {
 
 .uploadBtn{
   background-color: #3f3f3f;
-
   color: #FFF;
+  border: 1px solid;
+  border-color: transparent;
 }
 
 .uploadBtn:hover{
-  background-color: rgb(249, 123, 130);
-
+  background-color: #FFF;
+  color: black;
+  border-color: black;
 
 }
 

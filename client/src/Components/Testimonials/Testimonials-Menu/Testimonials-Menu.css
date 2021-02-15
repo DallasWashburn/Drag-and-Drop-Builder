@@ -1,23 +1,46 @@
 #Testimonial-0{
-    background-image: url("../../../images/Testimonials/testimonial-2.png");
-    background-size: contain;
-    
-  }
-  
-  #Testimonial-1{
-    background-image: url("../../../images/Testimonials/testimonial-1.png");
-    background-size: contain;
-  }
-  
-  #Testimonial-2{
-    background-image: url("../../../images/Testimonials/testimonial-2.png");
-    background-size: contain;
-  }
+  background-image: url("../../../images/Testimonials/testimonial-2.png");
+  background-size: contain;
+  min-height: 100px;
+}
 
-  #Testimonial-3{
-    background-image: url("../../../images/Testimonials/testimonial-3.png");
-    background-size: contain;
-  }
+#container2 #Testimonial-0{
+  min-height: 450px;
+  background-size: cover;
+}  
+
+#container2 #Testimonial-2{
+  min-height: 450px;
+  background-size: cover;
+}
+
+#Testimonial-1{
+  background-image: url("../../../images/Testimonials/testimonial-1.png");
+  background-size: contain;
+  min-height: 80px;
+}
+
+#container2 #Testimonial-1{
+min-height: 350px;
+background-size: 200%;
+}
+
+#Testimonial-2{
+  background-image: url("../../../images/Testimonials/testimonial-2.png");
+  background-size: contain;
+  min-height: 100px;
+
+}
+
+#Testimonial-3{
+  background-image: url("../../../images/Testimonials/testimonial-3.png");
+  background-size: contain;
+  min-height: 80px;
+}
+
+#container2 #Testimonial-3{
+  min-height: 150px;
+  background-size: 120%;
+}
 
 
-  

@@ -10,6 +10,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+button:focus{
+outline: none;
+}
 #wrapper{
   width: calc(100vw - 250px);
   display: flex;
@@ -41,23 +45,28 @@ code {
 }
 
 .btn:hover{
-  background-color: #F97B82;
+  background-color: black;
   color: #FFF;
 }
 
 #pdfBtn{
+  height: 100px;
+  padding-left: 14px;
+  width: 100px;
   position: fixed;
-  font-size: 22px;
+  font-size: 20px;
   bottom: 50px;
-  right: 30px;
+  right: 50px;
   color: #FFF;
   background-color: #3c3c3c;
-  border: solid 2px #F97B82;
+  border: solid 1px transparent;
+  border-radius: 100%;
 }
 
 #pdfBtn:hover{
-  background-color: #F97B82;
+  background-color: #FFF;
   color:#3c3c3c;
+  border-color: black;
 
 }
 
@@ -70,7 +79,18 @@ code {
 
 #logOut{
   margin-left:auto;
+  background-color: black;
+  color: #FFF;
+  border: 1px solid;
+  border-color: transparent;
 }
+
+#logOut:hover{
+  border-color: black;
+  background-color: #FFF;
+  color: black;
+}
+
 
 .opacity-ghost {
   transition: all .18s ease;
@@ -141,7 +161,7 @@ code {
 
 #container2{
   display: flex;
-  border: solid 1px #3f3f3f;
+  border: solid 1px #cfcfcf;
   flex-direction: column;
   width: 100%;
   max-width: 980px;
@@ -256,7 +276,7 @@ justify-content: flex-end;
 }
 
 .container1 {
-  border-right: solid .2px;
+  border-right: solid .2px #cfcfcf;
   position: fixed;
   width: 100%;
   min-height: 100%;
@@ -314,7 +334,7 @@ justify-content: flex-end;
   margin-right:4px;
   margin-bottom: 10px;
   position: relative;
-  bottom: 16px;
+  bottom: 15px;
 }
 
 #homePage li button:focus{
@@ -322,16 +342,17 @@ justify-content: flex-end;
 }
 
 
-#homePage li button span{
-  font-size: 18px;
+#homePage li button .pageSpan{
+  font-size: 16px;
+  width: 100%;
   padding-bottom: 5px;
   position: relative;
-  bottom: 5px;
+  bottom: 0px;
   border-left: 2px solid #fff;
   padding-left: 15px;
 }
 
-#homePage li button span:hover{
+#homePage li button .pageSpan:hover{
   color: #F97B82;
 }
 
@@ -416,7 +437,7 @@ justify-content: flex-end;
 }
 
 .form-btn:hover{
-  color: #3c3c3c!important;
+  color: #fff!important;
 }
 
 #homePage li label {
@@ -440,11 +461,11 @@ justify-content: flex-end;
   border-bottom: none;
   border-left: none;
   border-right: none;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   padding-left: 15px;
   text-align: left;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   background-color: #FFF;
 }

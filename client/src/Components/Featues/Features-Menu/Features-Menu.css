@@ -10,29 +10,57 @@
 
 }
 
+#container2 #Features-0{
+    background-size: cover;
+    min-height: 450px;
+  }
+
+  #container2 #Features-1{
+    background-size: cover;
+    min-height: 450px;
+  }
+
+
+
+  #container2 #Features-2{
+    background-size: cover;
+    min-height: 450px;
+  }
+
+
+
+  #container2 #Features-3{
+    background-size: cover;
+    min-height: 450px;
+  }
+
 
 #Features-0{
     background-image:url("../../../images/Features/features-4.png");
-    background-size: contain;
   }
+
+
 
 #Features-1{
     background-image: url("../../../images/Features/features-3.png");
-    background-size: contain;
 }
+
+
 
 #Features-2{
     background-image: url("../../../images/Features/features-2.png");
 }
 
-#container2 #Features-2{
-    min-height: 380px;
-}
+
 
 #Features-3{
     background-image: url("../../../images/Features/features-1.png");
-    background-size: contain;
+    
 }
 
+#container2 #Features-3{
+    background-size: 120%;
+    min-height: 400px;
 
+  }
 

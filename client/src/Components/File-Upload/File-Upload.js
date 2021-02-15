@@ -119,7 +119,7 @@ class FileUpload extends React.Component {
           <div className="form-group files">
 
             <ToastContainer />
-            <label for="file-upload">Drag your files here</label>
+            <label htmlFor="file-upload">Drag your files here</label>
             <input id="file-upload" type="file" multiple className="form-control" name="file" onChange={this.onChangeHandler} />
 
             <Progress id="progress" max="100" color="success" value={this.state.loaded} >{Math.round(this.state.loaded, 2)}%</Progress>

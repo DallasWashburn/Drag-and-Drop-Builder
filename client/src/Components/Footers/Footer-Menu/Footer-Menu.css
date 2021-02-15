@@ -10,33 +10,54 @@
 #Footer-0{
     background-image:url('../../../images/Footer/footer-5.png');
     background-size: contain;
-    min-height: 200px!important;
+    min-height: 80px;
   }
 #Footer-1{
     background-image: url("../../../images/Footer/footer-4.png");
     background-size: contain;
-    min-height: 200px!important;
-
+    min-height: 80px;
 }
 
 #Footer-2{
     background-image: url("../../../images/Footer/footer-3.png");
     background-size: contain;
-    min-height: 200px!important;
-
+    min-height: 80px;
 }
 
 #Footer-3{
     background-image: url("../../../images/Footer/footer-2.png");
     background-size: contain;
-    min-height: 200px;
-
+    min-height: 80px;
 }
 
 #Footer-4{
     background-image: url("../../../images/Footer/footer-1.png");
     background-size: contain;
-    min-height: 200px!important;
+    min-height: 80px;
+}
 
+#container2 #Footer-0{
+    min-height: 200px;
+    background-size: contain;
+}
+
+#container2 #Footer-1{
+    min-height: 200px;
+    background-size: contain;
+}
+
+#container2 #Footer-2{
+    min-height: 200px;
+    background-size: contain;
+}
+
+#container2 #Footer-3{
+    min-height: 200px;
+    background-size: contain;
+}
+
+#container2 #Footer-4{
+    min-height: 200px;
+    background-size: contain;
 }
 

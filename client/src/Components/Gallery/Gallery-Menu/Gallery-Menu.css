@@ -8,9 +8,8 @@
 #Gallery-0{
     background-image: url("../../../images/Gallery/gallery-4.png");
 }
-#board-2 #Gallery-0{
-    max-height:600px;
-    min-height: 470px;
+#container2 #Gallery-0{
+    min-height: 450px;
 }
 
 #Gallery-1{
@@ -22,10 +21,19 @@
     min-height: 470px;
 }
 
+#container2 #Gallery-2{
+    
+    min-height: 450px;
+}
 #Gallery-2{
     background-image: url("../../../images/Gallery/gallery-2.png");
 }
 
 #Gallery-3{
     background-image: url("../../../images/Gallery/gallery-1.png");
+    background-size: 140%;
+}
+
+#container2 #Gallery-3{
+    min-height: 400px;
 }
