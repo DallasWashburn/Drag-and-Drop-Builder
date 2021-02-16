@@ -34,7 +34,7 @@ console.log(email);
                     <div className="container1 fixed">
                     <img src="https://www.cybermark.com/wp-content/uploads/2018/08/mainLogo.png" height="45" alt="cybermark logo"/>
                     <br></br>
-                    <h5 className="text-center content-blocks">Content Blocks</h5>
+                    <h5 className="content-blocks">Content Blocks</h5>
                         <Headers />
                         <Intros />
                         <ContentContainer />

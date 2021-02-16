@@ -112,7 +112,7 @@ input[type=file]::file-selector-button:hover {
   border: 2px solid rgb(249, 123, 130);
 }
 
-.uploadBtn{
+.uploadBtn{font-size: 14px;
   background-color: #3f3f3f;
   color: #FFF;
   border: 1px solid;

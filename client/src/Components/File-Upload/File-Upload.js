@@ -88,7 +88,7 @@ class FileUpload extends React.Component {
         data.append('file', this.state.selectedFile[x])
       }
   
-      axios.post("http://localhost:3001/upload", data, {
+      axios.post("https://dnd.cybermark.com/upload", data, {
         // receive two    parameter endpoint url ,form data
         onUploadProgress: ProgressEvent => {
           this.setState({

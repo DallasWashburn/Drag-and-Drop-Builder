@@ -23,12 +23,15 @@ outline: none;
 }
 
 .content-blocks{
-  font-weight: 800;
+    text-align: left;
+    font-weight: 500;
+    font-size: 16px;
+    color: teal;
 }
 
-.smooth-dnd-container{
+/* .smooth-dnd-container{
   min-height: 900px!important;
-}
+} */
 
 #dropZone{
   height: 300px;
@@ -42,6 +45,7 @@ outline: none;
   font-weight: 700;
   border-radius: 25px;
   border: solid 2px #FFF;
+  text-transform: uppercase;
 }
 
 .btn:hover{
@@ -78,6 +82,7 @@ outline: none;
 }
 
 #logOut{
+  font-size: 12px;
   margin-left:auto;
   background-color: black;
   color: #FFF;
@@ -170,7 +175,7 @@ outline: none;
   margin-left: 40px;
   padding: 15px;
   height: 100%;
-  min-height:650px;
+  min-height:800px;
   padding-bottom: 300px;
   overflow-y:auto;
   overflow-x: hidden;
@@ -280,6 +285,7 @@ justify-content: flex-end;
   position: fixed;
   width: 100%;
   min-height: 100%;
+  max-height: 100vh;
   max-width: 250px;
   background-color: #FFF;
   padding: 15px;
@@ -291,10 +297,12 @@ justify-content: flex-end;
 }
 
 .container1 img {
+  margin-left: 4px;
   margin-bottom:20px;
 }
 
 .container1 .draggable-item{
+  margin-bottom: 25px;
   margin: 5px;
   border: teal solid 2px;
   min-height: 150px;
@@ -313,6 +321,9 @@ justify-content: flex-end;
   height: 30px;
 }
 
+.show{
+  margin-bottom: 20px;
+}
 
 
 #homePage{
@@ -526,10 +537,29 @@ justify-content: flex-end;
   margin-bottom: 10px;
 }
 
-/* #collapseOne{
-  height: 365px;
+.tabX{
+  margin: 0 5px;
+  position: absolute;
+  /* left: -11111px; */
+  /* left: 10px; */
+  font-size: 15px;
+  width: 20px;
+  visibility: hidden;
 }
 
-#collapseTwo{
-  height: 725px;
-} */
+#homePage li button .pageSpan:hover{
+  color: #F97B82;
+}
+
+#homePage li button .pageSpan:hover .tabX{
+  position: relative;
+  top: 0px;
+  bottom: 1px;
+  left: 10px;
+  visibility: visible;
+  color: #FFF;
+}
+
+#homePage li button .pageSpan:hover .tabX:hover{
+  color: #F97B82;
+}

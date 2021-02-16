@@ -248,6 +248,48 @@ class ContainerTabs extends Component {
         }
         
     }
+    // Deletes tab and array 
+    deleteTab = (event) => {
+        console.log(event.target);
+        var tab = event.target.parentElement.parentElement
+        if(tab.id === "tab-tab2"){
+            this.setState({pageName2:""})
+            document.getElementById("tabpanel-tab2").remove() 
+
+        }
+        if(tab.id === "tab-tab3"){
+            
+        }
+        if(tab.id === "tab-tab4"){
+            
+        }
+        if(tab.id === "tab-tab5"){
+            
+        }
+        if(tab.id === "tab-tab6"){
+            
+        }
+        if(tab.id === "tab-tab7"){
+            
+        }
+        tab.remove();
+    }
+
+    checkPageTitle = (event) => {
+        var target = event.target.className;
+        var targetFirstChar = event.target.textContent.charAt(0)
+        var pageTitle = event.target.parentElement.dataset.clicks;
+        var tabX = event.target.getElementsByTagName("span")[0];
+        console.log(target);
+        if(pageTitle === "0" && targetFirstChar === "+"){
+            console.log("working");
+            tabX.style.visibility="hidden"
+        } else if(pageTitle === "1" && target === "pageSpan"){
+            tabX.style.visibility="visible"
+        } else {
+            return 
+        }
+    }
 
 
     // Removes Element from Tab-1
@@ -642,7 +684,7 @@ class ContainerTabs extends Component {
                             </li>
                             <li className="nav-item" id="link-2">
                                 <TabLink data-clicks={0}  to="tab2">
-                                    <span className="pageSpan" onClick={this.modalOpen}>{this.state.pageName2} </span>
+                                    <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName2}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
                                     
                                     <div id="modal1" className={this.state.isHidden1 ? "hidden" : "visible"}>
                                     <Modal  modalClose={this.modalClose}>
@@ -666,7 +708,7 @@ class ContainerTabs extends Component {
                             </li>
                             <li className="nav-item" id="link-3" >
                             <TabLink data-clicks={0} onClick={this.modalOpen} to="tab3">
-                            <span className="pageSpan" onClick={this.modalOpen}>{this.state.pageName3}</span>
+                            <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName3}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
                                     
                                     <div id="modal2" className={this.state.isHidden2 ? "hidden" : "visible"}>
                                     <Modal   modalClose={this.modalClose}>
@@ -690,7 +732,7 @@ class ContainerTabs extends Component {
                             </li>
                             <li className="nav-item" id="link-4" >
                             <TabLink data-clicks={0} onClick={this.modalOpen} to="tab4">
-                            <span className="pageSpan" onClick={this.modalOpen}>{this.state.pageName4}</span>
+                            <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName4}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
                                     
                                     <div id="modal3" className={this.state.isHidden3 ? "hidden" : "visible"}>
                                     <Modal  modalClose={this.modalClose}>
@@ -715,7 +757,7 @@ class ContainerTabs extends Component {
                             </li>
                             <li className="nav-item" id="link-5">
                             <TabLink data-clicks={0} onClick={this.modalOpen} to="tab5">
-                            <span className="pageSpan" onClick={this.modalOpen}>{this.state.pageName5}</span>
+                            <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName5}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
                                     
                                     <div id="modal4" className={this.state.isHidden4 ? "hidden" : "visible"}>
                                     <Modal  modalClose={this.modalClose}>
@@ -739,7 +781,7 @@ class ContainerTabs extends Component {
                             </li>
                             <li className="nav-item" id="link-6" >
                             <TabLink data-clicks={0} onClick={this.modalOpen} to="tab6">
-                            <span className="pageSpan" onClick={this.modalOpen}>{this.state.pageName6}</span>
+                            <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName6}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
                                     
                                     <div  id="modal5" className={this.state.isHidden5 ? "hidden" : "visible"}>
                                     <Modal  modalClose={this.modalClose}>
@@ -763,7 +805,7 @@ class ContainerTabs extends Component {
                             </li>
                             <li className="nav-item" id="link-7">
                             <TabLink data-clicks={0} onClick={this.modalOpen} to="tab7">
-                            <span className="pageSpan" onClick={this.modalOpen}>{this.state.pageName7}</span>
+                            <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName7}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
                                     
                                     <div id="modal6" className={this.state.isHidden6 ? "hidden" : "visible"}>
                                     <Modal  modalClose={this.modalClose}>
