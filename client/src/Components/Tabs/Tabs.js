@@ -344,7 +344,8 @@ class ContainerTabs extends Component {
             const element = comps[i];
             console.log(element.data);
             if (element.data === "Header-0") {
-
+                console.log("header0");
+            
             }
         }
 
@@ -354,6 +355,7 @@ class ContainerTabs extends Component {
     // Recieves Element when dropped on Tab-1 and Places Element in its correct index 
     onDrop1 = (e) => {
         this.setState({ items2: applyDrag(this.state.items2, e) })
+        this.getHTML();
     }
 
     // Removes Element from Tab-2
@@ -833,6 +835,8 @@ class ContainerTabs extends Component {
 
                         <TabContent for="tab1">
                             <Container1
+                                items2={this.state.items2}
+                                getHTML={this.getHTML}
                                 onDrop={this.onDrop1}
                                 getChildPayload={this.getChildPayload1}
                                 generateItems={this.state.items2}
