@@ -29,12 +29,13 @@
 }
 
  #Header-1{
-  background-image: url("../../../images/Header/header-1.png");
   background-size: cover;
 
 }
 
 .container1 #Header-1{
+  background-image: url("../../../images/Header/header-1.png");
+
   min-height: 35px;
   background-size: contain;
 
@@ -42,14 +43,11 @@
 
 #container2 #Header-1{
   min-height: 0px;
-  max-height: 60px;
-}
-
-#Header-2{
-  background-image: url("../../../images/Header/header-2.png");
+  max-height: 688x;
 }
 
 .container1 #Header-2{
+  background-image: url("../../../images/Header/header-2.png");
   min-height: 35px;
     background-size: contain;
 
@@ -57,14 +55,15 @@
 
 #container2 #Header-2{
   min-height: 0px;
-  max-height: 60px;
+  max-height: 88px;
 }
 
 #Header-3{
-  background-image: url("../../../images/Header/header-3.png");
+
 }
 
 .container1 #Header-3{
+  background-image: url("../../../images/Header/header-3.png");
   min-height: 40px;
   background-size: contain;
 }

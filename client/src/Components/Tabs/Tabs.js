@@ -31,6 +31,7 @@ class ContainerTabs extends Component {
 
             userName: this.props.name,
             userEmail: this.props.email,
+            headerType:"",
             items2: generateItems(0, (i) => ({ id: '1' + i, data: `Draggable 2 - ${i}` })),
             items3: generateItems(0, (i) => ({ id: '1' + i, data: `Draggable 3 - ${i}` })),
             items4: generateItems(0, (i) => ({ id: '1' + i, data: `Draggable 4 - ${i}` })),
@@ -54,6 +55,30 @@ class ContainerTabs extends Component {
         }
     }
 
+
+    setHeader(){
+        var allData = this.state.items2;
+        if (allData) {
+          allData.map((element) =>{
+            if(element.data === "Header-0"){
+              this.setState({
+                headerType:"Header-0"
+              })
+              return
+            } else if(element.data === "Header-1"){
+              this.setState({
+                headerType:"Header-1"
+              })
+            } else {
+              this.setState({
+                headerType:"test"
+              })
+    
+            }
+          })
+          console.log(this.state.headerType);
+        }
+      }
 
     // Handles the form inside modal and disperses text to the corresponding page 
 
@@ -354,8 +379,8 @@ class ContainerTabs extends Component {
 
     // Recieves Element when dropped on Tab-1 and Places Element in its correct index 
     onDrop1 = (e) => {
-        this.setState({ items2: applyDrag(this.state.items2, e) })
-        this.getHTML();
+        this.setState({ items2: applyDrag(this.state.items2, e) });
+        this.setHeader()
     }
 
     // Removes Element from Tab-2
@@ -835,6 +860,7 @@ class ContainerTabs extends Component {
 
                         <TabContent for="tab1">
                             <Container1
+                                headerType={this.state.headerType}
                                 items2={this.state.items2}
                                 getHTML={this.getHTML}
                                 onDrop={this.onDrop1}

@@ -1,0 +1,11 @@
+.header3 .btn{
+    background-color: var(--primaryColor);
+    color: var(--secondaryColor);
+    border: 1px solid transparent;
+}
+
+.header3 .btn:hover{
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+    border-color: var(--primaryColor);
+}

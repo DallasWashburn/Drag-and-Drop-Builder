@@ -1,3 +1,9 @@
+:root{
+  --primaryColor:#3c3c3c;
+  --secondaryColor:white;
+}
+
+
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -9,6 +15,10 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.section_wrapper{
+  padding: 0 75px;
 }
 
 button:focus{
@@ -27,6 +37,10 @@ outline: none;
     font-weight: 500;
     font-size: 16px;
     color: teal;
+}
+
+a:not([href]){
+  color: var(--secondaryColor);
 }
 
 /* .smooth-dnd-container{
@@ -51,6 +65,18 @@ outline: none;
 .btn:hover{
   background-color: black;
   color: #FFF;
+}
+
+.primaryColor{
+  background-color: var(--primaryColor);
+  color: var(--secondaryColor);
+  border: 1px solid transparent;
+}
+
+.primaryColor:hover{
+  background-color: var(--secondaryColor);
+  color: var(--primaryColor);
+  border-color: var(--primaryColor);
 }
 
 #pdfBtn{

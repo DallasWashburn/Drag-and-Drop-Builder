@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Header-Menu.css"
-
+import Header1 from "../Header0/Header0"
 import { Container, Draggable } from 'react-smooth-dnd';
 import { applyDrag, generateItems } from '../../../utils';
 
@@ -9,7 +9,7 @@ class HeaderMenu extends Component {
         super();
 
         this.state = {
-            items1: generateItems(4, (i) => ({ id: '1' + i, data: `Header-${i}` })),
+            items1: generateItems(4, (i) => ({ id: '1' + i, data: `Header-${i}`, info:"" })),
         }
     }
 
@@ -29,14 +29,16 @@ class HeaderMenu extends Component {
                             {
                                 this.state.items1.map((p, i) => {
                                     console.log(i);
+
                                     return (
                                         <Draggable key={i}>
                                             <div className="text-center data-title">{p.data}</div>
                                             <div id={p.data} className="draggable-item">
-
+                                            {p.info}
                                             </div>
                                         </Draggable>
                                     );
+                                    
                                 })
                             }
                         </Container>
@@ -49,3 +51,5 @@ class HeaderMenu extends Component {
 }
 
 export default HeaderMenu
+
+
