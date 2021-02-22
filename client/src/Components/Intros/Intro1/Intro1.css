@@ -1,0 +1,32 @@
+.intro2 .btn{
+    background-color: var(--primaryColor);
+    color: var(--secondaryColor);
+    border: 1px solid transparent;
+}
+
+.intro2 .btn:hover{
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+    border-color: var(--primaryColor);
+}
+
+.form_box{
+    width: 85%;
+    background-color: lightgray;
+    padding: 20px;
+}
+
+
+
+.intro2 h1{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 35px;
+  font-weight: 800;
+  color: var(--primaryColor);
+
+}
+
+.intro2 p{
+  padding-bottom: 20px;
+  }

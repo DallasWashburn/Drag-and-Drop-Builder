@@ -4,7 +4,7 @@ import "./Header1.css"
 class Header1 extends Component {
     render(){
         return (
-            <nav className="navbar navbar-expand-md navbar-light bg-light header2">
+            <nav className="navbar navbar-expand-md navbar-light header2">
             <a className="navbar-brand">
                 <img src="../logo.png" width="250" height="60" className="d-inline-block align-top"
                     alt="" loading="lazy"/>

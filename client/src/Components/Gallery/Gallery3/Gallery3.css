@@ -1,0 +1,30 @@
+
+  
+    .gallery4 h2 { 
+    font-size: 45px;
+    font-weight: 900;
+    padding-bottom: 15px;
+    color: var(--primaryColor);
+    }
+  
+    .gallery4-slider .slick-prev:before {
+      color: var(--primaryColor) !important;
+      background-color: #FFF;
+      font-size: x-large;
+
+      
+    }
+
+    .gallery4-slider .slick-next:before {
+      color: var(--primaryColor) !important;
+      background-color: #FFF;
+      font-size: x-large;
+    }
+
+    .gallery4-slider{
+        width: 94%;
+    }
+
+    .gallery4-slider .slick-list{
+        margin-left: 10px!important;
+    }

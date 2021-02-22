@@ -40,7 +40,7 @@ class Header0 extends Component {
 
     render(){
         return (
-            <nav className="navbar navbar-expand-md navbar-light bg-light">
+            <nav className="navbar navbar-expand-md navbar-light">
             <a className="navbar-brand">
                 <img src="../logo.png" width="250" height="60" className="d-inline-block align-top"
                     alt="" loading="lazy" />

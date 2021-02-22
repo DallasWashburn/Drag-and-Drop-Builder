@@ -11,7 +11,7 @@ const Guest = () => {
     <>
       <div className="guest-wrapper">
         <div className="content-container">
-          <img src='./logo1.png' />
+          <img src='./logo1.png' alt=""/>
           <h1>CyberMark Drag and Drop</h1>
           <LoginButton />
         </div>

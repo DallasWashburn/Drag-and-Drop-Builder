@@ -26,7 +26,7 @@ class IntrosMenu extends Component {
                             dropPlaceholderAnimationDuration={200}>
                             {
                                 this.state.items1.map((p, i) => {
-                                    console.log(i);
+                                    // console.log(i);
                                     return (
                                         <Draggable key={i}>
                                             <div className="text-center data-title">{p.data}</div>

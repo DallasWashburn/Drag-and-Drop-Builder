@@ -1,0 +1,17 @@
+.profileBtn{
+    position: absolute;
+    top: 8px;
+    right: 165px;
+    font-size: 12px;
+    margin-left: auto;
+    background-color: black;
+    color: #FFF;
+    border: 1px solid;
+    border-color: transparent;
+  }
+  
+  .profileBtn:hover{
+    border-color: black;
+      background-color: #FFF;
+      color: black;
+  }

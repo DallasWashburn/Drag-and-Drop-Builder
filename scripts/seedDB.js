@@ -7,9 +7,9 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/dragdrop");
 
 const userSeed = [
     {
-        userName: "Karl Marx",
-        email: "socialism6549@gmail.com",
-        projects : []
+        email: "joe@gmail.com",
+        projects : [],
+        date:Date.now()
       }
     
   ];

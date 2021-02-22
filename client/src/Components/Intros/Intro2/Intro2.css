@@ -1,0 +1,49 @@
+.intro3 .btn{
+    background-color: var(--primaryColor);
+    color: var(--secondaryColor);
+    border: 1px solid transparent;
+}
+
+.intro3 .btn:hover{
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+    border-color: var(--primaryColor);
+}
+
+.intro3 .button_section{
+    display: flex;
+    justify-content: center;
+}
+
+.intro3 .button_section button{
+    width: 50%;
+    margin: 3px;
+    border-radius: 5px;
+}
+
+.intro3 .btn-secondary{
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+    border:solid 1px var(--primaryColor)
+}
+
+.intro3 .btn-secondary:hover{
+    background-color: var(--primaryColor);
+    color: var(--secondaryColor);
+    border-color: transparent;
+}
+
+
+.intro3 h1{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 35px;
+    font-weight: 800;
+    color: var(--primaryColor);
+
+  }
+  
+  .intro3 p{
+    padding-bottom: 20px;
+    }
+  

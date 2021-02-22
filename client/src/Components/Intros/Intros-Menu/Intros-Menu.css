@@ -9,34 +9,28 @@
 }
 
 #Intro-1{
-  background-image: url("../../../images/Intro/intro-1.png");
   background-size: cover;
 }
 
 .container1 #Intro-1{
+  background-image: url("../../../images/Intro/intro-1.png");
   min-height: 90px;
 }
 
 #Intro-2{
-  background-image: url("../../../images/Intro/intro-2.png");
   background-size: cover;
 }
 
 .container1 #Intro-2{
+  background-image: url("../../../images/Intro/intro-2.png");
   min-height: 90px;
 }
 
 #Intro-3{
-  background-image: url("../../../images/Intro/intro-3.png");
-  background-size: cover;
   
 }
 #container2 #Intro-0{
   min-height: 100%;
-}
-
-#container2 #Intro-3{
-  min-height: 400px;
 }
 
 #container2 #Intro-3 svg{
@@ -48,15 +42,17 @@
 }
 
 .container1 #Intro-3{
+  background-image: url("../../../images/Intro/intro-3.png");
+
   min-height: 90px;
 }
 
 #Intro-4{
-  background-image: url("../../../images/Intro/intro-4.png");
-  background-size: cover;
 }
 
 
 .container1 #Intro-4{
+  background-image: url("../../../images/Intro/intro-4.png");
+
   min-height: 90px;
 }

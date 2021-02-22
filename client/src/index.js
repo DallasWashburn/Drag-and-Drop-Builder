@@ -20,8 +20,8 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Auth0Provider
-        domain={"dwashburn8.us.auth0.com"}
-        clientId={"CKNHRdIkQDWCEFZBYB67G1A6r6Ci1pes"}
+        domain={"cybermark.us.auth0.com"}
+        clientId={"4qjVzLYYYlqSzFJnRX1Zn3ggcdTCkz1x"}
         // audience={process.env.REACT_APP_AUDIENCE}
         redirectUri={window.location.origin}
         onRedirectCallback={onRedirectCallback}>

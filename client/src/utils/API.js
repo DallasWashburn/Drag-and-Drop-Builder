@@ -1,16 +1,17 @@
+/* eslint-disable import/no-anonymous-default-export */
 import axios from "axios";
 
 export default {
 
   // Gets all users
   getUsers: async function () {
-    let response = axios.get("/api/users/")
+    let response = axios.get("http://localhost:3001/api/users/")
     .catch(err => console.log("error: ", err));
     return response;
   },
   // Gets the user with the given id
   getUser: async function (id) {
-    let response = axios.get("/api/users/" + id)
+    let response = axios.get("http://localhost:3001/api/users/" + id)
     .catch(err => console.log("error: ", err));
     return response;
   },
@@ -30,7 +31,7 @@ export default {
   },
   // Saves a user to the database
   saveUser: async function (userData) {
-    let response = axios.post("/api/users/", userData)
+    let response = axios.post("http://localhost:3001/api/users/", userData)
     .then(x => console.log("the response from posting the user is", x))
     .catch(error =>  
       {

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./Header-Menu.css"
-import Header1 from "../Header0/Header0"
 import { Container, Draggable } from 'react-smooth-dnd';
 import { applyDrag, generateItems } from '../../../utils';
 
@@ -28,7 +27,7 @@ class HeaderMenu extends Component {
                             dropPlaceholderAnimationDuration={200}>
                             {
                                 this.state.items1.map((p, i) => {
-                                    console.log(i);
+                                    // console.log(i);
 
                                     return (
                                         <Draggable key={i}>

@@ -13,54 +13,136 @@ import Footers from "./Components/Footers/Footer-Container/Footer-Container"
 import Team from "./Components/Team/Team-Container/Team-Container"
 import Intros from "./Components/Intros/Intros-Container/Intros-Container"
 import Header from "./Components/Header/Header"
+import NewClientForm from "./Components/New-Client-Form/New-Client-Form"
 import LoginButton from "./Components/LoginButton/LoginButton";
+import API from "./utils/API"
 
-function Copy (){
-    const { user } = useAuth0();
-    const { name, email } = user;
-console.log(email);
-
-
-    const onUpload = (event) => {
-        this.setState({images:EventTarget})
+class Copy extends React.Component {
+    constructor(props) {
+        super(props)
+        
+        this.state = {
+            userId:props.user.sub,
+            userEmail: props.user.email,
+            companyName: "",
+            URL: "",
+            nickname:props.user.nickname
+        }
     }
-    
+
+    componentDidMount(){
+        this.getUsers()
+    }
+
+    getUsers = () => {
+        API.getUsers()
+        .then(users => {
+            var theUsers = users.data
+            console.log(theUsers);
+            for (let i = 0; i < theUsers.length; i++) {
+                const element = theUsers[i];
+                console.log(element);
+                // users.push(element[])
+                
+            }
+        })
+        // console.log(allUsers);
+        
+    }
+
+    onUpload = (event) => {
+        this.setState({ images: EventTarget })
+    }
+
+    handleChange = (event) => {
+        const target = event.target;
+        const value = target.value;
+        const name = target.name;
+
+        this.setState({
+            [name]: value
+        });
+    }
+
+    saveUser = () => {
+        API.getUsers()
+        .then(users => {
+            var theUsers = users.data
+            console.log(theUsers);
+            var num = 0
+            for (let i = 0; i < theUsers.length; i++) {
+                const element = theUsers[i];
+                console.log(element);
+                if(element.userId === this.props.user.sub){
+                    num = 2
+                }
+            }
+            if(num === 2 ){
+                this.setState({nickname:2})
+                return
+            } else {
+                    let project = {
+                        userId: this.state.userId,
+                        userEmail: this.state.userEmail,
+                        companyName: this.state.companyName,
+                        url: this.state.URL,
+                        projects: []
+                    }
+                    console.log(project)
+                    // [this.state.items3][this.state.items4][this.state.items5][this.state.items6][this.state.items7][this.state.items8]
+                    API.saveUser(project)
+                    this.setState({ nickname: 2})
+                }
+        })
 
 
-        return (
-            <>
-                <Header name = {name} email={email}/>
-                <div id="wrapper" >
-                    <div className="container1 fixed">
-                    <img src="https://www.cybermark.com/wp-content/uploads/2018/08/mainLogo.png" height="45" alt="cybermark logo"/>
+    }
+render(){
+
+    if(this.state.nickname === 1) {
+    return <NewClientForm
+        saveUser={this.saveUser}
+        handleChange={this.handleChange}
+    />
+
+} else {
+
+    return (
+        <>
+            <Header name={this.state.userId} email={this.state.userEmail} nickname={this.state.nickname} />
+            <div id="wrapper" >
+                <div className="container1 fixed">
+                    <img src="https://www.cybermark.com/wp-content/uploads/2018/08/mainLogo.png" height="45" alt="cybermark logo" />
                     <br></br>
                     <h5 className="content-blocks">Content Blocks</h5>
-                        <Headers />
-                        <Intros />
-                        <ContentContainer />
-                        <Gallery />
-                        <Features />
-                        <Team/>
-                        <Pricing />
-                        <Testimonials/>
-                        <ContactContainer />
-                        <Footers />
-                        <div>
-                        <FileUpload name={name} email={email} onUpload={onUpload} />
+                    <Headers />
+                    <Intros />
+                    <ContentContainer />
+                    <Gallery />
+                    <Features />
+                    <Team />
+                    <Pricing />
+                    <Testimonials />
+                    <ContactContainer />
+                    <Footers />
+                    <div>
+                        <FileUpload name={this.state.userId} email={this.state.userEmail} onUpload={this.onUpload} />
                     </div>
-                    </div>
-
-
-                    <div id="container2">
-                    <ContainerTabs name = {name} email={email} />
-
-                    </div>
-
-                    
                 </div>
-            </>
-        );
-    }
+
+
+                <div id="container2">
+                    <ContainerTabs name={this.state.userId} email={this.state.userEmail} userId={this.state.userId} />
+
+                </div>
+
+
+            </div>
+        </>
+    );
+}
+}
+}
 
 
 

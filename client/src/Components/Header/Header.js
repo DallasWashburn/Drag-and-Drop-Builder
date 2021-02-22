@@ -8,7 +8,7 @@ function Header (props){
         
         <nav className="navbar navbar-light primary-color">
 
-    {/* <h3 className="text-center">Hello {props.name}</h3> */}
+    {/* <h3 className="text-center">Hello {props.nickname}</h3> */}
         <LogoutButton/>
       </nav>
       

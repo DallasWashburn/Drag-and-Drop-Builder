@@ -91,7 +91,7 @@ var mail = nodemailer.createTransport({
 
 
   
-  eraseFolder = () => {
+  const eraseFolder = () => {
     const directory = './public';
     console.log("erasing folder......");
     fs.readdir(directory, (err, files) => {
@@ -366,16 +366,12 @@ var mail = nodemailer.createTransport({
 
 // Define API routes here
 
+const apiRoutes = (require("./routes/api/index"));
 app.use(routes);
+app.use("/api", apiRoutes)
 
-
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/react", {
-  useNewUrlParser: true,
-  useFindAndModify: false
-});
-
+mongoose.connect('mongodb://localhost:27017/dnd_db', {useNewUrlParser: true, useUnifiedTopology: true});
 // routes
-app.use(require("./routes/api/index"));
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));

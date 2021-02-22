@@ -1,6 +1,7 @@
 :root{
-  --primaryColor:#3c3c3c;
-  --secondaryColor:white;
+  --primaryColor:black;
+  --secondaryColor:#CE9E7C;
+  --thirdColor:#800000;
 }
 
 
@@ -18,7 +19,7 @@ code {
 }
 
 .section_wrapper{
-  padding: 0 75px;
+  padding:50px 0px;
 }
 
 button:focus{
@@ -68,16 +69,17 @@ a:not([href]){
 }
 
 .primaryColor{
-  background-color: var(--primaryColor);
-  color: var(--secondaryColor);
-  border: 1px solid transparent;
+  color: var(--primaryColor);
+}
+.button-wrap{
+  position: absolute;
+  top:0px;
+  right:0px;
+  z-index: 99;
 }
 
-.primaryColor:hover{
-  background-color: var(--secondaryColor);
-  color: var(--primaryColor);
-  border-color: var(--primaryColor);
-}
+
+
 
 #pdfBtn{
   height: 100px;
@@ -177,11 +179,13 @@ a:not([href]){
 .smooth-dnd-container{
   flex: 100%;
   position: relative;
-  min-height: 600px;
+  min-height: 700px;
   width: 100%;
 }
 
-
+.image-border{
+  border:solid 1px var(--primaryColor);
+}
 
 
 
@@ -508,7 +512,7 @@ justify-content: flex-end;
 }
 
 .menu-btn:hover{
-  background-color: #F97B82;
+  background-color: #CE9E7C;
   color: #FFF;
 }
 
@@ -574,7 +578,7 @@ justify-content: flex-end;
 }
 
 #homePage li button .pageSpan:hover{
-  color: #F97B82;
+  color: #CE9E7C;
 }
 
 #homePage li button .pageSpan:hover .tabX{
@@ -587,5 +591,5 @@ justify-content: flex-end;
 }
 
 #homePage li button .pageSpan:hover .tabX:hover{
-  color: #F97B82;
+  color: #CE9E7C;
 }
