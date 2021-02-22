@@ -1,0 +1,17 @@
+#modalExit{
+    position: absolute;
+    top: 5px;
+    height: 25px;
+    width: 25px;
+    right: 5px;
+    color: black;
+    border: 1px solid black;
+    border-radius: 100%;
+    padding: 3px;
+    font-size: 12px;
+}
+
+#modalExit:hover{
+    background-color: black;
+    color: #FFF;
+}

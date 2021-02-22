@@ -9,31 +9,31 @@ class NewCLientForm extends Component {
         return (
 
             <div className="wrapper">
-                <div class="img-holder">
+                <div className="img-holder">
                     <img src="https://www.cybermark.com/wp-content/uploads/2018/08/mainLogo-white.png" alt="" height="150px" />
                 </div>
-                <div class="login-container">
-                    <div class="login-box">
-                        <div class="login-header">
+                <div className="login-container">
+                    <div className="login-box">
+                        <div className="login-header">
                             <h2>Welcome!</h2>
                             <h5>Please fill out the following information</h5>
                         </div>
                         <form onSubmit="return false;" method="post">
-                            <div class="form-group">
+                            <div className="form-group">
                                 <input
                                     onChange={this.props.handleChange}
                                     type="text"
-                                    class="form-control"
+                                    className="form-control"
                                     id="companyName"
                                     name="companyName"
                                     placeholder="Company Name" />
                             </div>
-                            <div class="form-group">
+                            <div className="form-group">
                                 <input
                                     onChange={this.props.handleChange}
                                     name="URL"
                                     type="text"
-                                    class="form-control"
+                                    className="form-control"
                                     id="URL"
                                     placeholder="URL" />
                             </div>
@@ -42,7 +42,7 @@ class NewCLientForm extends Component {
                                     onClick={this.props.saveUser}
                                     type="button"
                                     id="btn-login"
-                                    class="btn sign-up">
+                                    className="btn sign-up">
                                     Submit
                                 </button>
                             </div>

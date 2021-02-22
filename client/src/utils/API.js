@@ -16,8 +16,10 @@ export default {
     return response;
   },
   // update the user with the given id
-  updateUser: async function (id) {
-    let response = axios.put("/api/users/" + id)
+  updateUser: async function (id, items) {
+    let response = axios.put("http://localhost:3001/api/users/" + id,{
+      projects:items
+    })
     .then(x => console.log("the response from updating the user is", x))
     .catch(err => console.log("error: ", err));
     return response;

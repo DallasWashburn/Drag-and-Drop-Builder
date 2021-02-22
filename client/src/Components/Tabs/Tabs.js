@@ -43,6 +43,7 @@ class ContainerTabs extends Component {
             items6: generateItems(0, (i) => ({ id: '1' + i, data: `Draggable 6 - ${i}` })),
             items7: generateItems(0, (i) => ({ id: '1' + i, data: `Draggable 7 - ${i}` })),
             items8: generateItems(0, (i) => ({ id: '1' + i, data: `Draggable 8 - ${i}` })),
+            pageName1:"Home Page",
             pageName2: "+",
             pageName3: "+",
             pageName4: "+",
@@ -55,6 +56,7 @@ class ContainerTabs extends Component {
             isHidden4: true,
             isHidden5: true,
             isHidden6: true,
+            dbId:this.props.dbId
 
         }
     }
@@ -80,6 +82,15 @@ class ContainerTabs extends Component {
         })
         // console.log(allUsers);
         
+    }
+
+
+    updateUser = () => {
+        console.log(this.props.dbId);
+        API.updateUser(this.props.dbId, this.state.items2)
+        .then(user => {
+            console.log(user);
+        })
     }
 
     // Handles the form inside modal and disperses text to the corresponding page 
@@ -123,6 +134,27 @@ class ContainerTabs extends Component {
 
     }
 
+    modalClose = (event) => {
+        event.preventDefault();
+        let modalTab = event.target.parentElement.parentElement.parentElement.parentElement
+        let modals = event.target.parentElement.parentElement.id
+        console.log(modalTab.id)
+        modalTab.dataset.clicks = 0;
+        if(modalTab.id === "tab-tab2"){
+            this.setState({ isHidden1: true })
+        } else if (modalTab.id === "tab-tab3"){
+            this.setState({isHidden2:true})
+        } else if (modalTab.id === "tab-tab4"){
+            this.setState({isHidden3:true})
+        }  else if (modalTab.id === "tab-tab5"){
+            this.setState({isHidden4:true})
+        }  else if (modalTab.id === "tab-tab6"){
+            this.setState({isHidden5:true})
+        } else if (modalTab.id === "tab-tab7"){
+            this.setState({isHidden6:true})
+        }
+    }
+
     // Handles the submit button on the modal 
     handleSubmit = (event) => {
         var modalName = event.target.parentElement.parentElement.parentElement.parentElement.parentElement;
@@ -143,7 +175,7 @@ class ContainerTabs extends Component {
             pageTitles.push(this.state.pageName2)
             var link3 = document.getElementById("link-3")
             link3.style.visibility = "visible"
-        } else if (oneINeed.id == "tab-tab2" && oneINeed.dataset.clicks == 1 && this.state.pageName2.length === 1) {
+        }else if (oneINeed.id == "tab-tab2" && oneINeed.dataset.clicks == 1 && this.state.pageName2.length === 1) {
             this.setState({
                 pageName2: "Page 2"
             });
@@ -709,18 +741,21 @@ class ContainerTabs extends Component {
                         userName={this.state.userName}
                         userEmail={this.state.userEmail}
                         items2={this.state.items}
-                        handleSave={this.handleSave} />
+                        handleSave={this.handleSave} 
+                        updateUser={this.updateUser}
+                        />
                     <ProfileButton 
                         getUsers={this.getUsers}
                         userEmail={this.state.userEmail}
-
+                        getId={this.props.getId}
+                        dbId={this.state.dbId}
                     />
                     <Tabs
                         activeLinkStyle={styles.activeLinkStyle}
                     >
                         <ul id="homePage">
                             <li className="nav-item" >
-                                <TabLink to="tab1"><span id="firstPage">Home Page</span></TabLink>
+                                <TabLink to="tab1"><span id="firstPage">{this.state.pageName1}</span></TabLink>
                             </li>
                             <li className="nav-item" id="link-2">
                                 <TabLink data-clicks={0} to="tab2">

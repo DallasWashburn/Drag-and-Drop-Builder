@@ -1,5 +1,6 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
+import { withRouter } from "react-router";
 import ContainerTabs from "./Components/Tabs/Tabs"
 import FileUpload from "./Components/File-Upload/File-Upload"
 import ContactContainer from "./Components/Contact/Contact-Container/Contact-Container"
@@ -26,25 +27,24 @@ class Copy extends React.Component {
             userEmail: props.user.email,
             companyName: "",
             URL: "",
-            nickname:props.user.nickname
+            nickname:props.user.nickname,
+            login:1,
+            dbId: ""
         }
     }
 
     componentDidMount(){
+        this.getId()
         this.getUsers()
+
     }
 
     getUsers = () => {
+
         API.getUsers()
         .then(users => {
             var theUsers = users.data
-            console.log(theUsers);
-            for (let i = 0; i < theUsers.length; i++) {
-                const element = theUsers[i];
-                console.log(element);
-                // users.push(element[])
-                
-            }
+            // console.log(theUsers);
         })
         // console.log(allUsers);
         
@@ -63,6 +63,28 @@ class Copy extends React.Component {
             [name]: value
         });
     }
+    
+    getId = () => {
+        API.getUsers()
+        .then(users => {
+            var theUsers = users.data
+            // console.log(theUsers);
+            for (let i = 0; i < theUsers.length; i++) {
+                const element = theUsers[i];
+                console.log(element);
+                if(element.userId === this.props.user.sub){
+                    console.log(element._id);
+                    this.setState({
+                        dbId: element._id,
+                        login:2
+                    })
+                    
+                }
+            }
+        })
+    }
+
+
 
     saveUser = () => {
         API.getUsers()
@@ -99,7 +121,7 @@ class Copy extends React.Component {
     }
 render(){
 
-    if(this.state.nickname === 1) {
+    if(this.state.nickname === 1 && this.state.login === 1) {
     return <NewClientForm
         saveUser={this.saveUser}
         handleChange={this.handleChange}
@@ -132,7 +154,7 @@ render(){
 
 
                 <div id="container2">
-                    <ContainerTabs name={this.state.userId} email={this.state.userEmail} userId={this.state.userId} />
+                    <ContainerTabs dbId={this.state.dbId} name={this.state.userId} email={this.state.userEmail} userId={this.state.userId} dbId={this.state.dbId} getId={this.getId}/>
 
                 </div>
 

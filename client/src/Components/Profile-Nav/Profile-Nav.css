@@ -1,0 +1,14 @@
+.navWrap{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.homeButton{
+    font-size: 12px;
+    background-color: black;
+    color: #FFF;
+    border: 1px solid;
+    border-color: transparent;
+    height: 32px;
+}
