@@ -17,23 +17,25 @@ import Header from "./Components/Header/Header"
 import NewClientForm from "./Components/New-Client-Form/New-Client-Form"
 import LoginButton from "./Components/LoginButton/LoginButton";
 import API from "./utils/API"
+import EditMenu from "./Components/Edit-Menu/Edit-Menu";
+import EditButton from "./Components/Edit-Button/Edit-Button"
 
 class Copy extends React.Component {
     constructor(props) {
         super(props)
-        
+
         this.state = {
-            userId:props.user.sub,
+            userId: props.user.sub,
             userEmail: props.user.email,
             companyName: "",
             URL: "",
-            nickname:props.user.nickname,
-            login:1,
+            nickname: props.user.nickname,
+            login: 1,
             dbId: ""
         }
     }
 
-    componentDidMount(){
+    componentDidMount() {
         this.getId()
         this.getUsers()
 
@@ -42,12 +44,12 @@ class Copy extends React.Component {
     getUsers = () => {
 
         API.getUsers()
-        .then(users => {
-            var theUsers = users.data
-            console.log(theUsers);
-        })
+            .then(users => {
+                var theUsers = users.data
+                console.log(theUsers);
+            })
         // console.log(allUsers);
-        
+
     }
 
     onUpload = (event) => {
@@ -63,107 +65,136 @@ class Copy extends React.Component {
             [name]: value
         });
     }
-    
+
     getId = () => {
         API.getUsers()
-        .then(users => {
-            var theUsers = users.data
-            // console.log(theUsers);
-            for (let i = 0; i < theUsers.length; i++) {
-                const element = theUsers[i];
-                console.log(element);
-                if(element.userId === this.props.user.sub){
-                    console.log(element._id);
-                    this.setState({
-                        dbId: element._id,
-                        login:2
-                    })
-                    
+            .then(users => {
+                var theUsers = users.data
+                // console.log(theUsers);
+                for (let i = 0; i < theUsers.length; i++) {
+                    const element = theUsers[i];
+                    console.log(element);
+                    if (element.userId === this.props.user.sub) {
+                        console.log(element._id);
+                        this.setState({
+                            dbId: element._id,
+                            login: 2
+                        })
+
+                    }
                 }
-            }
-        })
+            })
     }
 
 
 
     saveUser = () => {
+
+        var nameOfPage1 = { id: "pageName1", data: "Home Page" }
+        var nameOfPage2 = { id: "pageName2", data: "+" }
+        var nameOfPage3 = { id: "pageName3", data: "+" }
+        var nameOfPage4 = { id: "pageName4", data: "+" }
+        var nameOfPage5 = { id: "pageName5", data: "+" }
+        var nameOfPage6 = { id: "pageName6", data: "+" }
+        var nameOfPage7 = { id: "pageName7", data: "+" }
+
+
+
+        var allPages = [nameOfPage1, [], nameOfPage2, [], nameOfPage3, [], nameOfPage4, [], nameOfPage5, [], nameOfPage6, [], nameOfPage7, []]
+
+
         API.getUsers()
-        .then(users => {
-            var theUsers = users.data
-            console.log(theUsers);
-            var num = 0
-            for (let i = 0; i < theUsers.length; i++) {
-                const element = theUsers[i];
-                console.log(element);
-                if(element.userId === this.props.user.sub){
-                    num = 2
+            .then(users => {
+                var theUsers = users.data
+                console.log(theUsers);
+                var num = 0
+                for (let i = 0; i < theUsers.length; i++) {
+                    const element = theUsers[i];
+                    console.log(element);
+                    if (element.userId === this.props.user.sub) {
+                        num = 2
+                    }
                 }
-            }
-            if(num === 2 ){
-                this.setState({nickname:2})
-                return
-            } else {
+                if (num === 2) {
+                    this.setState({ nickname: 2 })
+                    return
+                } else {
                     let project = {
                         userId: this.state.userId,
                         userEmail: this.state.userEmail,
                         companyName: this.state.companyName,
                         url: this.state.URL,
-                        projects: []
+                        projects: allPages
                     }
                     console.log(project)
                     // [this.state.items3][this.state.items4][this.state.items5][this.state.items6][this.state.items7][this.state.items8]
                     API.saveUser(project)
-                    this.setState({ nickname: 2})
+                    this.setState({ nickname: 2 })
                 }
-        })
+            })
 
 
     }
-render(){
 
-    if(this.state.nickname === 1 && this.state.login === 1) {
-    return <NewClientForm
-        saveUser={this.saveUser}
-        handleChange={this.handleChange}
-    />
 
-} else {
+    openEdit = () => {
+        document.getElementById("mySidebar").style.width = "350px";
+    }
 
-    return (
-        <>
-            <Header name={this.state.userId} email={this.state.userEmail} nickname={this.state.nickname} />
-            <div id="wrapper" >
-                <div className="container1 fixed">
-                    <img src="https://www.cybermark.com/wp-content/uploads/2018/08/mainLogo.png" height="45" alt="cybermark logo" />
-                    <br></br>
-                    <h5 className="content-blocks">Content Blocks</h5>
-                    <Headers />
-                    <Intros />
-                    <ContentContainer />
-                    <Gallery />
-                    <Features />
-                    <Team />
-                    <Pricing />
-                    <Testimonials />
-                    <ContactContainer />
-                    <Footers />
-                    <div>
-                        <FileUpload name={this.state.userId} email={this.state.userEmail} onUpload={this.onUpload} />
+    closeEdit = () => {
+    document.getElementById("mySidebar").style.width = "0";
+    }
+    render() {
+
+        if (this.state.nickname === 1 && this.state.login === 1) {
+            return <NewClientForm
+                saveUser={this.saveUser}
+                handleChange={this.handleChange}
+            />
+
+        } else {
+
+            return (
+                <>
+                    <Header name={this.state.userId} email={this.state.userEmail} nickname={this.state.nickname} />
+                    <div id="wrapper" >
+                        <div className="container1 fixed">
+                            <img src="https://www.cybermark.com/wp-content/uploads/2018/08/mainLogo.png" height="45" alt="cybermark logo" />
+                            <br></br>
+                            <h5 className="content-blocks">Content Blocks</h5>
+                            <Headers />
+                            <Intros />
+                            <ContentContainer />
+                            <Gallery />
+                            <Features />
+                            <Team />
+                            <Pricing />
+                            <Testimonials />
+                            <ContactContainer />
+                            <Footers />
+                            <div>
+                                <EditButton openEdit={this.openEdit}/>
+                            </div>
+                            <div>
+                                <FileUpload name={this.state.userId} email={this.state.userEmail} onUpload={this.onUpload} />
+                            </div>
+                            <div>
+                                <EditMenu closeEdit={this.closeEdit} />
+                            </div>
+                        </div>
+
+
+                        <div id="container2">
+                            <ContainerTabs dbId={this.state.dbId} name={this.state.userId} email={this.state.userEmail} userId={this.state.userId} dbId={this.state.dbId} getId={this.getId} />
+
+                        </div>
+
+
                     </div>
-                </div>
-
-
-                <div id="container2">
-                    <ContainerTabs dbId={this.state.dbId} name={this.state.userId} email={this.state.userEmail} userId={this.state.userId} dbId={this.state.dbId} getId={this.getId}/>
-
-                </div>
-
-
-            </div>
-        </>
-    );
-}
-}
+                </>
+            );
+        }
+    }
 }
 
 

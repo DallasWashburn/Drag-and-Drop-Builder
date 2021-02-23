@@ -61,12 +61,27 @@ class ContainerTabs extends Component {
         }
     }
 
+    componentDidMount(){
+        this.getProject()
+    }
+
     handleSave = (event) => {
+        var nameOfPage1= {id:"pageName1", data:this.state.pageName1}
+        var nameOfPage2= {id:"pageName2", data:this.state.pageName2}
+        var nameOfPage3= {id:"pageName3", data:this.state.pageName3}
+        var nameOfPage4= {id:"pageName4", data:this.state.pageName4}
+        var nameOfPage5= {id:"pageName5", data:this.state.pageName5}
+        var nameOfPage6= {id:"pageName6", data:this.state.pageName6}
+        var nameOfPage7= {id:"pageName7", data:this.state.pageName7}
+
+
+
+        var allPages = [nameOfPage1, this.state.items2, nameOfPage2, this.state.items3, nameOfPage3, this.state.items4, nameOfPage4, this.state.items5, nameOfPage5, this.state.items6, nameOfPage6, this.state.items7, nameOfPage7, this.state.items8]
 
         let project = {
             userId:this.state.userId,
             userEmail: this.state.email,
-            projects: [this.state.items2][this.state.items3][this.state.items4][this.state.items5][this.state.items6][this.state.items7][this.state.items8]
+            projects: allPages
         }
 
 
@@ -75,23 +90,122 @@ class ContainerTabs extends Component {
 
     }
 
-    getUsers = () => {
-        API.getUsers()
-        .then(users => {
-            var theUsers = users.data
-            console.log(theUsers);
-            
-        })
-        // console.log(allUsers);
+    getProject = () => {
         
+        API.getUsers()
+            .then(users => {
+                var theUsers = users.data
+                console.log(theUsers);
+                var userProjects = []
+                for (let i = 0; i < theUsers.length; i++) {
+                    const element = theUsers[i];
+                    console.log(element);
+                    if (element.userEmail === this.state.email) {
+                        console.log(element.projects);
+                        var Page1Title = element.projects[0];
+                        var Page1 = element.projects[1];
+                        var Page2Title = element.projects[2][0].data;
+                        var Page2 = element.projects[3];
+                        var Page3Title = element.projects[4][0].data;
+                        var Page3 = element.projects[5];
+                        var Page4Title = element.projects[6][0].data;
+                        var Page4 = element.projects[7];
+                        var Page5Title = element.projects[8][0].data;
+                        var Page5 = element.projects[9];
+                        var Page6Title = element.projects[10][0].data;
+                        var Page6 = element.projects[11];
+                        var Page7Title = element.projects[12][0].data;
+                        var Page7 = element.projects[13];
+                        console.log(Page3Title);
+                        this.setState({
+                            Page1Title: Page1Title,
+                            items2: Page1,
+                            pageName2: Page2Title,
+                            items3: Page2,
+                            pageName3: Page3Title,
+                            items4: Page3,
+                            pageName4: Page4Title,
+                            items5: Page4,
+                            pageName5: Page5Title,
+                            items6: Page5,
+                            pageName6: Page6Title,
+                            items7: Page6,
+                            pageName7: Page7Title,
+                            items8: Page7
+                        })
+                    }
+                }
+
+                console.log(this.state.projects);
+                this.checkTabs()
+            })
+    }
+
+    checkTabs = () => {
+        if (this.state.pageName2.length > 1) {
+            
+            var link3 = document.getElementById("link-3")
+            link3.style.visibility = "visible";
+            var link2 = document.getElementById("link-2")
+            var link2Child = link2.childNodes[0]
+            link2Child.setAttribute("data-clicks", 1);
+        }
+        if (this.state.pageName3.length > 1) {
+            
+            var link4 = document.getElementById("link-4")
+            link4.style.visibility = "visible";
+            var link3 = document.getElementById("link-3")
+            var link3Child = link3.childNodes[0]
+            link3Child.setAttribute("data-clicks", 1);
+        }
+        if (this.state.pageName4.length > 1) {
+            
+            var link5 = document.getElementById("link-5")
+            link5.style.visibility = "visible";
+            var link4 = document.getElementById("link-4")
+            var link4Child = link4.childNodes[0]
+            link4Child.setAttribute("data-clicks", 1);
+        }
+        if (this.state.pageName5.length > 1) {
+            
+            var link6 = document.getElementById("link-6")
+            link6.style.visibility = "visible";
+            var link5 = document.getElementById("link-5")
+            var link5Child = link5.childNodes[0]
+            link5Child.setAttribute("data-clicks", 1);
+        }
+        if (this.state.pageName6.length > 1) {
+            
+            var link7 = document.getElementById("link-7")
+            link7.style.visibility = "visible";
+            var link6 = document.getElementById("link-6")
+            var link6Child = link6.childNodes[0]
+            link6Child.setAttribute("data-clicks", 1);
+        }
+        if (this.state.pageName7.length > 1) {
+            
+            var link8 = document.getElementById("link-8")
+            link8.style.visibility = "visible";
+            var link7 = document.getElementById("link-7")
+            var link7Child = link7.childNodes[0]
+            link7Child.setAttribute("data-clicks", 1);
+        }
     }
 
 
     updateUser = () => {
         console.log(this.props.dbId);
+        var nameOfPage1= {id:"pageName1", data:this.state.pageName1}
         var nameOfPage2= {id:"pageName2", data:this.state.pageName2}
+        var nameOfPage3= {id:"pageName3", data:this.state.pageName3}
+        var nameOfPage4= {id:"pageName4", data:this.state.pageName4}
+        var nameOfPage5= {id:"pageName5", data:this.state.pageName5}
+        var nameOfPage6= {id:"pageName6", data:this.state.pageName6}
+        var nameOfPage7= {id:"pageName7", data:this.state.pageName7}
 
-        var allPages = [this.state.items2,nameOfPage2, this.state.items3]
+
+
+        var allPages = [nameOfPage1, this.state.items2, nameOfPage2, this.state.items3, nameOfPage3, this.state.items4, nameOfPage4, this.state.items5, nameOfPage5, this.state.items6, nameOfPage6, this.state.items7, nameOfPage7, this.state.items8]
         allPages.map(page => {
             console.log(page);
             
@@ -289,8 +403,8 @@ class ContainerTabs extends Component {
         // this.toggleHidden();
         var element = event.target
         var parent = element.parentElement;
-        console.log(parent);
-        if (parent.id === "tab-tab2" && parent.dataset.clicks === "0") {
+        console.log(element.textContent.length);
+        if (parent.id === "tab-tab2" && parent.dataset.clicks === "0" && element.textContent.length > 1) {
             parent.setAttribute("data-clicks", 1)
             this.setState({ isHidden1: false })
         }

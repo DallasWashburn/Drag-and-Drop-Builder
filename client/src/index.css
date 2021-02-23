@@ -593,3 +593,12 @@ justify-content: flex-end;
 #homePage li button .pageSpan:hover .tabX:hover{
   color: #CE9E7C;
 }
+
+.projectCard{
+  margin-bottom: 25px;
+}
+
+.projectCard h3{
+  padding-bottom: 10px;
+  text-align: center;
+}
