@@ -24,13 +24,13 @@ class Profile extends Component {
         API.getUsers()
             .then(users => {
                 var theUsers = users.data
-                // console.log(theUsers);
+                console.log(theUsers);
                 var userProjects = []
                 for (let i = 0; i < theUsers.length; i++) {
                     const element = theUsers[i];
-                    // console.log(element);
+                    console.log(element);
                     if (element.userEmail === this.props.user.email) {
-                        // console.log(element.projects);
+                        console.log(element.projects);
                         var eachDiv = element.projects;
                         eachDiv.map((user) => {
                             console.log(user);
@@ -44,10 +44,13 @@ class Profile extends Component {
             })
     }
 
-
+    getRandomNumber = () => {
+        var number_one = Math.floor(Math.random() * 1000);
+        return number_one
+    }
 
     render() {
-
+        var randomNumber = this.getRandomNumber()
             return (
                 <>
                     <ProfilfeNav email={this.props.user.email}/>
@@ -59,7 +62,7 @@ class Profile extends Component {
                         {this.state.projects.map(project => {
                             return (
                             
-                            <div key={project.id}><ProjectPreview
+                            <div key={randomNumber}><ProjectPreview
                                 divId={project.data}
                             />
                             </div>

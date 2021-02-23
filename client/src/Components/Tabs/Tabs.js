@@ -66,9 +66,11 @@ class ContainerTabs extends Component {
         let project = {
             userId:this.state.userId,
             userEmail: this.state.email,
-            projects: [this.state.items2]
+            projects: [this.state.items2][this.state.items3][this.state.items4][this.state.items5][this.state.items6][this.state.items7][this.state.items8]
         }
-        // [this.state.items3][this.state.items4][this.state.items5][this.state.items6][this.state.items7][this.state.items8]
+
+
+
         API.saveUser(project)
 
     }
@@ -87,10 +89,17 @@ class ContainerTabs extends Component {
 
     updateUser = () => {
         console.log(this.props.dbId);
-        API.updateUser(this.props.dbId, this.state.items2)
-        .then(user => {
-            console.log(user);
+        var nameOfPage2= {id:"pageName2", data:this.state.pageName2}
+
+        var allPages = [this.state.items2,nameOfPage2, this.state.items3]
+        allPages.map(page => {
+            console.log(page);
+            
         })
+        API.updateUser(this.props.dbId, allPages)
+        // .then(user => {
+        //     console.log(user);
+        // })
     }
 
     // Handles the form inside modal and disperses text to the corresponding page 
@@ -741,7 +750,6 @@ class ContainerTabs extends Component {
                         userName={this.state.userName}
                         userEmail={this.state.userEmail}
                         items2={this.state.items}
-                        handleSave={this.handleSave} 
                         updateUser={this.updateUser}
                         />
                     <ProfileButton 

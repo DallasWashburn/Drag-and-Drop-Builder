@@ -44,7 +44,7 @@ class Copy extends React.Component {
         API.getUsers()
         .then(users => {
             var theUsers = users.data
-            // console.log(theUsers);
+            console.log(theUsers);
         })
         // console.log(allUsers);
         
