@@ -6,7 +6,7 @@
      background-size:cover;
     }
     button:focus{
-      outline:none!important;
+      outline:#FFF!important;
     }
     .sign-up{
         border: solid 1px black;

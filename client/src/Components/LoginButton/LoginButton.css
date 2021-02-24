@@ -17,6 +17,6 @@
 }
 
 .sing-in:focus{
-	border-color: transparent;
+	border-color: #FFF;
 	border-radius: 35px;
 }

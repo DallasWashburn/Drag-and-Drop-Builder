@@ -7,7 +7,7 @@ class EditButton extends Component {
     render(){
         return (
             <div id="editButtonDiv" >
-            <button id="editButton" classsName="btn" onClick={this.props.openEdit}>Edit Content</button>
+            <button data-content={this.props.data} id="editButton" classsName="btn" onClick={this.props.openEdit}><i class="far fa-edit"></i></button>
             </div>
         )
     }

@@ -90,6 +90,9 @@ class ContainerTabs extends Component {
 
     }
 
+
+
+
     getProject = () => {
         
         API.getUsers()
@@ -1039,6 +1042,8 @@ class ContainerTabs extends Component {
                                 generateItems={this.state.items2}
                                 removeElement={this.removeElement1}
                                 duplicateElement={this.duplicateElement1}
+                                openEdit={this.props.openEdit}
+
                             />
                         </TabContent>
                         <TabContent for="tab2">

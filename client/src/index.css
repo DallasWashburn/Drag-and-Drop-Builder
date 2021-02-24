@@ -36,8 +36,19 @@ outline: none;
   position: absolute;
   top: 40%;
   left: 249px;
-  border: solid 1px black;
+  border: solid 1px #a5a5a5;
+  height: 40px;
 }
+
+.menuArrow .fas{
+  padding-top: 12px;
+  color: #3c3c3c;
+}
+
+.menuArrow .fas:hover{
+  color: #bababa;
+}
+
 
 .content-blocks{
     text-align: left;
@@ -205,7 +216,7 @@ a:not([href]){
   border: solid 1px #cfcfcf;
   flex-direction: column;
   width: 100%;
-  max-width: 980px;
+  max-width: 1100px;
   background-color: #FFF;
   margin-right: 20px;
   margin-left: 40px;

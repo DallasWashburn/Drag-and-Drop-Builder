@@ -31,7 +31,8 @@ class Copy extends React.Component {
             URL: "",
             nickname: props.user.nickname,
             login: 1,
-            dbId: ""
+            dbId: "",
+            dataContent: ""
         }
     }
 
@@ -136,16 +137,22 @@ class Copy extends React.Component {
 
     }
 
+    getElements = (event) => {
+        // event.preventDefault();
+    }
 
-    openEdit = () => {
+    openEdit = (event) => {
+        console.log(event.target.parentElement.getAttribute("data-content"));
+        var content = event.target.parentElement.getAttribute("data-content")
         document.getElementById("mySidebar").style.width = "249px";
+        this.setState({dataContent:content})
     }
 
     closeEdit = () => {
     document.getElementById("mySidebar").style.width = "0";
     }
     render() {
-
+        
         if (this.state.nickname === 1 && this.state.login === 1) {
             return <NewClientForm
                 saveUser={this.saveUser}
@@ -173,20 +180,20 @@ class Copy extends React.Component {
                             <Testimonials />
                             <ContactContainer />
                             <Footers />
-                            <div>
+                            {/* <div>
                                 <EditButton openEdit={this.openEdit}/>
-                            </div>
+                            </div> */}
                             <div>
                                 <FileUpload name={this.state.userId} email={this.state.userEmail} onUpload={this.onUpload} />
                             </div>
                             <div>
-                                <EditMenu closeEdit={this.closeEdit} />
+                                <EditMenu dataContent={this.state.dataContent} closeEdit={this.closeEdit} />
                             </div>
                         </div>
 
 
                         <div id="container2">
-                            <ContainerTabs dbId={this.state.dbId} name={this.state.userId} email={this.state.userEmail} userId={this.state.userId} dbId={this.state.dbId} getId={this.getId} />
+                            <ContainerTabs openEdit={this.openEdit} name={this.state.userId} email={this.state.userEmail} userId={this.state.userId} dbId={this.state.dbId} getId={this.getId} />
 
                         </div>
 
