@@ -32,6 +32,12 @@ outline: none;
   margin: auto;
   margin-right: 0;
 }
+.menuArrow{
+  position: absolute;
+  top: 40%;
+  left: 249px;
+  border: solid 1px black;
+}
 
 .content-blocks{
     text-align: left;

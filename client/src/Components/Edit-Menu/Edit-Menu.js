@@ -5,7 +5,7 @@ const EditMenu = (props) => {
 
     return (
         <div id="mySidebar" class="sidebar">
-            <button class="closebtn" onClick={props.closeEdit}>X</button>
+            <button class="closebtn" onClick={props.closeEdit}></button>
             <div class="form-group">
                 <div className="label-wrap">
                     <label className="">Update Text</label>

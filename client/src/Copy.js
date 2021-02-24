@@ -138,7 +138,7 @@ class Copy extends React.Component {
 
 
     openEdit = () => {
-        document.getElementById("mySidebar").style.width = "350px";
+        document.getElementById("mySidebar").style.width = "249px";
     }
 
     closeEdit = () => {
@@ -158,6 +158,7 @@ class Copy extends React.Component {
                 <>
                     <Header name={this.state.userId} email={this.state.userEmail} nickname={this.state.nickname} />
                     <div id="wrapper" >
+                        <span className="menuArrow"><i className="fas fa-lg fa-angle-left"></i></span>
                         <div className="container1 fixed">
                             <img src="https://www.cybermark.com/wp-content/uploads/2018/08/mainLogo.png" height="45" alt="cybermark logo" />
                             <br></br>
