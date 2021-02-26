@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import "./Header0.css"
+import InlineEdit from "../../inlineEdit"
 
 
 class Header0 extends Component {
@@ -14,29 +15,6 @@ class Header0 extends Component {
         }
     }
 
-    editText = (event) => {
-        event.preventDefault();
-        console.log(event.target.id);
-        var contentId = event.target.id;
-        var newText = prompt("Enter text");
-        if(contentId === "link1"){
-            this.setState({
-                linkOne:newText
-            });
-        } else if (contentId === "link2"){
-            this.setState({
-                linkTwo:newText
-            });
-        } else if (contentId === "link3"){
-            this.setState({
-                linkThree:newText
-            });
-        }  else if (contentId === "link4"){
-            this.setState({
-                linkFour:newText
-            });
-        } 
-    }
 
     render(){
         return (
@@ -51,16 +29,16 @@ class Header0 extends Component {
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav ml-auto">
                     <li className="nav-item active">
-                        <a className="nav-link" id="link1" onClick={this.editText}>{this.state.linkOne} <span className="sr-only">(current)</span></a>
+                        <a className="nav-link" id="link1" ><InlineEdit text={this.state.linkOne} onSetText={text => this.setState({linkOne:text})}/></a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" id="link2" onClick={this.editText}>{this.state.linkTwo}</a>
+                        <a className="nav-link" id="link2" ><InlineEdit text={this.state.linkTwo} onSetText={text => this.setState({linkTwo:text})}/></a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" id="link3" onClick={this.editText}>{this.state.linkThree}</a>
+                        <a className="nav-link" id="link3" ><InlineEdit text={this.state.linkThree} onSetText={text => this.setState({linkThree:text})}/></a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" id="link4" onClick={this.editText}>{this.state.linkFour}</a>
+                        <a className="nav-link" id="link4" ><InlineEdit text={this.state.linkFour} onSetText={text => this.setState({linkFour:text})}/></a>
                     </li>
                 </ul>
     

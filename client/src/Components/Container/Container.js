@@ -22,13 +22,6 @@ import EditButton from "../Edit-Button/Edit-Button"
 
 
 
-
-
-
-
-
-
-
 class Container1 extends Component {
     constructor(props) {
         super(props);
@@ -52,7 +45,7 @@ class Container1 extends Component {
 
     }
 
-    handleXButton(event, id) {
+    handleXButton = (event, id) => {
         event.stopPropagation();
         event.preventDefault();
 
@@ -68,22 +61,11 @@ class Container1 extends Component {
         window.removeEventListener('scroll', noScroll);
     }
 
-    editText(event) {
-        event.preventDefault();
-        console.log(event.target.textContent);
-        var content = event.target.textContent;
-
+    getImage= (event) => {
+        var cloumn = event.target.parentElement.parentElement.parentElement;
+        
+        console.log(cloumn.children[0].src);
     }
-
-    renderSwitch(id, index) {
-        switch (id) {
-            case "Header-0":
-                return <Draggable key={index}><div id={id} className="draggable-item"><Header0 /></div></Draggable>;
-            default:
-                return <Draggable key={index}><div id={id} className="draggable-item"><Header1 /></div></Draggable>;
-        }
-    }
-
 
 
     render() {
@@ -210,7 +192,7 @@ class Container1 extends Component {
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="component draggable-item" data-element={p.data}>
-                                            <Content0 h3Heading={this.props.h3Heading} pFirst={this.props.pFirst}/>
+                                            <Content0 getImage={this.getImage}/>
                                             <div className="button-wrap">
                                                 <EditButton data={p.data} openEdit={this.props.openEdit} getElements={this.getElements} />
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />

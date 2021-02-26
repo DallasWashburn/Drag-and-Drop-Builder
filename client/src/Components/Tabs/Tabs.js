@@ -268,9 +268,15 @@ class ContainerTabs extends Component {
         console.log(modalTab.id)
         modalTab.dataset.clicks = 0;
         if(modalTab.id === "tab-tab2"){
-            this.setState({ isHidden1: true })
+            this.setState({ 
+                isHidden1: true,
+                pageName2: "+"
+             })
         } else if (modalTab.id === "tab-tab3"){
-            this.setState({isHidden2:true})
+            this.setState({
+                isHidden2:true,
+                pageName3: "+"
+            })
         } else if (modalTab.id === "tab-tab4"){
             this.setState({isHidden3:true})
         }  else if (modalTab.id === "tab-tab5"){

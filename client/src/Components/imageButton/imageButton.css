@@ -1,0 +1,12 @@
+#imageButton{
+    position: absolute;
+    top: 5px;
+    left: 19px;
+    visibility: hidden;
+}
+
+#imageButton:focus{
+    outline: none;
+    box-shadow: none!important;
+}
+

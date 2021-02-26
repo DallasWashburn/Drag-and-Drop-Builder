@@ -34,13 +34,6 @@ class Copy extends React.Component {
             login: 1,
             dbId: "",
             dataContent: "",
-            h1Heading: "",
-            h2Heading: "",
-            h3Heading: "CyberMark Wire Frame",
-            h4Heading: "",
-            h5Heading: "",
-            pFirst: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore sint corrupti aliquam exercitationem ullam numquam explicabo sequi reprehenderit culpa est accusamus accusantium magniprovident in expedita harum libero, quasi perspiciatis!",
-            imgFirst: ""
         }
     }
 
@@ -188,7 +181,7 @@ class Copy extends React.Component {
     }
 
     openEdit = (event) => {
-        this.getContent(event);
+        // this.getContent(event);
         setTimeout(this.setContent, 1000)
         document.getElementById("mySidebar").style.width = "249px";
 
@@ -211,19 +204,6 @@ class Copy extends React.Component {
 
     }
     
-
-    toggleState = (event) => {
-        event.preventDefault();
-        if(this.state.closed === false){
-            this.setState({
-                closed:true
-            })
-        } else {
-            this.setState({
-                closed:false
-            })
-        }
-    }
 
     closeEdit = () => {
         document.getElementById("mySidebar").style.width = "0";
@@ -284,8 +264,6 @@ class Copy extends React.Component {
                                 userId={this.state.userId}
                                 dbId={this.state.dbId}
                                 getId={this.getId}
-                                h3Heading={this.state.h3Heading}
-                                pFirst={this.state.pFirst}
                                 handleSubmit={this.handleSubmit}
                                 handleInputChange={this.handleInputChange}
                                 dataContent={this.state.dataContent}
