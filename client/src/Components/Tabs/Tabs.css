@@ -8,13 +8,13 @@
     left: -15px;
     width: 105%;
     height: 60px;
-    background-color: #323232;
+    background-color: #EFEFEF;
     margin-bottom:-55px;
     z-index: -1;
 }
 
 #firstPage{
     border-left: none!important;
-    padding-left: 12px!important;
+    /* padding-left: 12px!important; */
 }
 

@@ -20,8 +20,9 @@ var pageTitles = ["Home Page"]
 
 const styles = {
     activeLinkStyle: {
-        backgroundColor: "#323232",
-        color: "#CE9E7C"
+        backgroundColor: "#fff",
+        color: "#3c3c3c",
+        borderRight:"none"
     }
 }
 

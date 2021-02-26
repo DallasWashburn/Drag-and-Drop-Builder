@@ -236,6 +236,7 @@ a:not([href]){
   width: 100%;
   max-width: 80%;
   background-color: #FFF;
+  margin-top: 20px;
   margin-right: 20px;
   margin-left: 40px;
   height: 100%;
@@ -398,18 +399,20 @@ justify-content: flex-end;
 }
 
 #homePage li button{
-  background-color: #323232;
+  /* background-color: #323232; */
   display: block;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   border: none;
-  color: #FFF;
   text-align: center;
   text-decoration: none;
-  margin-right:4px;
-  margin-bottom: 10px;
+  /* margin-right:5px; */
+  margin-left:5px;
+  margin-bottom: 5px;
   position: relative;
-  bottom: 15px;
+  bottom: 12px;
+  padding-bottom: 5px;
+  padding: 2px;
 }
 
 #homePage li button:focus{
@@ -423,8 +426,10 @@ justify-content: flex-end;
   padding-bottom: 5px;
   position: relative;
   bottom: 0px;
-  border-left: 1px solid #e1e1e1;
-  padding-left: 15px;
+  padding-left:10px;
+  padding-right:10px;
+
+
 }
 
 #homePage li button .pageSpan:hover{
@@ -604,7 +609,7 @@ justify-content: flex-end;
 .tabX{
   margin: 0 5px;
   position: absolute;
-  /* left: -11111px; */
+  left: -11111px;
   /* left: 10px; */
   font-size: 15px;
   width: 20px;
@@ -612,7 +617,7 @@ justify-content: flex-end;
 }
 
 #homePage li button .pageSpan:hover{
-  color: #CE9E7C;
+  color: #3c3c3c;
 }
 
 #homePage li button .pageSpan:hover .tabX{
@@ -621,11 +626,11 @@ justify-content: flex-end;
   bottom: 1px;
   left: 10px;
   visibility: visible;
-  color: #FFF;
+  color: #3c3c3c;
 }
 
 #homePage li button .pageSpan:hover .tabX:hover{
-  color: #CE9E7C;
+  color: #3c3c3c;
 }
 
 .projectCard{
