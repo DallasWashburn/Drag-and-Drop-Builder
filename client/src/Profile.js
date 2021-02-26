@@ -117,7 +117,7 @@ class Profile extends Component {
                     <h1 className="text-center">See your project pages below</h1>
                     <hr />
                     <div className="row">
-                        <div className="col-4 projectCard" id="page1">
+                        <div className="col-6 projectCard" id="page1">
                             <h3>{this.state.Page1Title[0].data}</h3>
                             {this.state.Page1.map(project => {
                                 return (
@@ -130,7 +130,7 @@ class Profile extends Component {
                                 )
                             })}
                         </div>
-                        <div className="col-4 projectCard" id="page2">
+                        <div className="col-6 projectCard" id="page2">
                         <h3>{this.state.Page2Title[0].data}</h3>
                             {this.state.Page2.map(project => {
                                 return (
@@ -143,7 +143,7 @@ class Profile extends Component {
                                 )
                             })}
                         </div>
-                        <div className="col-4 projectCard" id="page3">
+                        <div className="col-6 projectCard" id="page3">
                         <h3>{this.state.Page3Title[0].data}</h3>
                             {this.state.Page3.map(project => {
                                 return (
@@ -156,7 +156,7 @@ class Profile extends Component {
                                 )
                             })}
                         </div>
-                        <div className="col-4 projectCard" id="page4">
+                        <div className="col-6 projectCard" id="page4">
                         <h3>{this.state.Page4Title[0].data}</h3>
                             {this.state.Page4.map(project => {
                                 return (
@@ -169,7 +169,7 @@ class Profile extends Component {
                                 )
                             })}
                         </div>
-                        <div className="col-4 projectCard" id="page5">
+                        <div className="col-6 projectCard" id="page5">
                         <h3>{this.state.Page5Title[0].data}</h3>
                             {this.state.Page5.map(project => {
                                 return (
@@ -182,7 +182,7 @@ class Profile extends Component {
                                 )
                             })}
                         </div>
-                        <div className="col-4 projectCard" id="page6">
+                        <div className="col-6 projectCard" id="page6">
                         <h3>{this.state.Page6Title[0].data}</h3>
                             {this.state.Page6.map(project => {
                                 return (
@@ -195,7 +195,7 @@ class Profile extends Component {
                                 )
                             })}
                         </div>
-                        <div className="col-4 projectCard" id="page7">
+                        <div className="col-6 projectCard" id="page7">
                         <h3>{this.state.Page7Title[0].data}</h3>
                             {this.state.Page7.map(project => {
                                 return (

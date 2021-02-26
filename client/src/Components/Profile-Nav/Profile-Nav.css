@@ -11,4 +11,10 @@
     border: 1px solid;
     border-color: transparent;
     height: 32px;
+    margin-left: auto;
+}
+
+.navWrap #logOut{
+    margin-left: 5px;
+    height: 33px;
 }

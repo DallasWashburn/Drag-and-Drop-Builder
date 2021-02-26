@@ -1043,7 +1043,8 @@ class ContainerTabs extends Component {
                                 removeElement={this.removeElement1}
                                 duplicateElement={this.duplicateElement1}
                                 openEdit={this.props.openEdit}
-
+                                h3Heading={this.props.h3Heading} 
+                                pFirst={this.props.pFirst}
                             />
                         </TabContent>
                         <TabContent for="tab2">

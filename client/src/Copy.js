@@ -25,6 +25,7 @@ class Copy extends React.Component {
         super(props)
 
         this.state = {
+            closed:false,
             userId: props.user.sub,
             userEmail: props.user.email,
             companyName: "",
@@ -32,7 +33,14 @@ class Copy extends React.Component {
             nickname: props.user.nickname,
             login: 1,
             dbId: "",
-            dataContent: ""
+            dataContent: "",
+            h1Heading: "",
+            h2Heading: "",
+            h3Heading: "CyberMark Wire Frame",
+            h4Heading: "",
+            h5Heading: "",
+            pFirst: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore sint corrupti aliquam exercitationem ullam numquam explicabo sequi reprehenderit culpa est accusamus accusantium magniprovident in expedita harum libero, quasi perspiciatis!",
+            imgFirst: ""
         }
     }
 
@@ -40,6 +48,16 @@ class Copy extends React.Component {
         this.getId()
         this.getUsers()
 
+    }
+
+    handleInputChange = (event) => {
+        const target = event.target;
+        const value = target.value;
+        const name = target.name;
+
+        this.setState({
+            [name]: value
+        });
     }
 
     getUsers = () => {
@@ -137,22 +155,81 @@ class Copy extends React.Component {
 
     }
 
-    getElements = (event) => {
-        // event.preventDefault();
+    handleSubmit = (evt) => {
+        evt.preventDefault();
+
+    }
+
+    getContent = (event) => {
+        console.log(event.target.parentElement.getAttribute("data-content"));
+        var content = event.target.parentElement.getAttribute("data-content")
+        this.setState({
+            dataContent:content
+        })
+        }
+
+    setContent= () => {
+        if (this.state.dataContent !== "") {
+            var contentBlock = document.querySelectorAll(`[data-element=${this.state.dataContent}]`);
+            var pTag1 = contentBlock[0].getElementsByTagName("p")[0].innerText
+            // var mainHeading = contentBlock[0].getElementsByTagName("h1")
+            var subHeading = contentBlock[0].getElementsByTagName("h3")[0].innerText
+            var imageBlock = contentBlock[0].getElementsByTagName("img")
+            console.log(pTag1);
+            this.setState({
+                h3Heading:subHeading,
+                pFirst:pTag1
+            })
+        }
+    console.log(this.state.h3Heading);  
+    console.log(this.state.pFirst);
+
+
     }
 
     openEdit = (event) => {
-        console.log(event.target.parentElement.getAttribute("data-content"));
-        var content = event.target.parentElement.getAttribute("data-content")
+        this.getContent(event);
+        setTimeout(this.setContent, 1000)
         document.getElementById("mySidebar").style.width = "249px";
-        this.setState({dataContent:content})
+
+    }
+
+    fullScreen = () => {
+        document.getElementById("container1").style.visibility = "hidden";
+        document.getElementById("container2").style.minWidth="93%"
+        document.getElementById("webBox").style.minWidth="110%"
+        document.getElementById("container2").style.marginRight="200px"
+        document.getElementById("menuArrow").style.visibility="hidden"
+        } 
+
+    closeScreen = () => {
+            document.getElementById("container1").style.visibility = "visible";
+            document.getElementById("container2").style.minWidth="80%"
+            document.getElementById("webBox").style.minWidth="120%"
+            document.getElementById("container2").style.marginRight="20px"
+            document.getElementById("menuArrow").style.visibility="visible"
+
+    }
+    
+
+    toggleState = (event) => {
+        event.preventDefault();
+        if(this.state.closed === false){
+            this.setState({
+                closed:true
+            })
+        } else {
+            this.setState({
+                closed:false
+            })
+        }
     }
 
     closeEdit = () => {
-    document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("mySidebar").style.width = "0";
     }
     render() {
-        
+
         if (this.state.nickname === 1 && this.state.login === 1) {
             return <NewClientForm
                 saveUser={this.saveUser}
@@ -165,8 +242,9 @@ class Copy extends React.Component {
                 <>
                     <Header name={this.state.userId} email={this.state.userEmail} nickname={this.state.nickname} />
                     <div id="wrapper" >
-                        <span className="menuArrow"><i className="fas fa-lg fa-angle-left"></i></span>
-                        <div className="container1 fixed">
+                        <span id="menuArrow" className="menuArrow"><i onClick={this.fullScreen} className="fas fa-lg fa-angle-left"></i></span>
+                        <span id="openArrow"><i onClick={this.closeScreen} className="fas fa-lg fa-angle-left"></i></span>
+                        <div className="container1 fixed" id="container1">
                             <img src="https://www.cybermark.com/wp-content/uploads/2018/08/mainLogo.png" height="45" alt="cybermark logo" />
                             <br></br>
                             <h5 className="content-blocks">Content Blocks</h5>
@@ -187,13 +265,32 @@ class Copy extends React.Component {
                                 <FileUpload name={this.state.userId} email={this.state.userEmail} onUpload={this.onUpload} />
                             </div>
                             <div>
-                                <EditMenu dataContent={this.state.dataContent} closeEdit={this.closeEdit} />
+                                <EditMenu                                 
+                                handleSubmit={this.handleSubmit}
+                                handleInputChange={this.handleInputChange}
+                                dataContent={this.state.dataContent}
+                                closeEdit={this.closeEdit} 
+                                h3Heading={this.state.h3Heading} 
+                                pFirst={this.state.pFirst} />
                             </div>
                         </div>
 
 
                         <div id="container2">
-                            <ContainerTabs openEdit={this.openEdit} name={this.state.userId} email={this.state.userEmail} userId={this.state.userId} dbId={this.state.dbId} getId={this.getId} />
+                            <ContainerTabs
+                                openEdit={this.openEdit}
+                                name={this.state.userId}
+                                email={this.state.userEmail}
+                                userId={this.state.userId}
+                                dbId={this.state.dbId}
+                                getId={this.getId}
+                                h3Heading={this.state.h3Heading}
+                                pFirst={this.state.pFirst}
+                                handleSubmit={this.handleSubmit}
+                                handleInputChange={this.handleInputChange}
+                                dataContent={this.state.dataContent}
+                                closeEdit={this.closeEdit}
+                            />
 
                         </div>
 

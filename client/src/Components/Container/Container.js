@@ -210,7 +210,7 @@ class Container1 extends Component {
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="component draggable-item" data-element={p.data}>
-                                            <Content0 />
+                                            <Content0 h3Heading={this.props.h3Heading} pFirst={this.props.pFirst}/>
                                             <div className="button-wrap">
                                                 <EditButton data={p.data} openEdit={this.props.openEdit} getElements={this.getElements} />
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
