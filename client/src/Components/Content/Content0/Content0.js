@@ -13,9 +13,16 @@ class Content0 extends Component {
             imgSrc:"https://artgalleryofballarat.com.au/wp-content/uploads/2020/06/placeholder-image.png"
 
         }
+
     }
+    componentDidMount(){
+        this.props.getInfo(this.state.heading)
+    }
+
     render(){
         return (
+
+
             <div className="section_wrapper">
             <div className="container content1">
                 <div className="row align-items-center">
@@ -27,12 +34,21 @@ class Content0 extends Component {
                         <h3>
                             <InlineEdit 
                                 text={this.state.heading}
-                                onSetText={text => this.setState({heading:text})}
+                                onSetText={(text) => {
+                                    this.setState({heading:text})
+                                    this.props.getInfo(text)
+                                }
+                                }
                             />
                             </h3>
                         <p> <InlineEdit 
                                 text={this.state.copy}
-                                onSetText={text => this.setState({copy:text})}
+                                onSetText={(text) => {
+                                    
+                                this.setState({copy:text})
+                                this.props.getInfo(undefined,text)
+                                }
+                            }
                             /></p>
                     </div>
     

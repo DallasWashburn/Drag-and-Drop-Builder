@@ -18,7 +18,7 @@ class Intro3 extends Component {
         return (
             <header className="intro4">
                 <div className="overlay d-flex align-items-center"></div>
-                <video playsinline="playsinline" autoPlay="autoplay" muted="muted" loop="loop">
+                <video playsInline="playsinline" autoPlay="autoplay" muted="muted" loop="loop">
                     <source src={this.state.videoSrc} type="video/mp4"/>
                 </video>
                 <div className="container h-100">

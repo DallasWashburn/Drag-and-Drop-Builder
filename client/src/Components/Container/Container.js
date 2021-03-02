@@ -62,9 +62,9 @@ class Container1 extends Component {
     }
 
     getImage= (event) => {
-        var cloumn = event.target.parentElement.parentElement.parentElement;
+        var column = event.target.parentElement.parentElement.parentElement;
         
-        console.log(cloumn.children[0].src);
+        console.log(column.children[0].src);
     }
 
 
@@ -192,9 +192,9 @@ class Container1 extends Component {
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="component draggable-item" data-element={p.data}>
-                                            <Content0 getImage={this.getImage}/>
+                                            <Content0 getImage={this.getImage} getInfo={this.props.getInfo}/>
                                             <div className="button-wrap">
-                                                <EditButton data={p.data} openEdit={this.props.openEdit} getElements={this.getElements} />
+                                                {/* <EditButton data={p.data} openEdit={this.props.openEdit} getElements={this.getElements} /> */}
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
                                             </div>

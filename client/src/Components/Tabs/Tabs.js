@@ -36,7 +36,6 @@ class ContainerTabs extends Component {
             name: this.props.name,
             email: this.props.email,
             userId:this.props.userId,
-            headerType: "",
             items2: generateItems(0, (i) => ({ id: '1' + i, data: `Draggable 2 - ${i}` })),
             items3: generateItems(0, (i) => ({ id: '1' + i, data: `Draggable 3 - ${i}` })),
             items4: generateItems(0, (i) => ({ id: '1' + i, data: `Draggable 4 - ${i}` })),
@@ -57,7 +56,9 @@ class ContainerTabs extends Component {
             isHidden4: true,
             isHidden5: true,
             isHidden6: true,
-            dbId:this.props.dbId
+            dbId:this.props.dbId,
+            h3Heading:"",
+            copy1:""
 
         }
     }
@@ -218,6 +219,16 @@ class ContainerTabs extends Component {
         // .then(user => {
         //     console.log(user);
         // })
+    }
+
+    getInfo = (heading, copy) => {
+        this.setState({
+            h3Heading:heading,
+            copy1:copy
+        })
+        console.log(this.state.h3Heading);
+        console.log(this.state.copy1);
+
     }
 
     // Handles the form inside modal and disperses text to the corresponding page 
@@ -1050,8 +1061,7 @@ class ContainerTabs extends Component {
                                 removeElement={this.removeElement1}
                                 duplicateElement={this.duplicateElement1}
                                 openEdit={this.props.openEdit}
-                                h3Heading={this.props.h3Heading} 
-                                pFirst={this.props.pFirst}
+                                getInfo={this.getInfo}
                             />
                         </TabContent>
                         <TabContent for="tab2">

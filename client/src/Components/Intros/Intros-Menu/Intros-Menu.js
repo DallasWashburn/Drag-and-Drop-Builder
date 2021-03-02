@@ -8,7 +8,7 @@ class IntrosMenu extends Component {
         super();
 
         this.state = {
-            items1: generateItems(5, (i) => ({ id: '1' + i, data: `Intro-${i}` })),
+            items1: generateItems(5, (i) => ({ id: '1' + i, data: `Intro-${i}`, info:"" })),
         }
     }
 
