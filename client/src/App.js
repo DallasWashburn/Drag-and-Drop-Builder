@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./Components/Home/Home"
 // import Profile from "./Profile"
 import AuthForProjects from "./Components/AuthForProjects/AuthForProjects"
+import withSplashScreen from "./Components/Splash-Screen/withSplashScreen"
 
 // import UserProvided from "./providers/UserProvider"
 // import Application from "./Application";
@@ -23,4 +24,4 @@ function App() {
     </Router>  );
 }
 
-export default App;
+export default withSplashScreen(App);

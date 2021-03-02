@@ -207,6 +207,8 @@ class ContainerTabs extends Component {
         var nameOfPage5= {id:"pageName5", data:this.state.pageName5}
         var nameOfPage6= {id:"pageName6", data:this.state.pageName6}
         var nameOfPage7= {id:"pageName7", data:this.state.pageName7}
+        var pageHeader0= {id:"pageHeader0", data:this.state.h3Heading}
+        var pageContent0= {id:"pageContent0", data:this.state.copy1}
 
 
 
@@ -222,10 +224,16 @@ class ContainerTabs extends Component {
     }
 
     getInfo = (heading, copy) => {
-        this.setState({
-            h3Heading:heading,
-            copy1:copy
-        })
+
+        if(heading !== undefined){
+            this.setState({
+                h3Heading:heading,
+            })
+        } else if(copy !== undefined){
+            this.setState({
+                copy1:copy
+            })
+        }
         console.log(this.state.h3Heading);
         console.log(this.state.copy1);
 
