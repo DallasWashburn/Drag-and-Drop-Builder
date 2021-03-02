@@ -16,7 +16,7 @@ class Content0 extends Component {
 
     }
     componentDidMount(){
-        this.props.getInfo(this.state.heading)
+        this.props.getInfo(this.state.heading, this.state.copy)
     }
 
     render(){

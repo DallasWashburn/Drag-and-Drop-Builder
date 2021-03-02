@@ -32,19 +32,6 @@ class Container1 extends Component {
     }
 
 
-    handleSave = (event) => {
-
-        let project = {
-            name: this.props.user,
-            email: this.props.email,
-            projects: this.props.items2,
-            date: Date.now()
-        }
-
-        API.saveUser(project)
-
-    }
-
     handleXButton = (event, id) => {
         event.stopPropagation();
         event.preventDefault();
@@ -69,6 +56,8 @@ class Container1 extends Component {
 
 
     render() {
+        var h3Heading = this.props.h3Heading
+        var copy1 = this.props.copy1
         return (
             <>
                 <Container dragClass="opacity-ghost" dropClass="opacity-ghost-drop" id="dropZone" groupName="1" getChildPayload={this.props.getChildPayload} onDrop={this.props.onDrop}
@@ -81,6 +70,7 @@ class Container1 extends Component {
                     {
                         this.props.generateItems.map((p, i) => {
                             if (p.data === "Header-0") {
+                                p.info={h3Heading, copy1}
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="draggable-item">

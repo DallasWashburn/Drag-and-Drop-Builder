@@ -8,7 +8,7 @@ class HeaderMenu extends Component {
         super();
 
         this.state = {
-            items1: generateItems(4, (i) => ({ id: '1' + i, data: `Header-${i}`, info:"" })),
+            items1: generateItems(4, (i) => ({ id: '1' + i, data: `Header-${i}`, info: `Header-${i}` })),
         }
     }
 
@@ -33,7 +33,6 @@ class HeaderMenu extends Component {
                                         <Draggable key={i}>
                                             <div className="text-center data-title">{p.data}</div>
                                             <div id={p.data} className="draggable-item">
-                                            {p.info}
                                             </div>
                                         </Draggable>
                                     );
