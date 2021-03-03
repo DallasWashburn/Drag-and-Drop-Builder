@@ -244,7 +244,7 @@ class Copy extends React.Component {
                             <div>
                                 <FileUpload name={this.state.userId} email={this.state.userEmail} onUpload={this.onUpload} />
                             </div>
-                            <div>
+                            {/* <div>
                                 <EditMenu                                 
                                 handleSubmit={this.handleSubmit}
                                 handleInputChange={this.handleInputChange}
@@ -252,7 +252,7 @@ class Copy extends React.Component {
                                 closeEdit={this.closeEdit} 
                                 h3Heading={this.state.h3Heading} 
                                 pFirst={this.state.pFirst} />
-                            </div>
+                            </div> */}
                         </div>
 
 

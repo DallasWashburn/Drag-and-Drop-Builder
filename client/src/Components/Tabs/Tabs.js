@@ -58,74 +58,7 @@ class ContainerTabs extends Component {
             isHidden6: true,
             dbId:this.props.dbId,
             h3Heading:"",
-            copy1:"",
-            companyLogo:"",
-            headerLink1:"Services",
-            headerLink2:"Company",
-            headerLink3:"About",
-            headerLink4:"Contact",
-            headerButton:"Order Now",
-            phoneNumber:"+1-555-555-5555",
-            introHeading:"Cybermark Wireframe",
-            introSubtext:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore sint corrupti aliquam exercitationem ullam numquam explicabo sequi reprehenderit culpa est accusamus accusantium magni provident in expedita harum libero, quasi perspiciatis!",
-            introImage:"https://artgalleryofballarat.com.au/wp-content/uploads/2020/06/placeholder-image.png",
-            introButton1:"Button",
-            introButton2:"Button",
-            introVideo:"https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4",
-            content0Heading:"Cybermark Wireframe",
-            content0Text:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore sint corrupti aliquam exercitationem ullam numquam explicabo sequi reprehenderit culpa est accusamus accusantium magni provident in expedita harum libero, quasi perspiciatis!",
-            content0Image:"https://artgalleryofballarat.com.au/wp-content/uploads/2020/06/placeholder-image.png",
-            content1Heading:"Cybermark Wireframe",
-            content1Text:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore sint corrupti aliquam exercitationem ullam numquam explicabo sequi reprehenderit culpa est accusamus accusantium magni provident in expedita harum libero, quasi perspiciatis!",
-            content1Image:"https://artgalleryofballarat.com.au/wp-content/uploads/2020/06/placeholder-image.png",
-            content2Heading:"Cybermark Wireframe",
-            content2Text:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore sint corrupti aliquam exercitationem ullam numquam explicabo sequi reprehenderit culpa est accusamus accusantium magni provident in expedita harum libero, quasi perspiciatis!",
-            galleryHeading:"Gallery",
-            gallerySubtext:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore sint corrupti aliquam exercitationem ullam numquam explicabo sequi reprehenderit culpa est accusamus accusantium magni provident in expedita harum libero, quasi perspiciatis!",
-            galleryImage1Title:"First One",
-            galleryImage2Title:"Second One",
-            galleryImage3Title:"Third One",
-            galleryImage1Desc:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta iusto ipsa distinctio veritatis? Excepturi odit veritatis impedit eveniet",
-            galleryImage2Desc:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta iusto ipsa distinctio veritatis? Excepturi odit veritatis impedit eveniet",
-            galleryImage3Desc:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta iusto ipsa distinctio veritatis? Excepturi odit veritatis impedit eveniet",
-            galleryImage1:"http://placehold.it/350x300?text=1",
-            galleryImage2:"http://placehold.it/350x300?text=2",
-            galleryImage3:"http://placehold.it/350x300?text=3",
-            galleryImage4:"http://placehold.it/350x300?text=4",
-            galleryImage5:"http://placehold.it/350x300?text=5",
-            galleryImage6:"http://placehold.it/350x300?text=6",
-            galleryImage7:"http://placehold.it/350x300?text=7",
-            galleryImage8:"http://placehold.it/350x300?text=8",
-            galleryImage9:"http://placehold.it/350x300?text=9",
-            galleryImage10:"http://placehold.it/350x300?text=10",
-            galleryImage11:"http://placehold.it/350x300?text=11",
-            galleryImage12:"http://placehold.it/350x300?text=12",
-            galleryImage13:"http://placehold.it/350x300?text=13",
-            galleryImage14:"http://placehold.it/350x300?text=14",
-            galleryImage15:"http://placehold.it/350x300?text=15",
-            galleryImage16:"http://placehold.it/350x300?text=16",
-            featureHeading:"Features",
-            featureSubHeading:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore sint corrupti aliquam exercitationem ullam numquam explicabo sequi reprehenderit culpa est accusamus accusantium magni provident in expedita harum libero, quasi perspiciatis!",
-            featureH31:"First One",
-            featureH32:"Second One",
-            featureH33:"Third One",
-            featureH34:"Fourth One",
-            featureH35:"Fifth One",
-            featureH36:"Sixth One",
-            featureSubtext1:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta iusto ipsa distinctio veritatis? Excepturi odit veritatis impedit eveniet",
-            featureSubtext2:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta iusto ipsa distinctio veritatis? Excepturi odit veritatis impedit eveniet",
-            featureSubtext3:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta iusto ipsa distinctio veritatis? Excepturi odit veritatis impedit eveniet",
-            featureSubtext4:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta iusto ipsa distinctio veritatis? Excepturi odit veritatis impedit eveniet",
-            featureSubtext5:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta iusto ipsa distinctio veritatis? Excepturi odit veritatis impedit eveniet",
-            featureSubtext6:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta iusto ipsa distinctio veritatis? Excepturi odit veritatis impedit eveniet",
-            featureButton:"CLearn More",
-            teamHeading:"Our Team",
-            
-
-
-
-
-
+            copy1:""
         }
     }
 
@@ -287,22 +220,6 @@ class ContainerTabs extends Component {
         // .then(user => {
         //     console.log(user);
         // })
-    }
-
-    getInfo = (heading, copy) => {
-
-        if(heading !== undefined){
-            this.setState({
-                h3Heading:heading,
-            })
-        } else if(copy !== undefined){
-            this.setState({
-                copy1:copy
-            })
-        }
-        console.log(this.state.h3Heading);
-        console.log(this.state.copy1);
-
     }
 
     // Handles the form inside modal and disperses text to the corresponding page 
@@ -590,7 +507,9 @@ class ContainerTabs extends Component {
     // Duplicates Element from Tab-1
     duplicateElement1 = (event) => {
         var parentDiv = event.target.parentElement;
-        var grandparent = parentDiv.parentElement;
+        var grandparent = parentDiv.parentElement.parentElement;
+        console.log(grandparent);
+        
         var array = [...this.state.items2];
         var elementPosition = array.map(function (x) {
             console.log(x.data)

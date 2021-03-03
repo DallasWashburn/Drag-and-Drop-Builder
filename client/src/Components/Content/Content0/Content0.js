@@ -15,10 +15,6 @@ class Content0 extends Component {
         }
 
     }
-    componentDidMount(){
-        this.props.getInfo(this.state.heading, this.state.copy)
-    }
-
     render(){
         return (
 
@@ -36,7 +32,6 @@ class Content0 extends Component {
                                 text={this.state.heading}
                                 onSetText={(text) => {
                                     this.setState({heading:text})
-                                    this.props.getInfo(text)
                                 }
                                 }
                             />
@@ -44,9 +39,7 @@ class Content0 extends Component {
                         <p> <InlineEdit 
                                 text={this.state.copy}
                                 onSetText={(text) => {
-                                    
                                 this.setState({copy:text})
-                                this.props.getInfo(undefined,text)
                                 }
                             }
                             /></p>
