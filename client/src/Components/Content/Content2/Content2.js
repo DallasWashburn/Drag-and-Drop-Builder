@@ -1,5 +1,7 @@
 import React, { Component } from "react"
 import "./Content2.css"
+import InlineEdit from "../../inlineEdit"
+
 
 class Content2 extends Component {
     render() {
@@ -8,10 +10,23 @@ class Content2 extends Component {
                 <div class="container content3">
                     <div class="row">
                         <div class="col text-center">
-                            <h3>CyberMark Wire Frame Kit</h3>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore sint corrupti aliquam
-                                exercitationem ullam numquam explicabo sequi reprehenderit culpa est accusamus accusantium magni
-                            provident in expedita harum libero, quasi perspiciatis!</p>
+                            <h3>
+                                <InlineEdit
+                                    text={this.props.content2Heading}
+                                    onSetText={(text) => {
+                                        this.props.getContentInfo(undefined, undefined, undefined, undefined, undefined, undefined, text)
+                                    }
+                                    }
+                                />
+                            </h3>
+                            <p>
+                                <InlineEdit
+                                    text={this.props.content2Text}
+                                    onSetText={(text) => {
+                                        this.props.getContentInfo(undefined, undefined, undefined, undefined, undefined, undefined, undefined, text)
+                                    }
+                                    }
+                                /></p>
                         </div>
                     </div>
                 </div>

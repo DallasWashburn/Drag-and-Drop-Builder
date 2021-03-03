@@ -1,5 +1,7 @@
 import React, { Component } from "react"
 import "./Content1.css"
+import InlineEdit from "../../inlineEdit"
+
 
 class Content1 extends Component {
     render() {
@@ -8,21 +10,33 @@ class Content1 extends Component {
                 <div class="container content2">
                     <div class="row align-items-center">
                         <div class="col-md-6">
-                            <h3>CyberMark Wire Frame Kit</h3>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore sint corrupti aliquam
-                                exercitationem ullam numquam explicabo sequi reprehenderit culpa est accusamus accusantium magni
-                            provident in expedita harum libero, quasi perspiciatis!</p>
+                            <h3>
+                                <InlineEdit
+                                    text={this.props.content1Heading}
+                                    onSetText={(text) => {
+                                        this.props.getContentInfo(undefined,undefined,undefined,text)
+                                    }
+                                    }
+                                /></h3>
+                            <p>
+                                <InlineEdit
+                                    text={this.props.content1Text}
+                                    onSetText={(text) => {
+                                        this.props.getContentInfo(undefined,undefined,undefined,undefined,text)
+                                    }
+                                    }
+                                /></p>
                         </div>
                         <div class="col-md-6">
-                            <img class="image-border" src="https://artgalleryofballarat.com.au/wp-content/uploads/2020/06/placeholder-image.png" alt="" height="300px" width="100%"/>
-                    </div>
-
+                            <img class="image-border" src={this.props.content1Image} alt="" height="300px" width="100%" />
                         </div>
+
                     </div>
                 </div>
-                )
-            }
-        }
-        
-        
+            </div>
+        )
+    }
+}
+
+
 export default Content1
