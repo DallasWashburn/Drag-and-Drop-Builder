@@ -36,34 +36,6 @@ class PDFGenerate extends React.Component {
         })
     }
 
-    handleChange = (event) => {
-        const target = event.target;
-        const value = target.value;
-        console.log(value);
-    }
-
-    openModal = () => {
-        var urlModal = document.getElementById("URLModal");
-        urlModal.className = "visible"
-    }
-
-    handleSubmit = (event) => {
-        var input = document.getElementById("urlInput").value;
-        console.log(input);
-        var urlModal = document.getElementById("URLModal");
-        urlModal.className = "hidden"
-        if (input.length === 0) {
-            input = "Url was not entered"
-        }
-        if (input != null) {
-            data1.push(input)
-        }
-
-        this.generatePDF()
-
-    }
-
-
 
     generatePDF = () => {
 
@@ -200,7 +172,7 @@ class PDFGenerate extends React.Component {
                 <button id="pdfBtn" className="btn" onClick={this.openModal} type="primary"><i className="fas fa-file-pdf fa-3x"></i>
 
                 </button>
-                <div id="URLModal" className="hidden">
+                {/* <div id="URLModal" className="hidden">
                     <Modal>
                         <div className="form-group">
                             <label>Please enter the URL you would like to use for this template:</label>
@@ -217,7 +189,7 @@ class PDFGenerate extends React.Component {
                         </span>
                         </div>
                     </Modal>
-                </div>
+                </div> */}
             </div>
         );
 

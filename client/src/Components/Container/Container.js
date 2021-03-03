@@ -191,6 +191,43 @@ class Container1 extends Component {
         }
     }
 
+    componentDidMount=() => {
+        this.getProject();
+    }
+
+    // Get current projects and set content based on their saved information
+    getProject = () => {
+        
+        API.getUsers()
+            .then(users => {
+                var theUsers = users.data
+                console.log(theUsers);
+                var userProjects = []
+                for (let i = 0; i < theUsers.length; i++) {
+                    const element = theUsers[i];
+                    console.log(element);
+                    if (element.userEmail === this.props.email) {
+                        console.log(element.projects);
+                        var Page1 = element.projects[1];
+                        Page1.map(item => {
+                            console.log(item);
+                            if(item.data === "Header-0"){
+                                this.setState({
+                                    companyLogo:item.info.companyLogo,
+                                    headerLink1:item.info.headerLink1,
+                                    headerLink2:item.info.headerLink2,
+                                    headerLink3:item.info.headerLink2,
+                                    headerLink4:item.info.headerLink2,
+                                })
+                            }
+                        })
+                    }
+                }
+
+                console.log(this.state.projects);
+            })
+    }
+
 
     handleXButton = (event, id) => {
         event.stopPropagation();

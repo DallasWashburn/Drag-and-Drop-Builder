@@ -1055,8 +1055,7 @@ class ContainerTabs extends Component {
                                 duplicateElement={this.duplicateElement1}
                                 openEdit={this.props.openEdit}
                                 getInfo={this.getInfo}
-                                h3Heading={this.state.h3Heading}
-                                copy1={this.state.copy1}
+                                email={this.state.email}
                             />
                         </TabContent>
                         <TabContent for="tab2">
