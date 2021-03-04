@@ -216,8 +216,8 @@ class Container1 extends Component {
                                     companyLogo:item.info.companyLogo,
                                     headerLink1:item.info.headerLink1,
                                     headerLink2:item.info.headerLink2,
-                                    headerLink3:item.info.headerLink2,
-                                    headerLink4:item.info.headerLink2,
+                                    headerLink3:item.info.headerLink3,
+                                    headerLink4:item.info.headerLink4,
                                 })
                             }
                         })
