@@ -10,22 +10,6 @@
 
 }
 
-#container2 #Features-0{
-    background-size: cover;
-    min-height: 450px;
-  }
-
-  #container2 #Features-1{
-    background-size: cover;
-    min-height: 450px;
-  }
-
-
-
-  #container2 #Features-2{
-    background-size: cover;
-    min-height: 450px;
-  }
 
 
 
@@ -35,32 +19,27 @@
   }
 
 
-#Features-0{
+#container1 #Features-0{
     background-image:url("../../../images/Features/features-4.png");
   }
 
 
 
-#Features-1{
+  #container1 #Features-1{
     background-image: url("../../../images/Features/features-3.png");
 }
 
 
 
-#Features-2{
+#container1 #Features-2{
     background-image: url("../../../images/Features/features-2.png");
 }
 
 
 
-#Features-3{
+#container1 #Features-3{
     background-image: url("../../../images/Features/features-1.png");
     
 }
 
-#container2 #Features-3{
-    background-size: 120%;
-    min-height: 400px;
-
-  }
 

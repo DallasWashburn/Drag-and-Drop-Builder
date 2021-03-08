@@ -17,7 +17,7 @@ class FeaturesMenu extends Component {
         return (
             <>
                     <div id="collapseFive" className="collapse" aria-labelledby="featureOne" data-parent="#accordionFeature">
-                        <Container id="ContactMenu" dragClass="opacity-ghost" dropClass="opacity-ghost-drop" groupName="1" behaviour="copy" getChildPayload={i => this.state.items1[i]} onDrop={e => this.setState({ items1: applyDrag(this.state.items1, e) })}
+                        <Container id="FeatureMenu" dragClass="opacity-ghost" dropClass="opacity-ghost-drop" groupName="1" behaviour="copy" getChildPayload={i => this.state.items1[i]} onDrop={e => this.setState({ items1: applyDrag(this.state.items1, e) })}
                             dropPlaceholder={{
                                 animationDuration: 150,
                                 showOnTop: true,

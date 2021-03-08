@@ -33,6 +33,7 @@ class HeaderMenu extends Component {
                                         <Draggable key={i}>
                                             <div className="text-center data-title">{p.data}</div>
                                             <div id={p.data} className="draggable-item">
+                                                
                                             </div>
                                         </Draggable>
                                     );

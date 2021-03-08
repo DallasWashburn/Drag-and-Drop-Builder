@@ -8,7 +8,7 @@ class GalleryMenu extends Component {
         super();
 
         this.state = {
-            items1: generateItems(4, (i) => ({ id: '1' + i, data: `Gallery-${i}` })),
+            items1: generateItems(3, (i) => ({ id: '1' + i, data: `Gallery-${i}` })),
         }
     }
 

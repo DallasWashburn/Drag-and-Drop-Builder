@@ -2,43 +2,61 @@ import React, { Component } from "react"
 import "./Gallery0.css"
 
 class Gallery0 extends Component {
-    render(){
+    render() {
         return (
-            <div class="section_wrapper">
-            <div class="container gallery1">
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <h2>Portfolio</h2>
-                        <p class="sub-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum saepe temporibus
-                            molestias est quam, hic
-                            consequatur aliquid officiis incidunt Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Dicta
-                            cupiditate officia !</p>
+            <section className="gallery_1 section__wrapper">
+                <div className="container">
+                    <div className="section__heading text-center">
+                        <h2>Gallery</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+                    </div>
+
+                    <div className="section__container columns feature_columns">
+                        <div className="row justify-content-center">
+                            <div className="col-md-4">
+                                <div className="column gallery_1_column text-center">
+                                    <div className="column-img">
+                                        <a href="" className="fancybox" rel="gallery1">
+
+                                            <img width="1024" height="682" src="http://placehold.it/350x300?text=1" sizes="100vw" />							</a>
+                                    </div>
+                                    <div className="column-text">
+                                        <h3>Lorem ipsum</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-4">
+                                <div className="column gallery_1_column text-center">
+                                    <div className="column-img">
+                                        <a href="" className="fancybox" rel="gallery1">
+
+                                            <img width="1024" height="683" src="http://placehold.it/350x300?text=2" sizes="100vw" />							</a>
+                                    </div>
+                                    <div className="column-text">
+                                        <h3>Lorem ipsum</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-4">
+                                <div className="column gallery_1_column text-center">
+                                    <div className="column-img">
+                                        <a href="" className="fancybox" rel="gallery1">
+
+                                            <img width="1024" height="682" src="http://placehold.it/350x300?text=3" sizes="100vw" />							</a>
+                                    </div>
+                                    <div className="column-text">
+                                        <h3>Lorem ipsum</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
-                <div class="row align-items-center">
-                    <div class="col-md-4 ">
-                        <img src="https://artgalleryofballarat.com.au/wp-content/uploads/2020/06/placeholder-image.png" className="image-border" height="175px" width="100%" alt=""/>
-                        <h4 class="text-center ">First One</h4>
-                        <p class="text-center ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta iusto ipsa
-                            distinctio veritatis? Excepturi odit veritatis impedit eveniet </p>
-                    </div>
-                    <div class="col-md-4 ">
-                        <img src="https://artgalleryofballarat.com.au/wp-content/uploads/2020/06/placeholder-image.png" className="image-border" height="175px" width="100%" alt=""/>
-                        <h4 class="text-center ">Second One</h4>
-                        <p class="text-center ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta iusto ipsa
-                            distinctio veritatis? Excepturi odit veritatis impedit eveniet </p>
-                    </div>
-                    <div class="col-md-4 ">
-                        <img src="https://artgalleryofballarat.com.au/wp-content/uploads/2020/06/placeholder-image.png" className="image-border" height="175px" width="100%" alt=""/>
-                        <h4 class="text-center ">Third One</h4>
-                        <p class="text-center ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta iusto ipsa
-                            distinctio veritatis? Excepturi odit veritatis impedit eveniet </p>
-                    </div>
-                </div>
-    
-            </div>
-        </div>
+            </section>
         )
     }
 }

@@ -5,84 +5,79 @@ import "./Gallery1.css"
 
 class Gallery1 extends Component {
     render() {
-        const settings = {
-            className: "center",
-            centerMode: true,
-            infinite: true,
-            centerPadding: "80px",
-            slidesToShow: 3,
-            speed: 500,
-            rows: 2,
-            slidesPerRow: 1
-          };
+
         return (
-            <div class="section_wrapper">
-                <div class="container gallery2">
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <h2>Gallery</h2>
-                            <p class="sub-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum saepe temporibus
-                                molestias est quam, hic
-                            consequatur aliquid officiis incidunt Lorem ipsum dolor sit amet consectetur adipisicing</p>
+            <section className="gallery_2 section__wrapper">
+                <div className="container">
+                    <div className="section__heading text-center">
+                        <h2>Gallery</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+                    </div>
+                    <div className="section__container columns gallery_columns">
+                        <div className="row justify-content-center">
+                            <div className="col-md-4">
+                                <div className="column gallery_2_column text-center">
+                                    <div className="column-img">
+                                        <a className="fancybox" rel="gallery2">
+
+                                            <img width="1024" height="682" src="https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png" className="attachment-large size-large" alt="" loading="lazy" sizes="100vw" />							</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-4">
+                                <div className="column gallery_2_column text-center">
+                                    <div className="column-img">
+                                        <a className="fancybox" rel="gallery2">
+
+                                            <img width="1024" height="683" src="https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png" className="attachment-large size-large" alt="" loading="lazy"  sizes="100vw" />							</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-4">
+                                <div className="column gallery_2_column text-center">
+                                    <div className="column-img">
+                                        <a className="fancybox" rel="gallery2">
+
+                                            <img width="1024" height="682" src="https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png" className="attachment-large size-large" alt="" loading="lazy"  sizes="100vw" />							</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-4">
+                                <div className="column gallery_2_column text-center">
+                                    <div className="column-img">
+                                        <a className="fancybox" rel="gallery2">
+
+                                            <img width="1024" height="682" src="https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png" className="attachment-large size-large" alt="" loading="lazy"  sizes="100vw" />							</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-4">
+                                <div className="column gallery_2_column text-center">
+                                    <div className="column-img">
+                                        <a className="fancybox" rel="gallery2">
+
+                                            <img width="1024" height="682" src="https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png" className="attachment-large size-large" alt="" loading="lazy"  sizes="100vw" />							</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-4">
+                                <div className="column gallery_2_column text-center">
+                                    <div className="column-img">
+                                        <a className="fancybox" rel="gallery2">
+
+                                            <img width="1024" height="683" src="https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png" className="attachment-large size-large" alt="" loading="lazy"  sizes="100vw" />							</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div className="gallery2-Slider">
-                    <Slider {...settings}>
-                            <div>
-                                <img src="http://placehold.it/350x300?text=1" className="image-border" height="150px" width="100%" alt="" />
-                            </div>
-                            <div>
-                                <img src="http://placehold.it/350x300?text=2" className="image-border" height="150px" width="100%" alt="" />
-                            </div>
-                            <div>
-                                <img src="http://placehold.it/350x300?text=3" className="image-border" height="150px" width="100%" alt="" />
-                            </div>
-                            <div>
-                                <img src="http://placehold.it/350x300?text=4" className="image-border" height="150px" width="100%" alt="" />
-                            </div>
-                            <div>
-                                <img src="http://placehold.it/350x300?text=5" className="image-border" height="150px" width="100%" alt="" />
-                            </div>
-                            <div>
-                                <img src="http://placehold.it/350x300?text=6" className="image-border" height="150px" width="100%" alt="" />
-                            </div>
-                            <div>
-                                <img src="http://placehold.it/350x300?text=7" className="image-border" height="150px" width="100%" alt="" />
-                            </div>
-                            <div>
-                                <img src="http://placehold.it/350x300?text=8" className="image-border" height="150px" width="100%" alt="" />
-                            </div>
-                            <div>
-                                <img src="http://placehold.it/350x300?text=9" className="image-border" height="150px" width="100%" alt="" />
-                            </div>
-                            <div>
-                                <img src="http://placehold.it/350x300?text=10" className="image-border" height="150px" width="100%" alt="" />
-                            </div>
-                            <div>
-                                <img src="http://placehold.it/350x300?text=11" className="image-border" height="150px" width="100%" alt="" />
-                            </div>
-                            <div>
-                                <img src="http://placehold.it/350x300?text=12" className="image-border" height="150px" width="100%" alt="" />
-                            </div>
-                            <div>
-                                <img src="http://placehold.it/350x300?text=13" className="image-border" height="150px" width="100%" alt="" />
-                            </div>
-                            <div>
-                                <img src="http://placehold.it/350x300?text=14" className="image-border" height="150px" width="100%" alt="" />
-                            </div>
-                            <div>
-                                <img src="http://placehold.it/350x300?text=15" className="image-border" height="150px" width="100%" alt="" />
-                            </div>
-                            <div>
-                                <img src="http://placehold.it/350x300?text=16" className="image-border" height="150px" width="100%" alt="" />
-                            </div>
-                    </Slider>
-                    </div>
                 </div>
-            </div>
+            </section> 
         )
     }
 }
 
 
 export default Gallery1
+
+

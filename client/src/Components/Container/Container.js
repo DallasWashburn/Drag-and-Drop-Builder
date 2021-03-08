@@ -17,8 +17,12 @@ import Content1 from "../Content/Content1/Content1"
 import Content2 from "../Content/Content2/Content2"
 import Gallery0 from "../Gallery/Gallery0/Gallery0"
 import Gallery1 from "../Gallery/Gallery1/Gallery1"
-import Gallery3 from "../Gallery/Gallery3/Gallery3"
-import EditButton from "../Edit-Button/Edit-Button"
+import Gallery2 from "../Gallery/Gallery2/Gallery2"
+import Feature0 from "../Featues/Feature-0/Feature-0"
+import Feature1 from "../Featues/Feature-1/Feature-1"
+import Feature2 from "../Featues/Feature-2/Feature-2"
+import Feature3 from "../Featues/Feature-3/Feature-3"
+
 
 
 
@@ -305,6 +309,10 @@ class Container1 extends Component {
 
     }
 
+    getGalleryInfo = () => {
+        
+    }
+
 
     render() {
         // Calling Header Block Info
@@ -469,7 +477,6 @@ class Container1 extends Component {
                                         <div id={p.data} className="component draggable-item" data-element={p.data}>
                                             <Content0 getImage={this.getImage} getContentInfo={this.getContentInfo} content0Heading={content0Heading} content0Text={content0Text} content0Image={content0Image} />
                                             <div className="button-wrap">
-                                                {/* <EditButton data={p.data} openEdit={this.props.openEdit} getElements={this.getElements} /> */}
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
                                             </div>
@@ -483,8 +490,6 @@ class Container1 extends Component {
                                         <div id={p.data} className="component draggable-item">
                                             <Content1 getImage={this.getImage} getContentInfo={this.getContentInfo} content1Heading={content1Heading} content1Text={content1Text} content1Image={content1Image} />
                                             <div className="button-wrap">
-                                                <EditButton data={p.data} openEdit={this.props.openEdit} getElements={this.getElements} />
-
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
                                             </div>
@@ -528,11 +533,11 @@ class Container1 extends Component {
                                         </div>
                                     </Draggable>
                                 )
-                            } else if (p.data === "Gallery-3") {
+                            } else if (p.data === "Gallery-2") {
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="component draggable-item">
-                                            <Gallery3 />
+                                            <Gallery2 />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -540,7 +545,55 @@ class Container1 extends Component {
                                         </div>
                                     </Draggable>
                                 )
-                            } else {
+                            }  else if (p.data === "Features-0") {
+                                return (
+                                    <Draggable key={i}>
+                                        <div id={p.data} className="component draggable-item">
+                                            <Feature0 />
+                                            <div className="button-wrap">
+                                                <DuplicateButton duplicateElement={this.props.duplicateElement} />
+                                                <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
+                                            </div>
+                                        </div>
+                                    </Draggable>
+                                )
+                            }  else if (p.data === "Features-1") {
+                                return (
+                                    <Draggable key={i}>
+                                        <div id={p.data} className="component draggable-item">
+                                            <Feature1 />
+                                            <div className="button-wrap">
+                                                <DuplicateButton duplicateElement={this.props.duplicateElement} />
+                                                <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
+                                            </div>
+                                        </div>
+                                    </Draggable>
+                                )
+                            }  else if (p.data === "Features-2") {
+                                return (
+                                    <Draggable key={i}>
+                                        <div id={p.data} className="component draggable-item">
+                                            <Feature2 />
+                                            <div className="button-wrap">
+                                                <DuplicateButton duplicateElement={this.props.duplicateElement} />
+                                                <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
+                                            </div>
+                                        </div>
+                                    </Draggable>
+                                )
+                            }  else if (p.data === "Features-3") {
+                                return (
+                                    <Draggable key={i}>
+                                        <div id={p.data} className="component draggable-item">
+                                            <Feature3 />
+                                            <div className="button-wrap">
+                                                <DuplicateButton duplicateElement={this.props.duplicateElement} />
+                                                <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
+                                            </div>
+                                        </div>
+                                    </Draggable>
+                                )
+                            }    else {
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="component draggable-item">

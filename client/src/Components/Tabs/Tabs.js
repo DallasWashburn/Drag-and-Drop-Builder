@@ -1044,17 +1044,12 @@ class ContainerTabs extends Component {
 
                         <TabContent for="tab1">
                             <Container1
-                                user={this.state.userName}
-                                email={this.state.userEmail}
                                 items2={this.state.items2}
-                                getHTML={this.getHTML}
                                 onDrop={this.onDrop1}
                                 getChildPayload={this.getChildPayload1}
                                 generateItems={this.state.items2}
                                 removeElement={this.removeElement1}
                                 duplicateElement={this.duplicateElement1}
-                                openEdit={this.props.openEdit}
-                                getInfo={this.getInfo}
                                 email={this.state.email}
                             />
                         </TabContent>

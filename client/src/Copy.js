@@ -238,9 +238,7 @@ class Copy extends React.Component {
                             <Testimonials />
                             <ContactContainer />
                             <Footers />
-                            {/* <div>
-                                <EditButton openEdit={this.openEdit}/>
-                            </div> */}
+
                             <div>
                                 <FileUpload name={this.state.userId} email={this.state.userEmail} onUpload={this.onUpload} />
                             </div>
