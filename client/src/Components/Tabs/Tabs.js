@@ -266,10 +266,14 @@ class ContainerTabs extends Component {
     modalClose = (event) => {
         event.preventDefault();
         let modalTab = event.target.parentElement.parentElement.parentElement.parentElement
-        let modals = event.target.parentElement.parentElement.id
         console.log(modalTab.id)
         modalTab.dataset.clicks = 0;
         if(modalTab.id === "tab-tab2"){
+            var previous = document.getElementById("tab-tab2");
+            previous.setAttribute("aria-selected", "false");
+            previous.classList.remove("tab-link-active")
+            modalTab.setAttribute("aria-selected", "true");
+            modalTab.classList.add("tab-link-active")
             this.setState({ 
                 isHidden1: true,
                 pageName2: "+"

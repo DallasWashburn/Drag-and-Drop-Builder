@@ -560,8 +560,8 @@ textarea{
 }
 
 .menu-btn:hover{
-  background-color: #CE9E7C;
-  color: #FFF;
+  background-color: #f0f0f0;
+  color: #3c3c3c;
 }
 
 .menu-btn[aria-expanded=true]{
