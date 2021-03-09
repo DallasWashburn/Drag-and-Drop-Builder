@@ -8,7 +8,7 @@ class HeaderMenu extends Component {
         super();
 
         this.state = {
-            items1: generateItems(4, (i) => ({ id: '1' + i, data: `Header-${i}`, info:'' })),
+            items1: generateItems(3, (i) => ({ id: '1' + i, data: `Header-${i}`, info:'' })),
         }
     }
 

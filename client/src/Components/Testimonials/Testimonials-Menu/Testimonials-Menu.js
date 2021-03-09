@@ -8,7 +8,7 @@ class TestimonialsMenu extends Component {
         super();
 
         this.state = {
-            items1: generateItems(4, (i) => ({ id: '1' + i, data: `Testimonial-${i}` })),
+            items1: generateItems(2, (i) => ({ id: '1' + i, data: `Testimonial-${i}` })),
         }
     }
 

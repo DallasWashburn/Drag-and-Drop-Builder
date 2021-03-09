@@ -16,9 +16,9 @@ class Gallery0 extends Component {
                             <div className="col-md-4">
                                 <div className="column gallery_1_column text-center">
                                     <div className="column-img">
-                                        <a href="" className="fancybox" rel="gallery1">
+                                        <a className="fancybox" rel="gallery1">
 
-                                            <img width="1024" height="682" src="http://placehold.it/350x300?text=1" sizes="100vw" />							</a>
+                                            <img width="1024" height="382" src="https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png" sizes="100vw" />							</a>
                                     </div>
                                     <div className="column-text">
                                         <h3>Lorem ipsum</h3>
@@ -29,9 +29,9 @@ class Gallery0 extends Component {
                             <div className="col-md-4">
                                 <div className="column gallery_1_column text-center">
                                     <div className="column-img">
-                                        <a href="" className="fancybox" rel="gallery1">
+                                        <a className="fancybox" rel="gallery1">
 
-                                            <img width="1024" height="683" src="http://placehold.it/350x300?text=2" sizes="100vw" />							</a>
+                                            <img width="1024" height="383" src="https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png" sizes="100vw" />							</a>
                                     </div>
                                     <div className="column-text">
                                         <h3>Lorem ipsum</h3>
@@ -42,9 +42,9 @@ class Gallery0 extends Component {
                             <div className="col-md-4">
                                 <div className="column gallery_1_column text-center">
                                     <div className="column-img">
-                                        <a href="" className="fancybox" rel="gallery1">
+                                        <a className="fancybox" rel="gallery1">
 
-                                            <img width="1024" height="682" src="http://placehold.it/350x300?text=3" sizes="100vw" />							</a>
+                                            <img width="1024" height="382" src="https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png" sizes="100vw" />							</a>
                                     </div>
                                     <div className="column-text">
                                         <h3>Lorem ipsum</h3>

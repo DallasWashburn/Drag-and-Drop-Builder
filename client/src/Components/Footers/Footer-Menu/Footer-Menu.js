@@ -8,7 +8,7 @@ class FooterMenu extends Component {
         super();
 
         this.state = {
-            items1: generateItems(5, (i) => ({ id: '1' + i, data: `Footer-${i}` })),
+            items1: generateItems(3, (i) => ({ id: '1' + i, data: `Footer-${i}` })),
         }
     }
 

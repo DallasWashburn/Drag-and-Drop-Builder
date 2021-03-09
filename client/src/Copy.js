@@ -234,7 +234,7 @@ class Copy extends React.Component {
                             <Gallery />
                             <Features />
                             <Team />
-                            <Pricing />
+                            {/* <Pricing /> */}
                             <Testimonials />
                             <ContactContainer />
                             <Footers />

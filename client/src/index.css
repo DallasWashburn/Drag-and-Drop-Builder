@@ -279,7 +279,6 @@ filter: brightness(100%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 250px;
   width: auto;
   /* margin: 5px; */
   overflow: visible;
@@ -421,6 +420,7 @@ justify-content: flex-end;
   padding-right: 12px;
   height: 35px;
   background: #FFF;
+  font-size: 14px;
 }
 
 #homePage li button:focus{
@@ -552,7 +552,7 @@ textarea{
   padding-bottom: 10px;
   padding-left: 15px;
   text-align: left;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   background-color: #FFF;
   color: #3c3c3c;
@@ -1116,7 +1116,7 @@ dd {
 }
 
 img {
-    height: auto;
+    /* height: auto; */
     max-width: 100%;
     vertical-align: middle
 }
@@ -4757,6 +4757,10 @@ li.location-state {
     height: 100px;
 }
 
+.team_2 .slick-track{
+    height: 250px;
+}
+
 .slick-track:after,
 .slick-track:before {
     display: table;
@@ -5883,12 +5887,14 @@ only screen and (min-device-pixel-ratio:1.5) {
   float: left;
   width: 50%;
   clear: none;
+  margin-bottom: 30px;
 }
 .section__form_wrapper.section__form-short .gform_wrapper .top_label .ginput_container input {
     background: #FFF;
     width: 100%;
     max-height: 100px;
-    padding: 10px !important;
+    padding: 16px !important;
+    margin-right: 180px;
 }
 /*Contact*/
 .map-responsive {

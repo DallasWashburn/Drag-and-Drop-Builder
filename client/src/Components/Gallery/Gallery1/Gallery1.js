@@ -20,7 +20,7 @@ class Gallery1 extends Component {
                                     <div className="column-img">
                                         <a className="fancybox" rel="gallery2">
 
-                                            <img width="1024" height="682" src="https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png" className="attachment-large size-large" alt="" loading="lazy" sizes="100vw" />							</a>
+                                            <img width="1024" height="282" src="https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png" className="attachment-large size-large" alt="" loading="lazy" sizes="100vw" />							</a>
                                     </div>
                                 </div>
                             </div>
@@ -29,7 +29,7 @@ class Gallery1 extends Component {
                                     <div className="column-img">
                                         <a className="fancybox" rel="gallery2">
 
-                                            <img width="1024" height="683" src="https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png" className="attachment-large size-large" alt="" loading="lazy"  sizes="100vw" />							</a>
+                                            <img width="1024" height="282" src="https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png" className="attachment-large size-large" alt="" loading="lazy" sizes="100vw" />							</a>
                                     </div>
                                 </div>
                             </div>
@@ -38,7 +38,7 @@ class Gallery1 extends Component {
                                     <div className="column-img">
                                         <a className="fancybox" rel="gallery2">
 
-                                            <img width="1024" height="682" src="https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png" className="attachment-large size-large" alt="" loading="lazy"  sizes="100vw" />							</a>
+                                            <img width="1024" height="282" src="https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png" className="attachment-large size-large" alt="" loading="lazy" sizes="100vw" />							</a>
                                     </div>
                                 </div>
                             </div>
@@ -47,7 +47,7 @@ class Gallery1 extends Component {
                                     <div className="column-img">
                                         <a className="fancybox" rel="gallery2">
 
-                                            <img width="1024" height="682" src="https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png" className="attachment-large size-large" alt="" loading="lazy"  sizes="100vw" />							</a>
+                                            <img width="1024" height="282" src="https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png" className="attachment-large size-large" alt="" loading="lazy" sizes="100vw" />							</a>
                                     </div>
                                 </div>
                             </div>
@@ -56,7 +56,7 @@ class Gallery1 extends Component {
                                     <div className="column-img">
                                         <a className="fancybox" rel="gallery2">
 
-                                            <img width="1024" height="682" src="https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png" className="attachment-large size-large" alt="" loading="lazy"  sizes="100vw" />							</a>
+                                            <img width="1024" height="282" src="https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png" className="attachment-large size-large" alt="" loading="lazy" sizes="100vw" />							</a>
                                     </div>
                                 </div>
                             </div>
@@ -65,14 +65,14 @@ class Gallery1 extends Component {
                                     <div className="column-img">
                                         <a className="fancybox" rel="gallery2">
 
-                                            <img width="1024" height="683" src="https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png" className="attachment-large size-large" alt="" loading="lazy"  sizes="100vw" />							</a>
+                                            <img width="1024" height="282" src="https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png" className="attachment-large size-large" alt="" loading="lazy" sizes="100vw" />							</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section> 
+            </section>
         )
     }
 }
