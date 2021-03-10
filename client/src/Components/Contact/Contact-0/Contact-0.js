@@ -15,8 +15,8 @@ class Contact0 extends Component {
                         <div class="col-md-6">
                             <div class="section__container">
                                 <div class="section__content">
-                                    <h2>Get in touch</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                                    <h2><InlineEdit text={this.props.contactHeading} onSetText={text => this.props.getContactInfo(text)}/></h2>
+                                    <p><InlineEdit text={this.props.contactSubText} onSetText={text => this.props.getContactInfo(undefined, text)}/></p>
                                 </div>
                             </div>
                             <div class="contact_1_form section__form">

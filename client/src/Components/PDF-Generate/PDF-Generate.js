@@ -43,8 +43,14 @@ class PDFGenerate extends React.Component {
         var dataFromContainer1 = this.props.dataFromContainer1
         console.log(dataFromContainer1);
         dataFromContainer1.map((element) => {
-            console.log(element.data);
             data1.push(element.data)
+            console.log(element.info);
+            var dataInfo = element.info
+            for(const property in dataInfo){
+                console.log(`${property}: ${dataInfo[property]}`);
+                data1.push(`${property}: ${dataInfo[property]}`)
+            }
+            var sortedData = JSON.stringify(dataInfo)
             return data1
         })
         var data2 = [];
@@ -121,7 +127,8 @@ class PDFGenerate extends React.Component {
         })
 
         var doc = new jsPDF('p', 'pt');
-        doc.text(20, 20, data1);
+        var splitText = doc.splitTextToSize(data1, 500)
+        doc.text(10, 12, splitText);
         if (data2.length > 0) {
             doc.addPage();
             doc.text(20, 20, data2);
@@ -146,13 +153,13 @@ class PDFGenerate extends React.Component {
             doc.addPage();
             doc.text(20, 20, data7);
         }
-        doc.save('demo.pdf');
+        doc.save('project.pdf');
         var res = btoa(doc.output())
         console.log(res);
 
         Axios.post("http://localhost:3001/pdfUpload", res).then((res) => {
             if (res.status === 'ok') console.log("Yeah!");
-            else console.log(":(");
+            // else console.log(":(");
         })
 
 
@@ -169,7 +176,7 @@ class PDFGenerate extends React.Component {
     render() {
         return (
             <div className="btn-container">
-                <button id="pdfBtn" className="btn" onClick={this.openModal} type="primary"><i className="fas fa-file-pdf fa-3x"></i>
+                <button id="pdfBtn" className="btn" onClick={this.generatePDF} type="primary"><i className="fas fa-file-pdf fa-3x"></i>
 
                 </button>
                 {/* <div id="URLModal" className="hidden">

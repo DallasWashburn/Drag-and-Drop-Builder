@@ -58,22 +58,22 @@ class Container1 extends Component {
             phoneNumber: "623.456.9876",
             //Intro Blocks
             introHeading: "Cybermark Wireframe",
-            introSubHeading:"Lorem ipsum dolor sit amet",
+            introSubHeading: "Lorem ipsum dolor sit amet",
             introSubtext: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore sint corrupti aliquam exercitationem ullam numquam explicabo sequi reprehenderit culpa est accusamus accusantium magni provident in expedita harum libero, quasi perspiciatis!",
             introImage: "https://artgalleryofballarat.com.au/wp-content/uploads/2020/06/placeholder-image.png",
             introButton1: "Learn More",
             introButton2: "Learn More",
             // Content Blocks
             content0Heading: "Cybermark Wireframe",
-            content0SubHeading:"Lorem ipsum, dolor sit amet",
+            content0SubHeading: "Lorem ipsum, dolor sit amet",
             content0Text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore sint corrupti aliquam exercitationem ullam numquam explicabo sequi reprehenderit culpa est accusamus accusantium magni provident in expedita harum libero, quasi perspiciatis!",
             content0Image: "https://artgalleryofballarat.com.au/wp-content/uploads/2020/06/placeholder-image.png",
             content1Heading: "Cybermark Wireframe",
-            content1SubHeading:"Lorem ipsum, dolor sit amet",
+            content1SubHeading: "Lorem ipsum, dolor sit amet",
             content1Text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore sint corrupti aliquam exercitationem ullam numquam explicabo sequi reprehenderit culpa est accusamus accusantium magni provident in expedita harum libero, quasi perspiciatis!",
             content1Image: "https://artgalleryofballarat.com.au/wp-content/uploads/2020/06/placeholder-image.png",
             content2Heading: "Cybermark Wireframe",
-            content2SubHeading:"Lorem ipsum, dolor sit amet",
+            content2SubHeading: "Lorem ipsum, dolor sit amet",
             content2Text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore sint corrupti aliquam exercitationem ullam numquam explicabo sequi reprehenderit culpa est accusamus accusantium magni provident in expedita harum libero, quasi perspiciatis!",
             // Gallery Blocks
             galleryHeading: "Gallery",
@@ -91,41 +91,51 @@ class Container1 extends Component {
             galleryImage5: "http://placehold.it/350x300?text=5",
             galleryImage6: "http://placehold.it/350x300?text=6",
             // Feature Blocks
-            featureHeading: "Features",
-            featureSubHeading: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore sint corrupti aliquam exercitationem ullam numquam explicabo sequi reprehenderit culpa est accusamus accusantium magni provident in expedita harum libero, quasi perspiciatis!",
+            featureHeading: "Key Features",
+            featureSubHeading: "Lorem ipsum",
+            featuresSubHeadingText: "Lorem Ipsum, dolor sit amet consectetur adipisicing elit. Tempore sint corrupti aliquam exercitationem ullam numquam explicabo sequi reprehenderit culpa est accusamus accusantium magni provident in expedita harum libero, quasi perspiciatis!",
             featureH31: "First One",
             featureH32: "Second One",
             featureH33: "Third One",
             featureH34: "Fourth One",
             featureH35: "Fifth One",
             featureH36: "Sixth One",
-            featureSubtext1: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta iusto ipsa distinctio veritatis? Excepturi odit veritatis impedit eveniet",
-            featureSubtext2: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta iusto ipsa distinctio veritatis? Excepturi odit veritatis impedit eveniet",
-            featureSubtext3: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta iusto ipsa distinctio veritatis? Excepturi odit veritatis impedit eveniet",
-            featureSubtext4: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta iusto ipsa distinctio veritatis? Excepturi odit veritatis impedit eveniet",
-            featureSubtext5: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta iusto ipsa distinctio veritatis? Excepturi odit veritatis impedit eveniet",
-            featureSubtext6: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta iusto ipsa distinctio veritatis? Excepturi odit veritatis impedit eveniet",
-            featureButton: "Learn More",
+            featureSubtext1: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta iusto ipsa distinctio veritatis? Excepturi odit veritatis impedit eveniet explicabo sequi reprehenderit culpa est accusamus accusantium magni provident in expedita harum libero, quasi perspiciatis!",
+            featureSubtext2: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta iusto ipsa distinctio veritatis? Excepturi odit veritatis impedit eveniet explicabo sequi reprehenderit culpa est accusamus accusantium magni provident in expedita harum libero, quasi perspiciatis!",
+            featureSubtext3: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta iusto ipsa distinctio veritatis? Excepturi odit veritatis impedit eveniet explicabo sequi reprehenderit culpa est accusamus accusantium magni provident in expedita harum libero, quasi perspiciatis!",
+            featureSubtext4: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta iusto ipsa distinctio veritatis? Excepturi odit veritatis impedit eveniet explicabo sequi reprehenderit culpa est accusamus accusantium magni provident in expedita harum libero, quasi perspiciatis!",
+            featureSubtext5: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta iusto ipsa distinctio veritatis? Excepturi odit veritatis impedit eveniet explicabo sequi reprehenderit culpa est accusamus accusantium magni provident in expedita harum libero, quasi perspiciatis!",
+            featureSubtext6: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta iusto ipsa distinctio veritatis? Excepturi odit veritatis impedit eveniet explicabo sequi reprehenderit culpa est accusamus accusantium magni provident in expedita harum libero, quasi perspiciatis!",
+            featureButton: "View All",
             // Team Blocks 
             teamHeading: "Our Team",
             teamSubheading: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore sint corrupti aliquam exercitationem ullam numquam explicabo sequi reprehenderit culpa est accusamus accusantium magni provident in expedita harum libero, quasi perspiciatis!",
             teamH31: "John Doe",
             teamH32: "John Doe",
             teamH33: "John Doe",
+            teamH34: "John Doe",
+            teamH35: "John Doe",
+            teamH36: "John Doe",
             bigHeadshot: "",
             job1: "Lead Designer",
             job2: "Lead Designer",
             job3: "Lead Designer",
+            job4: "Lead Designer",
+            job5: "Lead Designer",
+            job6: "Lead Designer",
             teamSubtext1: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore sint corrupti aliquam exercitationem ullam numquam explicabo sequi reprehenderit culpa est accusamus accusantium magni provident in expedita harum libero",
             teamSubtext2: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore sint corrupti aliquam exercitationem ullam numquam explicabo sequi reprehenderit culpa est accusamus accusantium magni provident in expedita harum libero",
             teamSubtext3: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore sint corrupti aliquam exercitationem ullam numquam explicabo sequi reprehenderit culpa est accusamus accusantium magni provident in expedita harum libero",
+            teamSubtext4: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore sint corrupti aliquam exercitationem ullam numquam explicabo sequi reprehenderit culpa est accusamus accusantium magni provident in expedita harum libero",
+            teamSubtext5: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore sint corrupti aliquam exercitationem ullam numquam explicabo sequi reprehenderit culpa est accusamus accusantium magni provident in expedita harum libero",
+            teamSubtext6: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore sint corrupti aliquam exercitationem ullam numquam explicabo sequi reprehenderit culpa est accusamus accusantium magni provident in expedita harum libero",
             teamImage1: "https://artgalleryofballarat.com.au/wp-content/uploads/2020/06/placeholder-image.png",
             teamImage2: "https://artgalleryofballarat.com.au/wp-content/uploads/2020/06/placeholder-image.png",
             teamImage3: "https://artgalleryofballarat.com.au/wp-content/uploads/2020/06/placeholder-image.png",
             teamImage4: "https://artgalleryofballarat.com.au/wp-content/uploads/2020/06/placeholder-image.png",
             teamImage5: "https://artgalleryofballarat.com.au/wp-content/uploads/2020/06/placeholder-image.png",
             teamImage6: "https://artgalleryofballarat.com.au/wp-content/uploads/2020/06/placeholder-image.png",
-            teamButton: "https://artgalleryofballarat.com.au/wp-content/uploads/2020/06/placeholder-image.png",
+
             //Testimonials Blocks
             testimonialHeading: "Our Clients",
             testimonialSubHeading: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore sint corrupti aliquam exercitationem ullam numquam explicabo sequi reprehenderit culpa est accusamus accusantium magni provident in expedita harum libero",
@@ -141,17 +151,17 @@ class Container1 extends Component {
             name1Img: "",
             name2Img: "",
             name3Img: "",
+
             //Contact Blocks
             contactHeading: "Get In Touch",
-            ContactSubText: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore sint corrupti aliquam exercitationem ullam numquam explicabo sequi reprehenderit culpa est accusamus accusantium magni provident in expedita harum libero, quasi perspiciatis!",
+            contactSubText: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore sint corrupti aliquam exercitationem ullam numquam explicabo sequi reprehenderit culpa est accusamus accusantium magni provident in expedita harum libero, quasi perspiciatis!",
             lat: "",
             lon: "",
             address: "1234 N ABC Lane",
             email: "",
             //Footer Blocks
-            footerSubText1: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta iusto ipsa distinctio veritatis?",
-            footerSubText2: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta iusto ipsa distinctio veritatis?",
-            footerSubText3: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta iusto ipsa distinctio veritatis?"
+            footerSubText: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta iusto ipsa distinctio veritatis?",
+
         }
     }
 
@@ -186,7 +196,7 @@ class Container1 extends Component {
                                     headerLink6: item.info.headerLink6,
 
                                 })
-                            } else if (item.data === "Header-1"){
+                            } else if (item.data === "Header-1") {
                                 this.setState({
                                     companyLogo: item.info.companyLogo,
                                     headerLink1: item.info.headerLink1,
@@ -197,7 +207,7 @@ class Container1 extends Component {
                                     headerLink6: item.info.headerLink6,
 
                                 })
-                            } else if (item.data === "Header-2"){
+                            } else if (item.data === "Header-2") {
                                 this.setState({
                                     companyLogo: item.info.companyLogo,
                                     headerLink1: item.info.headerLink1,
@@ -208,56 +218,261 @@ class Container1 extends Component {
                                     headerLink6: item.info.headerLink6,
 
                                 })
-                            } else if (item.data === "Intro-0"){
+                            } else if (item.data === "Intro-0") {
                                 this.setState({
                                     introHeading: item.info.introHeading,
                                     introSubHeading: item.info.introSubHeading,
                                     introSubtext: item.info.introSubtext,
                                     introButton1: item.info.introButton1
                                 })
-                            } else if (item.data === "Intro-1"){
+                            } else if (item.data === "Intro-1") {
                                 this.setState({
                                     introHeading: item.info.introHeading,
                                     introSubHeading: item.info.introSubHeading,
                                     introSubtext: item.info.introSubtext,
                                 })
-                            } else if (item.data === "Intro-2"){
+                            } else if (item.data === "Intro-2") {
                                 this.setState({
                                     introHeading: item.info.introHeading,
                                     introSubHeading: item.info.introSubHeading,
                                     introSubtext: item.info.introSubtext,
-                                    introButton1:item.info.introButton1,
-                                    introButton2:item.info.introButton2
+                                    introButton1: item.info.introButton1,
+                                    introButton2: item.info.introButton2
                                 })
-                            } else if (item.data === "Intro-3"){
+                            } else if (item.data === "Intro-3") {
                                 this.setState({
                                     introHeading: item.info.introHeading,
                                     introSubHeading: item.info.introSubHeading
                                 })
-                            } else if (item.data === "Intro-4"){
+                            } else if (item.data === "Intro-4") {
                                 this.setState({
                                     introHeading: item.info.introHeading,
                                     introSubHeading: item.info.introSubHeading,
                                     introSubtext: item.info.introSubtext
 
                                 })
-                            } else if (item.data === "Content-0"){
+                            } else if (item.data === "Content-0") {
                                 this.setState({
                                     content0Heading: item.info.content0Heading,
                                     content0SubHeading: item.info.content0SubHeading,
                                     content0Text: item.info.content0Text
                                 })
-                            } else if (item.data === "Content-1"){
+                            } else if (item.data === "Content-1") {
                                 this.setState({
                                     content1Heading: item.info.content1Heading,
                                     content1SubHeading: item.info.content1SubHeading,
                                     content1Text: item.info.content1Text
                                 })
-                            } else if (item.data === "Content-2"){
+                            } else if (item.data === "Content-2") {
                                 this.setState({
                                     content2Heading: item.info.content2Heading,
                                     content2SubHeading: item.info.content2SubHeading,
                                     content2Text: item.info.content2Text
+                                })
+                            } else if (item.data === "Gallery-0") {
+                                this.setState({
+                                    galleryHeading: item.info.galleryHeading,
+                                    gallerySubtext: item.info.gallerySubtext,
+                                    galleryImage1Title: item.info.galleryImage1Title,
+                                    galleryImage2Title: item.info.galleryImage2Title,
+                                    galleryImage3Title: item.info.galleryImage3Title,
+                                    galleryImage1Desc: item.info.galleryImage1Desc,
+                                    galleryImage2Desc: item.info.galleryImage2Desc,
+                                    galleryImage3Desc: item.info.galleryImage3Desc
+                                })
+                            } else if (item.data === "Gallery-1") {
+                                this.setState({
+                                    galleryHeading: item.info.galleryHeading,
+                                    gallerySubtext: item.info.gallerySubtext,
+                                })
+                            } else if (item.data === "Gallery-2") {
+                                this.setState({
+                                    // galleryHeading: item.info.galleryHeading,
+                                    // gallerySubtext: item.info.gallerySubtext,
+                                })
+                            } else if (item.data === "Features-0") {
+                                this.setState({
+                                    featureHeading: item.info.featureHeading,
+                                    featureSubHeading: item.info.featureSubHeading,
+                                    featuresSubHeadingText: item.info.featuresSubHeadingText,
+                                    featureH31: item.info.featureH31,
+                                    featureSubtext1: item.info.featureSubtext1,
+                                    featureH32: item.info.featureH32,
+                                    featureSubtext2: item.info.featureSubtext2,
+                                    featureH33: item.info.featureH33,
+                                    featureSubtext3: item.info.featureSubtext3,
+                                    featureH34: item.info.featureH34,
+                                    featureSubtext4: item.info.featureSubtext4,
+                                })
+                            } else if (item.data === "Features-1") {
+                                this.setState({
+                                    featureHeading: item.info.featureHeading,
+                                    featuresSubHeadingText: item.info.featuresSubHeadingText,
+                                    featureH31: item.info.featureH31,
+                                    featureSubtext1: item.info.featureSubtext1,
+                                    featureH32: item.info.featureH32,
+                                    featureSubtext2: item.info.featureSubtext2,
+                                    featureH33: item.info.featureH33,
+                                    featureSubtext3: item.info.featureSubtext3,
+                                })
+                            } else if (item.data === "Features-2") {
+                                this.setState({
+                                    featureHeading: item.info.featureHeading,
+                                    featureSubHeading: item.info.featureSubHeading,
+                                    featuresSubHeadingText: item.info.featuresSubHeadingText,
+                                    featureH31: item.info.featureH31,
+                                    featureSubtext1: item.info.featureSubtext1,
+                                    featureH32: item.info.featureH32,
+                                    featureSubtext2: item.info.featureSubtext2,
+                                    featureH33: item.info.featureH33,
+                                    featureSubtext3: item.info.featureSubtext3,
+                                    featureH34: item.info.featureH34,
+                                    featureSubtext4: item.info.featureSubtext4,
+                                    featureH35: item.info.featureH35,
+                                    featureSubtext5: item.info.featureSubtext5,
+                                    featureH36: item.info.featureH36,
+                                    featureSubtext6: item.info.featureSubtext6,
+                                    featureButton: item.info.featureButton
+                                })
+                            } else if (item.data === "Features-3") {
+                                this.setState({
+                                    featureHeading: item.info.featureHeading,
+                                    featuresSubHeadingText: item.info.featuresSubHeadingText,
+                                    featureH31: item.info.featureH31,
+                                    featureSubtext1: item.info.featureSubtext1,
+                                    featureH32: item.info.featureH32,
+                                    featureSubtext2: item.info.featureSubtext2,
+                                    featureH33: item.info.featureH33,
+                                    featureSubtext3: item.info.featureSubtext3,
+                                    featureH34: item.info.featureH34,
+                                    featureSubtext4: item.info.featureSubtext4,
+                                    featureButton: item.info.featureButton
+                                })
+                            } else if (item.data === "Team-0") {
+                                this.setState({
+                                    teamHeading: item.info.teamHeading,
+                                    teamSubheading: item.info.teamSubheading,
+                                    teamH31: item.info.teamH31,
+                                    job1: item.info.job1,
+                                    teamSubtext1: item.info.teamSubtext1,
+                                    teamH32: item.info.teamH32,
+                                    job2: item.info.job2,
+                                    teamSubtext2: item.info.teamSubtext2,
+                                    teamH33: item.info.teamH33,
+                                    job3: item.info.job3,
+                                    teamSubtext3: item.info.teamSubtext3,
+                                })
+                            } else if (item.data === "Team-1") {
+                                this.setState({
+                                    teamH31: item.info.teamH31,
+                                    job1: item.info.job1,
+                                    teamSubtext1: item.info.teamSubtext1,
+                                    teamH32: item.info.teamH32,
+                                    job2: item.info.job2,
+                                    teamSubtext2: item.info.teamSubtext2,
+                                    teamH33: item.info.teamH33,
+                                    job3: item.info.job3,
+                                    teamSubtext3: item.info.teamSubtext3,
+                                    teamH34: item.info.teamH34,
+                                    job4: item.info.job4,
+                                    teamSubtext4: item.info.teamSubtext4,
+                                    teamH35: item.info.teamH35,
+                                    teamSubtext5: item.info.teamSubtext5,
+                                    teamH36: item.info.teamH36,
+                                    job6: item.info.job6,
+                                    teamSubtext6: item.info.teamSubtext6
+                                })
+                            } else if (item.data === "Team-2") {
+                                this.setState({
+                                    teamH31: item.info.teamH31,
+                                    job1: item.info.job1,
+                                    teamSubtext1: item.info.teamSubtext1,
+                                    teamH32: item.info.teamH32,
+                                    job2: item.info.job2,
+                                    teamSubtext2: item.info.teamSubtext2,
+                                    teamH33: item.info.teamH33,
+                                    job3: item.info.job3,
+                                    teamSubtext3: item.info.teamSubtext3,
+                                    teamH34: item.info.teamH34,
+                                    job4: item.info.job4,
+                                    teamSubtext4: item.info.teamSubtext4,
+                                    teamH35: item.info.teamH35,
+                                    teamSubtext5: item.info.teamSubtext5,
+                                    teamH36: item.info.teamH36,
+                                    job6: item.info.job6,
+                                    teamSubtext6: item.info.teamSubtext6
+                                })
+                            } else if (item.data === "Team-3") {
+                                this.setState({
+                                    teamHeading: item.info.teamHeading,
+                                    teamSubheading: item.info.teamSubheading,
+                                    teamH31: item.info.teamH31,
+                                    job1: item.info.job1,
+                                    teamSubtext1: item.info.teamSubtext1,
+                                    teamH32: item.info.teamH32,
+                                    job2: item.info.job2,
+                                    teamSubtext2: item.info.teamSubtext2,
+                                    teamH33: item.info.teamH33,
+                                    job3: item.info.job3,
+                                    teamSubtext3: item.info.teamSubtext3,
+                                    teamH34: item.info.teamH34,
+                                    job4: item.info.job4,
+                                    teamSubtext4: item.info.teamSubtext4,
+                                    teamH35: item.info.teamH35,
+                                    teamSubtext5: item.info.teamSubtext5,
+                                    teamH36: item.info.teamH36,
+                                    job6: item.info.job6,
+                                    teamSubtext6: item.info.teamSubtext6
+                                })
+                            } else if (item.data === "Testimonial-0") {
+                                this.setState({
+                                    testimonialHeading: item.info.testimonialHeading,
+                                    testimonialSubHeading: item.info.testimonialSubHeading,
+                                    name1: item.info.name1,
+                                    name1Desc: item.info.name1Desc,
+                                    quote1: item.info.quote1,
+                                    name2: item.info.name2,
+                                    name2Desc: item.info.name2Desc,
+                                    quote2: item.info.quote2,
+                                    name3: item.info.name3,
+                                    name3Desc: item.info.name3Desc,
+                                    quote3: item.info.quote3,
+                                })
+                            } else if (item.data === "Testimonial-1") {
+                                this.setState({
+                                    testimonialHeading: item.info.testimonialHeading,
+                                    testimonialSubHeading: item.info.testimonialSubHeading,
+                                    name1: item.info.name1,
+                                    name1Desc: item.info.name1Desc,
+                                    quote1: item.info.quote1,
+                                    name2: item.info.name2,
+                                    name2Desc: item.info.name2Desc,
+                                    quote2: item.info.quote2,
+                                    name3: item.info.name3,
+                                    name3Desc: item.info.name3Desc,
+                                    quote3: item.info.quote3,
+                                })
+                            } else if (item.data === "Contact-0") {
+                                this.setState({
+                                    contactHeading: item.info.contactHeading,
+                                    contactSubText: item.info.contactSubText,
+                                })
+                            } else if (item.data === "Contact-1") {
+                                this.setState({
+                                    contactHeading: item.info.contactHeading,
+                                    contactSubText: item.info.contactSubText,
+                                })
+                            } else if (item.data === "Contact-2") {
+                                this.setState({
+                                    contactHeading: item.info.contactHeading,
+                                    contactSubText: item.info.contactSubText,
+                                    address: item.info.address,
+                                    email: item.info.email
+                                })
+                            } else if (item.data === "Contact-3") {
+                                this.setState({
+                                    contactHeading: item.info.contactHeading,
+                                    contactSubText: item.info.contactSubText,
                                 })
                             }
                         })
@@ -330,7 +545,7 @@ class Container1 extends Component {
 
     }
 
-    getContentInfo = (content0Heading, content0SubHeading, content0Text, content0Image, content1Heading, content1SubHeading, content1Text, content1Image, content2Heading,content2SubHeading, content2Text) => {
+    getContentInfo = (content0Heading, content0SubHeading, content0Text, content0Image, content1Heading, content1SubHeading, content1Text, content1Image, content2Heading, content2SubHeading, content2Text) => {
         if (content0Heading !== undefined) {
             this.setState({ content0Heading: content0Heading })
         } else if (content0SubHeading !== undefined) {
@@ -357,7 +572,7 @@ class Container1 extends Component {
 
     }
 
-    getGalleryInfo = (galleryHeading, gallerySubtext, galleryImage1Title, galleryImage1Desc, galleryImage2Title, galleryImage2Desc ,galleryImage3Title, galleryImage3Desc, galleryImage1,galleryImage2,galleryImage3,galleryImage4,galleryImage5,galleryImage6 ) => {
+    getGalleryInfo = (galleryHeading, gallerySubtext, galleryImage1Title, galleryImage1Desc, galleryImage2Title, galleryImage2Desc, galleryImage3Title, galleryImage3Desc, galleryImage1, galleryImage2, galleryImage3, galleryImage4, galleryImage5, galleryImage6) => {
         if (galleryHeading !== undefined) {
             this.setState({ galleryHeading: galleryHeading })
         } else if (gallerySubtext !== undefined) {
@@ -386,6 +601,133 @@ class Container1 extends Component {
             this.setState({ galleryImage5: galleryImage5 })
         } else if (galleryImage6 !== undefined) {
             this.setState({ galleryImage6: galleryImage6 })
+        }
+    }
+
+    getFeaturesInfo = (featureHeading, featureSubHeading, featuresSubHeadingText, featureH31, featureSubtext1, featureH32, featureSubtext2, featureH33, featureSubtext3, featureH34, featureSubtext4, featureH35, featureSubtext5, featureH36, featureSubtext6, featureButton) => {
+        if (featureHeading !== undefined) {
+            this.setState({ featureHeading: featureHeading })
+        } else if (featureSubHeading !== undefined) {
+            this.setState({ featureSubHeading: featureSubHeading })
+        } else if (featuresSubHeadingText !== undefined) {
+            this.setState({ featuresSubHeadingText: featuresSubHeadingText })
+        } else if (featureH31 !== undefined) {
+            this.setState({ featureH31: featureH31 })
+        } else if (featureSubtext1 !== undefined) {
+            this.setState({ featureSubtext1: featureSubtext1 })
+        } else if (featureH32 !== undefined) {
+            this.setState({ featureH32: featureH32 })
+        } else if (featureSubtext2 !== undefined) {
+            this.setState({ featureSubtext2: featureSubtext2 })
+        } else if (featureH33 !== undefined) {
+            this.setState({ featureH33: featureH33 })
+        } else if (featureSubtext3 !== undefined) {
+            this.setState({ featureSubtext3: featureSubtext3 })
+        } else if (featureH34 !== undefined) {
+            this.setState({ featureH34: featureH34 })
+        } else if (featureSubtext4 !== undefined) {
+            this.setState({ featureSubtext4: featureSubtext4 })
+        } else if (featureH35 !== undefined) {
+            this.setState({ featureH35: featureH35 })
+        } else if (featureH35 !== undefined) {
+            this.setState({ featureH35: featureH35 })
+        } else if (featureSubtext5 !== undefined) {
+            this.setState({ featureSubtext5: featureSubtext5 })
+        } else if (featureH36 !== undefined) {
+            this.setState({ featureH36: featureH36 })
+        } else if (featureH36 !== undefined) {
+            this.setState({ featureH36: featureH36 })
+        } else if (featureSubtext6 !== undefined) {
+            this.setState({ featureSubtext6: featureSubtext6 })
+        } else if (featureButton !== undefined) {
+            this.setState({ featureButton: featureButton })
+        }
+    }
+    getTeamInfo = (teamHeading, teamSubheading, teamH31, job1, teamSubtext1, teamH32, job2, teamSubtext2, teamH33, job3, teamSubtext3, teamH34, job4, teamSubtext4, teamH35, job5, teamSubtext5, teamH36, job6, teamSubtext6) => {
+        if (teamHeading !== undefined) {
+            this.setState({ teamHeading: teamHeading })
+        } else if (teamSubheading !== undefined) {
+            this.setState({ teamSubheading: teamSubheading })
+        } else if (teamH31 !== undefined) {
+            this.setState({ teamH31: teamH31 })
+        } else if (job1 !== undefined) {
+            this.setState({ job1: job1 })
+        } else if (teamSubtext1 !== undefined) {
+            this.setState({ teamSubtext1: teamSubtext1 })
+        } else if (teamH32 !== undefined) {
+            this.setState({ teamH32: teamH32 })
+        } else if (teamSubtext2 !== undefined) {
+            this.setState({ teamSubtext2: teamSubtext2 })
+        } else if (teamH33 !== undefined) {
+            this.setState({ teamH33: teamH33 })
+        } else if (teamSubtext3 !== undefined) {
+            this.setState({ teamSubtext3: teamSubtext3 })
+        } else if (teamH34 !== undefined) {
+            this.setState({ teamH34: teamH34 })
+        } else if (teamSubtext4 !== undefined) {
+            this.setState({ teamSubtext4: teamSubtext4 })
+        } else if (teamH35 !== undefined) {
+            this.setState({ teamH35: teamH35 })
+        } else if (teamSubtext5 !== undefined) {
+            this.setState({ teamSubtext5: teamSubtext5 })
+        } else if (teamH36 !== undefined) {
+            this.setState({ teamH36: teamH36 })
+        } else if (teamSubtext6 !== undefined) {
+            this.setState({ teamSubtext6: teamSubtext6 })
+        } else if (job2 !== undefined) {
+            this.setState({ job2: job2 })
+        } else if (job3 !== undefined) {
+            this.setState({ job3: job3 })
+        } else if (job4 !== undefined) {
+            this.setState({ job4: job4 })
+        } else if (job5 !== undefined) {
+            this.setState({ job5: job5 })
+        } else if (job6 !== undefined) {
+            this.setState({ job6: job6 })
+        }
+    }
+
+    getTestimonialInfo = (testimonialHeading, testimonialSubHeading, name1, name1Desc, quote1, name2, name2Desc, quote2, name3, name3Desc, quote3) => {
+        if (testimonialHeading !== undefined) {
+            this.setState({ testimonialHeading: testimonialHeading })
+        } else if (testimonialSubHeading !== undefined) {
+            this.setState({ testimonialSubHeading: testimonialSubHeading })
+        } else if (name1 !== undefined) {
+            this.setState({ name1: name1 })
+        } else if (name1Desc !== undefined) {
+            this.setState({ name1Desc: name1Desc })
+        } else if (quote1 !== undefined) {
+            this.setState({ quote1: quote1 })
+        } else if (name2 !== undefined) {
+            this.setState({ name2: name2 })
+        } else if (name2Desc !== undefined) {
+            this.setState({ name2Desc: name2Desc })
+        } else if (quote2 !== undefined) {
+            this.setState({ quote2: quote2 })
+        } else if (name3 !== undefined) {
+            this.setState({ name3: name3 })
+        } else if (name3Desc !== undefined) {
+            this.setState({ name3Desc: name3Desc })
+        } else if (quote3 !== undefined) {
+            this.setState({ quote3: quote3 })
+        }
+    }
+
+    getContactInfo = (contactHeading, contactSubText, address, phoneNumber, lat, lon) => {
+        if (contactHeading !== undefined) {
+            this.setState({ contactHeading: contactHeading })
+        } else if (contactSubText !== undefined) {
+            this.setState({ contactSubText: contactSubText })
+        } else if (address !== undefined) {
+            this.setState({ address: address })
+        } else if (phoneNumber !== undefined) {
+            this.setState({ phoneNumber: phoneNumber })
+        }
+    }
+
+    getFooterInfo = (footerSubText) => {
+        if (footerSubText !== undefined) {
+            this.setState({ footerSubText: footerSubText })
         }
     }
 
@@ -421,6 +763,77 @@ class Container1 extends Component {
         var content2SubHeading = this.state.content2SubHeading
         var content2Text = this.state.content2Text;
         // Calling Gallery Block Info
+        var galleryHeading = this.state.galleryHeading;
+        var gallerySubtext = this.state.gallerySubtext;
+        var galleryImage1Title = this.state.galleryImage1Title;
+        var galleryImage2Title = this.state.galleryImage2Title;
+        var galleryImage3Title = this.state.galleryImage3Title;
+        var galleryImage1Desc = this.state.galleryImage1Desc;
+        var galleryImage2Desc = this.state.galleryImage2Desc;
+        var galleryImage3Desc = this.state.galleryImage3Desc;
+        var galleryImage1 = this.state.galleryImage1;
+        var galleryImage2 = this.state.galleryImage2;
+        var galleryImage3 = this.state.galleryImage3;
+        var galleryImage4 = this.state.galleryImage4;
+        var galleryImage5 = this.state.galleryImage5;
+        var galleryImage6 = this.state.galleryImage6;
+        // Calling Features Block Info
+        var featureHeading = this.state.featureHeading
+        var featureSubHeading = this.state.featureSubHeading
+        var featuresSubHeadingText = this.state.featuresSubHeadingText
+        var featureH31 = this.state.featureH31
+        var featureSubtext1 = this.state.featureSubtext1
+        var featureH32 = this.state.featureH32
+        var featureSubtext2 = this.state.featureSubtext2
+        var featureH33 = this.state.featureH33
+        var featureSubtext3 = this.state.featureSubtext3
+        var featureH34 = this.state.featureH34
+        var featureSubtext4 = this.state.featureSubtext4
+        var featureH35 = this.state.featureH35
+        var featureSubtext5 = this.state.featureSubtext5
+        var featureH36 = this.state.featureH36
+        var featureSubtext6 = this.state.featureSubtext6
+        var featureButton = this.state.featureButton
+        // Calling Team Block Info 
+        var teamHeading = this.state.teamHeading
+        var teamSubheading = this.state.teamSubheading
+        var teamH31 = this.state.teamH31
+        var job1 = this.state.job1
+        var teamSubtext1 = this.state.teamSubtext1
+        var teamH32 = this.state.teamH32
+        var job2 = this.state.job2
+        var teamSubtext2 = this.state.teamSubtext2
+        var teamH33 = this.state.teamH33
+        var job3 = this.state.job3
+        var teamSubtext3 = this.state.teamSubtext3
+        var teamH34 = this.state.teamH34
+        var job4 = this.state.job4
+        var teamSubtext4 = this.state.teamSubtext4
+        var teamH35 = this.state.teamH35
+        var job5 = this.state.job5
+        var teamSubtext5 = this.state.teamSubtext5
+        var teamH36 = this.state.teamH36
+        var job6 = this.state.job6
+        var teamSubtext6 = this.state.teamSubtext6
+        // Calling Testimonial Block Info 
+        var testimonialHeading = this.state.testimonialHeading;
+        var testimonialSubHeading = this.state.testimonialSubHeading;
+        var name1 = this.state.name1;
+        var name1Desc = this.state.name1Desc;
+        var quote1 = this.state.quote1;
+        var name2 = this.state.name2;
+        var name2Desc = this.state.name2Desc;
+        var quote2 = this.state.quote2;
+        var name3 = this.state.name3;
+        var name3Desc = this.state.name3Desc;
+        var quote3 = this.state.quote3;
+        // Calling Contact Block Info
+        var contactHeading = this.state.contactHeading;
+        var contactSubText = this.state.contactSubText;
+        var address = this.state.address;
+        var email = this.state.email;
+        // Calling Footer Block Info
+        var footerSubText = this.state.footerSubText;
 
 
         return (
@@ -465,7 +878,7 @@ class Container1 extends Component {
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="draggable-item">
-                                            <Header2 getHeaderInfo={this.getHeaderInfo} headerLink1={p.info.headerLink1} headerLink2={p.info.headerLink2} headerLink3={p.info.headerLink3} headerLink4={p.info.headerLink4} headerLink5={p.info.headerLink5} headerLink6={p.info.headerLink6}  companyLogo={p.info.companyLogo} />
+                                            <Header2 getHeaderInfo={this.getHeaderInfo} headerLink1={p.info.headerLink1} headerLink2={p.info.headerLink2} headerLink3={p.info.headerLink3} headerLink4={p.info.headerLink4} headerLink5={p.info.headerLink5} headerLink6={p.info.headerLink6} companyLogo={p.info.companyLogo} />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -491,8 +904,8 @@ class Container1 extends Component {
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="draggable-item">
-                                            <Intro1 getIntroInfo={this.getIntroInfo} introHeading={p.info.introHeading} 
-                                            introSubHeading={p.info.introSubHeading}introSubtext={p.info.introSubtext}  />
+                                            <Intro1 getIntroInfo={this.getIntroInfo} introHeading={p.info.introHeading}
+                                                introSubHeading={p.info.introSubHeading} introSubtext={p.info.introSubtext} />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -505,8 +918,8 @@ class Container1 extends Component {
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="draggable-item">
-                                            <Intro2 getIntroInfo={this.getIntroInfo} introHeading={p.info.introHeading} 
-                                            introSubHeading={p.info.introSubHeading}introSubtext={p.info.introSubtext} introButton1={p.info.introButton1} introButton2={p.info.introButton2} introImage={p.info.introImage} />
+                                            <Intro2 getIntroInfo={this.getIntroInfo} introHeading={p.info.introHeading}
+                                                introSubHeading={p.info.introSubHeading} introSubtext={p.info.introSubtext} introButton1={p.info.introButton1} introButton2={p.info.introButton2} introImage={p.info.introImage} />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -519,7 +932,7 @@ class Container1 extends Component {
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="draggable-item">
-                                            <Intro3 getIntroInfo={this.getIntroInfo} introHeading={p.info.introHeading} introSubHeading={p.info.introSubHeading}  />
+                                            <Intro3 getIntroInfo={this.getIntroInfo} introHeading={p.info.introHeading} introSubHeading={p.info.introSubHeading} />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -533,7 +946,7 @@ class Container1 extends Component {
                                     <Draggable key={i}>
                                         <div id={p.data} className="draggable-item">
                                             <Intro4 getIntroInfo={this.getIntroInfo} introHeading={p.info.introHeading} introSubtext={p.info.introSubtext}
-                                            introSubHeading={p.info.introSubHeading} />
+                                                introSubHeading={p.info.introSubHeading} />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -560,7 +973,7 @@ class Container1 extends Component {
                                     <Draggable key={i}>
                                         <div id={p.data} className="component draggable-item">
                                             <Content1 getImage={this.getImage} getContentInfo={this.getContentInfo} content1Heading={content1Heading}
-                                            content1SubHeading={content1SubHeading} content1Text={content1Text} content1Image={content1Image} />
+                                                content1SubHeading={content1SubHeading} content1Text={content1Text} content1Image={content1Image} />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -574,8 +987,8 @@ class Container1 extends Component {
                                     <Draggable key={i}>
                                         <div id={p.data} className="component draggable-item">
                                             <Content2 getContentInfo={this.getContentInfo} content2Heading={content2Heading}
-                                            content2SubHeading={content2SubHeading}
-                                            content2Text={content2Text} />
+                                                content2SubHeading={content2SubHeading}
+                                                content2Text={content2Text} />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -584,10 +997,24 @@ class Container1 extends Component {
                                     </Draggable>
                                 )
                             } else if (p.data === "Gallery-0") {
+                                p.info = { galleryHeading, gallerySubtext, galleryImage1Title, galleryImage1Desc, galleryImage2Title, galleryImage2Desc, galleryImage3Title, galleryImage3Desc, galleryImage1, galleryImage2, galleryImage3 }
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="component draggable-item">
-                                            <Gallery0 />
+                                            <Gallery0
+                                                getGalleryInfo={this.getGalleryInfo}
+                                                galleryHeading={galleryHeading}
+                                                gallerySubtext={gallerySubtext}
+                                                galleryImage1Title={galleryImage1Title}
+                                                galleryImage1Desc={galleryImage1Desc}
+                                                galleryImage2Title={galleryImage2Title}
+                                                galleryImage2Desc={galleryImage2Desc}
+                                                galleryImage3Title={galleryImage3Title}
+                                                galleryImage3Desc={galleryImage3Desc}
+                                                galleryImage1={galleryImage1}
+                                                galleryImage2={galleryImage2}
+                                                galleryImage3={galleryImage3}
+                                            />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -596,10 +1023,21 @@ class Container1 extends Component {
                                     </Draggable>
                                 )
                             } else if (p.data === "Gallery-1") {
+                                p.info = { galleryHeading, gallerySubtext, galleryImage1, galleryImage2, galleryImage3, galleryImage4, galleryImage5, galleryImage6 }
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="component draggable-item">
-                                            <Gallery1 />
+                                            <Gallery1
+                                                getGalleryInfo={this.getGalleryInfo}
+                                                galleryHeading={galleryHeading}
+                                                gallerySubtext={gallerySubtext}
+                                                galleryImage1={galleryImage1}
+                                                galleryImage2={galleryImage2}
+                                                galleryImage3={galleryImage3}
+                                                galleryImage4={galleryImage4}
+                                                galleryImage5={galleryImage5}
+                                                galleryImage6={galleryImage6}
+                                            />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -608,10 +1046,19 @@ class Container1 extends Component {
                                     </Draggable>
                                 )
                             } else if (p.data === "Gallery-2") {
+                                p.info = { galleryImage1, galleryImage2, galleryImage3, galleryImage4, galleryImage5, galleryImage6 }
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="component draggable-item">
-                                            <Gallery2 />
+                                            <Gallery2
+                                                getGalleryInfo={this.getGalleryInfo}
+                                                galleryImage1={galleryImage1}
+                                                galleryImage2={galleryImage2}
+                                                galleryImage3={galleryImage3}
+                                                galleryImage4={galleryImage4}
+                                                galleryImage5={galleryImage5}
+                                                galleryImage6={galleryImage6}
+                                            />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -620,10 +1067,24 @@ class Container1 extends Component {
                                     </Draggable>
                                 )
                             } else if (p.data === "Features-0") {
+                                p.info = { featureHeading, featureSubHeading, featuresSubHeadingText, featureH31, featureSubtext1, featureH32, featureSubtext2, featureH33, featureSubtext3, featureH34, featureSubtext4 }
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="component draggable-item">
-                                            <Feature0 />
+                                            <Feature0
+                                                getFeaturesInfo={this.getFeaturesInfo}
+                                                featureHeading={featureHeading}
+                                                featureSubHeading={featureSubHeading}
+                                                featuresSubHeadingText={featuresSubHeadingText}
+                                                featureH31={featureH31}
+                                                featureSubtext1={featureSubtext1}
+                                                featureH32={featureH32}
+                                                featureSubtext2={featureSubtext2}
+                                                featureH33={featureH33}
+                                                featureSubtext3={featureSubtext3}
+                                                featureH34={featureH34}
+                                                featureSubtext4={featureSubtext4}
+                                            />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -632,10 +1093,21 @@ class Container1 extends Component {
                                     </Draggable>
                                 )
                             } else if (p.data === "Features-1") {
+                                p.info = { featureHeading, featureSubHeading, featuresSubHeadingText, featureH31, featureSubtext1, featureH32, featureSubtext2, featureH33, featureSubtext3 }
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="component draggable-item">
-                                            <Feature1 />
+                                            <Feature1
+                                                getFeaturesInfo={this.getFeaturesInfo}
+                                                featureHeading={featureHeading}
+                                                featuresSubHeadingText={featuresSubHeadingText}
+                                                featureH31={featureH31}
+                                                featureSubtext1={featureSubtext1}
+                                                featureH32={featureH32}
+                                                featureSubtext2={featureSubtext2}
+                                                featureH33={featureH33}
+                                                featureSubtext3={featureSubtext3}
+                                            />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -644,10 +1116,29 @@ class Container1 extends Component {
                                     </Draggable>
                                 )
                             } else if (p.data === "Features-2") {
+                                p.info = { featureHeading, featureSubHeading, featuresSubHeadingText, featureH31, featureSubtext1, featureH32, featureSubtext2, featureH33, featureSubtext3, featureH34, featureSubtext4, featureH35, featureSubtext5, featureH36, featureSubtext6, featureButton }
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="component draggable-item">
-                                            <Feature2 />
+                                            <Feature2
+                                                getFeaturesInfo={this.getFeaturesInfo}
+                                                featureHeading={featureHeading}
+                                                featureSubHeading={featureSubHeading}
+                                                featuresSubHeadingText={featuresSubHeadingText}
+                                                featureH31={featureH31}
+                                                featureSubtext1={featureSubtext1}
+                                                featureH32={featureH32}
+                                                featureSubtext2={featureSubtext2}
+                                                featureH33={featureH33}
+                                                featureSubtext3={featureSubtext3}
+                                                featureH34={featureH34}
+                                                featureSubtext4={featureSubtext4}
+                                                featureH35={featureH35}
+                                                featureSubtext5={featureSubtext5}
+                                                featureH36={featureH36}
+                                                featureSubtext6={featureSubtext6}
+                                                featureButton={featureButton}
+                                            />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -656,10 +1147,24 @@ class Container1 extends Component {
                                     </Draggable>
                                 )
                             } else if (p.data === "Features-3") {
+                                p.info = { featureHeading, featuresSubHeadingText, featureH31, featureSubtext1, featureH32, featureSubtext2, featureH33, featureSubtext3, featureH34, featureSubtext4, featureButton }
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="component draggable-item">
-                                            <Feature3 />
+                                            <Feature3
+                                                getFeaturesInfo={this.getFeaturesInfo}
+                                                featureHeading={featureHeading}
+                                                featuresSubHeadingText={featuresSubHeadingText}
+                                                featureH31={featureH31}
+                                                featureSubtext1={featureSubtext1}
+                                                featureH32={featureH32}
+                                                featureSubtext2={featureSubtext2}
+                                                featureH33={featureH33}
+                                                featureSubtext3={featureSubtext3}
+                                                featureH34={featureH34}
+                                                featureSubtext4={featureSubtext4}
+                                                featureButton={featureButton}
+                                            />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -668,10 +1173,24 @@ class Container1 extends Component {
                                     </Draggable>
                                 )
                             } else if (p.data === "Team-0") {
+                                p.info = { teamHeading, teamSubheading, teamH31, job1, teamSubtext1, teamH32, job2, teamSubtext2, teamH33, job3, teamSubtext3 }
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="component draggable-item">
-                                            <Team0 />
+                                            <Team0
+                                                getTeamInfo={this.getTeamInfo}
+                                                teamHeading={teamHeading}
+                                                teamSubheading={teamSubheading}
+                                                teamH31={teamH31}
+                                                job1={job1}
+                                                teamSubtext1={teamSubtext1}
+                                                teamH32={teamH32}
+                                                job2={job2}
+                                                teamSubtext2={teamSubtext2}
+                                                teamH33={teamH33}
+                                                job3={job3}
+                                                teamSubtext3={teamSubtext3}
+                                            />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -680,10 +1199,31 @@ class Container1 extends Component {
                                     </Draggable>
                                 )
                             } else if (p.data === "Team-1") {
+                                p.info = { teamH31, job1, teamSubtext1, teamH32, job2, teamSubtext2, teamH33, job3, teamSubtext3, teamH34, job4, teamSubtext4, teamH35, job5, teamSubtext5, teamH36, job6, teamSubtext6 }
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="component draggable-item">
-                                            <Team1 />
+                                            <Team1
+                                                getTeamInfo={this.getTeamInfo}
+                                                teamH31={teamH31}
+                                                job1={job1}
+                                                teamSubtext1={teamSubtext1}
+                                                teamH32={teamH32}
+                                                job2={job2}
+                                                teamSubtext2={teamSubtext2}
+                                                teamH33={teamH33}
+                                                job3={job3}
+                                                teamSubtext3={teamSubtext3}
+                                                teamH34={teamH34}
+                                                job4={job4}
+                                                teamSubtext4={teamSubtext4}
+                                                teamH35={teamH35}
+                                                job5={job5}
+                                                teamSubtext5={teamSubtext5}
+                                                teamH36={teamH36}
+                                                job6={job6}
+                                                teamSubtext6={teamSubtext6}
+                                            />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -692,10 +1232,31 @@ class Container1 extends Component {
                                     </Draggable>
                                 )
                             } else if (p.data === "Team-2") {
+                                p.info = { teamH31, job1, teamSubtext1, teamH32, job2, teamSubtext2, teamH33, job3, teamSubtext3, teamH34, job4, teamSubtext4, teamH35, job5, teamSubtext5, teamH36, job6, teamSubtext6 }
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="component draggable-item">
-                                            <Team2 />
+                                            <Team2
+                                                getTeamInfo={this.getTeamInfo}
+                                                teamH31={teamH31}
+                                                job1={job1}
+                                                teamSubtext1={teamSubtext1}
+                                                teamH32={teamH32}
+                                                job2={job2}
+                                                teamSubtext2={teamSubtext2}
+                                                teamH33={teamH33}
+                                                job3={job3}
+                                                teamSubtext3={teamSubtext3}
+                                                teamH34={teamH34}
+                                                job4={job4}
+                                                teamSubtext4={teamSubtext4}
+                                                teamH35={teamH35}
+                                                job5={job5}
+                                                teamSubtext5={teamSubtext5}
+                                                teamH36={teamH36}
+                                                job6={job6}
+                                                teamSubtext6={teamSubtext6}
+                                            />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -704,10 +1265,33 @@ class Container1 extends Component {
                                     </Draggable>
                                 )
                             } else if (p.data === "Team-3") {
+                                p.info = { teamHeading, teamSubheading, teamH31, job1, teamSubtext1, teamH32, job2, teamSubtext2, teamH33, job3, teamSubtext3, teamH34, job4, teamSubtext4, teamH35, job5, teamSubtext5, teamH36, job6, teamSubtext6 }
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="component draggable-item">
-                                            <Team3 />
+                                            <Team3
+                                                getTeamInfo={this.getTeamInfo}
+                                                teamHeading={teamHeading}
+                                                teamSubheading={teamSubheading}
+                                                teamH31={teamH31}
+                                                job1={job1}
+                                                teamSubtext1={teamSubtext1}
+                                                teamH32={teamH32}
+                                                job2={job2}
+                                                teamSubtext2={teamSubtext2}
+                                                teamH33={teamH33}
+                                                job3={job3}
+                                                teamSubtext3={teamSubtext3}
+                                                teamH34={teamH34}
+                                                job4={job4}
+                                                teamSubtext4={teamSubtext4}
+                                                teamH35={teamH35}
+                                                job5={job5}
+                                                teamSubtext5={teamSubtext5}
+                                                teamH36={teamH36}
+                                                job6={job6}
+                                                teamSubtext6={teamSubtext6}
+                                            />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -716,10 +1300,24 @@ class Container1 extends Component {
                                     </Draggable>
                                 )
                             } else if (p.data === "Testimonial-0") {
+                                p.info = { testimonialHeading, testimonialSubHeading, name1, name1Desc, quote1, name2, name2Desc, quote2, name3, name3Desc, quote3 }
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="component draggable-item">
-                                            <Testimonial0 />
+                                            <Testimonial0
+                                                getTestimonialInfo={this.getTestimonialInfo}
+                                                testimonialHeading={testimonialHeading}
+                                                testimonialSubHeading={testimonialSubHeading}
+                                                name1={name1}
+                                                name1Desc={name1Desc}
+                                                quote1={quote1}
+                                                name2={name2}
+                                                name2Desc={name2Desc}
+                                                quote2={quote2}
+                                                name3={name3}
+                                                name3Desc={name3Desc}
+                                                quote3={quote3}
+                                            />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -728,10 +1326,24 @@ class Container1 extends Component {
                                     </Draggable>
                                 )
                             } else if (p.data === "Testimonial-1") {
+                                p.info = { testimonialHeading, testimonialSubHeading, name1, name1Desc, quote1, name2, name2Desc, quote2, name3, name3Desc, quote3 }
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="component draggable-item">
-                                            <Testimonial1 />
+                                            <Testimonial1
+                                                getTestimonialInfo={this.getTestimonialInfo}
+                                                testimonialHeading={testimonialHeading}
+                                                testimonialSubHeading={testimonialSubHeading}
+                                                name1={name1}
+                                                name1Desc={name1Desc}
+                                                quote1={quote1}
+                                                name2={name2}
+                                                name2Desc={name2Desc}
+                                                quote2={quote2}
+                                                name3={name3}
+                                                name3Desc={name3Desc}
+                                                quote3={quote3}
+                                            />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -740,10 +1352,16 @@ class Container1 extends Component {
                                     </Draggable>
                                 )
                             } else if (p.data === "Contact-0") {
+                                p.info = { contactHeading, contactSubText }
+
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="component draggable-item">
-                                            <Contact0 />
+                                            <Contact0
+                                                getContactInfo={this.getContactInfo}
+                                                contactHeading={contactHeading}
+                                                contactSubText={contactSubText}
+                                            />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -752,10 +1370,15 @@ class Container1 extends Component {
                                     </Draggable>
                                 )
                             } else if (p.data === "Contact-1") {
+                                p.info = { contactHeading, contactSubText }
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="component draggable-item">
-                                            <Contact1 />
+                                            <Contact1
+                                                getContactInfo={this.getContactInfo}
+                                                contactHeading={contactHeading}
+                                                contactSubText={contactSubText}
+                                            />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -764,10 +1387,18 @@ class Container1 extends Component {
                                     </Draggable>
                                 )
                             } else if (p.data === "Contact-2") {
+                                p.info = { contactHeading, contactSubText, address, phoneNumber }
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="component draggable-item">
-                                            <Contact2 />
+                                            <Contact2
+                                                getContactInfo={this.getContactInfo}
+                                                contactHeading={contactHeading}
+                                                contactSubText={contactSubText}
+                                                address={address}
+                                                email={email}
+                                                phoneNumber={phoneNumber}
+                                            />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -776,10 +1407,15 @@ class Container1 extends Component {
                                     </Draggable>
                                 )
                             } else if (p.data === "Contact-3") {
+                                p.info = { contactHeading, contactSubText }
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="component draggable-item">
-                                            <Contact3 />
+                                            <Contact3
+                                                getContactInfo={this.getContactInfo}
+                                                contactHeading={contactHeading}
+                                                contactSubText={contactSubText}
+                                            />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -788,10 +1424,15 @@ class Container1 extends Component {
                                     </Draggable>
                                 )
                             } else if (p.data === "Footer-0") {
+                                p.info = { footerSubText }
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="component draggable-item">
-                                            <Footer0 />
+                                            <Footer0
+                                                getFooterInfo={this.getFooterInfo}
+                                                footerSubText={p.info.footerSubText}
+
+                                            />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -800,10 +1441,20 @@ class Container1 extends Component {
                                     </Draggable>
                                 )
                             } else if (p.data === "Footer-1") {
+                                p.info = { headerLink1, headerLink2, headerLink3, headerLink4, headerLink5, headerLink6, footerSubText }
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="component draggable-item">
-                                            <Footer1 />
+                                            <Footer1
+                                                getFooterInfo={this.getFooterInfo}
+                                                footerSubText={p.info.footerSubText}
+                                                headerLink1={p.info.headerLink1}
+                                                headerLink2={p.info.headerLink2}
+                                                headerLink3={p.info.headerLink3}
+                                                headerLink4={p.info.headerLink4}
+                                                headerLink5={p.info.headerLink5}
+                                                headerLink6={p.info.headerLink6}
+                                            />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -812,10 +1463,18 @@ class Container1 extends Component {
                                     </Draggable>
                                 )
                             } else if (p.data === "Footer-2") {
+                                p.info = { headerLink1, headerLink2, headerLink3, headerLink4, headerLink5, headerLink6 }
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="component draggable-item">
-                                            <Footer2 />
+                                            <Footer2
+                                                headerLink1={p.info.headerLink1}
+                                                headerLink2={p.info.headerLink2}
+                                                headerLink3={p.info.headerLink3}
+                                                headerLink4={p.info.headerLink4}
+                                                headerLink5={p.info.headerLink5}
+                                                headerLink6={p.info.headerLink6}
+                                            />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />

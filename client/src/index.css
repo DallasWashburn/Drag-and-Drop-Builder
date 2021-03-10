@@ -196,7 +196,7 @@ a:not([href]){
 
 
 .X:hover {
-  fill:teal;
+  fill:var(--primaryColor);
 }
 
 
@@ -207,6 +207,7 @@ a:not([href]){
   padding-right: 35px;
   margin-left: auto;
   width: 25px;
+  margin-top: -5px;
 }
 
 .duplicateContainer{

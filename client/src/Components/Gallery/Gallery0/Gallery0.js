@@ -1,5 +1,7 @@
 import React, { Component } from "react"
 import "./Gallery0.css"
+import InlineEdit from "../../inlineEdit"
+
 
 class Gallery0 extends Component {
     render() {
@@ -7,8 +9,8 @@ class Gallery0 extends Component {
             <section className="gallery_1 section__wrapper">
                 <div className="container">
                     <div className="section__heading text-center">
-                        <h2>Gallery</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+                        <h2><InlineEdit text={this.props.galleryHeading} onSetText={text => this.props.getGalleryInfo(text)}/></h2>
+                        <p><InlineEdit text={this.props.gallerySubtext} onSetText={text => this.props.getGalleryInfo(undefined, text)}/></p>
                     </div>
 
                     <div className="section__container columns feature_columns">
@@ -21,8 +23,8 @@ class Gallery0 extends Component {
                                             <img width="1024" height="382" src="https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png" sizes="100vw" />							</a>
                                     </div>
                                     <div className="column-text">
-                                        <h3>Lorem ipsum</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+                                        <h3><InlineEdit text={this.props.galleryImage1Title} onSetText={text => this.props.getGalleryInfo(undefined, undefined, text)}/></h3>
+                                        <p><InlineEdit text={this.props.galleryImage1Desc} onSetText={text => this.props.getGalleryInfo(undefined, undefined, undefined, text)}/></p>
                                     </div>
                                 </div>
                             </div>
@@ -34,8 +36,8 @@ class Gallery0 extends Component {
                                             <img width="1024" height="383" src="https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png" sizes="100vw" />							</a>
                                     </div>
                                     <div className="column-text">
-                                        <h3>Lorem ipsum</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+                                        <h3><InlineEdit text={this.props.galleryImage2Title} onSetText={text => this.props.getGalleryInfo(undefined,undefined,undefined, undefined, text)}/></h3>
+                                        <p><InlineEdit text={this.props.galleryImage2Desc} onSetText={text => this.props.getGalleryInfo(undefined,undefined,undefined, undefined, undefined, text)}/></p>
                                     </div>
                                 </div>
                             </div>
@@ -47,8 +49,8 @@ class Gallery0 extends Component {
                                             <img width="1024" height="382" src="https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png" sizes="100vw" />							</a>
                                     </div>
                                     <div className="column-text">
-                                        <h3>Lorem ipsum</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+                                        <h3><InlineEdit text={this.props.galleryImage3Title} onSetText={text => this.props.getGalleryInfo(undefined,undefined,undefined,undefined, undefined, undefined, text)}/></h3>
+                                        <p><InlineEdit text={this.props.galleryImage3Desc} onSetText={text => this.props.getGalleryInfo(undefined,undefined,undefined,undefined, undefined, undefined,undefined, text)}/></p>
                                     </div>
                                 </div>
                             </div>

@@ -8,16 +8,16 @@ class Contact2 extends Component {
             <section class="contact_3 section__wrapper">
                 <div class="container">
                     <div class="section__heading text-center">
-                        <h2>Get in touch</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                        <h2><InlineEdit text={this.props.contactHeading} onSetText={text => this.props.getContactInfo(text)}/></h2>
+                        <p><InlineEdit text={this.props.contactSubText} onSetText={text => this.props.getContactInfo(undefined, text)}/></p>
                     </div>
                     <div class="row align-items-center flex-row-reverse">
                         <div class="col-md-6">
                             <div class="contact__details">
                                 <span class="h3 d-block">Address</span>
-                                <span class="details d-block">12345 W Somewhere St<br />Nowhere, AZ. 85999</span>
+                                <span class="details d-block"><InlineEdit text={this.props.address} onSetText={text => this.props.getContactInfo(undefined,undefined, text)}/></span>
                                 <span class="mt-3 h3 d-block">Phone</span>
-                                <span class="details d-block">623.456.9876</span>
+                                <span class="details d-block"><InlineEdit text={this.props.phoneNumber} onSetText={text => this.props.getContactInfo(undefined,undefined,undefined, text)}/></span>
                             </div>
                         </div>
                         <div class="col-md-6">

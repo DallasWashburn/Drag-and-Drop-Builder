@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import Slider from "react-slick";
+import InlineEdit from "../../inlineEdit"
 
 import "./Gallery1.css"
 
@@ -10,8 +11,8 @@ class Gallery1 extends Component {
             <section className="gallery_2 section__wrapper">
                 <div className="container">
                     <div className="section__heading text-center">
-                        <h2>Gallery</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+                        <h2><InlineEdit text={this.props.galleryHeading} onSetText={text => this.props.getGalleryInfo(text)}/></h2>
+                        <p><InlineEdit text={this.props.gallerySubtext} onSetText={text => this.props.getGalleryInfo(undefined, text)}/></p>
                     </div>
                     <div className="section__container columns gallery_columns">
                         <div className="row justify-content-center">

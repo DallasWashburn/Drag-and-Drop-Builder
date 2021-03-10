@@ -18,17 +18,20 @@ class Footer1 extends Component {
                                 </a>
                             </div>
                             <div class="footer-content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                                <p><InlineEdit text={this.props.footerSubText} onSetText={text => this.props.getFooterInfo(text)}/></p>
                             </div>
                         </div>
                         <div class="col-lg-6 text-right">
                             <nav class="footer-navigation">
                                 <div class="menu-footer-container">
                                     <ul id="menu-footer" class="primary-menu">
-                                        <li id="menu-item-259" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-259"><a href="http://localhost/SMB/">Home</a></li>
-                                        <li id="menu-item-260" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-260"><a href="http://localhost/SMB/blog/">Blog</a></li>
-                                        <li id="menu-item-261" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-261"><a href="http://localhost/SMB/about/">About</a></li>
-                                        <li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a href="http://localhost/SMB/contact-us/">Contact Us</a></li>
+                                        <li id="menu-item-259" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-259"><a >{this.props.headerLink1}</a></li>
+                                        <li id="menu-item-260" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-260"><a>{this.props.headerLink2}</a></li>
+                                        <li id="menu-item-261" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-261"><a>{this.props.headerLink3}</a></li>
+                                        <li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a>{this.props.headerLink4}</a></li>
+                                        <li id="menu-item-263" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a>{this.props.headerLink5}</a></li>
+                                        <li id="menu-item-264" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a>{this.props.headerLink6}</a></li>
+
                                     </ul>
                                 </div>
                             </nav>

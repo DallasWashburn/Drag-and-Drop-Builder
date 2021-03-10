@@ -38,7 +38,7 @@
 }
 
 #container2 #Intro-3 svg:hover{
-  fill:#F97B82;
+  fill:var(--primaryColor);
 }
 
 .container1 #Intro-3{
