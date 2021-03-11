@@ -23,19 +23,19 @@ class TestimonailsContainer extends Component {
         if (aria === "true") {
             span.style.transform = "rotate(180deg)"
             span.style.transition = "transform 0.3s ease-in-out"
-            span.style.bottom = "2px"
+            span.style.bottom = "5px"
         } else if(aria === "true" && elementTag === "SPAN"){
             span.style.transform = "rotate(180deg)"
             span.style.transition = "transform 0.3s ease-in-out"
-            span.style.bottom = "2px"
+            span.style.bottom = "5px"
         } else if (aria === "false" && elementTag === "SPAN") {
             span.style.transform = "rotate(-225deg)"
             span.style.transition = "transform 0.3s ease-in-out"
-            span.style.bottom = "2px"
+            span.style.bottom = "5px"
         }  else {
             span.style.transform = "rotate(-225deg)"
             span.style.transition = "transform 0.3s ease-in-out"
-            span.style.bottom = "2px"
+            span.style.bottom = "5px"
         }
     }
 

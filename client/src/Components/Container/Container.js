@@ -60,9 +60,10 @@ class Container1 extends Component {
             introHeading: "Cybermark Wireframe",
             introSubHeading: "Lorem ipsum dolor sit amet",
             introSubtext: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore sint corrupti aliquam exercitationem ullam numquam explicabo sequi reprehenderit culpa est accusamus accusantium magni provident in expedita harum libero, quasi perspiciatis!",
-            introImage: "https://artgalleryofballarat.com.au/wp-content/uploads/2020/06/placeholder-image.png",
+            introImage: "https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png",
             introButton1: "Learn More",
             introButton2: "Learn More",
+            introBackgroundImage:"https://resources.owllabs.com/hs-fs/hubfs/fog-3622519_1920-jpg.jpeg?width=882&name=fog-3622519_1920-jpg.jpeg",
             // Content Blocks
             content0Heading: "Cybermark Wireframe",
             content0SubHeading: "Lorem ipsum, dolor sit amet",
@@ -175,11 +176,11 @@ class Container1 extends Component {
         API.getUsers()
             .then(users => {
                 var theUsers = users.data
-                console.log(theUsers);
+                // console.log(theUsers);
                 var userProjects = []
                 for (let i = 0; i < theUsers.length; i++) {
                     const element = theUsers[i];
-                    console.log(element);
+                    // console.log(element);
                     if (element.userEmail === this.props.email) {
                         console.log(element.projects);
                         var Page1 = element.projects[1];
@@ -479,7 +480,6 @@ class Container1 extends Component {
                     }
                 }
 
-                console.log(this.state.projects);
             })
     }
 
@@ -501,9 +501,30 @@ class Container1 extends Component {
     }
 
     getImage = (event) => {
-        var column = event.target.parentElement.parentElement.parentElement;
+        var column = event.target.parentElement.parentElement
+        console.log(column.className);
+        // console.log(column.children[1].src);
 
-        console.log(column.children[0].src);
+        window.cloudinary.createUploadWidget({
+            cloudName: "dallas",
+            uploadPreset: "bpdpgvfm"
+        },
+            (error, result) => {
+                if(result.event === 'success' && column.className === 'Intro-2'){
+                    this.setState({
+                        introImage: result.info.secure_url
+                    })
+                } else if (result.event === 'success' && column.className === 'intro_4_hero'){
+                    this.setState({
+                        introBackgroundImage: result.info.secure_url
+                    })
+                } else if (result.event === 'success' && column.className === 'Content-0'){
+                    this.setState({
+                        content0Image: result.info.secure_url
+                    })
+                }
+            }
+        ).open();
     }
 
     getHeaderInfo = (link1, link2, link3, link4, link5, link6, logo) => {
@@ -750,6 +771,7 @@ class Container1 extends Component {
         var introImage = this.state.introImage;
         var introButton1 = this.state.introButton1;
         var introButton2 = this.state.introButton2;
+        var introBackgroundImage = this.state.introBackgroundImage;
         // Calling Content Block Info
         var content0Heading = this.state.content0Heading;
         var content0SubHeading = this.state.content0SubHeading
@@ -918,7 +940,7 @@ class Container1 extends Component {
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="draggable-item">
-                                            <Intro2 getIntroInfo={this.getIntroInfo} introHeading={p.info.introHeading}
+                                            <Intro2 getImage={this.getImage} getIntroInfo={this.getIntroInfo} introHeading={p.info.introHeading}
                                                 introSubHeading={p.info.introSubHeading} introSubtext={p.info.introSubtext} introButton1={p.info.introButton1} introButton2={p.info.introButton2} introImage={p.info.introImage} />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
@@ -928,11 +950,11 @@ class Container1 extends Component {
                                     </Draggable>
                                 )
                             } else if (p.data === "Intro-3") {
-                                p.info = { introHeading, introSubHeading }
+                                p.info = { introHeading, introSubHeading, introBackgroundImage }
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="draggable-item">
-                                            <Intro3 getIntroInfo={this.getIntroInfo} introHeading={p.info.introHeading} introSubHeading={p.info.introSubHeading} />
+                                            <Intro3 getImage={this.getImage} getIntroInfo={this.getIntroInfo} introBackgroundImage={introBackgroundImage} introHeading={p.info.introHeading} introSubHeading={p.info.introSubHeading} />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />

@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import "./Intro3.css"
 import InlineEdit from "../../inlineEdit"
+import ImageButton from "../../imageButton/imageButton"
 
 
 class Intro3 extends Component {
@@ -9,8 +10,9 @@ class Intro3 extends Component {
     render() {
         return (
 
-            <section className="intro_4 ">
-                <div className="intro_4_hero" style={{backgroundImage: 'url("https://resources.owllabs.com/hs-fs/hubfs/fog-3622519_1920-jpg.jpeg?width=882&name=fog-3622519_1920-jpg.jpeg")'}}>
+            <section className="intro_4">
+                <div className="intro_4_hero" style={{backgroundImage: `url(${this.props.introBackgroundImage})`}}>
+                <ImageButton getImage={this.props.getImage}/>
                     <div className="container">
                         <div className="intro_4_inner section__container text-center">
                             <div className="section__content">

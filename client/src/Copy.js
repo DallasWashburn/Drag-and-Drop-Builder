@@ -39,7 +39,7 @@ class Copy extends React.Component {
 
     componentDidMount() {
         this.getId()
-        this.getUsers()
+        // this.getUsers()
 
     }
 
@@ -79,6 +79,7 @@ class Copy extends React.Component {
     }
 
     getId = () => {
+        console.log("getId");
         API.getUsers()
             .then(users => {
                 var theUsers = users.data
@@ -142,9 +143,9 @@ class Copy extends React.Component {
                     // [this.state.items3][this.state.items4][this.state.items5][this.state.items6][this.state.items7][this.state.items8]
                     API.saveUser(project)
                     this.setState({ nickname: 2 })
+                    this.getId()
                 }
             })
-
 
     }
 
@@ -209,7 +210,6 @@ class Copy extends React.Component {
         document.getElementById("mySidebar").style.width = "0";
     }
     render() {
-
         if (this.state.nickname === 1 && this.state.login === 1) {
             return <NewClientForm
                 saveUser={this.saveUser}

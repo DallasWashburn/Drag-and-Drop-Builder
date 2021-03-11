@@ -126,9 +126,9 @@ class PDFGenerate extends React.Component {
             return data7
         })
 
-        var doc = new jsPDF('p', 'pt');
-        var splitText = doc.splitTextToSize(data1, 500)
-        doc.text(10, 12, splitText);
+        var doc = new jsPDF('l', 'em', [220 ,150]);
+        var splitText = doc.splitTextToSize(data1, 175)
+        doc.text(5, 5, splitText);
         if (data2.length > 0) {
             doc.addPage();
             doc.text(20, 20, data2);
@@ -176,9 +176,7 @@ class PDFGenerate extends React.Component {
     render() {
         return (
             <div className="btn-container">
-                <button id="pdfBtn" className="btn" onClick={this.generatePDF} type="primary"><i className="fas fa-file-pdf fa-3x"></i>
-
-                </button>
+                <button id="pdfBtn" className="btn" onClick={this.generatePDF} type="primary"><i className="fas fa-file-pdf fa-3x"></i></button>
                 {/* <div id="URLModal" className="hidden">
                     <Modal>
                         <div className="form-group">

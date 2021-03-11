@@ -10,10 +10,8 @@
 
 .projectPreviewWrap #Intro-0{
   background-image: url("../../../images/Intro/intro-0.png");
-  min-height: 190px;
+  min-height: 215px;
 }
-
-
 
 .container1 #Intro-1{
   background-image: url("../../../images/Intro/intro-1.png");
@@ -48,17 +46,6 @@
   background-size: cover;
 }
 
-#container2 #Intro-0{
-  min-height: 100%;
-}
-
-#container2 #Intro-3 svg{
-  fill:#FFF;
-}
-
-#container2 #Intro-3 svg:hover{
-  fill:var(--primaryColor);
-}
 
 .container1 #Intro-3{
   background-image: url("../../../images/Intro/intro-3.png");

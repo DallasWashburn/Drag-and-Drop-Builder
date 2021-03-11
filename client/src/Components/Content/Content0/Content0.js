@@ -18,7 +18,7 @@ class Content0 extends Component {
                                     <h3><InlineEdit text={this.props.content0SubHeading} onSetText={text => this.props.getContentInfo(undefined, text)}/></h3>
                                     <p><InlineEdit text={this.props.content0Text} onSetText={text => this.props.getContentInfo(undefined,undefined, text)}/></p>
                                     <div className="section__button ">
-                                        <a className="btn primary-btn" href="#" target="_self">Learn More</a>
+                                        <a className="btn primary-btn" href="#" >Learn More</a>
                                     </div>
                                 </div>
                             </div>
@@ -26,7 +26,10 @@ class Content0 extends Component {
                         <div className="col-md-6">
                             <div className="section__img">
                                 <div className="section_img_wrapper">
-                                    <img width="1160" height="773" src={this.props.content0Image} class="image-border attachment-full size-full" alt="" loading="lazy" sizes="100vw" />
+                                    <div className="Content-0">
+                                    <ImageButton getImage={this.props.getImage}/>
+                                    <img width="1160" height="773" src={this.props.content0Image} className="image-border attachment-full size-full" alt="" loading="lazy" sizes="100vw" />
+                                    </div>
                                 </div>
                             </div>
                         </div>

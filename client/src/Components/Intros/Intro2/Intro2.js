@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import "./Intro2.css"
 import InlineEdit from "../../inlineEdit"
+import ImageButton from "../../imageButton/imageButton"
 
 class Intro2 extends Component {
     render() {
@@ -11,7 +12,10 @@ class Intro2 extends Component {
                         <div className="col-md-6">
                             <div className="section__img">
                                 <div className="section_img_wrapper">
-                                    <img width="1218" height="812" src="https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png" sizes="100vw" />
+                                    <div className="Intro-2">
+                                    <ImageButton getImage={this.props.getImage}/>
+                                    <img width="1218" height="812" src={this.props.introImage} sizes="100vw" />
+                                    </div>
                                 </div>
                             </div>
                         </div>

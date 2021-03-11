@@ -37,7 +37,7 @@ outline: none;
 }
 .menuArrow{
   position: fixed;
-  top: 40%;
+  top: 42%;
   left: 249px;
   border: solid 1px #a5a5a5;
   border-radius: 2px;
@@ -55,7 +55,7 @@ outline: none;
 
 #openArrow{
   position: fixed;
-  top: 40%;
+  top: 42%;
   left: 0px;
   border: solid 1px #a5a5a5;
   border-radius: 2px;
@@ -63,7 +63,7 @@ outline: none;
 }
 
 #openArrow .fas{
-  padding-bottom: 8px;
+  padding-bottom: 5px;
   color: #3c3c3c;
   transform: rotate(180deg);
 }
@@ -72,6 +72,20 @@ outline: none;
   color: #bababa;
 }
 
+.center {
+    margin: auto;
+    width: 50%;
+    max-width: 400px;
+    min-width: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+  }
+  div.loader {
+    font-size: 100px;
+  }
 
 .content-blocks{
     text-align: left;
@@ -118,7 +132,9 @@ a:not([href]){
   z-index: 99;
 }
 
-
+.draggable-item #imageButton .far{
+    pointer-events: none;
+}
 
 
 #pdfBtn{
@@ -146,7 +162,7 @@ a:not([href]){
   position: absolute;
   right: 10px;
   font-size: 25px;
-  bottom: 2px;
+  bottom: 5px;
 }
 
 #logOut{
@@ -191,30 +207,58 @@ a:not([href]){
 .X{
   visibility: hidden;
   border: none;
+  pointer-events: none;
+  fill: black;
 }
 
 
 
 .X:hover {
-  fill:var(--primaryColor);
+  pointer-events: none;
 }
 
 
+.xButton{
+    visibility: hidden;
+    background-color: #cccccc;
+    padding: 2px;
+    min-width: 35px;
+    height: 35px;
+}
+
+.xButton:hover .X{
+    fill:var(--primaryColor);
+
+}
+
+.duplicate{
+    visibility: hidden;
+    background-color: #cccccc;
+    padding: 2px;
+    min-width: 35px;
+    height: 35px;
+}
+
+.duplicate:hover .X{
+    fill:var(--primaryColor);
+
+}
 
 .XContainer{
-  position: relative;
-  top: -25px;
-  padding-right: 35px;
-  margin-left: auto;
-  width: 25px;
-  margin-top: -5px;
+    position: relative;
+    top: -40px;
+    padding-right: 40px;
+    margin-left: auto;
+    width: 25px;
+    margin-top: -5px;
 }
 
 .duplicateContainer{
-  width: 25px;
-  margin-left: auto;
-  padding-right: 75px;
-  padding-top: 15px;
+    position: relative;
+    width: 25px;
+    padding-right: 80px;
+    padding-top: 15px;
+    top: -10px;
 }
 
 .smooth-dnd-container{
@@ -268,7 +312,7 @@ filter: brightness(100%);
 
 }
 
-#container2 .draggable-item:hover .X, #container2 .draggable-item:hover #imageButton{
+#container2 .draggable-item:hover .X, #container2 .draggable-item:hover .duplicate,  #container2 .draggable-item:hover .xButton , #container2 .draggable-item:hover #imageButton{
   visibility: visible;
 }
 
@@ -415,17 +459,22 @@ justify-content: flex-end;
   margin-left:5px;
   margin-bottom: 5px;
   position: relative;
-  bottom: 19px;
+  bottom: 18px;
   padding-top: 3px;
   padding-left: 12px;
   padding-right: 12px;
-  height: 35px;
+  height: 28px;
   background: #FFF;
   font-size: 14px;
+  pointer-events: none;
 }
 
 #homePage li button:focus{
   outline: 0;
+}
+
+#modal-wrap{
+    pointer-events: visible;
 }
 
 
@@ -435,7 +484,8 @@ justify-content: flex-end;
   padding-bottom: 5px;
   position: relative;
   bottom: 0px;
-  color: #3c3c3c;
+  pointer-events: visible;
+  /* color: #3c3c3c; */
 }
 
 #homePage li button .pageSpan:hover{
@@ -6035,4 +6085,13 @@ html {
 html {
     font-size: 70%;
 }
+}
+
+button [aria-selected='false']{
+    color: red;
+}
+
+.intro_4 #imageButton {
+    top: 10px;
+    left: 10px;
 }
