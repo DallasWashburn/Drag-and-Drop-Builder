@@ -11,10 +11,13 @@
   min-height: 35px;
   background-size: contain;
   background-image: url("../../../images/Header/header-0.png"); 
-
 }
 
-
+.projectPreviewWrap #Header-0{
+  background-image: url("../../../images/Header/header-0.png"); 
+  height: 40px;
+  background-size: 104%;
+}
 
 
 .container1 #Header-1{
@@ -25,7 +28,11 @@
 
 }
 
-
+.projectPreviewWrap #Header-1{
+  background-image: url("../../../images/Header/header-1.png"); 
+  height: 40px;
+  background-size: 104%;
+}
 
 .container1 #Header-2{
   background-image: url("../../../images/Header/header-2.png");
@@ -33,12 +40,22 @@
     background-size: contain;
 
 }
-
-
+.projectPreviewWrap #Header-2{
+  background-image: url("../../../images/Header/header-2.png"); 
+  height: 40px;
+  background-size: 104%;
+}
 
 .container1 #Header-3{
   background-image: url("../../../images/Header/header-3.png");
   min-height: 40px;
   background-size: contain;
+}
+
+
+.projectPreviewWrap #Header-3{
+  background-image: url("../../../images/Header/header-3.png"); 
+  height: 40px;
+  background-size: 104%;
 }
 

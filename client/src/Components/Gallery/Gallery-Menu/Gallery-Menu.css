@@ -14,3 +14,23 @@
     background-image: url("../../../images/Gallery/gallery-1.png");
 }
 
+.projectPreviewWrap #Gallery-0{
+    background-image: url("../../../images/Gallery/gallery-4.png");
+    min-height: 230px;
+    background-size: 115%;
+    background-position: center;
+}
+
+.projectPreviewWrap #Gallery-1{
+    background-image: url("../../../images/Gallery/gallery-3.png");
+    min-height: 280px;
+    background-size: 115%;
+    background-position: center;
+}
+
+.projectPreviewWrap #Gallery-2{
+    background-image: url("../../../images/Gallery/gallery-1.png");
+    min-height: 175px;
+    background-size: 115%;
+    background-position: center;
+}

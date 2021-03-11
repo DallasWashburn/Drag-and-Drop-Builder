@@ -17,4 +17,33 @@
          background-image: url("../../../images/Contact/contact-4.png");
          min-height: 100px;
     }
+
+
+    .projectPreviewWrap #Contact-0 {
+        background-image: url("../../../images/Contact/contact-1.png");
+        min-height: 250px;
+        background-size: 115%;
+        background-position: center;
+     }
+    
+     .projectPreviewWrap #Contact-1 {
+        background-image: url("../../../images/Contact/contact-2.png");
+        min-height: 200px;
+        background-size: 115%;
+        background-position: center;
+    }
+    
+    .projectPreviewWrap #Contact-2 {
+        background-image: url("../../../images/Contact/contact-3.png");
+        min-height: 210px;
+        background-size: 115%;
+        background-position: center;
+    }
+    
+    .projectPreviewWrap  #Contact-3 {
+         background-image: url("../../../images/Contact/contact-4.png");
+         min-height: 190px;
+         background-size: 115%;
+         background-position: center;
+    }
     

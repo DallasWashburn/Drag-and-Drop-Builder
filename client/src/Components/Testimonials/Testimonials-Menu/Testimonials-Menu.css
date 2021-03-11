@@ -4,12 +4,26 @@
   min-height: 100px;
 }
 
+.projectPreviewWrap #Testimonial-0{
+  background-image: url("../../../images/Testimonials/testimonial-2.png");
+  min-height: 190px;
+  background-size: 115%;
+  background-position: center;
+}
+
 #container1 #Testimonial-1{
   background-image: url("../../../images/Testimonials/testimonial-1.png");
   background-size: contain;
   min-height: 80px;
 }
 
+
+.projectPreviewWrap #Testimonial-1{
+  background-image: url("../../../images/Testimonials/testimonial-1.png");
+  min-height: 150px;
+  background-size: 115%;
+  background-position: center;
+}
 
 
 

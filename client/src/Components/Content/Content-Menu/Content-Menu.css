@@ -15,3 +15,27 @@
 }
 
 
+.projectPreviewWrap #Content-0{
+  background-image: url("../../../images/Content/content-1.png");
+  min-height: 150px;
+  background-size: contain;
+  background-position: center;
+
+}
+
+.projectPreviewWrap #Content-1{
+  background-image: url("../../../images/Content/content-2.png");
+  min-height: 180px;
+  background-size: cover;
+
+
+}
+
+.projectPreviewWrap #Content-2{
+  background-image: url("../../../images/Content/content-3.png");
+  min-height: 180px;
+  background-size: cover;
+
+
+
+}

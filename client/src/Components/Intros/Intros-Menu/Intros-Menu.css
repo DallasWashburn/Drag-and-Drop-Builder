@@ -8,13 +8,24 @@
   min-height: 90px;
 }
 
-#Intro-1{
-  background-size: cover;
+.projectPreviewWrap #Intro-0{
+  background-image: url("../../../images/Intro/intro-0.png");
+  min-height: 190px;
 }
+
+
 
 .container1 #Intro-1{
   background-image: url("../../../images/Intro/intro-1.png");
   min-height: 90px;
+  background-size: cover;
+}
+
+.projectPreviewWrap #Intro-1{
+  background-image: url("../../../images/Intro/intro-1.png");
+  min-height: 220px;
+  background-size: cover;
+
 }
 
 #Intro-2{
@@ -26,9 +37,17 @@
   min-height: 90px;
 }
 
-#Intro-3{
-  
+.projectPreviewWrap #Intro-2{
+  background-image: url("../../../images/Intro/intro-2.png");
+  min-height:220px;
 }
+
+.projectPreviewWrap #Intro-3{
+  background-image: url("../../../images/Intro/intro-3.png");
+  min-height:220px;
+  background-size: cover;
+}
+
 #container2 #Intro-0{
   min-height: 100%;
 }
@@ -47,12 +66,17 @@
   min-height: 90px;
 }
 
-#Intro-4{
-}
 
 
 .container1 #Intro-4{
   background-image: url("../../../images/Intro/intro-4.png");
-
+  
   min-height: 90px;
+}
+
+.projectPreviewWrap #Intro-4{
+  background-image: url("../../../images/Intro/intro-4.png");
+  min-height: 220px;
+  background-size: contain;
+
 }
