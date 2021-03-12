@@ -21,7 +21,7 @@
 
 
 .container1 #Header-1{
-  background-image: url("../../../images/Header/header-1.png");
+  background-image: url("../../../images/Header/header-1.jpg");
 
   min-height: 35px;
   background-size: contain;
@@ -29,24 +29,24 @@
 }
 
 .projectPreviewWrap #Header-1{
-  background-image: url("../../../images/Header/header-1.png"); 
+  background-image: url("../../../images/Header/header-1.jpg"); 
   height: 40px;
   background-size: 104%;
 }
 
 .container1 #Header-2{
-  background-image: url("../../../images/Header/header-2.png");
+  background-image: url("../../../images/Header/header-2.jpg");
   min-height: 35px;
     background-size: contain;
 
 }
 .projectPreviewWrap #Header-2{
-  background-image: url("../../../images/Header/header-2.png"); 
+  background-image: url("../../../images/Header/header-2.jpg"); 
   height: 40px;
   background-size: 104%;
 }
 
-.container1 #Header-3{
+/* .container1 #Header-3{
   background-image: url("../../../images/Header/header-3.png");
   min-height: 40px;
   background-size: contain;
@@ -57,5 +57,16 @@
   background-image: url("../../../images/Header/header-3.png"); 
   height: 40px;
   background-size: 104%;
+} */
+
+
+
+#Header-0 #imageButton,#Header-1 #imageButton {
+  top: -2px;
+  left: 0px;
 }
 
+#Header-2 #imageButton{
+  top: 50px;
+  left: 0px;
+}

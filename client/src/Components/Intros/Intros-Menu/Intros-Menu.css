@@ -6,11 +6,13 @@
 .container1 #Intro-0{
   background-image: url("../../../images/Intro/intro-0.png");
   min-height: 90px;
+  background-size: 100%;
 }
 
 .projectPreviewWrap #Intro-0{
   background-image: url("../../../images/Intro/intro-0.png");
-  min-height: 215px;
+  min-height: 175px;
+  background-size: 100%;
 }
 
 .container1 #Intro-1{
@@ -33,17 +35,19 @@
 .container1 #Intro-2{
   background-image: url("../../../images/Intro/intro-2.png");
   min-height: 90px;
+  background-size: 100%;
 }
 
 .projectPreviewWrap #Intro-2{
   background-image: url("../../../images/Intro/intro-2.png");
-  min-height:220px;
+  min-height:190px;
+  background-size: 100%;
 }
 
 .projectPreviewWrap #Intro-3{
   background-image: url("../../../images/Intro/intro-3.png");
-  min-height:220px;
-  background-size: cover;
+  min-height:165px;
+  background-size: 100%;
 }
 
 
@@ -51,6 +55,7 @@
   background-image: url("../../../images/Intro/intro-3.png");
 
   min-height: 90px;
+  background-size: 100%;
 }
 
 
@@ -59,11 +64,12 @@
   background-image: url("../../../images/Intro/intro-4.png");
   
   min-height: 90px;
+  background-size: 100%;
 }
 
 .projectPreviewWrap #Intro-4{
   background-image: url("../../../images/Intro/intro-4.png");
-  min-height: 220px;
+  min-height: 135px;
   background-size: contain;
 
 }

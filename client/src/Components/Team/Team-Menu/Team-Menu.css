@@ -5,8 +5,8 @@
 
 .projectPreviewWrap #Team-0{
   background-image: url("../../../images/Team/team-0.png");
-  min-height: 210px;
-  background-size: 115%;
+  min-height: 350px;
+  background-size: 100%;
   background-position: center;
 }
 
@@ -19,8 +19,8 @@
 
 .projectPreviewWrap #Team-1{
   background-image: url("../../../images/Team/team-1.png");
-  min-height: 175px;
-  background-size: 115%;
+  min-height: 250px;
+  background-size: 100%;
   background-position: center;
 }
 
@@ -31,8 +31,8 @@
 
 .projectPreviewWrap #Team-2{
   background-image: url("../../../images/Team/team-2.png");
-  min-height: 210px;
-  background-size: 115%;
+  min-height: 250px;
+  background-size: 100%;
   background-position: center;
 }
 
@@ -43,8 +43,18 @@
 
 .projectPreviewWrap #Team-3{
   background-image: url("../../../images/Team/team-3.png");
-  min-height: 220px;
-  background-size: 115%;
+  min-height: 260px;
+  background-size: 100%;
   background-position: center;
 }
 
+
+#Team-0 #imageButton, #Team-1 #imageButton{
+  top: 160px;
+  left: 6px;
+  z-index: 9999999;
+}
+
+#Team-3 #imageButton{
+  left: 5px;
+}

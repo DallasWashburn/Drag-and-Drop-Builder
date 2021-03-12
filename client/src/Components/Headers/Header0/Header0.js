@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import "./Header0.css"
 import InlineEdit from "../../inlineEdit"
+import ImageButton from "../../imageButton/imageButton"
+
 
 
 
@@ -14,7 +16,11 @@ class Header0 extends Component {
                         <div className="site-branding">
                             <div className="main-logo">
                                 <a rel="home">
-                                    <img src="https://www.cybermark.com/wp-content/uploads/2018/08/mainLogo.png" alt="" />
+                                    <div className="Header-0">
+                                    <ImageButton getImage={this.props.getImage} />
+
+                                    <img src={this.props.companyLogo} alt="" />
+                                    </div>
                                 </a>
                             </div>
                         </div>

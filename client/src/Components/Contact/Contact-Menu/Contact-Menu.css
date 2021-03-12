@@ -1,48 +1,48 @@
 #container1 #Contact-0 {
-        background-image: url("../../../images/Contact/contact-1.png");
+        background-image: url("../../../images/Contact/contact-0.png");
          min-height: 100px;
      }
     
 #container1 #Contact-1 {
-        background-image: url("../../../images/Contact/contact-2.png");
+        background-image: url("../../../images/Contact/contact-1.png");
         min-height: 100px;
     }
     
 #container1 #Contact-2 {
-        background-image: url("../../../images/Contact/contact-3.png");
+        background-image: url("../../../images/Contact/contact-2.png");
         min-height: 100px;
     }
     
 #container1  #Contact-3 {
-         background-image: url("../../../images/Contact/contact-4.png");
+         background-image: url("../../../images/Contact/contact-3.png");
          min-height: 100px;
     }
 
 
     .projectPreviewWrap #Contact-0 {
-        background-image: url("../../../images/Contact/contact-1.png");
-        min-height: 250px;
+        background-image: url("../../../images/Contact/contact-0.png");
+        min-height: 375px;
         background-size: 115%;
         background-position: center;
      }
     
      .projectPreviewWrap #Contact-1 {
-        background-image: url("../../../images/Contact/contact-2.png");
-        min-height: 200px;
+        background-image: url("../../../images/Contact/contact-1.png");
+        min-height: 375px;
         background-size: 115%;
         background-position: center;
     }
     
     .projectPreviewWrap #Contact-2 {
-        background-image: url("../../../images/Contact/contact-3.png");
-        min-height: 210px;
+        background-image: url("../../../images/Contact/contact-2.png");
+        min-height: 350px;
         background-size: 115%;
         background-position: center;
     }
     
     .projectPreviewWrap  #Contact-3 {
-         background-image: url("../../../images/Contact/contact-4.png");
-         min-height: 190px;
+         background-image: url("../../../images/Contact/contact-3.png");
+         min-height: 325px;
          background-size: 115%;
          background-position: center;
     }

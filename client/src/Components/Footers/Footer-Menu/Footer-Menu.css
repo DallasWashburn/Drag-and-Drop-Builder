@@ -1,38 +1,38 @@
 
 #container1 #Footer-0{
-    background-image:url('../../../images/Footer/footer-5.png');
+    background-image:url('../../../images/Footer/footer-0.png');
     background-size: contain;
     min-height: 80px;
   }
 #container1 #Footer-1{
-    background-image: url("../../../images/Footer/footer-4.png");
+    background-image: url("../../../images/Footer/footer-1.png");
     background-size: contain;
     min-height: 80px;
 }
 
 #container1 #Footer-2{
-    background-image: url("../../../images/Footer/footer-3.png");
+    background-image: url("../../../images/Footer/footer-2.png");
     background-size: contain;
     min-height: 80px;
 }
 
 
 .projectPreviewWrap #Footer-0{
-    background-image:url('../../../images/Footer/footer-5.png');
+    background-image:url('../../../images/Footer/footer-0.png');
     min-height: 120px;
     background-size: 100%;
     background-position: center;
   }
   .projectPreviewWrap #Footer-1{
-    background-image: url("../../../images/Footer/footer-4.png");
-    min-height: 50px;
+    background-image: url("../../../images/Footer/footer-1.png");
+    min-height: 125px;
     background-size: 100%;
     background-position: center;
 }
 
 .projectPreviewWrap #Footer-2{
-    background-image: url("../../../images/Footer/footer-3.png");
-    min-height: 120px;
+    background-image: url("../../../images/Footer/footer-2.png");
+    min-height: 125px;
     background-size: 100%;
     background-position: center;
 }

@@ -1,13 +1,13 @@
 #container1 #Testimonial-0{
-  background-image: url("../../../images/Testimonials/testimonial-2.png");
+  background-image: url("../../../images/Testimonials/testimonial-0.png");
   background-size: contain;
   min-height: 100px;
 }
 
 .projectPreviewWrap #Testimonial-0{
-  background-image: url("../../../images/Testimonials/testimonial-2.png");
-  min-height: 190px;
-  background-size: 115%;
+  background-image: url("../../../images/Testimonials/testimonial-0.png");
+  min-height: 200px;
+  background-size: 100%;
   background-position: center;
 }
 
@@ -20,8 +20,8 @@
 
 .projectPreviewWrap #Testimonial-1{
   background-image: url("../../../images/Testimonials/testimonial-1.png");
-  min-height: 150px;
-  background-size: 115%;
+  min-height: 160px;
+  background-size: 100%;
   background-position: center;
 }
 

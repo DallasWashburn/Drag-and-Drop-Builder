@@ -1,26 +1,21 @@
 .projectPreview{
     padding: 10px;
     border: solid 1px black;
+    background-size: 100%;
+
 }
 
 .projectPreviewWrap #Header-0{
-    background-image: url("../../images/Header/header-0.png");
     height: 40px;
-    background-size: 104%;
+    background-size: 100%;
     
 }
 .projectPreviewWrap #Header-1{
-    background-image: url("../../images/Header/header-1.png");
     height: 40px;
-    background-size: 104%;
+    background-size: 100%;
+
 }
 .projectPreviewWrap #Header-2{
-    background-image: url("../../images/Header/header-2.png");
-    height: 40px;
-    background-size: 104%;
-}
-.projectPreviewWrap #Header-3{
-    background-image: url("../../images/Header/header-3.png");
-    height: 70px;
-    background-size: 102%;
+    height: 60px;
+    background-size: 100%;
 }

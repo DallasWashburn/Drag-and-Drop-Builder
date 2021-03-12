@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import "./Header2.css"
 import InlineEdit from "../../inlineEdit"
+import ImageButton from "../../imageButton/imageButton"
 
 
 class Header2 extends Component {
@@ -13,7 +14,7 @@ class Header2 extends Component {
                             <div className="row align-items-center">
                                 <div className="col-md-6">
                                     <div className="top__phone">
-                                        <a>623.456.9876</a>
+                                        <a><InlineEdit text={this.props.phoneNumber} onSetText={text => this.props.getHeaderInfo(undefined,undefined,undefined,undefined,undefined,undefined,undefined,text)}/></a>
                                     </div>
                                 </div>
                                 <div className="col-md-6 text-right">
@@ -35,7 +36,10 @@ class Header2 extends Component {
                             <div className="site-branding">
                                 <div className="main-logo">
                                     <a rel="home">
-                                        <img src="https://www.cybermark.com/wp-content/uploads/2018/08/mainLogo.png" alt="" />
+                                    <div className="Header-2">
+                                        <ImageButton getImage={this.props.getImage} />
+                                        <img src={this.props.companyLogo} alt="" />
+                                    </div>
                                     </a>
                                 </div>
                             </div>

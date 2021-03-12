@@ -24,7 +24,7 @@ class Feature3 extends Component {
                                 <div className="col-md-6">
                                     <div className="column">
                                         <div className="column-img">
-                                            <img src="https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png" alt="" />
+                                            <img src="https://res.cloudinary.com/dallas/image/upload/v1615588290/hgj071thutqu9xyfycni.png" alt="" />
                                         </div>
                                         <div className="column-text">
                                             <h4><InlineEdit text={this.props.featureH31} onSetText={text => this.props.getFeaturesInfo(undefined,undefined,undefined, text)}/></h4>
@@ -35,7 +35,7 @@ class Feature3 extends Component {
                                 <div className="col-md-6">
                                     <div className="column">
                                         <div className="column-img">
-                                            <img src="https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png" alt="" />
+                                            <img src="https://res.cloudinary.com/dallas/image/upload/v1615588280/qbblyhkhxbikkyvrk9ka.png" alt="" />
                                         </div>
                                         <div className="column-text">
                                             <h4><InlineEdit text={this.props.featureH32} onSetText={text => this.props.getFeaturesInfo(undefined,undefined,undefined,undefined,undefined, text)}/></h4>
@@ -46,7 +46,7 @@ class Feature3 extends Component {
                                 <div className="col-md-6">
                                     <div className="column">
                                         <div className="column-img">
-                                            <img src="https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png" alt="" />
+                                            <img src="https://res.cloudinary.com/dallas/image/upload/v1615588296/ou5pbr8chdjqnoum4ebz.png" alt="" />
                                         </div>
                                         <div className="column-text">
                                             <h4><InlineEdit text={this.props.featureH33} onSetText={text => this.props.getFeaturesInfo(undefined,undefined,undefined,undefined,undefined,undefined,undefined, text)}/></h4>
@@ -57,7 +57,7 @@ class Feature3 extends Component {
                                 <div className="col-md-6">
                                     <div className="column">
                                         <div className="column-img">
-                                            <img src="https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png" alt="" />
+                                            <img src="https://res.cloudinary.com/dallas/image/upload/v1615588290/hgj071thutqu9xyfycni.png" alt="" />
                                         </div>
                                         <div className="column-text">
                                             <h4><InlineEdit text={this.props.featureH34} onSetText={text => this.props.getFeaturesInfo(undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined, text)}/></h4>

@@ -126,7 +126,7 @@ class PDFGenerate extends React.Component {
             return data7
         })
 
-        var doc = new jsPDF('l', 'em', [220 ,150]);
+        var doc = new jsPDF('l', 'em', [300 ,150]);
         var splitText = doc.splitTextToSize(data1, 175)
         doc.text(5, 5, splitText);
         if (data2.length > 0) {

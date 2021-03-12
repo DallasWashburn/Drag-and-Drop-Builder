@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import Slider from "react-slick";
 import InlineEdit from "../../inlineEdit"
+import ImageButton from "../../imageButton/imageButton"
 
 import "./Gallery1.css"
 
@@ -11,8 +12,8 @@ class Gallery1 extends Component {
             <section className="gallery_2 section__wrapper">
                 <div className="container">
                     <div className="section__heading text-center">
-                        <h2><InlineEdit text={this.props.galleryHeading} onSetText={text => this.props.getGalleryInfo(text)}/></h2>
-                        <p><InlineEdit text={this.props.gallerySubtext} onSetText={text => this.props.getGalleryInfo(undefined, text)}/></p>
+                        <h2><InlineEdit text={this.props.galleryHeading} onSetText={text => this.props.getGalleryInfo(text)} /></h2>
+                        <p><InlineEdit text={this.props.gallerySubtext} onSetText={text => this.props.getGalleryInfo(undefined, text)} /></p>
                     </div>
                     <div className="section__container columns gallery_columns">
                         <div className="row justify-content-center">
@@ -20,8 +21,11 @@ class Gallery1 extends Component {
                                 <div className="column gallery_2_column text-center">
                                     <div className="column-img">
                                         <a className="fancybox" rel="gallery2">
-
-                                            <img width="1024" height="282" src="https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png" className="attachment-large size-large" alt="" loading="lazy" sizes="100vw" />							</a>
+                                            <div className="Gallery-1-1">
+                                                <ImageButton getImage={this.props.getImage} />
+                                                <img width="1024" height="282" src={this.props.galleryImage1} className="attachment-large size-large" alt="" loading="lazy" sizes="100vw" />
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -29,8 +33,11 @@ class Gallery1 extends Component {
                                 <div className="column gallery_2_column text-center">
                                     <div className="column-img">
                                         <a className="fancybox" rel="gallery2">
-
-                                            <img width="1024" height="282" src="https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png" className="attachment-large size-large" alt="" loading="lazy" sizes="100vw" />							</a>
+                                            <div className="Gallery-1-2">
+                                                <ImageButton getImage={this.props.getImage} />
+                                                <img width="1024" height="282" src={this.props.galleryImage2} className="attachment-large size-large" alt="" loading="lazy" sizes="100vw" />
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -38,8 +45,11 @@ class Gallery1 extends Component {
                                 <div className="column gallery_2_column text-center">
                                     <div className="column-img">
                                         <a className="fancybox" rel="gallery2">
-
-                                            <img width="1024" height="282" src="https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png" className="attachment-large size-large" alt="" loading="lazy" sizes="100vw" />							</a>
+                                            <div className="Gallery-1-3">
+                                                <ImageButton getImage={this.props.getImage} />
+                                                <img width="1024" height="282" src={this.props.galleryImage3} className="attachment-large size-large" alt="" loading="lazy" sizes="100vw" />
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -47,8 +57,11 @@ class Gallery1 extends Component {
                                 <div className="column gallery_2_column text-center">
                                     <div className="column-img">
                                         <a className="fancybox" rel="gallery2">
-
-                                            <img width="1024" height="282" src="https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png" className="attachment-large size-large" alt="" loading="lazy" sizes="100vw" />							</a>
+                                            <div className="Gallery-1-4">
+                                                <ImageButton getImage={this.props.getImage} />
+                                                <img width="1024" height="282" src={this.props.galleryImage4} className="attachment-large size-large" alt="" loading="lazy" sizes="100vw" />
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -56,8 +69,11 @@ class Gallery1 extends Component {
                                 <div className="column gallery_2_column text-center">
                                     <div className="column-img">
                                         <a className="fancybox" rel="gallery2">
-
-                                            <img width="1024" height="282" src="https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png" className="attachment-large size-large" alt="" loading="lazy" sizes="100vw" />							</a>
+                                            <div className="Gallery-1-5">
+                                                <ImageButton getImage={this.props.getImage} />
+                                                <img width="1024" height="282" src={this.props.galleryImage5} className="attachment-large size-large" alt="" loading="lazy" sizes="100vw" />
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -65,8 +81,11 @@ class Gallery1 extends Component {
                                 <div className="column gallery_2_column text-center">
                                     <div className="column-img">
                                         <a className="fancybox" rel="gallery2">
-
-                                            <img width="1024" height="282" src="https://www.agora-gallery.com/advice/wp-content/uploads/2015/10/image-placeholder.png" className="attachment-large size-large" alt="" loading="lazy" sizes="100vw" />							</a>
+                                            <div className="Gallery-1-6">
+                                                <ImageButton getImage={this.props.getImage} />
+                                                <img width="1024" height="282" src={this.props.galleryImage6} className="attachment-large size-large" alt="" loading="lazy" sizes="100vw" />
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

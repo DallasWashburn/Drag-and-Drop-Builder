@@ -1,41 +1,38 @@
 .container1 #Content-0{
-  background-image: url("../../../images/Content/content-3.png");
+  background-image: url("../../../images/Content/content-0.png");
   background-size: contain;
   
 }
 
 .container1 #Content-1{
-  background-image: url("../../../images/Content/content-2.png");
-  background-size: contain;
+  background-image: url("../../../images/Content/content-1.png");
+  background-size: 100%;
 }
 
 .container1 #Content-2{
-  background-image: url("../../../images/Content/content-1.png");
+  background-image: url("../../../images/Content/content-2.png");
   background-size: contain;
 }
 
 
 .projectPreviewWrap #Content-0{
-  background-image: url("../../../images/Content/content-1.png");
-  min-height: 150px;
-  background-size: contain;
+  background-image: url("../../../images/Content/content-0.png");
+  min-height: 200px;
+  background-size: 100%;
   background-position: center;
 
 }
 
 .projectPreviewWrap #Content-1{
-  background-image: url("../../../images/Content/content-2.png");
-  min-height: 180px;
+  background-image: url("../../../images/Content/content-1.png");
+  min-height: 200px;
   background-size: cover;
 
 
 }
 
 .projectPreviewWrap #Content-2{
-  background-image: url("../../../images/Content/content-3.png");
-  min-height: 180px;
-  background-size: cover;
-
-
-
+  background-image: url("../../../images/Content/content-2.png");
+  min-height: 115px;
+  background-size: 100%;
 }
