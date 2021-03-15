@@ -89,7 +89,7 @@ outline: none;
     text-align: left;
     font-weight: 500;
     font-size: 16px;
-    color: teal;
+    color: var(--primaryColor);
 }
 
 a:not([href]){
@@ -544,6 +544,10 @@ textarea{
   
 }
 
+.projectCard h3:empty{
+    border:none;
+}
+
 #modal-bk{
   display: flex;
   height: 100vh;
@@ -696,8 +700,9 @@ textarea{
 }
 
 .projectCard h3{
-  padding-bottom: 10px;
   text-align: center;
+  border: 1px solid;
+    padding: 20px;
 }
 
 

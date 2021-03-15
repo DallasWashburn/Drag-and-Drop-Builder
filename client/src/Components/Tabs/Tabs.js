@@ -10,13 +10,11 @@ import Container5 from "../Container5/Container5"
 import Container6 from "../Container6/Container6"
 import Container7 from "../Container7/Container7"
 import Modal from "../Modal/Modal"
-// import Header1 from "../Headers/Header1/Header1"
 import { applyDrag, generateItems } from '../../utils';
 import PDFGenerate from "../PDF-Generate/PDF-Generate"
 import SaveButton from "../Save-Button/Save-Button"
 import ProfileButton from "../Profile-Button/Profile-Button"
 var pageTitles = ["Home Page"]
-// let header1 = document.getElementById("Header-0");
 
 const styles = {
     activeLinkStyle: {
@@ -114,13 +112,9 @@ class ContainerTabs extends Component {
         API.getUsers()
             .then(users => {
                 var theUsers = users.data
-                console.log("getProject");
-                var userProjects = []
                 for (let i = 0; i < theUsers.length; i++) {
                     const element = theUsers[i];
-                    // console.log(element);
                     if (element.userEmail === this.state.email) {
-                        // console.log(element.projects);
                         var Page1Title = element.projects[0];
                         var Page1 = element.projects[1];
                         var Page2Title = element.projects[2][0].data;
@@ -135,7 +129,6 @@ class ContainerTabs extends Component {
                         var Page6 = element.projects[11];
                         var Page7Title = element.projects[12][0].data;
                         var Page7 = element.projects[13];
-                        // console.log(Page3Title);
                         this.setState({
                             Page1Title: Page1Title,
                             items2: Page1,
@@ -154,8 +147,6 @@ class ContainerTabs extends Component {
                         })
                     }
                 }
-
-                // console.log(this.state.projects);
                 this.checkTabs()
             })
     }
@@ -173,47 +164,46 @@ class ContainerTabs extends Component {
             
             var link4 = document.getElementById("link-4")
             link4.style.visibility = "visible";
-            var link3 = document.getElementById("link-3")
-            var link3Child = link3.childNodes[0]
+            var link3New = document.getElementById("link-3")
+            var link3Child = link3New.childNodes[0]
             link3Child.setAttribute("data-clicks", 1);
         }
         if (this.state.pageName4.length > 1) {
             
             var link5 = document.getElementById("link-5")
             link5.style.visibility = "visible";
-            var link4 = document.getElementById("link-4")
-            var link4Child = link4.childNodes[0]
+            var link4New = document.getElementById("link-4")
+            var link4Child = link4New.childNodes[0]
             link4Child.setAttribute("data-clicks", 1);
         }
         if (this.state.pageName5.length > 1) {
             
             var link6 = document.getElementById("link-6")
             link6.style.visibility = "visible";
-            var link5 = document.getElementById("link-5")
-            var link5Child = link5.childNodes[0]
+            var link5New = document.getElementById("link-5")
+            var link5Child = link5New.childNodes[0]
             link5Child.setAttribute("data-clicks", 1);
         }
         if (this.state.pageName6.length > 1) {
             
             var link7 = document.getElementById("link-7")
             link7.style.visibility = "visible";
-            var link6 = document.getElementById("link-6")
-            var link6Child = link6.childNodes[0]
+            var link6New = document.getElementById("link-6")
+            var link6Child = link6New.childNodes[0]
             link6Child.setAttribute("data-clicks", 1);
         }
         if (this.state.pageName7.length > 1) {
             
             var link8 = document.getElementById("link-8")
             link8.style.visibility = "visible";
-            var link7 = document.getElementById("link-7")
-            var link7Child = link7.childNodes[0]
+            var link7New = document.getElementById("link-7")
+            var link7Child = link7New.childNodes[0]
             link7Child.setAttribute("data-clicks", 1);
         }
     }
 
 
     updateUser = () => {
-        console.log(this.props.dbId);
         var nameOfPage1= {id:"pageName1", data:this.state.pageName1}
         var nameOfPage2= {id:"pageName2", data:this.state.pageName2}
         var nameOfPage3= {id:"pageName3", data:this.state.pageName3}
@@ -221,32 +211,21 @@ class ContainerTabs extends Component {
         var nameOfPage5= {id:"pageName5", data:this.state.pageName5}
         var nameOfPage6= {id:"pageName6", data:this.state.pageName6}
         var nameOfPage7= {id:"pageName7", data:this.state.pageName7}
-        var pageHeader0= {id:"pageHeader0", data:this.state.h3Heading}
-        var pageContent0= {id:"pageContent0", data:this.state.copy1}
-
-
 
         var allPages = [nameOfPage1, this.state.items2, nameOfPage2, this.state.items3, nameOfPage3, this.state.items4, nameOfPage4, this.state.items5, nameOfPage5, this.state.items6, nameOfPage6, this.state.items7, nameOfPage7, this.state.items8]
-        allPages.map(page => {
-            console.log(page);
-            
-        })
+
         API.updateUser(this.props.dbId, allPages)
 
         window.alert("Thank you, Your Project Has Been Saved")
-        // .then(user => {
-        //     console.log(user);
-        // })
+
     }
 
     // Handles the form inside modal and disperses text to the corresponding page 
 
     handleChange = (event) => {
         const target = event.target;
-        const name = target.name;
         const value = target.value;
         var modalBackground = event.target.parentElement.parentElement.parentElement.parentElement.parentElement;
-        console.log(value.length);
         if (modalBackground.id === "modal1") {
             this.setState({
                 pageName2: value
@@ -283,7 +262,6 @@ class ContainerTabs extends Component {
     modalClose = (event) => {
         event.preventDefault();
         let modalTab = event.target.parentElement.parentElement.parentElement.parentElement
-        console.log(modalTab.id)
         modalTab.dataset.clicks = 0;
         if(modalTab.id === "tab-tab2"){
             var previous = document.getElementById("tab-tab2");
@@ -314,7 +292,6 @@ class ContainerTabs extends Component {
     // Handles the submit button on the modal 
     handleSubmit = (event) => {
         var modalName = event.target.parentElement.parentElement.parentElement.parentElement.parentElement;
-        console.log(modalName);
 
         // Pushes page titles to pdf doc, if name is not inputed, it will autofill the number of the page
         // Shows the next tab after the one before it has been used
@@ -324,7 +301,6 @@ class ContainerTabs extends Component {
         var divGrandparent = divParent.parentElement
         var lastOne = divGrandparent.parentElement
         var oneINeed = lastOne.parentElement.parentElement
-        console.log(oneINeed);
 
 
         if (oneINeed.id == "tab-tab2" && oneINeed.dataset.clicks == 1 && this.state.pageName2.length > 1) {
@@ -336,8 +312,8 @@ class ContainerTabs extends Component {
                 pageName2: "Page 2"
             });
             pageTitles.push(this.state.pageName2)
-            var link3 = document.getElementById("link-3")
-            link3.style.visibility = "visible"
+            var link3Next = document.getElementById("link-3")
+            link3Next.style.visibility = "visible"
         }
 
         if (oneINeed.id == "tab-tab3" && oneINeed.dataset.clicks == 1 && this.state.pageName3.length > 1) {
@@ -349,8 +325,8 @@ class ContainerTabs extends Component {
                 pageName3: "Page 3"
             });
             pageTitles.push(this.state.pageName3)
-            var link4 = document.getElementById("link-4")
-            link4.style.visibility = "visible"
+            var link4Next = document.getElementById("link-4")
+            link4Next.style.visibility = "visible"
         }
 
         if (oneINeed.id == "tab-tab4" && oneINeed.dataset.clicks == 1 && this.state.pageName4.length > 1) {
@@ -362,8 +338,8 @@ class ContainerTabs extends Component {
                 pageName4: "Page 4"
             });
             pageTitles.push(this.state.pageName4)
-            var link5 = document.getElementById("link-5")
-            link5.style.visibility = "visible"
+            var link5Next = document.getElementById("link-5")
+            link5Next.style.visibility = "visible"
         }
 
         if (oneINeed.id == "tab-tab5" && oneINeed.dataset.clicks == 1 && this.state.pageName5.length > 1) {
@@ -375,8 +351,8 @@ class ContainerTabs extends Component {
                 pageName5: "Page 5"
             });
             pageTitles.push(this.state.pageName5)
-            var link6 = document.getElementById("link-6")
-            link6.style.visibility = "visible"
+            var link6Next = document.getElementById("link-6")
+            link6Next.style.visibility = "visible"
         }
 
         if (oneINeed.id == "tab-tab6" && oneINeed.dataset.clicks == 1 && this.state.pageName6.length > 1) {
@@ -388,8 +364,8 @@ class ContainerTabs extends Component {
                 pageName6: "Page 6"
             });
             pageTitles.push(this.state.pageName6)
-            var link7 = document.getElementById("link-7")
-            link7.style.visibility = "visible"
+            var link7Next = document.getElementById("link-7")
+            link7Next.style.visibility = "visible"
         }
 
         if (oneINeed.id == "tab-tab7" && oneINeed.dataset.clicks == 1 && this.state.pageName7.length > 1) {
@@ -436,7 +412,6 @@ class ContainerTabs extends Component {
         // this.toggleHidden();
         var element = event.target
         var parent = element.parentElement;
-        console.log(element.textContent.length);
         if (parent.id === "tab-tab2" && parent.dataset.clicks === "0" && element.textContent.length > 1) {
             parent.setAttribute("data-clicks", 1)
             this.setState({ isHidden1: false })
@@ -465,7 +440,6 @@ class ContainerTabs extends Component {
     }
     // Deletes tab and array 
     deleteTab = (event) => {
-        console.log(event.target);
         var tab = event.target.parentElement.parentElement
         if (tab.id === "tab-tab2") {
             this.setState({ pageName2: "" })
@@ -495,17 +469,11 @@ class ContainerTabs extends Component {
         var targetFirstChar = event.target.textContent.charAt(0)
         var pageTitle = event.target.parentElement.dataset.clicks;
         var tabX = event.target.getElementsByTagName("span")[0];
-        console.log(target);
         if (pageTitle === "0" && targetFirstChar === "+") {
-            console.log("working");
             tabX.style.display = "none"
         } else if (pageTitle === "1" && target === "pageSpan") {
             tabX.style.display = "inline"
-            // tabX.style.justifyContent = "flex-end"
-            // tabX.style.position ="absolute"
             tabX.style.marginLeft ="auto"
-
-
         } else {
             return
         }
@@ -516,15 +484,10 @@ class ContainerTabs extends Component {
     removeElement1 = (event) => {
         var parentDiv = event.target.parentElement;
         var grandparent = parentDiv.parentElement.parentElement;
-        console.log(event.target);
-        console.log(grandparent);
-
         var array = [...this.state.items2];
         var elementPosition = array.map(function (x) {
-            console.log(x.data)
             return x.data
         }).indexOf(grandparent.id);
-        console.log(grandparent.id);
         if (array !== -1) {
             array.splice(elementPosition, 1);
             this.setState({ items2: array })
@@ -534,23 +497,14 @@ class ContainerTabs extends Component {
     // Duplicates Element from Tab-1
     duplicateElement1 = (event) => {
         var parentDiv = event.target.parentElement;
-        var grandparent = parentDiv.parentElement.parentElement;
-        console.log(grandparent);
-        
+        var grandparent = parentDiv.parentElement.parentElement;        
         var array = [...this.state.items2];
         var elementPosition = array.map(function (x) {
-            console.log(x.data)
             return x.data
         }).indexOf(grandparent.id);
-        console.log(grandparent.id);
         var element = array.map(function (x) {
-            console.log(x)
             return x
         })
-        console.log(element);
-        console.log(this.state.items2);
-
-        // element.setAttribute("id", "working")
         array.push(element[elementPosition])
         this.setState({ items2: array })
     }
@@ -562,20 +516,6 @@ class ContainerTabs extends Component {
         )
     }
 
-    getHTML = () => {
-        console.log(this.state.items2);
-        var comps = this.state.items2
-        for (let i = 0; i < comps.length; i++) {
-            const element = comps[i];
-            console.log(element.data);
-            if (element.data === "Header-0") {
-                console.log("header0");
-
-            }
-        }
-
-
-    }
 
     // Recieves Element when dropped on Tab-1 and Places Element in its correct index 
     onDrop1 = (e) => {
@@ -588,10 +528,8 @@ class ContainerTabs extends Component {
         var grandparent = parentDiv.parentElement.parentElement;
         var array = [...this.state.items3];
         var elementPosition = array.map(function (x) {
-            console.log(x.data)
             return x.data
         }).indexOf(grandparent.id);
-        console.log(grandparent.id);
         if (array !== -1) {
             array.splice(elementPosition, 1);
             this.setState({ items3: array })
@@ -604,16 +542,11 @@ class ContainerTabs extends Component {
         var grandparent = parentDiv.parentElement;
         var array = [...this.state.items3];
         var elementPosition = array.map(function (x) {
-            console.log(x.data)
             return x.data
         }).indexOf(grandparent.id);
-        console.log(grandparent.id);
         var element = array.map(function (x) {
-            console.log(x)
             return x
         })
-        console.log(element);
-        console.log(this.state.items3);
 
         // element.setAttribute("id", "working")
         array.push(element[elementPosition])
@@ -638,10 +571,8 @@ class ContainerTabs extends Component {
         var grandparent = parentDiv.parentElement.parentElement;
         var array = [...this.state.items4];
         var elementPosition = array.map(function (x) {
-            console.log(x.data)
             return x.data
         }).indexOf(grandparent.id);
-        console.log(grandparent.id);
         if (array !== -1) {
             array.splice(elementPosition, 1);
             this.setState({ items4: array })
@@ -654,16 +585,11 @@ class ContainerTabs extends Component {
         var grandparent = parentDiv.parentElement;
         var array = [...this.state.items4];
         var elementPosition = array.map(function (x) {
-            console.log(x.data)
             return x.data
         }).indexOf(grandparent.id);
-        console.log(grandparent.id);
         var element = array.map(function (x) {
-            console.log(x)
             return x
         })
-        console.log(element);
-        console.log(this.state.items4);
 
         // element.setAttribute("id", "working")
         array.push(element[elementPosition])
@@ -688,10 +614,8 @@ class ContainerTabs extends Component {
         var grandparent = parentDiv.parentElement.parentElement;
         var array = [...this.state.items5];
         var elementPosition = array.map(function (x) {
-            console.log(x.data)
             return x.data
         }).indexOf(grandparent.id);
-        console.log(grandparent.id);
         if (array !== -1) {
             array.splice(elementPosition, 1);
             this.setState({ items5: array })
@@ -704,18 +628,11 @@ class ContainerTabs extends Component {
         var grandparent = parentDiv.parentElement;
         var array = [...this.state.items5];
         var elementPosition = array.map(function (x) {
-            console.log(x.data)
             return x.data
         }).indexOf(grandparent.id);
-        console.log(grandparent.id);
         var element = array.map(function (x) {
-            console.log(x)
             return x
         })
-        console.log(element);
-        console.log(this.state.items5);
-
-        // element.setAttribute("id", "working")
         array.push(element[elementPosition])
         this.setState({ items5: array })
     }
@@ -738,10 +655,8 @@ class ContainerTabs extends Component {
         var grandparent = parentDiv.parentElement.parentElement;
         var array = [...this.state.items6];
         var elementPosition = array.map(function (x) {
-            console.log(x.data)
             return x.data
         }).indexOf(grandparent.id);
-        console.log(grandparent.id);
         if (array !== -1) {
             array.splice(elementPosition, 1);
             this.setState({ items6: array })
@@ -754,16 +669,12 @@ class ContainerTabs extends Component {
         var grandparent = parentDiv.parentElement;
         var array = [...this.state.items6];
         var elementPosition = array.map(function (x) {
-            console.log(x.data)
             return x.data
         }).indexOf(grandparent.id);
-        console.log(grandparent.id);
         var element = array.map(function (x) {
-            console.log(x)
             return x
         })
-        console.log(element);
-        console.log(this.state.items6);
+        
 
         // element.setAttribute("id", "working")
         array.push(element[elementPosition])
@@ -788,10 +699,8 @@ class ContainerTabs extends Component {
         var grandparent = parentDiv.parentElement.parentElement;
         var array = [...this.state.items7];
         var elementPosition = array.map(function (x) {
-            console.log(x.data)
             return x.data
         }).indexOf(grandparent.id);
-        console.log(grandparent.id);
         if (array !== -1) {
             array.splice(elementPosition, 1);
             this.setState({ items7: array })
@@ -804,17 +713,11 @@ class ContainerTabs extends Component {
         var grandparent = parentDiv.parentElement;
         var array = [...this.state.items7];
         var elementPosition = array.map(function (x) {
-            console.log(x.data)
             return x.data
         }).indexOf(grandparent.id);
-        console.log(grandparent.id);
         var element = array.map(function (x) {
-            console.log(x)
             return x
         })
-        console.log(element);
-        console.log(this.state.items7);
-
         // element.setAttribute("id", "working")
         array.push(element[elementPosition])
         this.setState({ items7: array })
@@ -838,10 +741,8 @@ class ContainerTabs extends Component {
         var grandparent = parentDiv.parentElement.parentElement;
         var array = [...this.state.items8];
         var elementPosition = array.map(function (x) {
-            console.log(x.data)
             return x.data
         }).indexOf(grandparent.id);
-        console.log(grandparent.id);
         if (array !== -1) {
             array.splice(elementPosition, 1);
             this.setState({ items8: array })
@@ -854,17 +755,11 @@ class ContainerTabs extends Component {
         var grandparent = parentDiv.parentElement;
         var array = [...this.state.items8];
         var elementPosition = array.map(function (x) {
-            console.log(x.data)
             return x.data
         }).indexOf(grandparent.id);
-        console.log(grandparent.id);
         var element = array.map(function (x) {
-            console.log(x)
             return x
         })
-        console.log(element);
-        console.log(this.state.items8);
-
         // element.setAttribute("id", "working")
         array.push(element[elementPosition])
         this.setState({ items8: array })
@@ -1071,13 +966,11 @@ class ContainerTabs extends Component {
 
                         <TabContent for="tab1">
                             <Container1
-                                items2={this.state.items2}
                                 onDrop={this.onDrop1}
                                 getChildPayload={this.getChildPayload1}
                                 generateItems={this.state.items2}
                                 removeElement={this.removeElement1}
                                 duplicateElement={this.duplicateElement1}
-                                email={this.state.email}
                             />
                         </TabContent>
                         <TabContent for="tab2">

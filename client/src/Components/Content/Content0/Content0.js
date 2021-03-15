@@ -18,7 +18,7 @@ class Content0 extends Component {
                                     <h3><InlineEdit text={this.props.content0SubHeading} onSetText={text => this.props.getContentInfo(undefined, text)}/></h3>
                                     <p><InlineEdit text={this.props.content0Text} onSetText={text => this.props.getContentInfo(undefined,undefined, text)}/></p>
                                     <div className="section__button ">
-                                        <a className="btn primary-btn" href="#" >Learn More</a>
+                                        <a className="btn primary-btn" >Learn More</a>
                                     </div>
                                 </div>
                             </div>

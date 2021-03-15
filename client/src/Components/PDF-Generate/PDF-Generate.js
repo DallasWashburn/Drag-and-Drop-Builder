@@ -1,16 +1,9 @@
 import React from "react"
 import jsPDF from 'jspdf'
-// import API from "../../utils/API"
-// import { useAuth0 } from '@auth0/auth0-react';
 import Axios from "axios";
-import Modal from "../Modal/Modal"
-// import PDFButton from "./PDF-Button"
-var data1 = [];
 
 class PDFGenerate extends React.Component {
-    // const { user } = useAuth0();    
-    // const [values, setValues] = useState({ userName: props.userName, email: props.userEmail, projects: [] });
-    // const [errors, setErrors] = useState({});
+
     constructor(props) {
         super(props);
         this.state = {
@@ -19,12 +12,6 @@ class PDFGenerate extends React.Component {
 
     }
 
-    blobToFile = (theBlob, fileName) => {
-        //A Blob() is almost a File() - it's just missing the two properties below which we will add
-        theBlob.lastModifiedDate = new Date();
-        theBlob.name = fileName;
-        return theBlob;
-    }
 
     passPdf = () => {
         const dataForm = new FormData()
@@ -38,19 +25,15 @@ class PDFGenerate extends React.Component {
 
 
     generatePDF = () => {
-
+        var data1 = [];
         data1.push(this.props.pageTitles[0])
         var dataFromContainer1 = this.props.dataFromContainer1
-        console.log(dataFromContainer1);
         dataFromContainer1.map((element) => {
             data1.push(element.data)
-            console.log(element.info);
             var dataInfo = element.info
             for(const property in dataInfo){
-                console.log(`${property}: ${dataInfo[property]}`);
                 data1.push(`${property}: ${dataInfo[property]}`)
             }
-            var sortedData = JSON.stringify(dataInfo)
             return data1
         })
         var data2 = [];
@@ -59,10 +42,12 @@ class PDFGenerate extends React.Component {
             data2.push(this.props.pageTitles[1])
         }
         var dataFromContainer2 = this.props.dataFromContainer2
-        console.log(dataFromContainer2);
         dataFromContainer2.map((element) => {
-            console.log(element.data);
             data2.push(element.data)
+            var dataInfo = element.info
+            for(const property in dataInfo){
+                data2.push(`${property}: ${dataInfo[property]}`)
+            }
             return data2
         })
         var data3 = [];
@@ -71,10 +56,12 @@ class PDFGenerate extends React.Component {
             data3.push(this.props.pageTitles[2])
         }
         var dataFromContainer3 = this.props.dataFromContainer3
-        console.log(dataFromContainer3);
         dataFromContainer3.map((element) => {
-            console.log(element.data);
             data3.push(element.data)
+            var dataInfo = element.info
+            for(const property in dataInfo){
+                data3.push(`${property}: ${dataInfo[property]}`)
+            }
             return data3
         })
         var data4 = [];
@@ -83,10 +70,12 @@ class PDFGenerate extends React.Component {
             data4.push(this.props.pageTitles[3])
         }
         var dataFromContainer4 = this.props.dataFromContainer4
-        console.log(dataFromContainer4);
         dataFromContainer4.map((element) => {
-            console.log(element.data);
             data4.push(element.data)
+            var dataInfo = element.info
+            for(const property in dataInfo){
+                data4.push(`${property}: ${dataInfo[property]}`)
+            }
             return data4
         })
         var data5 = [];
@@ -95,10 +84,12 @@ class PDFGenerate extends React.Component {
             data5.push(this.props.pageTitles[4])
         }
         var dataFromContainer5 = this.props.dataFromContainer5
-        console.log(dataFromContainer5);
         dataFromContainer5.map((element) => {
-            console.log(element.data);
             data5.push(element.data)
+            var dataInfo = element.info
+            for(const property in dataInfo){
+                data5.push(`${property}: ${dataInfo[property]}`)
+            }
             return data5
         })
         var data6 = [];
@@ -107,10 +98,12 @@ class PDFGenerate extends React.Component {
             data6.push(this.props.pageTitles[5])
         }
         var dataFromContainer6 = this.props.dataFromContainer6
-        console.log(dataFromContainer6);
         dataFromContainer6.map((element) => {
-            console.log(element.data);
             data6.push(element.data)
+            var dataInfo = element.info
+            for(const property in dataInfo){
+                data6.push(`${property}: ${dataInfo[property]}`)
+            }
             return data6
         })
         var data7 = [];
@@ -119,57 +112,60 @@ class PDFGenerate extends React.Component {
             data7.push(this.props.pageTitles[6])
         }
         var dataFromContainer7 = this.props.dataFromContainer7
-        console.log(dataFromContainer7);
         dataFromContainer7.map((element) => {
-            console.log(element.data);
-            data7.push(element.data);
+            data7.push(element.data)
+            var dataInfo = element.info
+            for(const property in dataInfo){
+                data7.push(`${property}: ${dataInfo[property]}`)
+            }
             return data7
         })
 
         var doc = new jsPDF('l', 'em', [300 ,150]);
         var splitText = doc.splitTextToSize(data1, 175)
+        var splitText2 = doc.splitTextToSize(data2, 175)
+        var splitText3 = doc.splitTextToSize(data3, 175)
+        var splitText4 = doc.splitTextToSize(data4, 175)
+        var splitText5 = doc.splitTextToSize(data5, 175)
+        var splitText6 = doc.splitTextToSize(data6, 175)
+        var splitText7 = doc.splitTextToSize(data7, 175)
+
+
+
         doc.text(5, 5, splitText);
         if (data2.length > 0) {
             doc.addPage();
-            doc.text(20, 20, data2);
+            doc.text(5, 5, splitText2);
         }
         if (data3.length > 0) {
             doc.addPage();
-            doc.text(20, 20, data3);
+            doc.text(5, 5, splitText3);
         }
         if (data4.length > 0) {
             doc.addPage();
-            doc.text(20, 20, data4);
+            doc.text(5, 5, splitText4);
         }
         if (data5.length > 0) {
             doc.addPage();
-            doc.text(20, 20, data5);
+            doc.text(5, 5, splitText5);
         }
         if (data6.length > 0) {
             doc.addPage();
-            doc.text(20, 20, data6);
+            doc.text(5, 5, splitText6);
         }
         if (data7.length > 0) {
             doc.addPage();
-            doc.text(20, 20, data7);
+            doc.text(5, 5, splitText7);
         }
         doc.save('project.pdf');
         var res = btoa(doc.output())
         console.log(res);
 
-        Axios.post("http://localhost:3001/pdfUpload", res).then((res) => {
-            if (res.status === 'ok') console.log("Yeah!");
-            // else console.log(":(");
-        })
-
-
-        // API.saveUser(values)
-        // .then(() => {
-        //     console.log(values);
-
+        // Axios.post("http://localhost:3001/pdfUpload", res).then((res) => {
+        //     if (res.status === 'ok') console.log("Yeah!");
         // })
-        // .catch(err => console.log(err)
-        // )
+
+
 
     }
 
@@ -177,57 +173,9 @@ class PDFGenerate extends React.Component {
         return (
             <div className="btn-container">
                 <button id="pdfBtn" className="btn" onClick={this.generatePDF} type="primary"><i className="fas fa-file-pdf fa-3x"></i></button>
-                {/* <div id="URLModal" className="hidden">
-                    <Modal>
-                        <div className="form-group">
-                            <label>Please enter the URL you would like to use for this template:</label>
-                            <input
-                                id="urlInput"
-                                type="text"
-                                onChange={e => this.handleChange(e)}
-                                className="form-control"
-                            />
-                        </div>
-                        <div className="form-group">
-                            <span onClick={this.handleSubmit} className="btn form-btn text-center" type="button">
-                                Save
-                        </span>
-                        </div>
-                    </Modal>
-                </div> */}
             </div>
         );
 
     }
 }
 export default PDFGenerate;
-
-
-
-// var title1 = this.props.pageTitles;
-// console.log(title1);
-// // data1.push(title1)
-// dataFromContainer1.map((element) => {
-//     let elem = document.getElementById(element.data)
-//     let ht = window.getComputedStyle(elem, null).getPropertyValue("background-image")
-//     console.log(ht);
-//     var mySubString = ht.substring(
-//         ht.lastIndexOf('(') + 1,
-//         ht.lastIndexOf(")")
-//     );
-//     var withoutQuotes = mySubString.replace(/^"(.+(?="$))"$/, '$1');
-//     data1.push(withoutQuotes)
-
-//     console.log(data1);
-
-
-
-
-// var img = new Image()
-// for (let i = 0; i < data1.length; i++) {
-//     const picture = data1[i];
-
-//     img.src=picture
-//     doc.addImage(img, "png", 10,78,580,300);
-//     doc.text(20,20," vcxvxcv")
-// }

@@ -6,7 +6,7 @@ class imageButton extends Component {
     render(){
         return (
             <div id="imageButton">
-            <button onClick={this.props.getImage}  type="button" className="btn"><i class="far fa-images"></i></button>
+            <button onClick={this.props.getImage}  type="button" className="btn"><i className="far fa-images"></i></button>
             </div>
         )
     }

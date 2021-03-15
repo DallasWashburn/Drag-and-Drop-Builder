@@ -77,9 +77,9 @@ class Header2 extends Component {
                 </header>
                 <div id="ult-fs-search">
                     <button type="button" className="close">×</button>
-                    <form role="search" className="form-search" method="get" id="searchform" >
-                        <input type="text" value="" name="s" placeholder="Type Your Keywords Here" />
-                        <button type="submit" className="btn primary-btn clear-btn">Search</button>
+                    <form className="form-search" >
+                        <input type="text" name="s" placeholder="Type Your Keywords Here" />
+                        <button  className="btn primary-btn clear-btn">Search</button>
                     </form>
                 </div>
             </>

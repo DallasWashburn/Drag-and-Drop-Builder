@@ -27,10 +27,10 @@ class Header1 extends Component {
                                     <div className="primary-menu">
                                         <ul id="menu-main-menu" className="primary-menu">
                                             <li id="menu-item-22" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-22">
-                                                <a><InlineEdit text={this.props.headerLink1} onSetText={text => this.props.getHeaderInfo(text)} /></a>
+                                                <a ><InlineEdit text={this.props.headerLink1} onSetText={text => this.props.getHeaderInfo(text)} /></a>
                                             </li>
                                             <li id="menu-item-24" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-24">
-                                                <a><InlineEdit text={this.props.headerLink2} onSetText={text => this.props.getHeaderInfo(undefined, text)} /></a>
+                                                <a ><InlineEdit text={this.props.headerLink2} onSetText={text => this.props.getHeaderInfo(undefined, text)} /></a>
                                             </li>
                                             <li id="menu-item-26" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-26">
                                                 <a><InlineEdit text={this.props.headerLink3} onSetText={text => this.props.getHeaderInfo(undefined, undefined, text)} /></a>

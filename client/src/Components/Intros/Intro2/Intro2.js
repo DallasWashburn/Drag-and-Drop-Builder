@@ -14,7 +14,7 @@ class Intro2 extends Component {
                                 <div className="section_img_wrapper">
                                     <div className="Intro-2">
                                     <ImageButton getImage={this.props.getImage}/>
-                                    <img width="1218" height="812" src={this.props.introImage} sizes="100vw" />
+                                    <img width="1218" height="812" src={this.props.introImage} sizes="100vw" alt=""/>
                                     </div>
                                 </div>
                             </div>

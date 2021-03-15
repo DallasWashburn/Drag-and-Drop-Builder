@@ -4,7 +4,7 @@ import Profile from "../../Profile"
 
 
 const AuthForProjects= () => {
-    const { user, isAuthenticated } = useAuth0();
+    const { user } = useAuth0();
     return (
     <Profile user={user}/>
     );

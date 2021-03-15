@@ -34,7 +34,6 @@ import Contact3 from "../Contact/Contact-3/Contact-3"
 import Footer0 from "../Footers/Footer-0/Footer-0"
 import Footer1 from "../Footers/Footer-1/Footer-1"
 import Footer2 from "../Footers/Footer-2/Footer-2"
-import IntrosMenu from '../Intros/Intros-Menu/Intros-Menu';
 
 
 
@@ -182,15 +181,12 @@ class Container1 extends Component {
             .then(users => {
                 var theUsers = users.data
                 // console.log(theUsers);
-                var userProjects = []
                 for (let i = 0; i < theUsers.length; i++) {
                     const element = theUsers[i];
                     // console.log(element);
                     if (element.userEmail === this.props.email) {
-                        console.log(element.projects);
                         var Page1 = element.projects[1];
                         Page1.map(item => {
-                            console.log(item);
                             if (item.data === "Header-0") {
                                 this.setState({
                                     companyLogo: item.info.companyLogo,
@@ -200,7 +196,6 @@ class Container1 extends Component {
                                     headerLink4: item.info.headerLink4,
                                     headerLink5: item.info.headerLink5,
                                     headerLink6: item.info.headerLink6,
-
                                 })
                             } else if (item.data === "Header-1") {
                                 this.setState({
@@ -212,7 +207,6 @@ class Container1 extends Component {
                                     headerLink5: item.info.headerLink5,
                                     headerLink6: item.info.headerLink6,
                                     phoneNumber:item.info.phoneNumber
-
                                 })
                             } else if (item.data === "Header-2") {
                                 this.setState({
@@ -224,8 +218,6 @@ class Container1 extends Component {
                                     headerLink5: item.info.headerLink5,
                                     headerLink6: item.info.headerLink6,
                                     phoneNumber:item.info.phoneNumber
-
-
                                 })
                             } else if (item.data === "Intro-0") {
                                 this.setState({
@@ -296,7 +288,6 @@ class Container1 extends Component {
                                     galleryImage1:item.info.galleryImage1,
                                     galleryImage2:item.info.galleryImage2,
                                     galleryImage3:item.info.galleryImage3,
-
                                 })
                             } else if (item.data === "Gallery-1") {
                                 this.setState({
@@ -548,14 +539,12 @@ class Container1 extends Component {
         window.addEventListener("scroll", noScroll)
         const selectedDiv = event.target.parentElement;
         let parentDiv = selectedDiv.parentElement;
-        console.log(parentDiv.id);
         parentDiv.remove();
         window.removeEventListener('scroll', noScroll);
     }
 
     getImage = (event) => {
         var column = event.target.parentElement.parentElement
-        console.log(column.className);
         // console.log(column.children[1].src);
 
         window.cloudinary.createUploadWidget({
@@ -756,7 +745,7 @@ class Container1 extends Component {
         ).open();
     }
 
-    getHeaderInfo = (link1, link2, link3, link4, link5, link6, logo, phoneNumber) => {
+    getHeaderInfo = (link1, link2, link3, link4, link5, link6, phoneNumber) => {
 
         if (link1 !== undefined) {
             this.setState({ headerLink1: link1 })
@@ -770,15 +759,13 @@ class Container1 extends Component {
             this.setState({ headerLink5: link5 })
         } else if (link6 !== undefined) {
             this.setState({ headerLink6: link6 })
-        } else if (logo !== undefined) {
-            this.setState({ companyLogo: logo })
-        } else if (phoneNumber !== undefined) {
+        }else if (phoneNumber !== undefined) {
             this.setState({ phoneNumber: phoneNumber })
         }
 
     }
 
-    getIntroInfo = (introHeading, introSubHeading, introSubtext, introImage,
+    getIntroInfo = (introHeading, introSubHeading, introSubtext,
         introButton1, introButton2) => {
 
         if (introHeading !== undefined) {
@@ -787,8 +774,6 @@ class Container1 extends Component {
             this.setState({ introSubHeading: introSubHeading })
         } else if (introSubtext !== undefined) {
             this.setState({ introSubtext: introSubtext })
-        } else if (introImage !== undefined) {
-            this.setState({ introImage: introImage })
         } else if (introButton1 !== undefined) {
             this.setState({ introButton1: introButton1 })
         } else if (introButton2 !== undefined) {
@@ -797,23 +782,19 @@ class Container1 extends Component {
 
     }
 
-    getContentInfo = (content0Heading, content0SubHeading, content0Text, content0Image, content1Heading, content1SubHeading, content1Text, content1Image, content2Heading, content2SubHeading, content2Text) => {
+    getContentInfo = (content0Heading, content0SubHeading, content0Text, content1Heading, content1SubHeading, content1Text, content2Heading, content2SubHeading, content2Text) => {
         if (content0Heading !== undefined) {
             this.setState({ content0Heading: content0Heading })
         } else if (content0SubHeading !== undefined) {
             this.setState({ content0SubHeading: content0SubHeading })
         } else if (content0Text !== undefined) {
             this.setState({ content0Text: content0Text })
-        } else if (content0Image !== undefined) {
-            this.setState({ content0Image: content0Image })
         } else if (content1Heading !== undefined) {
             this.setState({ content1Heading: content1Heading })
         } else if (content1SubHeading !== undefined) {
             this.setState({ content1SubHeading: content1SubHeading })
         } else if (content1Text !== undefined) {
             this.setState({ content1Text: content1Text })
-        } else if (content1Image !== undefined) {
-            this.setState({ content1Image: content1Image })
         } else if (content2Heading !== undefined) {
             this.setState({ content2Heading: content2Heading })
         } else if (content2SubHeading !== undefined) {
@@ -824,7 +805,7 @@ class Container1 extends Component {
 
     }
 
-    getGalleryInfo = (galleryHeading, gallerySubtext, galleryImage1Title, galleryImage1Desc, galleryImage2Title, galleryImage2Desc, galleryImage3Title, galleryImage3Desc, galleryImage1, galleryImage2, galleryImage3, galleryImage4, galleryImage5, galleryImage6) => {
+    getGalleryInfo = (galleryHeading, gallerySubtext, galleryImage1Title, galleryImage1Desc, galleryImage2Title, galleryImage2Desc, galleryImage3Title, galleryImage3Desc) => {
         if (galleryHeading !== undefined) {
             this.setState({ galleryHeading: galleryHeading })
         } else if (gallerySubtext !== undefined) {
@@ -841,18 +822,6 @@ class Container1 extends Component {
             this.setState({ galleryImage3Title: galleryImage3Title })
         } else if (galleryImage3Desc !== undefined) {
             this.setState({ galleryImage3Desc: galleryImage3Desc })
-        } else if (galleryImage1 !== undefined) {
-            this.setState({ galleryImage1: galleryImage1 })
-        } else if (galleryImage2 !== undefined) {
-            this.setState({ galleryImage2: galleryImage2 })
-        } else if (galleryImage3 !== undefined) {
-            this.setState({ galleryImage3: galleryImage3 })
-        } else if (galleryImage4 !== undefined) {
-            this.setState({ galleryImage4: galleryImage4 })
-        } else if (galleryImage5 !== undefined) {
-            this.setState({ galleryImage5: galleryImage5 })
-        } else if (galleryImage6 !== undefined) {
-            this.setState({ galleryImage6: galleryImage6 })
         }
     }
 
@@ -965,7 +934,7 @@ class Container1 extends Component {
         }
     }
 
-    getContactInfo = (contactHeading, contactSubText, address, phoneNumber, lat, lon) => {
+    getContactInfo = (contactHeading, contactSubText, address, phoneNumber) => {
         if (contactHeading !== undefined) {
             this.setState({ contactHeading: contactHeading })
         } else if (contactSubText !== undefined) {
@@ -1794,8 +1763,6 @@ class Container1 extends Component {
                     }
                 </Container>
             </>
-
-
         );
     }
 }
@@ -1803,10 +1770,3 @@ class Container1 extends Component {
 
 export default Container1;
 
-
-// var id = p.data
-// switch(id){
-//     case "Header-0":<Draggable key={i}><div id={p.data} className="draggable-item"><Header2 /></div><Draggable>;
-//     break;
-
-// }

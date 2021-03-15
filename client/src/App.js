@@ -4,7 +4,7 @@ import Home from "./Components/Home/Home"
 // import Profile from "./Profile"
 import { useAuth0 } from "@auth0/auth0-react";
 import AuthForProjects from "./Components/AuthForProjects/AuthForProjects"
-import withSplashScreen from "./Components/Splash-Screen/withSplashScreen"
+// import withSplashScreen from "./Components/Splash-Screen/withSplashScreen"
 import Loading from "../src/Components/Loading/Loading"
 
 // import UserProvided from "./providers/UserProvider"

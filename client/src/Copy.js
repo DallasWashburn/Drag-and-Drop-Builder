@@ -58,7 +58,6 @@ class Copy extends React.Component {
         API.getUsers()
             .then(users => {
                 var theUsers = users.data
-                console.log(theUsers);
             })
         // console.log(allUsers);
 
@@ -79,16 +78,13 @@ class Copy extends React.Component {
     }
 
     getId = () => {
-        console.log("getId");
         API.getUsers()
             .then(users => {
                 var theUsers = users.data
                 // console.log(theUsers);
                 for (let i = 0; i < theUsers.length; i++) {
                     const element = theUsers[i];
-                    console.log(element);
                     if (element.userId === this.props.user.sub) {
-                        console.log(element._id);
                         this.setState({
                             dbId: element._id,
                             login: 2
@@ -119,11 +115,9 @@ class Copy extends React.Component {
         API.getUsers()
             .then(users => {
                 var theUsers = users.data
-                console.log(theUsers);
                 var num = 0
                 for (let i = 0; i < theUsers.length; i++) {
                     const element = theUsers[i];
-                    console.log(element);
                     if (element.userId === this.props.user.sub) {
                         num = 2
                     }
@@ -139,7 +133,6 @@ class Copy extends React.Component {
                         url: this.state.URL,
                         projects: allPages
                     }
-                    console.log(project)
                     // [this.state.items3][this.state.items4][this.state.items5][this.state.items6][this.state.items7][this.state.items8]
                     API.saveUser(project)
                     this.setState({ nickname: 2 })
@@ -155,7 +148,6 @@ class Copy extends React.Component {
     }
 
     getContent = (event) => {
-        console.log(event.target.parentElement.getAttribute("data-content"));
         var content = event.target.parentElement.getAttribute("data-content")
         this.setState({
             dataContent:content
@@ -169,14 +161,11 @@ class Copy extends React.Component {
             // var mainHeading = contentBlock[0].getElementsByTagName("h1")
             var subHeading = contentBlock[0].getElementsByTagName("h3")[0].innerText
             var imageBlock = contentBlock[0].getElementsByTagName("img")
-            console.log(pTag1);
             this.setState({
                 h3Heading:subHeading,
                 pFirst:pTag1
             })
         }
-    console.log(this.state.h3Heading);  
-    console.log(this.state.pFirst);
 
 
     }
@@ -190,9 +179,9 @@ class Copy extends React.Component {
 
     fullScreen = () => {
         document.getElementById("container1").style.visibility = "hidden";
-        document.getElementById("container2").style.minWidth="93%"
+        document.getElementById("container2").style.minWidth="99%"
         document.getElementById("webBox").style.minWidth="110%"
-        document.getElementById("container2").style.marginRight="200px"
+        document.getElementById("container2").style.marginRight="280px"
         document.getElementById("menuArrow").style.visibility="hidden"
         } 
 
@@ -239,9 +228,9 @@ class Copy extends React.Component {
                             <ContactContainer />
                             <Footers />
 
-                            <div>
+                            {/* <div>
                                 <FileUpload name={this.state.userId} email={this.state.userEmail} onUpload={this.onUpload} />
-                            </div>
+                            </div> */}
                             {/* <div>
                                 <EditMenu                                 
                                 handleSubmit={this.handleSubmit}
