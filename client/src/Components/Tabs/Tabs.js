@@ -802,12 +802,12 @@ class ContainerTabs extends Component {
                         items2={this.state.items}
                         updateUser={this.updateUser}
                         />
-                    <ProfileButton 
+                    {/* <ProfileButton 
                         getUsers={this.getUsers}
                         userEmail={this.state.userEmail}
                         getId={this.props.getId}
                         dbId={this.state.dbId}
-                    />
+                    /> */}
                     <Tabs
                         activeLinkStyle={styles.activeLinkStyle}
                     >

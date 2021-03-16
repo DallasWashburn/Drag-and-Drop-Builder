@@ -7,12 +7,12 @@ const LogoutButton = () => {
   // const { email } = user;
  
 
-  return <button id="logOut" className="btn"
+  return <a  id="logOut" className=""
             type="submit"
             onClick={() => logout({ returnTo: window.location.origin, })}>
               Logout
             {/* onClick={() => logout()}>Log Out */}
-        </button>;
+        </a>;
 };
 
 export default LogoutButton;

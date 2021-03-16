@@ -7,7 +7,7 @@ const ProfileButton = (props) => {
 
   return <Link to={{
     pathname:"/profile", 
-    state:[{email:"soldbydw", dbId:props.dbId}]}}  className="btn profileBtn">Profile</Link>
+    state:[{email:"soldbydw", dbId:props.dbId}]}}  className="profileBtn">Profile</Link>
 };
 
 export default ProfileButton;

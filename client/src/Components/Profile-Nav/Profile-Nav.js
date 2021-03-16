@@ -1,24 +1,29 @@
-import React from "react"
-import "./Profile-Nav.css"
-import { Link } from "react-router-dom"
+import React, { Component } from "react"
 import LogoutButton from "../LogoutButton/LogoutButton"
+import "./Profile-Nav.css"
+
+class ProfileNav extends Component {
+
+    dropDownMenu = () => {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
 
 
-function projectNav(props) {
-
-
-    return (
-
-        <nav className="navbar navbar-light primary-color">
-            <div className="navWrap">
-             <img src="https://www.cybermark.com/wp-content/uploads/2018/08/mainLogo.png" height="65" alt="cybermark logo" />
-             
-            <Link to={{ pathname: "/" }} className="btn homeButton">Home</Link>
-            <LogoutButton/>
+    render() {
+        return (
+            <div id="profileNav">
+                <img src="https://www.cybermark.com/wp-content/uploads/2018/08/mainLogo.png" height="45" alt="cybermark logo" />
+                <div class="dropDown">
+                    <button className="dropbtn" onClick={this.dropDownMenu} type="button" id="dropDownMenu"><i className="fas fa-lg fa-bars"></i></button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="/">Home</a>
+                        \                    <LogoutButton />
+                    </div>
+                </div>
             </div>
-        </nav>
-
-    )
+        )
+    }
 }
 
-export default projectNav
+
+export default ProfileNav
