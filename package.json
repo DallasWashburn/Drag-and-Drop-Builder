@@ -2,7 +2,6 @@
   "name": "smooth-dnd",
   "engines": {
     "node": "12.x",
-    "npm": "6.14.8"
   },
   "version": "0.1.0",
   "private": true,
