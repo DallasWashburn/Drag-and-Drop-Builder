@@ -6,8 +6,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@auth0/auth0-react": "^1.4.0",
-    "axios": "^0.21.1",
     "body-parser": "^1.19.0",
     "connect-multiparty": "^2.2.0",
     "cors": "^2.8.5",
@@ -24,7 +22,7 @@
   },
   "scripts": {
     "start": "node server.js && cd client && npm run start",
-    "build": "cd client && npm install && react-scripts build",
+    "build": "cd client && react-scripts build",
     "client": "cd client && npm run start",
     "test": "react-scripts test",
     "seed": "node scripts/seedDB.js",
