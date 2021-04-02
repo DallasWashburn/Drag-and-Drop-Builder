@@ -9,7 +9,7 @@ var nameOfPage6= {id:"pageName6", data:"+"}
 var nameOfPage7= {id:"pageName7", data:"+"}
 var allPages = [nameOfPage1, [], nameOfPage2, [], nameOfPage3, [], nameOfPage4, [], nameOfPage5, [], nameOfPage6, [], nameOfPage7, []]
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/dragdrop");
+mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://admin:Cybermark@cluster0.1sujq.mongodb.net/dragndrop?retryWrites=true&w=majority");
 
 
 const userSeed = [

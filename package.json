@@ -33,7 +33,8 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "node server.js && cd client && npm run start",
+    "begin":"npm run build && node server.js",
+    "start": "node server.js && cd client && npm run start:original",
     "build": "cd client && react-scripts build",
     "client": "cd client && npm run start",
     "test": "react-scripts test",
