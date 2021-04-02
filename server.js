@@ -365,11 +365,6 @@ var mail = nodemailer.createTransport({
 
 
 // Define API routes here
-
-const apiRoutes = (require("./routes/api/index"));
-app.use(routes);
-app.use("/api", apiRoutes)
-
 mongoose.connect(
   "mongodb+srv://admin:Cybermark@cluster0.1sujq.mongodb.net/dragndrop?retryWrites=true&w=majority",
   {
@@ -378,6 +373,11 @@ mongoose.connect(
     useUnifiedTopology: true
   }
 );
+
+const apiRoutes = (require("./routes/api/index"));
+app.use(routes);
+app.use("/api", apiRoutes)
+
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
