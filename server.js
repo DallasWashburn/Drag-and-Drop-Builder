@@ -11,7 +11,7 @@ var count = 1;
 
 
 
-// Define middleware here
+// Define middleware here first 
 
 app.use(cors())
 app.use(express.urlencoded({ extended: true }));
