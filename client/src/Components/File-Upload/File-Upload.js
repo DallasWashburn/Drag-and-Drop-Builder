@@ -1,6 +1,6 @@
 import React from 'react';
 import "./File-Upload.css"
-import 'react-dropzone-uploader/dist/styles.css';
+// import 'react-dropzone-uploader/dist/styles.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
