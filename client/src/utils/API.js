@@ -5,12 +5,8 @@ export default {
 
   // Gets all users
   getUsers: async function () {
-    let response = axios({
-      method:'GET',
-      baseURL:'https://sheltered-beyond-92629.herokuapp.com',
-      url:'/api/users'
-    })
-    .catch(err => console.log("error: ", err.response));
+    let response = axios.get("/api/users/")
+    .catch(err => console.log("error: ", err));
     return response;
   },
   // Gets the user with the given id
