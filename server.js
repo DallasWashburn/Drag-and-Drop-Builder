@@ -13,7 +13,7 @@ const mongoose = require("mongoose");
 
 // Define middleware here first 
 
-app.use(cors())
+// app.use(cors())
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
