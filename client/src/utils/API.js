@@ -10,7 +10,7 @@ export default {
       baseURL:'https://sheltered-beyond-92629.herokuapp.com',
       url:'/api/users'
     })
-    .catch(err => console.log("error: ", err.response.data));
+    .catch(err => console.log("error: ", err.response));
     return response;
   },
   // Gets the user with the given id
