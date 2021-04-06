@@ -12,7 +12,7 @@ export default {
   // Gets the user with the given id
   getUser: async function (id) {
     let response = axios.get("/api/users/" + id)
-    .catch(err => console.log("error: ", err));
+    .catch(err => console.log("error: ", err.response.data));
     return response;
   },
   // update the user with the given id
