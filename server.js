@@ -12,8 +12,13 @@ const mongoose = require("mongoose");
 
 
 // Define middleware here first 
+const corsOptions = {
+  origin: 'https://sheltered-beyond-92629.herokuapp.com/',
+  optionsSuccessStatus: 200
+}
+app.use(cors(corsOptions))
+app.options('*', cors());
 
-app.use(cors())
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
