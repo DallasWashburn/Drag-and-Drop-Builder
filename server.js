@@ -4,20 +4,10 @@ const routes = require("./routes/index");
 const PORT = process.env.PORT || 443;
 const app = express();
 // var multer = require('multer')
-var cors = require('cors');
 const mongoose = require("mongoose");
 // const fs = require('fs');
 // var count = 1;
 
-
-
-// Define middleware here first 
-const corsOptions = {
-  origin: 'https://sheltered-beyond-92629.herokuapp.com/',
-  optionsSuccessStatus: 200
-}
-app.use(cors(corsOptions))
-app.options('*', cors());
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
