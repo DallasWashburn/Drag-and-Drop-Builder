@@ -1,11 +1,14 @@
 {
   "name": "smooth-dnd",
-  "homepage": "http://localhost:3000/",
+  "homepage": "https://sheltered-beyond-92629.herokuapp.com/",
   "version": "0.1.0",
   "private": true,
   "proxy":{
-    "/api/users": {
-      "target": "http://localhost:3001"
+    "/api": {
+      "target": "https://sheltered-beyond-92629.herokuapp.com/",
+      "pathRewrite": {
+        "^/api": "/"
+      }
     }
   },
   "dependencies": {
