@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const routes = require("./routes/index");
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 80;
 const app = express();
 // var multer = require('multer')
 var cors = require('cors');
