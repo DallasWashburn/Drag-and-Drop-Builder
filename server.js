@@ -35,9 +35,9 @@ const options = {
 // Connect to Mongo DB
 mongoose.connect(MONGODB_URI,options)
 
-const apiRoutes = (require("./routes/api/index"));
+// const apiRoutes = (require("./routes/api/index"));
 app.use(routes);
-app.use("/api", apiRoutes)
+// app.use("/api", apiRoutes)
 
 
 app.get("*", (req, res) => {
