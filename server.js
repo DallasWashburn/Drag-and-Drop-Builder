@@ -22,15 +22,17 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb+srv://admin:Cybermark@cluster0.1sujq.mongodb.net/dragndrop?retryWrites=true&w=majority";
+
+const options = {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useFindAndModify: false,
+  family: 4 // Use IPv4, skip trying IPv6
+};
 
 // Connect to Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://admin:Cybermark@cluster0.1sujq.mongodb.net/dragndrop?retryWrites=true&w=majority",
-  {
-    useNewUrlParser: true,
-    useFindAndModify: false,
-    useUnifiedTopology: true
-  }
-);
+mongoose.connect(MONGODB_URI,options)
 
 const apiRoutes = (require("./routes/api/index"));
 app.use(routes);
