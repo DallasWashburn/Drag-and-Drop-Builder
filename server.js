@@ -22,7 +22,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb+srv://admin:Cybermark@cluster0.1sujq.mongodb.net/dragndrop?retryWrites=true&w=majority";
+var MONGODB_URI = process.env.MONGODB_URL || "mongodb+srv://admin:Cybermark@cluster0.1sujq.mongodb.net/dragndrop?retryWrites=true&w=majority";
 
 const options = {
   useNewUrlParser: true,
