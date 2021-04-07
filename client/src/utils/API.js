@@ -6,7 +6,7 @@ export default {
   // Gets all users
   getUsers: async function () {
     let response = axios.get("/api/users")
-    .catch(err => console.log("error: ", err.response.status));
+    .catch(err => console.log("error: ", err.response.status, err.request));
     return response;
   },
   // Gets the user with the given id
