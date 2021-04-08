@@ -8,7 +8,7 @@ export default {
     let response = axios({
       url:"/api/users",
       method:'get',
-      baseURL: "https://sheltered-beyond-92629.herokuapp.com/"
+      baseURL: ""
     }).catch(err => console.log(err.response));
     return response;
   },
