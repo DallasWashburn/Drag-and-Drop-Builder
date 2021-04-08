@@ -5,7 +5,7 @@ export default {
   
   // Gets all users
   getUsers: async function () {
-    let response = axios.get("//api/users",)
+    let response = axios.get("/api/users",)
     .catch(err => console.log("error: ", err));
     return response;
   },
