@@ -3,14 +3,7 @@
   "homepage": "https://sheltered-beyond-92629.herokuapp.com/",
   "version": "0.1.0",
   "private": true,
-  "proxy":{
-    "/api": {
-      "target": "https://sheltered-beyond-92629.herokuapp.com/",
-      "pathRewrite": {
-        "^/api": "/"
-      }
-    }
-  },
+  "proxy":"http://localhost:3001",
   "dependencies": {
     "@auth0/auth0-react": "^1.2.0",
     "@reach/router": "^1.3.4",
