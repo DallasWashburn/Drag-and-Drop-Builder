@@ -180,12 +180,12 @@ class Container1 extends Component {
         API.getUsers()
             .then(users => {
                 var theUsers = users.data
-                // console.log(theUsers);
                 for (let i = 0; i < theUsers.length; i++) {
                     const element = theUsers[i];
-                    // console.log(element);
-                    if (element.userEmail === this.props.email) {
-                        var Page1 = element.projects[1];
+                    if (element.userEmail === this.props.userEmail) {
+                        var Page1 = element.projects[1]; 
+                        console.log(Page1);
+                                               
                         Page1.map(item => {
                             if (item.data === "Header-0") {
                                 this.setState({
@@ -1080,6 +1080,8 @@ class Container1 extends Component {
                     dropPlaceholderAnimationDuration={200}>
                     {
                         this.props.generateItems.map((p, i) => {
+                            console.log(p.data);
+                            
                             if (p.data === "Header-0") {
                                 p.info = { headerLink1, headerLink2, headerLink3, headerLink4, headerLink5, headerLink6, companyLogo }
                                 return (

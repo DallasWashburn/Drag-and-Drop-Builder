@@ -184,7 +184,7 @@ class Container2 extends Component {
                 for (let i = 0; i < theUsers.length; i++) {
                     const element = theUsers[i];
                     // console.log(element);
-                    if (element.userEmail === this.props.email) {
+                    if (element.userEmail === this.props.userEmail) {
                         var Page1 = element.projects[3];
                         Page1.map(item => {
                             if (item.data === "Header-0") {

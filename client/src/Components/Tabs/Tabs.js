@@ -37,7 +37,7 @@ class ContainerTabs extends Component {
         this.state = {
 
             name: this.props.name,
-            email: this.props.email,
+            userEmail: this.props.email,
             userId:this.props.userId,
             items2: generateItems(0, (i) => ({ id: '1' + i, data: `Draggable 2 - ${i}` })),
             items3: generateItems(0, (i) => ({ id: '1' + i, data: `Draggable 3 - ${i}` })),
@@ -114,7 +114,7 @@ class ContainerTabs extends Component {
                 var theUsers = users.data
                 for (let i = 0; i < theUsers.length; i++) {
                     const element = theUsers[i];
-                    if (element.userEmail === this.state.email) {
+                    if (element.userEmail === this.state.userEmail) {
                         var Page1Title = element.projects[0];
                         var Page1 = element.projects[1];
                         var Page2Title = element.projects[2][0].data;
@@ -971,6 +971,7 @@ class ContainerTabs extends Component {
                                 generateItems={this.state.items2}
                                 removeElement={this.removeElement1}
                                 duplicateElement={this.duplicateElement1}
+                                userEmail={this.state.userEmail}
                             />
                         </TabContent>
                         <TabContent for="tab2">
@@ -980,6 +981,7 @@ class ContainerTabs extends Component {
                                 generateItems={this.state.items3}
                                 removeElement={this.removeElement2}
                                 duplicateElement={this.duplicateElement2}
+                                userEmail={this.state.userEmail}
                             />
                         </TabContent>
                         <TabContent for="tab3">
@@ -989,6 +991,7 @@ class ContainerTabs extends Component {
                                 generateItems={this.state.items4}
                                 removeElement={this.removeElement3}
                                 duplicateElement={this.duplicateElement3}
+                                userEmail={this.state.userEmail}
                             />
                         </TabContent>
                         <TabContent for="tab4">
@@ -998,6 +1001,7 @@ class ContainerTabs extends Component {
                                 generateItems={this.state.items5}
                                 removeElement={this.removeElement4}
                                 duplicateElement={this.duplicateElement4}
+                                userEmail={this.state.userEmail}
                             />
                         </TabContent>
                         <TabContent for="tab5">
@@ -1007,6 +1011,7 @@ class ContainerTabs extends Component {
                                 generateItems={this.state.items6}
                                 removeElement={this.removeElement5}
                                 duplicateElement={this.duplicateElement5}
+                                userEmail={this.state.userEmail}
                             />
                         </TabContent>
                         <TabContent for="tab6">
@@ -1016,6 +1021,7 @@ class ContainerTabs extends Component {
                                 generateItems={this.state.items7}
                                 removeElement={this.removeElement6}
                                 duplicateElement={this.duplicateElement6}
+                                userEmail={this.state.userEmail}
                             />
                         </TabContent>
                         <TabContent for="tab7">
@@ -1025,6 +1031,7 @@ class ContainerTabs extends Component {
                                 generateItems={this.state.items8}
                                 removeElement={this.removeElement7}
                                 duplicateElement={this.duplicateElement7}
+                                userEmail={this.state.userEmail}
                             />
                         </TabContent>
                     </Tabs>
