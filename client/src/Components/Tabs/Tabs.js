@@ -18,13 +18,13 @@ var pageTitles = ["Home Page"]
 
 const styles = {
     activeLinkStyle: {
-        backgroundColor: "#fff",
-        color: "#3c3c3c",
+        backgroundColor:"transparent",
+        color: "#00D4BB",
         borderRight:"none"
     },
 
     notActive: {
-        backgroundColor:"#b2b2b2",
+        backgroundColor:"transparent",
         color:"#FFF"
     }
 }
@@ -303,11 +303,11 @@ class ContainerTabs extends Component {
         var oneINeed = lastOne.parentElement.parentElement
 
 
-        if (oneINeed.id == "tab-tab2" && oneINeed.dataset.clicks == 1 && this.state.pageName2.length > 1) {
+        if (oneINeed.id === "tab-tab2" && oneINeed.dataset.clicks === 1 && this.state.pageName2.length > 1) {
             pageTitles.push(this.state.pageName2)
             var link3 = document.getElementById("link-3")
             link3.style.visibility = "visible"
-        }else if (oneINeed.id == "tab-tab2" && oneINeed.dataset.clicks == 1 && this.state.pageName2.length === 1) {
+        }else if (oneINeed.id === "tab-tab2" && oneINeed.dataset.clicks === 1 && this.state.pageName2.length === 1) {
             this.setState({
                 pageName2: "Page 2"
             });
@@ -316,11 +316,11 @@ class ContainerTabs extends Component {
             link3Next.style.visibility = "visible"
         }
 
-        if (oneINeed.id == "tab-tab3" && oneINeed.dataset.clicks == 1 && this.state.pageName3.length > 1) {
+        if (oneINeed.id === "tab-tab3" && oneINeed.dataset.clicks === 1 && this.state.pageName3.length > 1) {
             pageTitles.push(this.state.pageName3)
             var link4 = document.getElementById("link-4")
             link4.style.visibility = "visible"
-        } else if (oneINeed.id == "tab-tab3" && oneINeed.dataset.clicks == 1 && this.state.pageName3.length === 1) {
+        } else if (oneINeed.id === "tab-tab3" && oneINeed.dataset.clicks === 1 && this.state.pageName3.length === 1) {
             this.setState({
                 pageName3: "Page 3"
             });
@@ -329,11 +329,11 @@ class ContainerTabs extends Component {
             link4Next.style.visibility = "visible"
         }
 
-        if (oneINeed.id == "tab-tab4" && oneINeed.dataset.clicks == 1 && this.state.pageName4.length > 1) {
+        if (oneINeed.id === "tab-tab4" && oneINeed.dataset.clicks === 1 && this.state.pageName4.length > 1) {
             pageTitles.push(this.state.pageName4)
             var link5 = document.getElementById("link-5")
             link5.style.visibility = "visible"
-        } else if (oneINeed.id == "tab-tab4" && oneINeed.dataset.clicks == 1 && this.state.pageName4.length === 1) {
+        } else if (oneINeed.id === "tab-tab4" && oneINeed.dataset.clicks === 1 && this.state.pageName4.length === 1) {
             this.setState({
                 pageName4: "Page 4"
             });
@@ -342,11 +342,11 @@ class ContainerTabs extends Component {
             link5Next.style.visibility = "visible"
         }
 
-        if (oneINeed.id == "tab-tab5" && oneINeed.dataset.clicks == 1 && this.state.pageName5.length > 1) {
+        if (oneINeed.id === "tab-tab5" && oneINeed.dataset.clicks === 1 && this.state.pageName5.length > 1) {
             pageTitles.push(this.state.pageName5)
             var link6 = document.getElementById("link-6")
             link6.style.visibility = "visible"
-        } else if (oneINeed.id == "tab-tab5" && oneINeed.dataset.clicks == 1 && this.state.pageName5.length === 1) {
+        } else if (oneINeed.id === "tab-tab5" && oneINeed.dataset.clicks === 1 && this.state.pageName5.length === 1) {
             this.setState({
                 pageName5: "Page 5"
             });
@@ -355,11 +355,11 @@ class ContainerTabs extends Component {
             link6Next.style.visibility = "visible"
         }
 
-        if (oneINeed.id == "tab-tab6" && oneINeed.dataset.clicks == 1 && this.state.pageName6.length > 1) {
+        if (oneINeed.id === "tab-tab6" && oneINeed.dataset.clicks === 1 && this.state.pageName6.length > 1) {
             pageTitles.push(this.state.pageName6)
             var link7 = document.getElementById("link-7")
             link7.style.visibility = "visible"
-        } else if (oneINeed.id == "tab-tab6" && oneINeed.dataset.clicks == 1 && this.state.pageName6.length === 1) {
+        } else if (oneINeed.id === "tab-tab6" && oneINeed.dataset.clicks === 1 && this.state.pageName6.length === 1) {
             this.setState({
                 pageName6: "Page 6"
             });
@@ -368,9 +368,9 @@ class ContainerTabs extends Component {
             link7Next.style.visibility = "visible"
         }
 
-        if (oneINeed.id == "tab-tab7" && oneINeed.dataset.clicks == 1 && this.state.pageName7.length > 1) {
+        if (oneINeed.id === "tab-tab7" && oneINeed.dataset.clicks === 1 && this.state.pageName7.length > 1) {
             pageTitles.push(this.state.pageName6)
-        } else if (oneINeed.id == "tab-tab7" && oneINeed.dataset.clicks == 1 && this.state.pageName7.length === 1) {
+        } else if (oneINeed.id === "tab-tab7" && oneINeed.dataset.clicks === 1 && this.state.pageName7.length === 1) {
             this.setState({
                 pageName7: "Page 7"
             });
@@ -782,9 +782,7 @@ class ContainerTabs extends Component {
     render() {
         return (
             <>
-                <div id="tabsContainer">
-                    <div id="webBox"></div>
-                    <PDFGenerate
+            <PDFGenerate
                         userName={this.state.userName}
                         userEmail={this.state.userEmail}
                         dataFromContainer1={this.state.items2}
@@ -795,22 +793,19 @@ class ContainerTabs extends Component {
                         dataFromContainer6={this.state.items7}
                         dataFromContainer7={this.state.items8}
                         pageTitles={pageTitles} />
-                    <br />
+                    
                     <SaveButton
                         userName={this.state.userName}
                         userEmail={this.state.userEmail}
                         items2={this.state.items}
-                        updateUser={this.updateUser}
-                        />
-                    {/* <ProfileButton 
-                        getUsers={this.getUsers}
-                        userEmail={this.state.userEmail}
-                        getId={this.props.getId}
-                        dbId={this.state.dbId}
-                    /> */}
+                        updateUser={this.updateUser} />
+                <div id="tabsContainer">
+                    
+                    
                     <Tabs
                         activeLinkStyle={styles.activeLinkStyle}
                     >
+                        <div id="tab__header">
                         <ul id="homePage">
                             <li className="nav-item" >
                                 <TabLink style={styles.notActive} to="tab1"><span id="firstPage"><span className="pageSpan">{this.state.pageName1}</span></span></TabLink>
@@ -961,7 +956,7 @@ class ContainerTabs extends Component {
                                 </TabLink>
                             </li>
                         </ul>
-
+                        </div>
 
 
                         <TabContent for="tab1">

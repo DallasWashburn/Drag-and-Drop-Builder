@@ -8,6 +8,7 @@
 
 #dropDownMenu{
     padding: 10px;
+    border-radius: 0;
 }
 
 .dropbtn {
@@ -20,7 +21,7 @@
   }
   
   .dropbtn:hover, .dropbtn:focus {
-    background-color: #ce9e7c;
+    background-color: #00D4BB;
   }
   
   

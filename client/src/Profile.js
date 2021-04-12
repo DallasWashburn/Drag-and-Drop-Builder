@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import API from "./utils/API";
 import ProfilfeNav from "./Components/Profile-Nav/Profile-Nav"
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 import ProjectPreview from "./Components/Project-Preview/Project-Preview"
 
 
@@ -40,7 +40,7 @@ class Profile extends Component {
             .then(users => {
                 var theUsers = users.data
                 console.log(theUsers);
-                var userProjects = []
+                // var userProjects = []
                 for (let i = 0; i < theUsers.length; i++) {
                     const element = theUsers[i];
                     console.log(element);
@@ -108,7 +108,7 @@ class Profile extends Component {
     }
 
     render() {
-        var randomNumber = this.getRandomNumber()
+        // var randomNumber = this.getRandomNumber()
 
         return (
             <>
