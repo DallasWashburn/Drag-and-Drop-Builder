@@ -9,11 +9,12 @@
   color: #FFF;
   border: 1px solid;
   border-color: transparent;
-  border-radius: 3px;
+  border-radius: 0;
   
   }
   
   .saveButton:hover{
     border-color: black;
-      background-color: #ce9e7c;
+      background-color: #00D4BB;
+      border-color: #00D4BB;
   }
