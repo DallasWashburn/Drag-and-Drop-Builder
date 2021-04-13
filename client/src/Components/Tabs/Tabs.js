@@ -66,8 +66,8 @@ class ContainerTabs extends Component {
     }
 
     componentDidMount(){
-        this.getProject()
         window.addEventListener("beforeunload", this.onUnload)
+        this.getProject()
     }
 
     componentWillUnmount(){

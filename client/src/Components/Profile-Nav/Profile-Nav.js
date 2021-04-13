@@ -17,7 +17,7 @@ class ProfileNav extends Component {
                     <button className="dropbtn" onClick={this.dropDownMenu} type="button" id="dropDownMenu"><i className="fas fa-lg fa-bars"></i></button>
                     <div id="myDropdown" class="dropdown-content">
                         <a href="/">Home</a>
-                        \                    <LogoutButton />
+                        <LogoutButton />
                     </div>
                 </div>
             </div>
