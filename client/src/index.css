@@ -6088,3 +6088,8 @@ button [aria-selected='false']{
     top: 10px;
     left: 10px;
 }
+
+
+#container2 .vertical {
+    min-height: 750px;
+}
