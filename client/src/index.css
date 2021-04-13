@@ -702,11 +702,11 @@ textarea{
   bottom: 1px;
   left: 10px;
   visibility: visible;
-  color: #3c3c3c;
+  color: #FFF;
 }
 
 #homePage li button .pageSpan:hover .tabX:hover{
-  color: #3c3c3c;
+  color: #F97B82;
 }
 
 .projectCard{
@@ -6093,4 +6093,9 @@ button [aria-selected='false']{
 
 #container2 .vertical {
     min-height: 750px;
+}
+
+.user-preview {
+    border: solid 1px black;
+    padding: 20px;
 }

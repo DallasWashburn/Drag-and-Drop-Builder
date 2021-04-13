@@ -1080,7 +1080,7 @@ class Container1 extends Component {
                     dropPlaceholderAnimationDuration={200}>
                     {
                         this.props.generateItems.map((p, i) => {
-                            console.log(p.data);
+                            // console.log(p.data);
                             
                             if (p.data === "Header-0") {
                                 p.info = { headerLink1, headerLink2, headerLink3, headerLink4, headerLink5, headerLink6, companyLogo }

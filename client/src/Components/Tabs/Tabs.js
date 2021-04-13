@@ -274,6 +274,11 @@ class ContainerTabs extends Component {
                 pageName2: "+"
              })
         } else if (modalTab.id === "tab-tab3"){
+            var previous = document.getElementById("tab-tab3");
+            previous.setAttribute("aria-selected", "false");
+            previous.classList.remove("tab-link-active")
+            modalTab.setAttribute("aria-selected", "true");
+            modalTab.classList.add("tab-content-visible")
             this.setState({
                 isHidden2:true,
                 pageName3: "+"
@@ -301,82 +306,72 @@ class ContainerTabs extends Component {
         var divGrandparent = divParent.parentElement
         var lastOne = divGrandparent.parentElement
         var oneINeed = lastOne.parentElement.parentElement
+        console.log(oneINeed);
 
-
-        if (oneINeed.id === "tab-tab2" && oneINeed.dataset.clicks === 1 && this.state.pageName2.length > 1) {
+        if (oneINeed.id === "tab-tab2") {
+            if(this.state.pageName2 === "+"){
+                this.setState({
+                    pageName2:"Page 2"
+                })
+            }
             pageTitles.push(this.state.pageName2)
             var link3 = document.getElementById("link-3")
             link3.style.visibility = "visible"
-        }else if (oneINeed.id === "tab-tab2" && oneINeed.dataset.clicks === 1 && this.state.pageName2.length === 1) {
-            this.setState({
-                pageName2: "Page 2"
-            });
-            pageTitles.push(this.state.pageName2)
-            var link3Next = document.getElementById("link-3")
-            link3Next.style.visibility = "visible"
         }
 
-        if (oneINeed.id === "tab-tab3" && oneINeed.dataset.clicks === 1 && this.state.pageName3.length > 1) {
+        if (oneINeed.id === "tab-tab3") {
+            if(this.state.pageName3 === "+"){
+                this.setState({
+                    pageName3:"Page 3"
+                })
+            }
             pageTitles.push(this.state.pageName3)
             var link4 = document.getElementById("link-4")
             link4.style.visibility = "visible"
-        } else if (oneINeed.id === "tab-tab3" && oneINeed.dataset.clicks === 1 && this.state.pageName3.length === 1) {
-            this.setState({
-                pageName3: "Page 3"
-            });
-            pageTitles.push(this.state.pageName3)
-            var link4Next = document.getElementById("link-4")
-            link4Next.style.visibility = "visible"
         }
 
-        if (oneINeed.id === "tab-tab4" && oneINeed.dataset.clicks === 1 && this.state.pageName4.length > 1) {
+        if (oneINeed.id === "tab-tab4") {
+            if(this.state.pageName4 === "+"){
+                this.setState({
+                    pageName4:"Page 4"
+                })
+            }
             pageTitles.push(this.state.pageName4)
             var link5 = document.getElementById("link-5")
             link5.style.visibility = "visible"
-        } else if (oneINeed.id === "tab-tab4" && oneINeed.dataset.clicks === 1 && this.state.pageName4.length === 1) {
-            this.setState({
-                pageName4: "Page 4"
-            });
-            pageTitles.push(this.state.pageName4)
-            var link5Next = document.getElementById("link-5")
-            link5Next.style.visibility = "visible"
         }
 
-        if (oneINeed.id === "tab-tab5" && oneINeed.dataset.clicks === 1 && this.state.pageName5.length > 1) {
+        if (oneINeed.id === "tab-tab5") {
+            if(this.state.pageName5 === "+"){
+                this.setState({
+                    pageName5:"Page 5"
+                })
+            }
             pageTitles.push(this.state.pageName5)
             var link6 = document.getElementById("link-6")
             link6.style.visibility = "visible"
-        } else if (oneINeed.id === "tab-tab5" && oneINeed.dataset.clicks === 1 && this.state.pageName5.length === 1) {
-            this.setState({
-                pageName5: "Page 5"
-            });
-            pageTitles.push(this.state.pageName5)
-            var link6Next = document.getElementById("link-6")
-            link6Next.style.visibility = "visible"
         }
 
-        if (oneINeed.id === "tab-tab6" && oneINeed.dataset.clicks === 1 && this.state.pageName6.length > 1) {
+        if (oneINeed.id === "tab-tab6") {
+            if(this.state.pageName6 === "+"){
+                this.setState({
+                    pageName6:"Page 6"
+                })
+            }
             pageTitles.push(this.state.pageName6)
             var link7 = document.getElementById("link-7")
             link7.style.visibility = "visible"
-        } else if (oneINeed.id === "tab-tab6" && oneINeed.dataset.clicks === 1 && this.state.pageName6.length === 1) {
-            this.setState({
-                pageName6: "Page 6"
-            });
-            pageTitles.push(this.state.pageName6)
-            var link7Next = document.getElementById("link-7")
-            link7Next.style.visibility = "visible"
         }
 
-        if (oneINeed.id === "tab-tab7" && oneINeed.dataset.clicks === 1 && this.state.pageName7.length > 1) {
-            pageTitles.push(this.state.pageName6)
-        } else if (oneINeed.id === "tab-tab7" && oneINeed.dataset.clicks === 1 && this.state.pageName7.length === 1) {
-            this.setState({
-                pageName7: "Page 7"
-            });
-            pageTitles.push(this.state.pageName6)
-        }
+        if (oneINeed.id === "tab-tab7") {
+            if(this.state.pageName7 === "+"){
+                this.setState({
+                    pageName7:"Page 7"
+                })
+            }
+            pageTitles.push(this.state.pageName7)
 
+        }
         // Closes the corresponding modal //
 
         if (modalName.id === "modal1") {
@@ -444,22 +439,31 @@ class ContainerTabs extends Component {
         if (tab.id === "tab-tab2") {
             this.setState({ pageName2: "" })
             document.getElementById("tabpanel-tab2").remove()
-
         }
         if (tab.id === "tab-tab3") {
-
+            var tab = event.target.parentElement.parentElement
+            this.setState({ pageName3: "" })
+            document.getElementById("tabpanel-tab3").remove()
         }
         if (tab.id === "tab-tab4") {
-
+            var tab = event.target.parentElement.parentElement
+            this.setState({ pageName4: "" })
+            document.getElementById("tabpanel-tab4").remove()
         }
         if (tab.id === "tab-tab5") {
-
+            var tab = event.target.parentElement.parentElement
+            this.setState({ pageName5: "" })
+            document.getElementById("tabpanel-tab5").remove()
         }
         if (tab.id === "tab-tab6") {
-
+            var tab = event.target.parentElement.parentElement
+            this.setState({ pageName6: "" })
+            document.getElementById("tabpanel-tab6").remove()
         }
         if (tab.id === "tab-tab7") {
-
+            var tab = event.target.parentElement.parentElement
+            this.setState({ pageName7: "" })
+            document.getElementById("tabpanel-tab7").remove()
         }
         tab.remove();
     }
@@ -823,6 +827,7 @@ class ContainerTabs extends Component {
                                                     name={this.state.pageName2}
                                                     onChange={e => this.handleChange(e)}
                                                     className="form-control"
+                                                    
                                                 />
                                             </div>
                                             <div className="form-group">
