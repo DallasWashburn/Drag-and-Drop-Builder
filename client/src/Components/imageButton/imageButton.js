@@ -1,12 +1,15 @@
 import React, { Component } from "react"
+import Tooltip from "../Tooltip/Tooltip"
 import "./imageButton.css"
 
 
 class imageButton extends Component {
-    render(){
+    render() {
         return (
             <div id="imageButton">
-            <button onClick={this.props.getImage}  type="button" className="btn"><i className="far fa-images"></i></button>
+                <Tooltip content="Click to edit image" direction="right">
+                <button data-toggle onClick={this.props.getImage} type="button" className="btn"><i className="far fa-images"></i></button>
+                </Tooltip>
             </div>
         )
     }

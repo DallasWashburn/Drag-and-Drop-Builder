@@ -1,6 +1,7 @@
 import React from "react"
 import jsPDF from 'jspdf'
 import Axios from "axios";
+import Tooltip from "../Tooltip/Tooltip"
 
 class PDFGenerate extends React.Component {
 
@@ -31,7 +32,7 @@ class PDFGenerate extends React.Component {
         dataFromContainer1.map((element) => {
             data1.push(element.data)
             var dataInfo = element.info
-            for(const property in dataInfo){
+            for (const property in dataInfo) {
                 data1.push(`${property}: ${dataInfo[property]}`)
             }
             return data1
@@ -45,7 +46,7 @@ class PDFGenerate extends React.Component {
         dataFromContainer2.map((element) => {
             data2.push(element.data)
             var dataInfo = element.info
-            for(const property in dataInfo){
+            for (const property in dataInfo) {
                 data2.push(`${property}: ${dataInfo[property]}`)
             }
             return data2
@@ -59,7 +60,7 @@ class PDFGenerate extends React.Component {
         dataFromContainer3.map((element) => {
             data3.push(element.data)
             var dataInfo = element.info
-            for(const property in dataInfo){
+            for (const property in dataInfo) {
                 data3.push(`${property}: ${dataInfo[property]}`)
             }
             return data3
@@ -73,7 +74,7 @@ class PDFGenerate extends React.Component {
         dataFromContainer4.map((element) => {
             data4.push(element.data)
             var dataInfo = element.info
-            for(const property in dataInfo){
+            for (const property in dataInfo) {
                 data4.push(`${property}: ${dataInfo[property]}`)
             }
             return data4
@@ -87,7 +88,7 @@ class PDFGenerate extends React.Component {
         dataFromContainer5.map((element) => {
             data5.push(element.data)
             var dataInfo = element.info
-            for(const property in dataInfo){
+            for (const property in dataInfo) {
                 data5.push(`${property}: ${dataInfo[property]}`)
             }
             return data5
@@ -101,7 +102,7 @@ class PDFGenerate extends React.Component {
         dataFromContainer6.map((element) => {
             data6.push(element.data)
             var dataInfo = element.info
-            for(const property in dataInfo){
+            for (const property in dataInfo) {
                 data6.push(`${property}: ${dataInfo[property]}`)
             }
             return data6
@@ -115,13 +116,13 @@ class PDFGenerate extends React.Component {
         dataFromContainer7.map((element) => {
             data7.push(element.data)
             var dataInfo = element.info
-            for(const property in dataInfo){
+            for (const property in dataInfo) {
                 data7.push(`${property}: ${dataInfo[property]}`)
             }
             return data7
         })
 
-        var doc = new jsPDF('l', 'em', [300 ,150]);
+        var doc = new jsPDF('l', 'em', [300, 150]);
         var splitText = doc.splitTextToSize(data1, 175)
         var splitText2 = doc.splitTextToSize(data2, 175)
         var splitText3 = doc.splitTextToSize(data3, 175)
@@ -172,7 +173,7 @@ class PDFGenerate extends React.Component {
     render() {
         return (
             <div className="btn-container">
-                <button id="pdfBtn" className="btn" onClick={this.generatePDF} type="primary"><i className="fas fa-file-pdf fa-3x"></i></button>
+                    <button id="pdfBtn" className="btn" onClick={this.generatePDF} type="primary"><i className="fas fa-file-pdf fa-3x"></i></button>
             </div>
         );
 

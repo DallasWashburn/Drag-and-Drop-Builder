@@ -14,6 +14,7 @@ import { applyDrag, generateItems } from '../../utils';
 import PDFGenerate from "../PDF-Generate/PDF-Generate"
 import SaveButton from "../Save-Button/Save-Button"
 import ProfileButton from "../Profile-Button/Profile-Button"
+import Tooltip from "../Tooltip/Tooltip"
 var pageTitles = ["Home Page"]
 
 const styles = {

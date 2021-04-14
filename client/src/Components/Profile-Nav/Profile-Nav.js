@@ -13,9 +13,9 @@ class ProfileNav extends Component {
         return (
             <div id="profileNav">
                 <img src="https://www.cybermark.com/wp-content/uploads/2018/08/mainLogo.png" height="45" alt="cybermark logo" />
-                <div class="dropDown">
+                <div className="dropDown">
                     <button className="dropbtn" onClick={this.dropDownMenu} type="button" id="dropDownMenu"><i className="fas fa-lg fa-bars"></i></button>
-                    <div id="myDropdown" class="dropdown-content">
+                    <div id="myDropdown" className="dropdown-content">
                         <a href="/">Home</a>
                         <LogoutButton />
                     </div>
