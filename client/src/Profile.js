@@ -4,6 +4,7 @@ import ProfilfeNav from "./Components/Profile-Nav/Profile-Nav"
 // import { Link } from "react-router-dom"
 import ProjectPreview from "./Components/Project-Preview/Project-Preview"
 import UserPreview from "./Components/User-Preview/User-Preview"
+import PDFGenerate from "./Components/PDF-Generate/PDF-Generate"
 
 
 class Profile extends Component {
@@ -26,7 +27,8 @@ class Profile extends Component {
             Page7Title: [""],
             Page7: [""],
             email: this.props.user.email,
-            AllUsers: [""]
+            AllUsers: [""],
+            allProjects: [""]
 
 
 
@@ -45,11 +47,20 @@ class Profile extends Component {
                 console.log(theUsers);
                 // var userProjects = []
                 if (this.state.email === 'admin@cybermark.com') {
-                    console.log("workingggggg");
                     this.setState({
                         AllUsers: theUsers
                     })
-                    console.log(this.state.AllUsers);
+                    let users = this.state.AllUsers
+                    for (let i = 0; i < users.length; i++) {
+                        let userProjects = []
+                        const element = users[i];
+                        // console.log(element.projects);
+                        let allProjects = element.projects
+                        this.setState({
+                            allProjects: allProjects
+                        })
+                        console.log(this.state.allProjects);
+                    }
                     return
                 }
                 for (let i = 0; i < theUsers.length; i++) {
@@ -120,21 +131,55 @@ class Profile extends Component {
     render() {
         // var randomNumber = this.getRandomNumber()
         const email = this.state.email;
+        const pageTitles = ["Home Page"]
         if (email === "admin@cybermark.com") {
             return (
                 <>
                     <ProfilfeNav email={this.props.user.email} />
-                    <div className="container">
+                    <div className="container admin">
                         <h1 className="text-center">See your clients below</h1>
                         <hr />
-
                         <div className="row">
-
-
                             {this.state.AllUsers.map(user => {
-                                console.log(user.projects);
+                                if(!user.projects){
+                                    return <span>Loading ...</span>
+                                }
+                                console.log(user.projects[6][0].data);
+                                if(user.projects[2][0].data != "+"){
+                                    pageTitles.push(user.projects[2][0].data)
+                                }
+                                if(user.projects[4][0].data != "+"){
+                                    pageTitles.push(user.projects[4][0].data)
+                                }
+                                if(user.projects[6][0].data != "+"){
+                                    pageTitles.push(user.projects[6][0].data)
+                                }
+                                if(user.projects[8][0].data != "+"){
+                                    pageTitles.push(user.projects[8][0].data)
+                                }
+                                if(user.projects[10][0].data != "+"){
+                                    pageTitles.push(user.projects[10][0].data)
+                                }
+                                if(user.projects[12][0].data != "+"){
+                                    pageTitles.push(user.projects[12][0].data)
+                                }
                                 return (
-                                    <UserPreview user={user} />
+                                    <div className="col-6 user-preview">
+
+                                        <UserPreview projects={user.projects} company={user.companyName} email={user.userEmail} url={user.url} />
+                                        <PDFGenerate 
+                                        userEmail={user.email} 
+                                        dataFromContainer1={user.projects[1]} 
+                                        dataFromContainer2={user.projects[3]} 
+                                        dataFromContainer3={user.projects[5]} 
+                                        dataFromContainer4={user.projects[7]} 
+                                        dataFromContainer5={user.projects[9]}
+                                        dataFromContainer6={user.projects[11]}
+                                        dataFromContainer7={user.projects[13]}
+                                        pageTitles={pageTitles}
+                                        />
+
+                                    </div>
                                 )
                             })}
                         </div>

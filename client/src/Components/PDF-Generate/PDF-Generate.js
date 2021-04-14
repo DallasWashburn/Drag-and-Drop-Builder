@@ -158,8 +158,8 @@ class PDFGenerate extends React.Component {
             doc.text(5, 5, splitText7);
         }
         doc.save('project.pdf');
-        var res = btoa(doc.output())
-        console.log(res);
+        // var res = btoa(doc.output())
+        // console.log(res);
 
         // Axios.post("http://localhost:3001/pdfUpload", res).then((res) => {
         //     if (res.status === 'ok') console.log("Yeah!");

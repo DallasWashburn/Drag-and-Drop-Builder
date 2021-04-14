@@ -6099,3 +6099,12 @@ button [aria-selected='false']{
     border: solid 1px black;
     padding: 20px;
 }
+
+.admin .btn-container{
+    position: initial;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-bottom: 20px;
+    border-radius: 0px;
+}

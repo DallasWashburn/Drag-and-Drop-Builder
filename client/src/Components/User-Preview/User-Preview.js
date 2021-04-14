@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import PDFGenerate from "../PDF-Generate/PDF-Generate"
 
 
 class UserPreview extends Component {
@@ -8,16 +8,21 @@ class UserPreview extends Component {
 
 
     render() {
-        // console.log(this.props.user.projects[1]);
-        // var home = this.props.user.projects[0][0].data
-        // // var page1 = this.props.user.projects[1]
+            // console.log(this.props.projects);
+            let userProjects = this.props.projects
+            // console.log(JSON.stringify(userProjects));
 
         return (
             <>
-                <div className="col-6 user-preview">
-                    <h3 className="text-center">{this.props.user.userEmail}</h3>
-                    {/* Title: {home} */}
-                </div>
+                
+                    <h3 className="text-center">{this.props.url}</h3>
+                    <p><strong>Company Name:</strong> {this.props.company}</p>
+                    <p><strong>User Email:</strong> {this.props.email}</p>
+                    <p  className="text-center"><strong>Download Project</strong></p>
+                    {/* <PDFGenerate /> */}
+                    {/* <pre>{JSON.stringify({userProjects}, null, 1)}</pre> */}
+                    
+                
             </>
         )
     }
