@@ -49,7 +49,7 @@
   .show {display: block;}
 
 
-  a:not([href]):hover{
+  .dropdown a:not([href]):hover{
       color: black;
       background-color: #cfcfcf;
   }

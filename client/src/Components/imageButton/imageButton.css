@@ -1,9 +1,9 @@
 #imageButton{
     position: absolute;
-    top: 5px;
-    left: 19px;
     visibility: hidden;
     z-index: 999999;
+    height: 100%;
+    width: 100%;
 }
 
 #imageButton:focus{
@@ -11,3 +11,16 @@
     box-shadow: none!important;
 }
 
+#imageButton .Tooltip-Wrapper{
+    width: 100%;
+    height: 100%;
+    position: initial;
+}
+
+
+#imageButton .Tooltip-Wrapper .btn, #imageButton .Tooltip-Wrapper .btn:hover{
+    background-color: transparent;
+    color: transparent;
+    height: 100%;
+    width: 100%;
+}

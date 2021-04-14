@@ -3,7 +3,6 @@
 :root{
   --primaryColor:#ce9e7c;
   --secondaryColor:#000000;
-  --thirdColor:#800000;
   --tooltip-text-color: white;
   --tooltip-background-color: black;
   --tooltip-margin: 30px;
@@ -6225,3 +6224,15 @@ button.btn.profile-delete:hover{
     border-left-color: var(--tooltip-background-color);
   }
   
+.dropdown-content a:hover{
+    color: black;
+    background-color: #cfcfcf;
+}
+
+header .main-logo #imageButton .Tooltip-Wrapper{
+    
+}
+
+header .main-logo #imageButton{
+    width: 22%;
+}

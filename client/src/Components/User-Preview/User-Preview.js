@@ -20,7 +20,7 @@ class UserPreview extends Component {
                         <button className="btn profile-delete">X</button>
                     </Tooltip>
                 </div>
-                <h3 className="text-center">{this.props.url}</h3>
+                <h3  className="text-uppercase text-center py-2">{this.props.url}</h3>
                 <p><strong>Company Name:</strong> {this.props.company}</p>
                 <p><strong>User Email:</strong> {this.props.email}</p>
                 <p className="text-center"><strong>Download Project</strong></p>
