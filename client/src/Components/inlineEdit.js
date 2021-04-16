@@ -69,7 +69,7 @@ function InlineEdit(props) {
   ]);
 
   return (
-    <Tooltip content="Click to edit text" direction="left">
+    <Tooltip content="Click to edit text" direction="top">
       <span className="inline-text" ref={wrapperRef}>
         <span
           ref={textRef}
