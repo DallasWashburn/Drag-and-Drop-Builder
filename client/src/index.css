@@ -3,10 +3,7 @@
 :root{
   --primaryColor:#ce9e7c;
   --secondaryColor:#000000;
-  --tooltip-text-color: white;
-  --tooltip-background-color: black;
-  --tooltip-margin: 30px;
-  --tooltip-arrow-size: 6px;
+  --thirdColor:#800000;
 }
 
 
@@ -15,7 +12,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f1f1f1;
+  background-color: #fff;
 }
 
 code {
@@ -136,20 +133,21 @@ a:not([href]){
 .primaryColor{
   color: var(--primaryColor);
 }
-.button-wrap{
-  position: absolute;
-  top:0px;
-  right:0px;
-  z-index: 9999;
+.button-wrap {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 9999;
 }
 
 .draggable-item #imageButton .far{
     pointer-events: none;
 }
 
-.btn-container {
+
+.btn-container .btn {
     height: 100px;
-    padding-left: 0;
+    padding: 0;
     width: 100px;
     position: fixed;
     font-size: 20px;
@@ -161,25 +159,11 @@ a:not([href]){
     border-radius: 100%;
     text-align: center;
     overflow: hidden;
-    line-height: 100px;
     box-shadow: 0 0 15px 0 rgba(0,0,0,.25);
-    z-index: 2;
+    display: block;
 }
-.btn-container .btn {
-    background-color: transparent;
-    color: #FFF;
-    border: none;
-    padding: 0;
-}
-
 .btn-container:hover {
     background-color: #FFF;
-}
-
-.btn-container:hover #pdfBtn{
-    background-color: #FFF;
-    color: #3c3c3c;
-    border-color: black;
 }
 #pdfBtn:hover{
   background-color: #FFF;
@@ -187,14 +171,6 @@ a:not([href]){
   border-color: black;
 
 }
-.container1 .menu-btn .menu-span {
-    position: absolute;
-    right: 10px;
-    font-size: 25px;
-    top: 50%;
-    transform: translateY(-50%) ;
-}
-
 .container1 .menu-btn.collapsed .menu-span {
     position: absolute;
     right: 10px;
@@ -202,9 +178,12 @@ a:not([href]){
     top: 50%;
     transform: translateY(-50%);
 }
-
-.container1 .menu-btn[aria-expanded=true] .menu-span{
-    transform: translateY(-50%)rotate(-225deg);
+.container1 .menu-btn .menu-span {
+    position: absolute;
+    right: 10px;
+    font-size: 25px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .opacity-ghost {
   transition: all .18s ease;
@@ -242,48 +221,100 @@ a:not([href]){
   pointer-events: none;
 }
 
-
-.xButton{
+.xButton {
     visibility: hidden;
     background-color: #cccccc;
     padding: 2px;
     min-width: 35px;
     height: 35px;
+    position: relative;
+    display: block;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    background-color: #9D1F60;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 0;
+    border: none;
+}
+.btn-text {
+    position: absolute;
+    top: 0;
+    right: 7px;
+    display: inline-block;
+    padding: 0 3px 0 20px;
+    width: 0;
+    height: 38px;
+    line-height: 38px;
+    background: #ddd;
+    font-size: 12px;
+    color: #3e474d;
+    text-align: left;
+    border-radius: 19px;
+    z-index: -1;
+    transition: width 0.35s, visibility .35s;
+    overflow: hidden;
+    visibility: hidden;
+}
+.xButton::after {
+    content: "\f00d";
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-family: "Font Awesome 5 Free";
 }
 
-.xButton:hover .X{
-    fill:var(--primaryColor);
-
+.xButton:hover .btn-text {
+    width: 110px;
+    visibility: visible;
 }
-
 .duplicate{
     visibility: hidden;
     background-color: #cccccc;
     padding: 2px;
     min-width: 35px;
     height: 35px;
+    position: relative;
+    display: block;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    background-color: #00D4BB;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 0;
+    border: none;
 }
-
-.duplicate:hover .X{
-    fill:var(--primaryColor);
-
+.duplicate:hover .btn-text {
+    width: 145px;
+    visibility: visible;
+}
+.duplicate::after {
+    content: "\f0c5";
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-family: "Font Awesome 5 Free";
 }
 
 .XContainer{
     position: relative;
-    top: -40px;
-    padding-right: 40px;
-    margin-left: auto;
-    width: 25px;
-    margin-top: -5px;
 }
 
 .duplicateContainer{
     position: relative;
-    width: 25px;
-    padding-right: 80px;
-    padding-top: 15px;
-    top: -10px;
+margin: 0 0 1em;
 }
 
 .smooth-dnd-container{
@@ -307,18 +338,18 @@ a:not([href]){
   text-transform: uppercase;
 }
 
-
-#tabsContainer{
-  display: flex;
-  border: solid 1px #cfcfcf;
-  flex-direction: column;
-  width: 100%;
-  max-width: 100%;
-  background-color: #FFF;
-  height: 100%;
-  min-height:800px;
-  z-index: 2;
-  border-radius: 5px;
+#tabsContainer {
+    display: flex;
+    border: solid 1px #cfcfcf;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1000px;
+    background-color: #FFF;
+    height: 100%;
+    min-height: 800px;
+    z-index: 2;
+    border-radius: 5px;
+    margin: 0 auto;
 }
 
 #container2 .draggable-item{
@@ -615,6 +646,7 @@ textarea{
     letter-spacing: 0;
     text-transform: capitalize;
     font-weight: 500;
+    margin: 0 0 1em;
 }
 .hidden {
   visibility: hidden;
@@ -716,23 +748,24 @@ textarea{
   bottom: 1px;
   left: 10px;
   visibility: visible;
-  color: #FFF;
+  color: #3c3c3c;
 }
 
 #homePage li button .pageSpan:hover .tabX:hover{
-  color: #F97B82;
+  color: #3c3c3c;
 }
 
 .projectCard{
   margin-bottom: 25px;
 }
-
-.projectCard h3{
-  text-align: center;
-  border: 1px solid;
-    padding: 20px;
+.projectCard h3 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #111;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin: 0 0 1em;
 }
-
 
 
 /* these make sure it can work in any text element */
@@ -6104,8 +6137,8 @@ button [aria-selected='false']{
     width: 3%;
     height: 10%;
     left: 10px;
-}
 
+}
 
 #container2 .vertical {
     min-height: 750px;
@@ -6290,3 +6323,4 @@ a:not([href]):hover {
     visibility: hidden;
     text-transform: uppercase;
 }
+
