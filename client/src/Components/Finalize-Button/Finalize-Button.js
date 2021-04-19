@@ -1,7 +1,7 @@
 import React from "react";
 
 const FinalizeButton = (props) => {
-  return <button className=" finalizeButton" >Finalize</button>;
+  return <button onClick={props.finalize} className=" finalizeButton" >Finalize</button>;
 };
 
 export default FinalizeButton;

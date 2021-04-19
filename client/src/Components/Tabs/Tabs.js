@@ -63,7 +63,8 @@ class ContainerTabs extends Component {
             isHidden6: true,
             dbId: this.props.dbId,
             h3Heading: "",
-            copy1: ""
+            copy1: "",
+            final:false
         }
     }
 
@@ -131,6 +132,35 @@ class ContainerTabs extends Component {
                         var Page6 = element.projects[11];
                         var Page7Title = element.projects[12][0].data;
                         var Page7 = element.projects[13];
+                        if(element.finalized === true){
+                            var divDisable = document.getElementById("container2");
+                            divDisable.classList.add("final");
+                            var imageDisable = document.getElementsByClassName("image-button");
+                            var container1Disable = document.getElementsByClassName("menu-btn");
+                            var buttonDisable = document.getElementsByClassName("button-wrap");
+                            var dragDisable = document.getElementsByClassName("smooth-dnd-draggable-wrapper");
+                            setTimeout(function(){
+                                for (let index = 0; index < imageDisable.length; index++) {
+                                    const element = imageDisable[index];
+                                    element.style.display="none"
+                                }
+                                for (let j = 0; j < container1Disable.length; j++) {
+                                    const element = container1Disable[j];
+                                    element.style.pointerEvents = "none"
+                                }
+
+                                for (let k = 0; k < buttonDisable.length; k++) {
+                                    const element = buttonDisable[k];
+                                    element.style.display="none"
+                                }
+
+                                for (let d = 0; d < dragDisable.length; d++) {
+                                    const element = dragDisable[d];
+                                    element.style.pointerEvents = "none"
+                                }
+                            }, 1000)
+
+                        }
                         this.setState({
                             Page1Title: Page1Title,
                             items2: Page1,
@@ -226,7 +256,20 @@ class ContainerTabs extends Component {
     finalize = (event) => {
         event.preventDefault()
         console.log("finalize working");
+        var question = window.confirm("Are you sure you would like to finalize this project? You will not be able to make any more edits once this is performed")
+        if (question === true){
+            API.updateUserStatus(this.props.dbId, true)
+            var divDisable = document.getElementById("container2")
+            divDisable.classList.add("final")
+            this.setState({final:true})
+        } else {
+            console.log("no im still working");
+        }
     }
+
+
+
+
     // Handles the form inside modal and disperses text to the corresponding page 
 
     handleChange = (event) => {
@@ -812,7 +855,8 @@ class ContainerTabs extends Component {
                     items2={this.state.items}
                     updateUser={this.updateUser} />
 
-                <FinalizeButton />
+                <FinalizeButton 
+                finalize={this.finalize}/>
 
                 <div id="tabsContainer">
 
