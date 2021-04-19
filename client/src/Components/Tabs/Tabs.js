@@ -69,12 +69,12 @@ class ContainerTabs extends Component {
     }
 
     componentDidMount() {
-        window.addEventListener("beforeunload", this.onUnload)
+        // window.addEventListener("beforeunload", this.onUnload)
         this.getProject()
     }
 
     componentWillUnmount() {
-        window.removeEventListener("beforeunload", this.onUnload)
+        // window.removeEventListener("beforeunload", this.onUnload)
     }
 
     handleSave = (event) => {
@@ -139,6 +139,8 @@ class ContainerTabs extends Component {
                             var container1Disable = document.getElementsByClassName("menu-btn");
                             var buttonDisable = document.getElementsByClassName("button-wrap");
                             var dragDisable = document.getElementsByClassName("smooth-dnd-draggable-wrapper");
+                            var reviewBanner = document.getElementById("reviewBanner")
+                            reviewBanner.style.visibility="visible"
                             setTimeout(function(){
                                 for (let index = 0; index < imageDisable.length; index++) {
                                     const element = imageDisable[index];
@@ -261,7 +263,7 @@ class ContainerTabs extends Component {
             API.updateUserStatus(this.props.dbId, true)
             var divDisable = document.getElementById("container2")
             divDisable.classList.add("final")
-            this.setState({final:true})
+            window.location.reload()
         } else {
             console.log("no im still working");
         }
