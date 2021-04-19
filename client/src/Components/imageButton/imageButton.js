@@ -7,8 +7,6 @@ class imageButton extends Component {
     render() {
         return (
 
-            <div id="imageButton">
-
             <div id="imageButton" className="image-button">
 
                 <Tooltip content="Click to edit image" direction="top">

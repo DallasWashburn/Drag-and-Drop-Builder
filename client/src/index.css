@@ -686,6 +686,10 @@ textarea{
   color: #FFF;
 }
 
+.menu-btn[aria-expanded=true] .menu-span{
+    transform: translateY(-50%) rotate(225deg);
+}
+
 .menu-btn:focus{
   outline: 0;
 }
