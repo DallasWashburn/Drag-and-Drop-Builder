@@ -210,6 +210,7 @@ class Copy extends React.Component {
             return (
                 <>
                     <Header name={this.state.userId} email={this.state.userEmail} nickname={this.state.nickname} />
+                    <div id="reviewBanner">Your project is in review</div>
                     <div id="wrapper" >
                         {/* <span id="menuArrow" className="menuArrow"><i onClick={this.fullScreen} className="fas fa-lg fa-angle-left"></i></span> */}
                         {/* <span id="openArrow"><i onClick={this.closeScreen} className="fas fa-lg fa-angle-left"></i></span> */}
