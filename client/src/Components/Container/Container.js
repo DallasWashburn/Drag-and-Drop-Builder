@@ -184,7 +184,7 @@ class Container1 extends Component {
                     const element = theUsers[i];
                     if (element.userEmail === this.props.userEmail) {
                         var Page1 = element.projects[1]; 
-                        console.log(Page1);
+                        console.log(element);
                                                
                         Page1.map(item => {
                             if (item.data === "Header-0") {

@@ -9,7 +9,8 @@ const userSchema = new Schema({
   companyName: {type: String, required:true },
   url: { type: String, required:true },
   projects: { type: [[]] },
-  date: { type: Date, default: Date.now }
+  date: { type: Date, default: Date.now },
+  finalized: {type:Boolean, default:false}
 });
 
 const User = mongoose.model("User", userSchema);
