@@ -1,4 +1,5 @@
 import React from "react"
+import Tooltip from "../Tooltip/Tooltip"
 
 function DuplicateButton(props) {
 
@@ -6,6 +7,7 @@ function DuplicateButton(props) {
 
     return (
         <div className="duplicateContainer">
+            <Tooltip content="Click to duplicate element" direction="left">
             <button className="duplicate" onClick={props.duplicateElement}>
             <svg className="X"   xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="25px" height="25px" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 591.6 591.6">
                 <g>
@@ -18,6 +20,7 @@ function DuplicateButton(props) {
 
             </svg>
             </button>
+            </Tooltip>
         </div>
     )
 }

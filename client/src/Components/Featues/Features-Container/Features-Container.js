@@ -12,7 +12,7 @@ class FeaturesContainer extends Component {
         
     }
 
-    handleMouseDown(event){
+    handleMouseDown(event) {
         event.stopPropagation();
         var span = event.target.querySelector("span")
         var elementTag = event.target.tagName
@@ -23,21 +23,13 @@ class FeaturesContainer extends Component {
             aria = event.target.parentElement.getAttribute("aria-expanded")
         }
         if (aria === "true") {
-            span.style.transform = "rotate(180deg)"
             span.style.transition = "transform 0.3s ease-in-out"
-            span.style.bottom = "5px"
         } else if(aria === "true" && elementTag === "SPAN"){
-            span.style.transform = "rotate(180deg)"
             span.style.transition = "transform 0.3s ease-in-out"
-            span.style.bottom = "5px"
         } else if (aria === "false" && elementTag === "SPAN") {
-            span.style.transform = "rotate(-225deg)"
             span.style.transition = "transform 0.3s ease-in-out"
-            span.style.bottom = "5px"
         }  else {
-            span.style.transform = "rotate(-225deg)"
             span.style.transition = "transform 0.3s ease-in-out"
-            span.style.bottom = "5px"
         }
     }
 

@@ -17,7 +17,7 @@ class Team0 extends Component {
                                 <div className="column team-column team-1-column text-center">
                                     <div className="team-img">
                                         <div className="profile-img">
-                                            <div classNameName="Team-0-1">
+                                            <div className="Team-0-1">
                                                 <ImageButton getImage={this.props.getImage} />
                                                 <img src={this.props.teamImage1} alt="" />
                                             </div>

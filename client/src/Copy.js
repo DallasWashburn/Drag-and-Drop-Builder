@@ -211,8 +211,8 @@ class Copy extends React.Component {
                 <>
                     <Header name={this.state.userId} email={this.state.userEmail} nickname={this.state.nickname} />
                     <div id="wrapper" >
-                        <span id="menuArrow" className="menuArrow"><i onClick={this.fullScreen} className="fas fa-lg fa-angle-left"></i></span>
-                        <span id="openArrow"><i onClick={this.closeScreen} className="fas fa-lg fa-angle-left"></i></span>
+                        {/* <span id="menuArrow" className="menuArrow"><i onClick={this.fullScreen} className="fas fa-lg fa-angle-left"></i></span> */}
+                        {/* <span id="openArrow"><i onClick={this.closeScreen} className="fas fa-lg fa-angle-left"></i></span> */}
                         <div className="container1 fixed" id="container1">
                             <img src="https://www.cybermark.com/wp-content/uploads/2018/08/mainLogo.png" height="45" alt="cybermark logo" />
                             <br></br>
@@ -227,19 +227,6 @@ class Copy extends React.Component {
                             <Testimonials />
                             <ContactContainer />
                             <Footers />
-
-                            {/* <div>
-                                <FileUpload name={this.state.userId} email={this.state.userEmail} onUpload={this.onUpload} />
-                            </div> */}
-                            {/* <div>
-                                <EditMenu                                 
-                                handleSubmit={this.handleSubmit}
-                                handleInputChange={this.handleInputChange}
-                                dataContent={this.state.dataContent}
-                                closeEdit={this.closeEdit} 
-                                h3Heading={this.state.h3Heading} 
-                                pFirst={this.state.pFirst} />
-                            </div> */}
                         </div>
 
 
@@ -270,18 +257,3 @@ class Copy extends React.Component {
 
 
 export default Copy;
-
-
-
-    // handleAddPage() {
-    //     var navLink = document.createElement("LI");
-    //     var homePage = document.getElementById("homePage");
-    //     var pageTitle = prompt("What would you like to name this page?", "Services Page");
-    //     navLink.classList.add("nav-item");
-    //     navLink.innerHTML = '<button onClick={this.handleClassSwitch} id="tab-tab2" role="tab" aria-selected="true" aria-controls="tabpanel-tab2" class="tab-link" style="">' + pageTitle + '</button>';
-    //     navLink.classList.add("new-link")
-    //     // navLink.style.padding="8px 0px 0px 10px";
-    //     var count = homePage.childNodes.length;
-    //     homePage.insertBefore(navLink, homePage.childNodes[count - 1])
-    //     console.log(count);
-    // }

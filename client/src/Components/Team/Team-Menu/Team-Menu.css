@@ -49,12 +49,3 @@
 }
 
 
-#Team-0 #imageButton, #Team-1 #imageButton{
-  top: 160px;
-  left: 6px;
-  z-index: 9999999;
-}
-
-#Team-3 #imageButton{
-  left: 5px;
-}

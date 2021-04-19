@@ -5,11 +5,8 @@ export default {
   
   // Gets all users
   getUsers: async function () {
-    let response = axios({
-      url:"/api/users",
-      method:'get',
-      baseURL: ""
-    }).catch(err => console.log(err.response));
+    let response = axios.get("/api/users")
+    .catch(err => console.log(err.response));
     return response;
   },
   // Gets the user with the given id

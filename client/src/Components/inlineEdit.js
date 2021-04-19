@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from "react";
 import useKeypress from "../Components/Hooks/useKeypress"
 import useOnClickOutside from "../Components/Hooks/useOnClickOutside";
 import DOMPurify from "dompurify";
+import Tooltip from "../Components/Tooltip/Tooltip"
 
 function InlineEdit(props) {
   const [isInputActive, setIsInputActive] = useState(false);
@@ -68,29 +69,29 @@ function InlineEdit(props) {
   ]);
 
   return (
-    <span className="inline-text" ref={wrapperRef}>
-      <span
-        ref={textRef}
-        onClick={handleSpanClick}
-        className={`inline-text_copy inline-text_copy--${
-          !isInputActive ? "active" : "hidden"
-        }`}
-      >
-        {props.text}
+    <Tooltip content="Click to edit text" direction="top">
+      <span className="inline-text" ref={wrapperRef}>
+        <span
+          ref={textRef}
+          onClick={handleSpanClick}
+          className={`inline-text_copy inline-text_copy--${!isInputActive ? "active" : "hidden"
+            }`}
+        >
+          {props.text}
+        </span>
+        <textarea
+          rows="4"
+          ref={inputRef}
+          // set the width to the input length multiplied by the x height
+          // it's not quite right but gets it close
+          style={{ minWidth: "100%" }}
+          value={inputValue}
+          onChange={handleInputChange}
+          className={`inline-text_input inline-text_input--${isInputActive ? "active" : "hidden"
+            }`}
+        />
       </span>
-      <textarea
-      rows="4"
-        ref={inputRef}
-        // set the width to the input length multiplied by the x height
-        // it's not quite right but gets it close
-        style={{ minWidth: "100%"}}
-        value={inputValue}
-        onChange={handleInputChange}
-        className={`inline-text_input inline-text_input--${
-          isInputActive ? "active" : "hidden"
-        }`}
-      />
-    </span>
+    </Tooltip>
   );
 }
 
