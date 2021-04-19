@@ -6101,6 +6101,8 @@ button [aria-selected='false']{
 
 .intro_4 #imageButton {
     top: 10px;
+    width: 3%;
+    height: 10%;
     left: 10px;
 }
 
@@ -6243,3 +6245,21 @@ button.btn.profile-delete:hover{
 
 
 
+.finalizeButton{
+    position: absolute;
+    top: 8px;
+    padding: 9px;
+    right: 143px;
+    font-size: 16px;
+    margin-left: auto;
+    background-color: black;
+    color: #FFF;
+    border: 1px solid;
+    border-color: transparent;
+    border-radius: 0;
+}
+
+.finalizeButton:hover{
+    background-color: #00D4BB;
+    border-color: #00D4BB;
+}
