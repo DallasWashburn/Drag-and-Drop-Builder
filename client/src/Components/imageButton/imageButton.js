@@ -6,7 +6,11 @@ import "./imageButton.css"
 class imageButton extends Component {
     render() {
         return (
+
+            <div id="imageButton">
+
             <div id="imageButton" className="image-button">
+
                 <Tooltip content="Click to edit image" direction="top">
                 <button data-toggle onClick={this.props.getImage} type="button" className="btn"><i className="far fa-images"></i></button>
                 </Tooltip>

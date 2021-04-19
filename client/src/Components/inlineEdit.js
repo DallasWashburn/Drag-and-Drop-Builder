@@ -6,6 +6,7 @@ import Tooltip from "../Components/Tooltip/Tooltip"
 import API from '../utils/API';
 
 
+
 function InlineEdit(props) {
   const [isInputActive, setIsInputActive] = useState(false);
   const [inputValue, setInputValue] = useState(props.text);
@@ -69,6 +70,7 @@ function InlineEdit(props) {
   const handleSpanClick = useCallback(() => setIsInputActive(true), [
     setIsInputActive
   ]);
+
 
   const checkFinal = () => {
     API.getUsers()
@@ -140,6 +142,7 @@ function InlineEdit(props) {
       </Tooltip>
     );
   }
+
 }
 
 export default InlineEdit;

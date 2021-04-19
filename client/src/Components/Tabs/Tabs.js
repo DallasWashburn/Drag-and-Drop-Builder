@@ -16,6 +16,7 @@ import SaveButton from "../Save-Button/Save-Button"
 import ProfileButton from "../Profile-Button/Profile-Button"
 import Tooltip from "../Tooltip/Tooltip"
 import FinalizeButton from '../Finalize-Button/Finalize-Button';
+
 var pageTitles = ["Home Page"]
 
 const styles = {
@@ -67,6 +68,7 @@ class ContainerTabs extends Component {
             final:false
         }
     }
+
 
     componentDidMount() {
         // window.addEventListener("beforeunload", this.onUnload)
@@ -324,8 +326,10 @@ class ContainerTabs extends Component {
             this.setState({
                 isHidden1: true,
                 pageName2: "+"
+
             })
         } else if (modalTab.id === "tab-tab3") {
+
             var previous = document.getElementById("tab-tab3");
             previous.setAttribute("aria-selected", "false");
             previous.classList.remove("tab-link-active")
@@ -361,6 +365,7 @@ class ContainerTabs extends Component {
         console.log(oneINeed);
 
         if (oneINeed.id === "tab-tab2") {
+
             if (this.state.pageName2 === "+") {
                 this.setState({
                     pageName2: "Page 2"
@@ -372,9 +377,11 @@ class ContainerTabs extends Component {
         }
 
         if (oneINeed.id === "tab-tab3") {
+
             if (this.state.pageName3 === "+") {
                 this.setState({
                     pageName3: "Page 3"
+
                 })
             }
             pageTitles.push(this.state.pageName3)
@@ -383,9 +390,11 @@ class ContainerTabs extends Component {
         }
 
         if (oneINeed.id === "tab-tab4") {
+
             if (this.state.pageName4 === "+") {
                 this.setState({
                     pageName4: "Page 4"
+
                 })
             }
             pageTitles.push(this.state.pageName4)
@@ -394,9 +403,11 @@ class ContainerTabs extends Component {
         }
 
         if (oneINeed.id === "tab-tab5") {
+
             if (this.state.pageName5 === "+") {
                 this.setState({
                     pageName5: "Page 5"
+
                 })
             }
             pageTitles.push(this.state.pageName5)
@@ -405,6 +416,7 @@ class ContainerTabs extends Component {
         }
 
         if (oneINeed.id === "tab-tab6") {
+
             if (this.state.pageName6 === "+") {
                 this.setState({
                     pageName6: "Page 6"
@@ -416,9 +428,11 @@ class ContainerTabs extends Component {
         }
 
         if (oneINeed.id === "tab-tab7") {
+
             if (this.state.pageName7 === "+") {
                 this.setState({
                     pageName7: "Page 7"
+
                 })
             }
             pageTitles.push(this.state.pageName7)
@@ -867,29 +881,29 @@ class ContainerTabs extends Component {
                         activeLinkStyle={styles.activeLinkStyle}
                     >
                         <div id="tab__header">
-                            <ul id="homePage">
-                                <li className="nav-item" >
-                                    <TabLink style={styles.notActive} to="tab1"><span id="firstPage"><span className="pageSpan">{this.state.pageName1}</span></span></TabLink>
-                                </li>
-                                <li className="nav-item" id="link-2">
-                                    <TabLink style={styles.notActive} data-clicks={0} to="tab2">
-                                        <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName2}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
+                        <ul id="homePage">
+                            <li className="nav-item" >
+                                <TabLink style={styles.notActive} to="tab1"><span id="firstPage"><span className="pageSpan">{this.state.pageName1}</span></span></TabLink>
+                            </li>
+                            <li className="nav-item" id="link-2">
+                                <TabLink style={styles.notActive} data-clicks={0} to="tab2">
+                                    <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName2}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
 
-                                        <div id="modal1" className={this.state.isHidden1 ? "hidden" : "visible"}>
-                                            <Modal modalClose={this.modalClose}>
-                                                <div className="form-group">
-                                                    <label>Enter Page Name:</label>
-                                                    <input
-                                                        type="text"
-                                                        name={this.state.pageName2}
-                                                        onChange={e => this.handleChange(e)}
-                                                        className="form-control"
-
-                                                    />
-                                                </div>
-                                                <div className="form-group">
-                                                    <span className="btn form-btn" type="button" onClick={this.handleSubmit}>
-                                                        Save
+                                    <div id="modal1" className={this.state.isHidden1 ? "hidden" : "visible"}>
+                                        <Modal modalClose={this.modalClose}>
+                                            <div className="form-group">
+                                                <label>Enter Page Name:</label>
+                                                <input
+                                                    type="text"
+                                                    name={this.state.pageName2}
+                                                    onChange={e => this.handleChange(e)}
+                                                    className="form-control"
+                                                    
+                                                />
+                                            </div>
+                                            <div className="form-group">
+                                                <span className="btn form-btn" type="button" onClick={this.handleSubmit}>
+                                                    Save
                                             </span>
                                                 </div>
                                             </Modal>
