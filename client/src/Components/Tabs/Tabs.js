@@ -553,7 +553,7 @@ class ContainerTabs extends Component {
     // Removes Element from Tab-1
     removeElement1 = (event) => {
         var parentDiv = event.target.parentElement;
-        var grandparent = parentDiv.parentElement.parentElement.parentElement;
+        var grandparent = parentDiv.parentElement.parentElement;
         console.log(grandparent);
         var array = [...this.state.items2];
         var elementPosition = array.map(function (x) {
@@ -568,7 +568,7 @@ class ContainerTabs extends Component {
     // Duplicates Element from Tab-1
     duplicateElement1 = (event) => {
         var parentDiv = event.target.parentElement;
-        var grandparent = parentDiv.parentElement.parentElement.parentElement;
+        var grandparent = parentDiv.parentElement.parentElement;
         var array = [...this.state.items2];
         var elementPosition = array.map(function (x) {
             return x.data
@@ -596,7 +596,7 @@ class ContainerTabs extends Component {
     // Removes Element from Tab-2
     removeElement2 = (event) => {
         var parentDiv = event.target.parentElement;
-        var grandparent = parentDiv.parentElement.parentElement.parentElement;
+        var grandparent = parentDiv.parentElement.parentElement;
         var array = [...this.state.items3];
         var elementPosition = array.map(function (x) {
             return x.data
@@ -639,7 +639,7 @@ class ContainerTabs extends Component {
     // Removes Element from Tab-3
     removeElement3 = (event) => {
         var parentDiv = event.target.parentElement;
-        var grandparent = parentDiv.parentElement.parentElement.parentElement;
+        var grandparent = parentDiv.parentElement.parentElement;
         var array = [...this.state.items4];
         var elementPosition = array.map(function (x) {
             return x.data
