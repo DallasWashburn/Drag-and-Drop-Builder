@@ -1,7 +1,7 @@
 #imageButton{
     position: absolute;
     visibility: hidden;
-    z-index: 999999;
+    z-index: 110;
     height: 100%;
     width: 100%;
 }

@@ -5,7 +5,7 @@
   right: 65px;
   font-size: 16px;
   margin-left: auto;
-  background-color: black;
+  background-color:#00D4BB;
   color: #FFF;
   border: 1px solid;
   border-color: transparent;
@@ -14,6 +14,6 @@
   }
   
   .saveButton:hover{
-      background-color: #00D4BB;
-      border-color: #00D4BB;
+      background-color:#9D1F60;
+      border-color: #9D1F60;
   }
