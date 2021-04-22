@@ -72,20 +72,6 @@ function InlineEdit(props) {
   ]);
 
 
-  const checkFinal = () => {
-    API.getUsers()
-      .then(users => {
-        var theUsers = users.data
-        for (let i = 0; i < theUsers.length; i++) {
-          const element = theUsers[i];
-          if (element.userEmail === this.props.userEmail) {
-            var Page1 = element.projects[1];
-            console.log(element);
-          }
-        }
-      })
-  }
-
   var containerClass = document.getElementById("container2").classList[0]
   if (containerClass != undefined) {
     

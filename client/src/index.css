@@ -809,6 +809,7 @@ textarea{
 .inline-text_input--active {
   border-bottom: 1px solid #666666;
   text-align: left;
+  pointer-events: all;
 }
 
 #headingOne, #IntroOne,#contentOne, #galleryOne, #featureOne, #teamOne, #pricingOne, #testimonailsOne, #contactOne, #footerOne{
@@ -6350,4 +6351,8 @@ a:not([href]):hover {
 
 #Testimonial-1 .slick-list{
     min-height: 220px;
+}
+
+.during-edit{
+    pointer-events: none;
 }
