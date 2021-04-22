@@ -132,7 +132,7 @@ function InlineEdit(props) {
             ref={inputRef}
             // set the width to the input length multiplied by the x height
             // it's not quite right but gets it close
-            style={{ minWidth: "100%" }}
+            style={{ minWidth: "20vw" }}
             value={inputValue}
             onChange={handleInputChange}
             className={`inline-text_input inline-text_input--${isInputActive ? "active" : "hidden"

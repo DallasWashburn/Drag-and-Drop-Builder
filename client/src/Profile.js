@@ -131,8 +131,8 @@ class Profile extends Component {
     render() {
         // var randomNumber = this.getRandomNumber()
         const email = this.state.email;
-        const pageTitles = ["Home Page"]
         if (email === "admin@cybermark.com") {
+            const pageTitles = ["Home Page"]
             return (
                 <>
                     <ProfilfeNav email={this.props.user.email} />

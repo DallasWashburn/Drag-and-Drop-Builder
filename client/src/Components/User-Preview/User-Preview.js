@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PDFGenerate from "../PDF-Generate/PDF-Generate"
 import Tooltip from "../Tooltip/Tooltip"
 
-
 class UserPreview extends Component {
 
 

@@ -18,7 +18,7 @@ class Gallery2 extends Component {
                     <div className="section__container columns gallery_columns">
                         <div className="gallery__slider">
                             <Slider {...settings}>
-                                <div className="gallery__item ml-1 mr-1">
+                                <div className="gallery__item">
                                     <div className="column gallery_3_column mb-0">
                                         <div className="column-img mb-0">
                                             <a className="fancybox" rel="gallery3">
@@ -31,7 +31,7 @@ class Gallery2 extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="gallery__item ml-1 mr-1">
+                                <div className="gallery__item">
                                     <div className="column gallery_3_column mb-0">
                                         <div className="column-img mb-0">
                                             <a className="fancybox" rel="gallery3">
@@ -44,7 +44,7 @@ class Gallery2 extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="gallery__item ml-1 mr-1">
+                                <div className="gallery__item">
                                     <div className="column gallery_3_column mb-0">
                                         <div className="column-img mb-0">
                                             <a className="fancybox" rel="gallery3">
@@ -57,7 +57,7 @@ class Gallery2 extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="gallery__item ml-1 mr-1">
+                                <div className="gallery__item">
                                     <div className="column gallery_3_column mb-0">
                                         <div className="column-img mb-0">
                                             <a className="fancybox" rel="gallery3">
@@ -70,7 +70,7 @@ class Gallery2 extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="gallery__item ml-1 mr-1">
+                                <div className="gallery__item">
                                     <div className="column gallery_3_column mb-0">
                                         <div className="column-img mb-0">
                                             <a className="fancybox" rel="gallery3">
@@ -84,7 +84,7 @@ class Gallery2 extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="gallery__item ml-1 mr-1">
+                                <div className="gallery__item">
                                     <div className="column gallery_3_column mb-0">
                                         <div className="column-img mb-0">
                                             <a className="fancybox" rel="gallery3">
@@ -97,7 +97,7 @@ class Gallery2 extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="gallery__item ml-1 mr-1">
+                                <div className="gallery__item">
                                     <div className="column gallery_3_column mb-0">
                                         <div className="column-img mb-0">
                                             <a className="fancybox" rel="gallery3">
@@ -110,7 +110,7 @@ class Gallery2 extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="gallery__item ml-1 mr-1">
+                                <div className="gallery__item">
                                     <div className="column gallery_3_column mb-0">
                                         <div className="column-img mb-0">
                                             <a className="fancybox" rel="gallery3">
@@ -123,7 +123,7 @@ class Gallery2 extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="gallery__item ml-1 mr-1">
+                                <div className="gallery__item">
                                     <div className="column gallery_3_column mb-0">
                                         <div className="column-img mb-0">
                                             <a className="fancybox" rel="gallery3">
@@ -136,7 +136,7 @@ class Gallery2 extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="gallery__item ml-1 mr-1">
+                                <div className="gallery__item">
                                     <div className="column gallery_3_column mb-0">
                                         <div className="column-img mb-0">
                                             <a className="fancybox" rel="gallery3">
