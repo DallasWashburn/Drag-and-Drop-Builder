@@ -1,6 +1,6 @@
 {
   "name": "smooth-dnd",
-  "homepage": "https://dragon.cybermark.com/.com/",
+  "homepage": "http://dragon.cybermark.com/",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001",
