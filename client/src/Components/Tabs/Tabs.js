@@ -259,7 +259,7 @@ class ContainerTabs extends Component {
 
     finalize = (event) => {
         event.preventDefault()
-        console.log("finalize working");
+        // console.log("finalize working");
         var question = window.confirm("Are you sure you would like to finalize this project? You will not be able to make any more edits once this is performed")
         if (question === true){
             API.updateUserStatus(this.props.dbId, true)
@@ -267,7 +267,7 @@ class ContainerTabs extends Component {
             divDisable.classList.add("final")
             window.location.reload()
         } else {
-            console.log("no im still working");
+            // console.log("no im still working");
         }
     }
 
@@ -362,7 +362,7 @@ class ContainerTabs extends Component {
         var divGrandparent = divParent.parentElement
         var lastOne = divGrandparent.parentElement
         var oneINeed = lastOne.parentElement.parentElement
-        console.log(oneINeed);
+        // console.log(oneINeed);
 
         if (oneINeed.id === "tab-tab2") {
 
@@ -554,7 +554,7 @@ class ContainerTabs extends Component {
     removeElement1 = (event) => {
         var parentDiv = event.target.parentElement;
         var grandparent = parentDiv.parentElement.parentElement;
-        console.log(grandparent);
+        // console.log(grandparent);
         var array = [...this.state.items2];
         var elementPosition = array.map(function (x) {
             return x.data

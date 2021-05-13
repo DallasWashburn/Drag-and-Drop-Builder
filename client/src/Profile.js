@@ -44,7 +44,7 @@ class Profile extends Component {
         API.getUsers()
             .then(users => {
                 var theUsers = users.data
-                console.log(theUsers);
+                // console.log(theUsers);
                 // var userProjects = []
                 if (this.state.email === 'admin@cybermark.com') {
                     this.setState({
@@ -59,16 +59,16 @@ class Profile extends Component {
                         this.setState({
                             allProjects: allProjects
                         })
-                        console.log(this.state.allProjects);
+                        // console.log(this.state.allProjects);
                     }
                     return
                 }
                 for (let i = 0; i < theUsers.length; i++) {
                     const element = theUsers[i];
-                    console.log(element);
+                    // console.log(element);
                     if (element.userEmail === this.props.user.email) {
-                        console.log(element.projects);
-                        console.log(this.props.user.email);
+                        // console.log(element.projects);
+                        // console.log(this.props.user.email);
                         var Page1Title = element.projects[0];
                         var Page1 = element.projects[1];
                         var Page2Title = element.projects[2];
@@ -144,7 +144,7 @@ class Profile extends Component {
                                 if(!user.projects){
                                     return <span>Loading ...</span>
                                 }
-                                console.log(user.projects[6][0].data);
+                                // console.log(user.projects[6][0].data);
                                 if(user.projects[2][0].data != "+"){
                                     pageTitles.push(user.projects[2][0].data)
                                 }

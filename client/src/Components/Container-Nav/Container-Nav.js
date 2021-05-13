@@ -17,7 +17,7 @@ class ContainerNav extends React.Component {
     // navLink.style.padding="8px 0px 0px 10px";
     var count = homePage.childNodes.length;    
     homePage.insertBefore(navLink, homePage.childNodes[count -1])
-    console.log(count);
+    // console.log(count);
 }
 render(){
     return (

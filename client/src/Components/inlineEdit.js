@@ -3,7 +3,6 @@ import useKeypress from "../Components/Hooks/useKeypress"
 import useOnClickOutside from "../Components/Hooks/useOnClickOutside";
 import DOMPurify from "dompurify";
 import Tooltip from "../Components/Tooltip/Tooltip"
-import API from '../utils/API';
 
 
 
@@ -32,7 +31,7 @@ function InlineEdit(props) {
     if (enter) {
       onSetText(inputValue);
       setIsInputActive(false);
-      console.log(inputValue);
+      // console.log(inputValue);
     }
   }, [enter, inputValue, onSetText]);
 

@@ -81,7 +81,7 @@ class Copy extends React.Component {
         API.getUsers()
             .then(users => {
                 var theUsers = users.data
-                console.log(theUsers);
+                // console.log(theUsers);
                 for (let i = 0; i < theUsers.length; i++) {
                     const element = theUsers[i];
                     if (element.userId === this.props.user.sub) {

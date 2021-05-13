@@ -42,7 +42,7 @@ class FileUpload extends React.Component {
     if (files.length > 10) {
       const msg = 'Only 10 images can be uploaded at a time'
       event.target.value = null // discard selected file
-      console.log(msg)
+      // console.log(msg)
       err.push(msg);
       toast.error(err[0])
       return false;
@@ -81,7 +81,7 @@ class FileUpload extends React.Component {
     if(this.state.selectedFile.length > 0){
       
       var progressBar = document.getElementById("progress");
-      console.log(progressBar);
+      // console.log(progressBar);
       progressBar.style.display = "flex"
       const data = new FormData()
       for (var x = 0; x < this.state.selectedFile.length; x++) {
