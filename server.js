@@ -2,13 +2,14 @@ const express = require("express");
 const path = require("path");
 const routes = require("./routes/index");
 const PORT = process.env.PORT || 3001;
+var sslRedirect = require('heroku-ssl-redirect');
 const app = express();
 // var multer = require('multer')
 const mongoose = require("mongoose");
 // const fs = require('fs');
 // var count = 1;
 
-
+app.use(sslRedirect());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -28,7 +29,8 @@ const options = {
 };
 
 // Connect to Mongo DB
-mongoose.connect(MONGODB_URI,options).then(()=>{console.log("Connected to Database ");
+mongoose.connect(MONGODB_URI, options).then(() => {
+  console.log("Connected to Database ");
 })
 
 // const apiRoutes = (require("./routes/api/index"));
@@ -92,7 +94,7 @@ app.listen(PORT, () => {
 
 //   // sendEmail(req.body, (res) => {
 //   //   res.status(200).json({"status": res ? 'ok' : 'error' });
-  
+
 //   // })
 // });
 
@@ -110,7 +112,7 @@ app.listen(PORT, () => {
 //     console.log("erasing folder......");
 //     fs.readdir(directory, (err, files) => {
 //       if (err) throw err;
-    
+
 //       for (const file of files) {
 //         fs.unlink(path.join(directory, file), err => {
 //           if (err) throw err;
@@ -119,8 +121,8 @@ app.listen(PORT, () => {
 //     });
 
 //   }
-  
-  
+
+
 //   const sendEmail = (data, callback) => {
 
 //     fs.readdir("./public", (err, files) => {
@@ -358,8 +360,8 @@ app.listen(PORT, () => {
 //         text: 'Project Images!',
 //         attachments: attachments
 //       };
-    
-    
+
+
 //       mail.sendMail(mailOptions, function (error, info) {
 //         if (error) {
 //           console.log(error);
@@ -373,6 +375,6 @@ app.listen(PORT, () => {
 
 
 //     })
-  
+
 
 //   }
