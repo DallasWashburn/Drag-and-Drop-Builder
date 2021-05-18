@@ -49,7 +49,7 @@ class Header1 extends Component {
                                 </nav>
                                 <div className="header-button">
                                     <a className="btn primary-btn clear-btn">
-                                    <InlineEdit text={this.props.phoneNumber} onSetText={text => this.props.getHeaderInfo(undefined,undefined,undefined,undefined,undefined,undefined,undefined,text)}/>
+                                    <InlineEdit text={this.props.phoneNumber} onSetText={text => this.props.getHeaderInfo(undefined,undefined,undefined,undefined,undefined,undefined,text)}/>
                                     </a>
                                 </div>
                             </div>

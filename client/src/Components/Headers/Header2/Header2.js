@@ -14,7 +14,7 @@ class Header2 extends Component {
                             <div className="row align-items-center">
                                 <div className="col-md-6">
                                     <div className="top__phone">
-                                        <a><InlineEdit text={this.props.phoneNumber} onSetText={text => this.props.getHeaderInfo(undefined,undefined,undefined,undefined,undefined,undefined,undefined,text)}/></a>
+                                        <a><InlineEdit text={this.props.phoneNumber} onSetText={text => this.props.getHeaderInfo(undefined,undefined,undefined,undefined,undefined,undefined,text)}/></a>
                                     </div>
                                 </div>
                                 <div className="col-md-6 text-right">
