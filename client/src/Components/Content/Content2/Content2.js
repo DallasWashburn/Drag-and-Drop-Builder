@@ -10,9 +10,9 @@ class Content2 extends Component {
                 <div className="container">
                     <div className="section__container text-center">
                         <div className="section__content">
-                            <h2><InlineEdit text={this.props.content2Heading} onSetText={text => this.props.getContentInfo(undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined, text)}/></h2>
-                            <h3><InlineEdit text={this.props.content2SubHeading} onSetText={text => this.props.getContentInfo(undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined, text)}/></h3>
-                            <p><InlineEdit text={this.props.content2Text} onSetText={text => this.props.getContentInfo(undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined, text)}/></p>
+                            <h2><InlineEdit text={this.props.content2Heading} onSetText={text => this.props.getContentInfo(undefined,undefined,undefined,undefined,undefined,undefined, text)}/></h2>
+                            <h3><InlineEdit text={this.props.content2SubHeading} onSetText={text => this.props.getContentInfo(undefined,undefined,undefined,undefined,undefined,undefined,undefined, text)}/></h3>
+                            <p><InlineEdit text={this.props.content2Text} onSetText={text => this.props.getContentInfo(undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined, text)}/></p>
                         </div>
                     </div>
                 </div>
