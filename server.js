@@ -2,13 +2,14 @@ const express = require("express");
 const path = require("path");
 const routes = require("./routes/index");
 const PORT = process.env.PORT || 3001;
+var enforce = require('express-sslify');
 const app = express();
 // var multer = require('multer')
 const mongoose = require("mongoose");
 // const fs = require('fs');
 // var count = 1;
 
-
+app.use(enforce.HTTPS({trustProtoHeader: true}));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
