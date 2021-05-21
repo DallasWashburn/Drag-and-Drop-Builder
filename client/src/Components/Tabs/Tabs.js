@@ -1087,7 +1087,7 @@ class ContainerTabs extends Component {
                         </TabContent>
                         <TabContent for="tab6">
                             <Container6
-                                onDrop={this.onDrop}
+                                onDrop={this.onDrop6}
                                 getChildPayload={this.getChildPayload6}
                                 generateItems={this.state.items7}
                                 removeElement={this.removeElement6}

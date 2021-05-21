@@ -118,6 +118,7 @@ class Copy extends React.Component {
                 var num = 0
                 for (let i = 0; i < theUsers.length; i++) {
                     const element = theUsers[i];
+                    console.log(this.props.user.sub);
                     if (element.userId === this.props.user.sub) {
                         num = 2
                     }

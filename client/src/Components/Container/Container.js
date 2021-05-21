@@ -964,6 +964,7 @@ class Container1 extends Component {
         var headerButton = this.state.headerButton;
         var phoneNumber = this.state.phoneNumber;
         var companyLogo = this.state.companyLogo;
+
         // Calling Intro Block Info
         var introHeading = this.state.introHeading;
         var introSubHeading = this.state.introSubHeading;
@@ -972,6 +973,7 @@ class Container1 extends Component {
         var introButton1 = this.state.introButton1;
         var introButton2 = this.state.introButton2;
         var introBackgroundImage = this.state.introBackgroundImage;
+
         // Calling Content Block Info
         var content0Heading = this.state.content0Heading;
         var content0SubHeading = this.state.content0SubHeading
@@ -984,6 +986,7 @@ class Container1 extends Component {
         var content2Heading = this.state.content2Heading;
         var content2SubHeading = this.state.content2SubHeading
         var content2Text = this.state.content2Text;
+
         // Calling Gallery Block Info
         var galleryHeading = this.state.galleryHeading;
         var gallerySubtext = this.state.gallerySubtext;
@@ -1003,6 +1006,7 @@ class Container1 extends Component {
         var galleryImage8 = this.state.galleryImage8;
         var galleryImage9 = this.state.galleryImage9;
         var galleryImage10 = this.state.galleryImage10;
+
         // Calling Features Block Info
         var featureHeading = this.state.featureHeading
         var featureSubHeading = this.state.featureSubHeading
@@ -1020,6 +1024,7 @@ class Container1 extends Component {
         var featureH36 = this.state.featureH36
         var featureSubtext6 = this.state.featureSubtext6
         var featureButton = this.state.featureButton
+        
         // Calling Team Block Info 
         var teamHeading = this.state.teamHeading
         var teamSubheading = this.state.teamSubheading
