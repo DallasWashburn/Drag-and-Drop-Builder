@@ -9,7 +9,7 @@ const mongoose = require("mongoose");
 // const fs = require('fs');
 // var count = 1;
 
-// app.use(enforce.HTTPS({trustProtoHeader: true}));
+app.use(enforce.HTTPS({trustProtoHeader: true}));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
