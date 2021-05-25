@@ -9,6 +9,9 @@ import Container4 from "../Container4/Container4"
 import Container5 from "../Container5/Container5"
 import Container6 from "../Container6/Container6"
 import Container7 from "../Container7/Container7"
+import Container8 from "../Container8/Container8"
+import Container9 from "../Container9/Container9"
+import Container10 from "../Container10/Container10"
 import Modal from "../Modal/Modal"
 import { applyDrag, generateItems } from '../../utils';
 import PDFGenerate from "../PDF-Generate/PDF-Generate"
@@ -49,6 +52,9 @@ class ContainerTabs extends Component {
             items6: generateItems(0, (i) => ({ id: '1' + i, data: `Draggable 6 - ${i}` })),
             items7: generateItems(0, (i) => ({ id: '1' + i, data: `Draggable 7 - ${i}` })),
             items8: generateItems(0, (i) => ({ id: '1' + i, data: `Draggable 8 - ${i}` })),
+            items9: generateItems(0, (i) => ({ id: '1' + i, data: `Draggable 9 - ${i}` })),
+            items10: generateItems(0, (i) => ({ id: '1' + i, data: `Draggable 10 - ${i}` })),
+            items11: generateItems(0, (i) => ({ id: '1' + i, data: `Draggable 11 - ${i}` })),
             pageName1: "Home Page",
             pageName2: "+",
             pageName3: "+",
@@ -56,60 +62,30 @@ class ContainerTabs extends Component {
             pageName5: "+",
             pageName6: "+",
             pageName7: "+",
+            pageName8: "+",
+            pageName9: "+",
+            pageName10: "+",
             isHidden1: true,
             isHidden2: true,
             isHidden3: true,
             isHidden4: true,
             isHidden5: true,
             isHidden6: true,
+            isHidden7: true,
+            isHidden8: true,
+            isHidden9: true,
+            isHidden10: true,
             dbId: this.props.dbId,
             h3Heading: "",
             copy1: "",
-            final:false
+            final: false
         }
     }
 
 
     componentDidMount() {
-        // window.addEventListener("beforeunload", this.onUnload)
         this.getProject()
     }
-
-    componentWillUnmount() {
-        // window.removeEventListener("beforeunload", this.onUnload)
-    }
-
-    handleSave = (event) => {
-        var nameOfPage1 = { id: "pageName1", data: this.state.pageName1 }
-        var nameOfPage2 = { id: "pageName2", data: this.state.pageName2 }
-        var nameOfPage3 = { id: "pageName3", data: this.state.pageName3 }
-        var nameOfPage4 = { id: "pageName4", data: this.state.pageName4 }
-        var nameOfPage5 = { id: "pageName5", data: this.state.pageName5 }
-        var nameOfPage6 = { id: "pageName6", data: this.state.pageName6 }
-        var nameOfPage7 = { id: "pageName7", data: this.state.pageName7 }
-
-
-
-        var allPages = [nameOfPage1, this.state.items2, nameOfPage2, this.state.items3, nameOfPage3, this.state.items4, nameOfPage4, this.state.items5, nameOfPage5, this.state.items6, nameOfPage6, this.state.items7, nameOfPage7, this.state.items8]
-
-        let project = {
-            userId: this.state.userId,
-            userEmail: this.state.email,
-            projects: allPages
-        }
-
-
-
-        API.saveUser(project)
-
-    }
-
-    onUnload = (event) => {
-        event.preventDefault();
-        event.returnValue = '';
-    }
-
-
 
 
     getProject = () => {
@@ -134,7 +110,13 @@ class ContainerTabs extends Component {
                         var Page6 = element.projects[11];
                         var Page7Title = element.projects[12][0].data;
                         var Page7 = element.projects[13];
-                        if(element.finalized === true){
+                        var Page8Title = element.projects[14][0].data;
+                        var Page8 = element.projects[15]
+                        var Page9Title = element.projects[16][0].data;
+                        var Page9 = element.projects[17];
+                        var Page10Title = element.projects[18][0].data;
+                        var Page10 = element.projects[19];
+                        if (element.finalized === true) {
                             var divDisable = document.getElementById("container2");
                             divDisable.classList.add("final");
                             var imageDisable = document.getElementsByClassName("image-button");
@@ -142,11 +124,11 @@ class ContainerTabs extends Component {
                             var buttonDisable = document.getElementsByClassName("button-wrap");
                             var dragDisable = document.getElementsByClassName("smooth-dnd-draggable-wrapper");
                             var reviewBanner = document.getElementById("reviewBanner")
-                            reviewBanner.style.visibility="visible"
-                            setTimeout(function(){
+                            reviewBanner.style.visibility = "visible"
+                            setTimeout(function () {
                                 for (let index = 0; index < imageDisable.length; index++) {
                                     const element = imageDisable[index];
-                                    element.style.display="none"
+                                    element.style.display = "none"
                                 }
                                 for (let j = 0; j < container1Disable.length; j++) {
                                     const element = container1Disable[j];
@@ -155,7 +137,7 @@ class ContainerTabs extends Component {
 
                                 for (let k = 0; k < buttonDisable.length; k++) {
                                     const element = buttonDisable[k];
-                                    element.style.display="none"
+                                    element.style.display = "none"
                                 }
 
                                 for (let d = 0; d < dragDisable.length; d++) {
@@ -179,7 +161,13 @@ class ContainerTabs extends Component {
                             pageName6: Page6Title,
                             items7: Page6,
                             pageName7: Page7Title,
-                            items8: Page7
+                            items8: Page7,
+                            pageName8: Page8Title,
+                            items9: Page8,
+                            pageName9: Page9Title,
+                            items10: Page9,
+                            pageName10: Page10Title,
+                            items11: Page10
                         })
                     }
                 }
@@ -236,6 +224,27 @@ class ContainerTabs extends Component {
             var link7Child = link7New.childNodes[0]
             link7Child.setAttribute("data-clicks", 1);
         }
+        if (this.state.pageName8.length > 1) {
+
+            var link9 = document.getElementById("link-9")
+            link9.style.visibility = "visible";
+            var link8New = document.getElementById("link-8")
+            var link8Child = link8New.childNodes[0]
+            link8Child.setAttribute("data-clicks", 1);
+        }
+        if (this.state.pageName9.length > 1) {
+
+            var link10 = document.getElementById("link-10")
+            link10.style.visibility = "visible";
+            var link9New = document.getElementById("link-9")
+            var link9Child = link9New.childNodes[0]
+            link9Child.setAttribute("data-clicks", 1);
+        }
+        if (this.state.pageName10.length > 1) {
+            var link10New = document.getElementById("link-10")
+            var link10Child = link10New.childNodes[0]
+            link10Child.setAttribute("data-clicks", 1);
+        }
     }
 
 
@@ -247,8 +256,11 @@ class ContainerTabs extends Component {
         var nameOfPage5 = { id: "pageName5", data: this.state.pageName5 }
         var nameOfPage6 = { id: "pageName6", data: this.state.pageName6 }
         var nameOfPage7 = { id: "pageName7", data: this.state.pageName7 }
+        var nameOfPage8 = { id: "pageName8", data: this.state.pageName8 }
+        var nameOfPage9 = { id: "pageName9", data: this.state.pageName9 }
+        var nameOfPage10 = { id: "pageName10", data: this.state.pageName10 }
 
-        var allPages = [nameOfPage1, this.state.items2, nameOfPage2, this.state.items3, nameOfPage3, this.state.items4, nameOfPage4, this.state.items5, nameOfPage5, this.state.items6, nameOfPage6, this.state.items7, nameOfPage7, this.state.items8]
+        var allPages = [nameOfPage1, this.state.items2, nameOfPage2, this.state.items3, nameOfPage3, this.state.items4, nameOfPage4, this.state.items5, nameOfPage5, this.state.items6, nameOfPage6, this.state.items7, nameOfPage7, this.state.items8, nameOfPage8, this.state.items9, nameOfPage9, this.state.items10, nameOfPage10, this.state.items11]
 
         API.updateUser(this.props.dbId, allPages)
 
@@ -261,7 +273,7 @@ class ContainerTabs extends Component {
         event.preventDefault()
         // console.log("finalize working");
         var question = window.confirm("Are you sure you would like to finalize this project? You will not be able to make any more edits once this is performed")
-        if (question === true){
+        if (question === true) {
             API.updateUserStatus(this.props.dbId, true)
             var divDisable = document.getElementById("container2")
             divDisable.classList.add("final")
@@ -310,6 +322,21 @@ class ContainerTabs extends Component {
                 pageName7: value
             });
         }
+        if (modalBackground.id === "modal7") {
+            this.setState({
+                pageName8: value
+            });
+        }
+        if (modalBackground.id === "modal8") {
+            this.setState({
+                pageName9: value
+            });
+        }
+        if (modalBackground.id === "modal9") {
+            this.setState({
+                pageName10: value
+            });
+        }
 
     }
 
@@ -329,7 +356,6 @@ class ContainerTabs extends Component {
 
             })
         } else if (modalTab.id === "tab-tab3") {
-
             var previous = document.getElementById("tab-tab3");
             previous.setAttribute("aria-selected", "false");
             previous.classList.remove("tab-link-active")
@@ -347,6 +373,12 @@ class ContainerTabs extends Component {
             this.setState({ isHidden5: true })
         } else if (modalTab.id === "tab-tab7") {
             this.setState({ isHidden6: true })
+        } else if (modalTab.id === "tab-tab8") {
+            this.setState({ isHidden7: true })
+        } else if (modalTab.id === "tab-tab9") {
+            this.setState({ isHidden8: true })
+        } else if (modalTab.id === "tab-tab10") {
+            this.setState({ isHidden9: true })
         }
     }
 
@@ -436,6 +468,44 @@ class ContainerTabs extends Component {
                 })
             }
             pageTitles.push(this.state.pageName7)
+            var link8 = document.getElementById("link-8")
+            link8.style.visibility = "visible"
+        }
+        if (oneINeed.id === "tab-tab8") {
+
+            if (this.state.pageName8 === "+") {
+                this.setState({
+                    pageName8: "Page 8"
+
+                })
+            }
+            pageTitles.push(this.state.pageName8)
+            var link9 = document.getElementById("link-9")
+            link9.style.visibility = "visible"
+
+        }
+        if (oneINeed.id === "tab-tab9") {
+
+            if (this.state.pageName9 === "+") {
+                this.setState({
+                    pageName9: "Page 9"
+
+                })
+            }
+            pageTitles.push(this.state.pageName9)
+            var link10 = document.getElementById("link-10")
+            link10.style.visibility = "visible"
+
+        }
+        if (oneINeed.id === "tab-tab10") {
+
+            if (this.state.pageName10 === "+") {
+                this.setState({
+                    pageName10: "Page 10"
+
+                })
+            }
+            pageTitles.push(this.state.pageName10)
 
         }
         // Closes the corresponding modal //
@@ -464,6 +534,22 @@ class ContainerTabs extends Component {
             this.setState({ isHidden6: true })
             modalName.remove()
         }
+        if (modalName.id === "modal7") {
+            this.setState({ isHidden7: true })
+            modalName.remove()
+        }
+        if (modalName.id === "modal8") {
+            this.setState({ isHidden8: true })
+            modalName.remove()
+        }
+        if (modalName.id === "modal9") {
+            this.setState({ isHidden9: true })
+            modalName.remove()
+        }
+        if (modalName.id === "modal10") {
+            this.setState({ isHidden10: true })
+            modalName.remove()
+        }
     }
 
     //  Opens the modal for corresponding tab 
@@ -475,7 +561,10 @@ class ContainerTabs extends Component {
         var parent = element.parentElement;
         if (parent.id === "tab-tab2" && parent.dataset.clicks === "0" && element.textContent.length > 1) {
             parent.setAttribute("data-clicks", 1)
+            var inputBox = parent.getElementsByTagName('INPUT')[0];
+            console.log(inputBox);
             this.setState({ isHidden1: false })
+            inputBox.focus();
         }
         if (parent.id === "tab-tab3" && parent.dataset.clicks === "0") {
             parent.setAttribute("data-clicks", 1)
@@ -496,6 +585,18 @@ class ContainerTabs extends Component {
         if (parent.id === "tab-tab7" && parent.dataset.clicks === "0") {
             parent.setAttribute("data-clicks", 1)
             this.setState({ isHidden6: false })
+        }
+        if (parent.id === "tab-tab8" && parent.dataset.clicks === "0") {
+            parent.setAttribute("data-clicks", 1)
+            this.setState({ isHidden7: false })
+        }
+        if (parent.id === "tab-tab9" && parent.dataset.clicks === "0") {
+            parent.setAttribute("data-clicks", 1)
+            this.setState({ isHidden8: false })
+        }
+        if (parent.id === "tab-tab10" && parent.dataset.clicks === "0") {
+            parent.setAttribute("data-clicks", 1)
+            this.setState({ isHidden9: false })
         }
 
     }
@@ -530,6 +631,21 @@ class ContainerTabs extends Component {
             var tab = event.target.parentElement.parentElement
             this.setState({ pageName7: "" })
             document.getElementById("tabpanel-tab7").remove()
+        }
+        if (tab.id === "tab-tab8") {
+            var tab = event.target.parentElement.parentElement
+            this.setState({ pageName8: "" })
+            document.getElementById("tabpanel-tab8").remove()
+        }
+        if (tab.id === "tab-tab9") {
+            var tab = event.target.parentElement.parentElement
+            this.setState({ pageName9: "" })
+            document.getElementById("tabpanel-tab9").remove()
+        }
+        if (tab.id === "tab-tab10") {
+            var tab = event.target.parentElement.parentElement
+            this.setState({ pageName10: "" })
+            document.getElementById("tabpanel-tab10").remove()
         }
         tab.remove();
     }
@@ -848,7 +964,131 @@ class ContainerTabs extends Component {
         this.setState({ items8: applyDrag(this.state.items8, e) })
     }
 
+    // Removes Element from Tab-8
+    removeElement8 = (event) => {
+        var parentDiv = event.target.parentElement;
+        var grandparent = parentDiv.parentElement.parentElement;
+        var array = [...this.state.items9];
+        var elementPosition = array.map(function (x) {
+            return x.data
+        }).indexOf(grandparent.id);
+        if (array !== -1) {
+            array.splice(elementPosition, 1);
+            this.setState({ items9: array })
+        }
+    }
 
+    // Duplicates Element from Tab-8
+    duplicateElement8 = (event) => {
+        var parentDiv = event.target.parentElement;
+        var grandparent = parentDiv.parentElement.parentElement;
+        var array = [...this.state.items9];
+        var elementPosition = array.map(function (x) {
+            return x.data
+        }).indexOf(grandparent.id);
+        var element = array.map(function (x) {
+            return x
+        })
+        // element.setAttribute("id", "working")
+        array.push(element[elementPosition])
+        this.setState({ items9: array })
+    }
+
+    // Recieves Element's data when dropped into Tab-8
+    getChildPayload8 = (i) => {
+        return (
+            this.state.items9[i]
+        )
+    }
+
+    // Recieves Element when dropped on Tab-8 and Places Element in its correct index 
+    onDrop8 = (e) => {
+        this.setState({ items9: applyDrag(this.state.items9, e) })
+    }
+
+    // Removes Element from Tab-9
+    removeElement9 = (event) => {
+        var parentDiv = event.target.parentElement;
+        var grandparent = parentDiv.parentElement.parentElement;
+        var array = [...this.state.items10];
+        var elementPosition = array.map(function (x) {
+            return x.data
+        }).indexOf(grandparent.id);
+        if (array !== -1) {
+            array.splice(elementPosition, 1);
+            this.setState({ items10: array })
+        }
+    }
+
+    // Duplicates Element from Tab-9
+    duplicateElement9 = (event) => {
+        var parentDiv = event.target.parentElement;
+        var grandparent = parentDiv.parentElement.parentElement;
+        var array = [...this.state.items10];
+        var elementPosition = array.map(function (x) {
+            return x.data
+        }).indexOf(grandparent.id);
+        var element = array.map(function (x) {
+            return x
+        })
+        // element.setAttribute("id", "working")
+        array.push(element[elementPosition])
+        this.setState({ items10: array })
+    }
+
+    // Recieves Element's data when dropped into Tab-9
+    getChildPayload9 = (i) => {
+        return (
+            this.state.items10[i]
+        )
+    }
+
+    // Recieves Element when dropped on Tab-9 and Places Element in its correct index 
+    onDrop9 = (e) => {
+        this.setState({ items10: applyDrag(this.state.items10, e) })
+    }
+
+    // Removes Element from Tab-10
+    removeElement10 = (event) => {
+        var parentDiv = event.target.parentElement;
+        var grandparent = parentDiv.parentElement.parentElement;
+        var array = [...this.state.items11];
+        var elementPosition = array.map(function (x) {
+            return x.data
+        }).indexOf(grandparent.id);
+        if (array !== -1) {
+            array.splice(elementPosition, 1);
+            this.setState({ items10: array })
+        }
+    }
+
+    // Duplicates Element from Tab-9
+    duplicateElement10 = (event) => {
+        var parentDiv = event.target.parentElement;
+        var grandparent = parentDiv.parentElement.parentElement;
+        var array = [...this.state.items11];
+        var elementPosition = array.map(function (x) {
+            return x.data
+        }).indexOf(grandparent.id);
+        var element = array.map(function (x) {
+            return x
+        })
+        // element.setAttribute("id", "working")
+        array.push(element[elementPosition])
+        this.setState({ items11: array })
+    }
+
+    // Recieves Element's data when dropped into Tab-10
+    getChildPayload10 = (i) => {
+        return (
+            this.state.items11[i]
+        )
+    }
+
+    // Recieves Element when dropped on Tab-10 and Places Element in its correct index 
+    onDrop10 = (e) => {
+        this.setState({ items11: applyDrag(this.state.items11, e) })
+    }
 
     render() {
         return (
@@ -863,16 +1103,16 @@ class ContainerTabs extends Component {
                     dataFromContainer5={this.state.items6}
                     dataFromContainer6={this.state.items7}
                     dataFromContainer7={this.state.items8}
+                    dataFromContainer8={this.state.items9}
+                    dataFromContainer9={this.state.items10}
+                    dataFromContainer10={this.state.items11}
                     pageTitles={pageTitles} />
 
                 <SaveButton
-                    userName={this.state.userName}
-                    userEmail={this.state.userEmail}
-                    items2={this.state.items}
                     updateUser={this.updateUser} />
 
-                <FinalizeButton 
-                finalize={this.finalize}/>
+                <FinalizeButton
+                    finalize={this.finalize} />
 
                 <div id="tabsContainer">
 
@@ -881,29 +1121,28 @@ class ContainerTabs extends Component {
                         activeLinkStyle={styles.activeLinkStyle}
                     >
                         <div id="tab__header">
-                        <ul id="homePage">
-                            <li className="nav-item" >
-                                <TabLink style={styles.notActive} to="tab1"><span id="firstPage"><span className="pageSpan">{this.state.pageName1}</span></span></TabLink>
-                            </li>
-                            <li className="nav-item" id="link-2">
-                                <TabLink style={styles.notActive} data-clicks={0} to="tab2">
-                                    <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName2}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
+                            <ul id="homePage">
+                                <li className="nav-item" >
+                                    <TabLink style={styles.notActive} to="tab1"><span id="firstPage"><span className="pageSpan">{this.state.pageName1}</span></span></TabLink>
+                                </li>
+                                <li className="nav-item" id="link-2">
+                                    <TabLink style={styles.notActive} data-clicks={0} to="tab2">
+                                        <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName2}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
 
-                                    <div id="modal1" className={this.state.isHidden1 ? "hidden" : "visible"}>
-                                        <Modal modalClose={this.modalClose}>
-                                            <div className="form-group">
-                                                <label>Enter Page Name:</label>
-                                                <input
-                                                    type="text"
-                                                    name={this.state.pageName2}
-                                                    onChange={e => this.handleChange(e)}
-                                                    className="form-control"
-                                                    
-                                                />
-                                            </div>
-                                            <div className="form-group">
-                                                <span className="btn form-btn" type="button" onClick={this.handleSubmit}>
-                                                    Save
+                                        <div id="modal1" className={this.state.isHidden1 ? "hidden" : "visible"}>
+                                            <Modal modalClose={this.modalClose}>
+                                                <div className="form-group">
+                                                    <label>Enter Page Name:</label>
+                                                    <input
+                                                        type="text"
+                                                        name={this.state.pageName2}
+                                                        onChange={e => this.handleChange(e)}
+                                                        className="form-control"
+                                                    />
+                                                </div>
+                                                <div className="form-group">
+                                                    <span className="btn form-btn" type="button" onClick={this.handleSubmit}>
+                                                        Save
                                             </span>
                                                 </div>
                                             </Modal>
@@ -944,7 +1183,7 @@ class ContainerTabs extends Component {
                                                     <label>Enter Page Name:</label>
                                                     <input
                                                         type="text"
-                                                        name={this.state.pageName3}
+                                                        name={this.state.pageName4}
                                                         onChange={e => this.handleChange(e)}
                                                         className="form-control"
                                                     />
@@ -969,7 +1208,7 @@ class ContainerTabs extends Component {
                                                     <label>Enter Page Name:</label>
                                                     <input
                                                         type="text"
-                                                        name={this.state.pageName3}
+                                                        name={this.state.pageName5}
                                                         onChange={e => this.handleChange(e)}
                                                         className="form-control"
                                                     />
@@ -993,7 +1232,7 @@ class ContainerTabs extends Component {
                                                     <label>Enter Page Name:</label>
                                                     <input
                                                         type="text"
-                                                        name={this.state.pageName3}
+                                                        name={this.state.pageName6}
                                                         onChange={e => this.handleChange(e)}
                                                         className="form-control"
                                                     />
@@ -1017,7 +1256,79 @@ class ContainerTabs extends Component {
                                                     <label>Enter Page Name:</label>
                                                     <input
                                                         type="text"
-                                                        name={this.state.pageName3}
+                                                        name={this.state.pageName7}
+                                                        onChange={e => this.handleChange(e)}
+                                                        className="form-control"
+                                                    />
+                                                </div>
+                                                <div className="form-group">
+                                                    <span className="btn form-btn" type="button" onClick={this.handleSubmit}>
+                                                        Save
+                                            </span>
+                                                </div>
+                                            </Modal>
+                                        </div>
+                                    </TabLink>
+                                </li>
+                                <li className="nav-item" id="link-8">
+                                    <TabLink style={styles.notActive} data-clicks={0} onClick={this.modalOpen} to="tab8">
+                                        <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName8}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
+
+                                        <div id="modal7" className={this.state.isHidden7 ? "hidden" : "visible"}>
+                                            <Modal modalClose={this.modalClose}>
+                                                <div className="form-group">
+                                                    <label>Enter Page Name:</label>
+                                                    <input
+                                                        type="text"
+                                                        name={this.state.pageName8}
+                                                        onChange={e => this.handleChange(e)}
+                                                        className="form-control"
+                                                    />
+                                                </div>
+                                                <div className="form-group">
+                                                    <span className="btn form-btn" type="button" onClick={this.handleSubmit}>
+                                                        Save
+                                            </span>
+                                                </div>
+                                            </Modal>
+                                        </div>
+                                    </TabLink>
+                                </li>
+                                <li className="nav-item" id="link-9">
+                                    <TabLink style={styles.notActive} data-clicks={0} onClick={this.modalOpen} to="tab9">
+                                        <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName9}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
+
+                                        <div id="modal8" className={this.state.isHidden8 ? "hidden" : "visible"}>
+                                            <Modal modalClose={this.modalClose}>
+                                                <div className="form-group">
+                                                    <label>Enter Page Name:</label>
+                                                    <input
+                                                        type="text"
+                                                        name={this.state.pageName9}
+                                                        onChange={e => this.handleChange(e)}
+                                                        className="form-control"
+                                                    />
+                                                </div>
+                                                <div className="form-group">
+                                                    <span className="btn form-btn" type="button" onClick={this.handleSubmit}>
+                                                        Save
+                                            </span>
+                                                </div>
+                                            </Modal>
+                                        </div>
+                                    </TabLink>
+                                </li>
+                                <li className="nav-item" id="link-10">
+                                    <TabLink style={styles.notActive} data-clicks={0} onClick={this.modalOpen} to="tab10">
+                                        <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName10}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
+
+                                        <div id="modal9" className={this.state.isHidden9 ? "hidden" : "visible"}>
+                                            <Modal modalClose={this.modalClose}>
+                                                <div className="form-group">
+                                                    <label>Enter Page Name:</label>
+                                                    <input
+                                                        type="text"
+                                                        name={this.state.pageName10}
                                                         onChange={e => this.handleChange(e)}
                                                         className="form-control"
                                                     />
@@ -1102,6 +1413,36 @@ class ContainerTabs extends Component {
                                 generateItems={this.state.items8}
                                 removeElement={this.removeElement7}
                                 duplicateElement={this.duplicateElement7}
+                                userEmail={this.state.userEmail}
+                            />
+                        </TabContent>
+                        <TabContent for="tab8">
+                            <Container8
+                                onDrop={this.onDrop8}
+                                getChildPayload={this.getChildPayload8}
+                                generateItems={this.state.items9}
+                                removeElement={this.removeElement8}
+                                duplicateElement={this.duplicateElement8}
+                                userEmail={this.state.userEmail}
+                            />
+                        </TabContent>
+                        <TabContent for="tab9">
+                            <Container9
+                                onDrop={this.onDrop9}
+                                getChildPayload={this.getChildPayload9}
+                                generateItems={this.state.items10}
+                                removeElement={this.removeElement9}
+                                duplicateElement={this.duplicateElement9}
+                                userEmail={this.state.userEmail}
+                            />
+                        </TabContent>
+                        <TabContent for="tab10">
+                            <Container10
+                                onDrop={this.onDrop10}
+                                getChildPayload={this.getChildPayload10}
+                                generateItems={this.state.items11}
+                                removeElement={this.removeElement10}
+                                duplicateElement={this.duplicateElement10}
                                 userEmail={this.state.userEmail}
                             />
                         </TabContent>

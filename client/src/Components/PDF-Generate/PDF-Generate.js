@@ -13,18 +13,6 @@ class PDFGenerate extends React.Component {
 
     }
 
-
-    passPdf = () => {
-        const dataForm = new FormData()
-        dataForm.append('file', this.state.selectedFile)
-
-        Axios.post("http://localhost:3001/pdfUpload", dataForm, {
-            // receive two    parameter endpoint url ,form data
-
-        })
-    }
-
-
     generatePDF = () => {
         var data1 = [];
         data1.push(this.props.pageTitles[0])
@@ -121,6 +109,48 @@ class PDFGenerate extends React.Component {
             }
             return data7
         })
+        var data8 = [];
+        if (this.props.pageTitles.length > 7) {
+
+            data8.push(this.props.pageTitles[7])
+        }
+        var dataFromContainer8 = this.props.dataFromContainer8
+        dataFromContainer8.map((element) => {
+            data8.push(element.data)
+            var dataInfo = element.info
+            for (const property in dataInfo) {
+                data8.push(`${property}: ${dataInfo[property]}`)
+            }
+            return data8
+        })
+        var data9 = [];
+        if (this.props.pageTitles.length > 8) {
+
+            data9.push(this.props.pageTitles[8])
+        }
+        var dataFromContainer9 = this.props.dataFromContainer9
+        dataFromContainer9.map((element) => {
+            data9.push(element.data)
+            var dataInfo = element.info
+            for (const property in dataInfo) {
+                data9.push(`${property}: ${dataInfo[property]}`)
+            }
+            return data9
+        })
+        var data10 = [];
+        if (this.props.pageTitles.length > 9) {
+
+            data10.push(this.props.pageTitles[9])
+        }
+        var dataFromContainer10 = this.props.dataFromContainer10
+        dataFromContainer10.map((element) => {
+            data10.push(element.data)
+            var dataInfo = element.info
+            for (const property in dataInfo) {
+                data10.push(`${property}: ${dataInfo[property]}`)
+            }
+            return data10
+        })
 
         var doc = new jsPDF('l', 'em', [300, 150]);
         var splitText = doc.splitTextToSize(data1, 175)
@@ -130,6 +160,9 @@ class PDFGenerate extends React.Component {
         var splitText5 = doc.splitTextToSize(data5, 175)
         var splitText6 = doc.splitTextToSize(data6, 175)
         var splitText7 = doc.splitTextToSize(data7, 175)
+        var splitText8 = doc.splitTextToSize(data8, 175)
+        var splitText9 = doc.splitTextToSize(data9, 175)
+        var splitText10 = doc.splitTextToSize(data10, 175)
 
 
 
@@ -158,6 +191,18 @@ class PDFGenerate extends React.Component {
             doc.addPage();
             doc.text(5, 5, splitText7);
         }
+        if (data8.length > 0) {
+            doc.addPage();
+            doc.text(5, 5, splitText8);
+        }
+        if (data9.length > 0) {
+            doc.addPage();
+            doc.text(5, 5, splitText9);
+        }
+        if (data10.length > 0) {
+            doc.addPage();
+            doc.text(5, 5, splitText10);
+        }
         doc.save('project.pdf');
         // var res = btoa(doc.output())
         // console.log(res);
@@ -165,9 +210,17 @@ class PDFGenerate extends React.Component {
         // Axios.post("http://localhost:3001/pdfUpload", res).then((res) => {
         //     if (res.status === 'ok') console.log("Yeah!");
         // })
+    }
 
+    
+    passPdf = () => {
+        const dataForm = new FormData()
+        dataForm.append('file', this.state.selectedFile)
 
+        Axios.post("http://localhost:3001/pdfUpload", dataForm, {
+            // receive two    parameter endpoint url ,form data
 
+        })
     }
 
     render() {

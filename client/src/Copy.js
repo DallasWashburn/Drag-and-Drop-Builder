@@ -1,13 +1,9 @@
 import React from "react";
-import { useAuth0 } from "@auth0/auth0-react";
-import { withRouter } from "react-router";
 import ContainerTabs from "./Components/Tabs/Tabs"
-import FileUpload from "./Components/File-Upload/File-Upload"
 import ContactContainer from "./Components/Contact/Contact-Container/Contact-Container"
 import ContentContainer from "./Components/Content/Content-Container/Content-Container"
 import Features from "./Components/Featues/Features-Container/Features-Container"
 import Gallery from "./Components/Gallery/Gallery-Container/Gallery-Container"
-import Pricing from "./Components/Pricing/Pricing-Container/Pricing-Container"
 import Headers from "./Components/Headers/Header-Container/Header-Container"
 import Testimonials from "./Components/Testimonials/Testimonials-Container/Testimonials-Container"
 import Footers from "./Components/Footers/Footer-Container/Footer-Container"
@@ -15,10 +11,8 @@ import Team from "./Components/Team/Team-Container/Team-Container"
 import Intros from "./Components/Intros/Intros-Container/Intros-Container"
 import Header from "./Components/Header/Header"
 import NewClientForm from "./Components/New-Client-Form/New-Client-Form"
-import LoginButton from "./Components/LoginButton/LoginButton";
 import API from "./utils/API"
-import EditMenu from "./Components/Edit-Menu/Edit-Menu";
-import EditButton from "./Components/Edit-Button/Edit-Button"
+
 
 class Copy extends React.Component {
     constructor(props) {
@@ -106,10 +100,13 @@ class Copy extends React.Component {
         var nameOfPage5 = { id: "pageName5", data: "+" }
         var nameOfPage6 = { id: "pageName6", data: "+" }
         var nameOfPage7 = { id: "pageName7", data: "+" }
+        var nameOfPage8 = { id: "pageName8", data: "+" }
+        var nameOfPage9 = { id: "pageName9", data: "+" }
+        var nameOfPage10 = { id: "pageName10", data: "+" }
 
 
 
-        var allPages = [nameOfPage1, [], nameOfPage2, [], nameOfPage3, [], nameOfPage4, [], nameOfPage5, [], nameOfPage6, [], nameOfPage7, []]
+        var allPages = [nameOfPage1, [], nameOfPage2, [], nameOfPage3, [], nameOfPage4, [], nameOfPage5, [], nameOfPage6, [], nameOfPage7, [], nameOfPage8, [], nameOfPage9, [], nameOfPage10, []]
 
 
         API.getUsers()
@@ -172,7 +169,6 @@ class Copy extends React.Component {
     }
 
     openEdit = (event) => {
-        // this.getContent(event);
         setTimeout(this.setContent, 1000)
         document.getElementById("mySidebar").style.width = "249px";
 

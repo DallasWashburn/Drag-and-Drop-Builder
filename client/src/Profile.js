@@ -26,6 +26,12 @@ class Profile extends Component {
             Page6: [""],
             Page7Title: [""],
             Page7: [""],
+            Page8Title: [""],
+            Page8: [""],
+            Page9Title: [""],
+            Page9: [""],
+            Page10Title: [""],
+            Page10: [""],
             email: this.props.user.email,
             AllUsers: [""],
             allProjects: [""]
@@ -83,7 +89,12 @@ class Profile extends Component {
                         var Page6 = element.projects[11];
                         var Page7Title = element.projects[12];
                         var Page7 = element.projects[13];
-
+                        var Page8Title = element.projects[14]
+                        var Page8 = element.projects[15];
+                        var Page9Title = element.projects[16]
+                        var Page9 = element.projects[17];
+                        var Page10Title = element.projects[18]
+                        var Page10 = element.projects[19];
                         // console.log(Page2Title[0].data);
                         if (Page2Title[0].data === "+") {
                             Page2Title = [""]
@@ -103,6 +114,15 @@ class Profile extends Component {
                         if (Page7Title[0].data === "+") {
                             Page7Title = [""]
                         }
+                        if (Page8Title[0].data === "+") {
+                            Page8Title = [""]
+                        }
+                        if (Page9Title[0].data === "+") {
+                            Page9Title = [""]
+                        }
+                        if (Page10Title[0].data === "+") {
+                            Page10Title = [""]
+                        }
                         this.setState({
                             Page1Title: Page1Title,
                             Page1: Page1,
@@ -117,7 +137,13 @@ class Profile extends Component {
                             Page6Title: Page6Title,
                             Page6: Page6,
                             Page7Title: Page7Title,
-                            Page7: Page7
+                            Page7: Page7,
+                            Page8Title: Page8Title,
+                            Page8: Page8,
+                            Page9Title: Page9Title,
+                            Page9: Page9,
+                            Page10Title: Page10Title,
+                            Page10: Page10
                         })
                     }
 
@@ -163,6 +189,15 @@ class Profile extends Component {
                                 if(user.projects[12][0].data != "+"){
                                     pageTitles.push(user.projects[12][0].data)
                                 }
+                                if(user.projects[14][0].data != "+"){
+                                    pageTitles.push(user.projects[14][0].data)
+                                }
+                                if(user.projects[16][0].data != "+"){
+                                    pageTitles.push(user.projects[16][0].data)
+                                }
+                                if(user.projects[18][0].data != "+"){
+                                    pageTitles.push(user.projects[18][0].data)
+                                }
                                 return (
                                     <div className="col-6 user-preview">
 
@@ -176,6 +211,9 @@ class Profile extends Component {
                                         dataFromContainer5={user.projects[9]}
                                         dataFromContainer6={user.projects[11]}
                                         dataFromContainer7={user.projects[13]}
+                                        dataFromContainer8={user.projects[15]}
+                                        dataFromContainer9={user.projects[17]}
+                                        dataFromContainer10={user.projects[19]}
                                         pageTitles={pageTitles}
                                         />
 
@@ -277,6 +315,45 @@ class Profile extends Component {
                             <div className="col-6 projectCard" id="page7">
                                 <h3>{this.state.Page7Title[0].data}</h3>
                                 {this.state.Page7.map(project => {
+                                    return (
+
+                                        <div key={project.id}><ProjectPreview
+                                            divId={project.data}
+                                        />
+                                        </div>
+
+                                    )
+                                })}
+                            </div>
+                            <div className="col-6 projectCard" id="page8">
+                                <h3>{this.state.Page8Title[0].data}</h3>
+                                {this.state.Page8.map(project => {
+                                    return (
+
+                                        <div key={project.id}><ProjectPreview
+                                            divId={project.data}
+                                        />
+                                        </div>
+
+                                    )
+                                })}
+                            </div>
+                            <div className="col-6 projectCard" id="page9">
+                                <h3>{this.state.Page9Title[0].data}</h3>
+                                {this.state.Page9.map(project => {
+                                    return (
+
+                                        <div key={project.id}><ProjectPreview
+                                            divId={project.data}
+                                        />
+                                        </div>
+
+                                    )
+                                })}
+                            </div>
+                            <div className="col-6 projectCard" id="page10">
+                                <h3>{this.state.Page10Title[0].data}</h3>
+                                {this.state.Page10.map(project => {
                                     return (
 
                                         <div key={project.id}><ProjectPreview

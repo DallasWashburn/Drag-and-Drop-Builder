@@ -579,6 +579,18 @@ textarea {
   visibility: hidden;
 }
 
+#link-8 {
+  visibility: hidden;
+}
+
+#link-9 {
+  visibility: hidden;
+}
+
+#link-10 {
+  visibility: hidden;
+}
+
 .long {
   width: 90%;
 }
@@ -732,7 +744,10 @@ textarea {
   font-size: 15px;
   width: 20px;
   visibility: hidden;
+  color: #FFF;
 }
+
+.tabX:hover
 
 #homePage li button .pageSpan:hover .tabX {
   position: relative;
