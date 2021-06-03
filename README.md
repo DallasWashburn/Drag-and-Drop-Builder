@@ -17,3 +17,7 @@ Dragon drop is a professional design tool that turns your vision into a responsi
 When arriving to https://dragon.cybermark.com/ you will be presented with the home screen and the option to sign in. Once you reach the sign in screen you will be prompted to provide a email and password. If you do not currently have an account you will need to press the sign up button after filling out this info and a profile will be created for you. 
 
 ![Welcome Image ](https://res.cloudinary.com/dallas/image/upload/v1622747049/wjncekmxwy9tgk8s9cjk.png)
+
+After creating a profile we will need to gather some quick information from you to complete your profile. Please fill out the follwing fields and press start project when you are ready.
+
+![Drag and Drop Example](https://www.dropbox.com/s/xtwo1e9kievdd2c/Untitled_%20Jun%203%2C%202021%2012_26%20PM.gif?dl=0)
