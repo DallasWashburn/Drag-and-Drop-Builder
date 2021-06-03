@@ -20,4 +20,4 @@ When arriving to https://dragon.cybermark.com/ you will be presented with the ho
 
 After creating a profile we will need to gather some quick information from you to complete your profile. Please fill out the follwing fields and press start project when you are ready.
 
-![Drag and Drop Example](https://www.dropbox.com/s/xtwo1e9kievdd2c/Untitled_%20Jun%203%2C%202021%2012_26%20PM.gif?dl=0)
+![Drag and Drop Example](https://res.cloudinary.com/dallas/image/upload/v1622748956/eezsfiy9ve8ge2webj34.gif)
