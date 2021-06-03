@@ -61,15 +61,6 @@ class Copy extends React.Component {
         this.setState({ images: EventTarget })
     }
 
-    handleChange = (event) => {
-        const target = event.target;
-        const value = target.value;
-        const name = target.name;
-
-        this.setState({
-            [name]: value
-        });
-    }
 
     getId = () => {
         API.getUsers()
@@ -199,7 +190,7 @@ class Copy extends React.Component {
         if (this.state.nickname === 1 && this.state.login === 1) {
             return <NewClientForm
                 saveUser={this.saveUser}
-                handleChange={this.handleChange}
+                handleChange={this.handleInputChange}
             />
 
         } else {
