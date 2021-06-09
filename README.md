@@ -26,5 +26,14 @@ When you arrive at this screen you can start building your project! Choose betwe
 
 ![Create New Page Example](https://res.cloudinary.com/dallas/image/upload/v1623262026/kyybxnxcwex1sgya7qa9.gif)
 
+After you build your home page you will have the option to build additonal pages. By pressing the plus button you will be prompted to name your new page. After entering your new page name and pressing save you can begin to build out your design. If you need to return back to the home page or any other, you can simply click the corresponding tab. 
 
-After you build your home page you will have the option to build additonal pages. By pressing the plus button you will be prompted to name your new page. After entering your new page name and pressing save you can begin to build out your page. If you need to return back to the home page or any other pages, you can simply click the corresponding tab. 
+![Save Example](https://res.cloudinary.com/dallas/image/upload/v1623262530/t7wwrlljbsi6avqe8iy4.gif)
+
+An essential step to this process is to always remember to save your work often to ensure you dont lose anything. To do so, you will just need to navigate to the save button in the top right corner. Please make sure you always press this button before leaving this webpage or your project will not be saved.
+
+![Profile Example](https://res.cloudinary.com/dallas/image/upload/v1623263438/pizvscfvncdoq7pnm9vj.gif)
+
+If at any point in your design process, you would like to look at an overview of your project, you can navigate to the top right corner and press on the tab "Profile". This will provide you all of your pages in overview layout so you can getter a better vision of how the pages will work together. It is important to note that only placeholder images and text will be vissible in this view. This view is strictly for design layout purposes. 
+
+
