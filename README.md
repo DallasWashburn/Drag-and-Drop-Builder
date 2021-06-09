@@ -21,3 +21,10 @@ When arriving to https://dragon.cybermark.com/ you will be presented with the ho
 After creating a profile we will need to gather some quick information from you to complete your profile. Please fill out the follwing fields and press start project when you are ready.
 
 ![Drag and Drop Example](https://res.cloudinary.com/dallas/image/upload/v1622748956/eezsfiy9ve8ge2webj34.gif)
+
+When you arrive at this screen you can start building your project! Choose between our custom designed template blocks and arrange them however you see fit. 
+
+![Create New Page Example](https://res.cloudinary.com/dallas/image/upload/v1623262026/kyybxnxcwex1sgya7qa9.gif)
+
+
+After you build your home page you will have the option to build additonal pages. By pressing the plus button you will be prompted to name your new page. After entering your new page name and pressing save you can begin to build out your page. If you need to return back to the home page or any other pages, you can simply click the corresponding tab. 
