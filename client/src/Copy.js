@@ -94,10 +94,22 @@ class Copy extends React.Component {
         var nameOfPage8 = { id: "pageName8", data: "+" }
         var nameOfPage9 = { id: "pageName9", data: "+" }
         var nameOfPage10 = { id: "pageName10", data: "+" }
+        var nameOfPage11 = { id: "pageName11", data: "+" }
+        var nameOfPage12 = { id: "pageName12", data: "+" }
+        var nameOfPage13 = { id: "pageName13", data: "+" }
+        var nameOfPage14 = { id: "pageName14", data: "+" }
+        var nameOfPage15 = { id: "pageName15", data: "+" }
+        var nameOfPage16 = { id: "pageName16", data: "+" }
+        var nameOfPage17 = { id: "pageName17", data: "+" }
+        var nameOfPage18 = { id: "pageName18", data: "+" }
+        var nameOfPage19 = { id: "pageName19", data: "+" }
+        var nameOfPage20 = { id: "pageName20", data: "+" }
 
 
 
-        var allPages = [nameOfPage1, [], nameOfPage2, [], nameOfPage3, [], nameOfPage4, [], nameOfPage5, [], nameOfPage6, [], nameOfPage7, [], nameOfPage8, [], nameOfPage9, [], nameOfPage10, []]
+
+
+        var allPages = [nameOfPage1, [], nameOfPage2, [], nameOfPage3, [], nameOfPage4, [], nameOfPage5, [], nameOfPage6, [], nameOfPage7, [], nameOfPage8, [], nameOfPage9, [], nameOfPage10, [], nameOfPage11, [], nameOfPage12, [], nameOfPage13, [], nameOfPage14, [], nameOfPage15, [], nameOfPage16, [], nameOfPage17, [], nameOfPage18, [], nameOfPage19, [], nameOfPage20, []]
 
 
         API.getUsers()
@@ -199,6 +211,7 @@ class Copy extends React.Component {
                 <>
                     <Header name={this.state.userId} email={this.state.userEmail} nickname={this.state.nickname} />
                     <div id="reviewBanner">Your project is in review</div>
+                    <div id="designBanner">Your project is now in content edit mode</div>
                     <div id="wrapper" >
                         {/* <span id="menuArrow" className="menuArrow"><i onClick={this.fullScreen} className="fas fa-lg fa-angle-left"></i></span> */}
                         {/* <span id="openArrow"><i onClick={this.closeScreen} className="fas fa-lg fa-angle-left"></i></span> */}

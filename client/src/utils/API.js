@@ -33,6 +33,16 @@ export default {
       .catch(err => console.log("error: ", err));
     return response;
   },
+  // update the users design status with the given id
+  updateUserDesignStatus: async function (id, toggleSwitch) {
+    let response = axios.put("/api/users/" + id, {
+      designFinalized: toggleSwitch
+    })
+      .then(x => console.log("the response from updating the user is", x))
+      .catch(err => console.log("error: ", err));
+    return response;
+  },
+
   // Deletes the user with the given id
   deleteUser: async function (id) {
     let response = axios.delete("/api/users/" + id)

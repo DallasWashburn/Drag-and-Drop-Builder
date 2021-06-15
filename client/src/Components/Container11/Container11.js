@@ -36,12 +36,7 @@ import Footer1 from "../Footers/Footer-1/Footer-1"
 import Footer2 from "../Footers/Footer-2/Footer-2"
 
 
-
-
-
-
-
-class Container1 extends Component {
+class Container11 extends Component {
     constructor(props) {
         super(props);
 
@@ -180,12 +175,12 @@ class Container1 extends Component {
         API.getUsers()
             .then(users => {
                 var theUsers = users.data
+                // console.log(theUsers);
                 for (let i = 0; i < theUsers.length; i++) {
                     const element = theUsers[i];
+                    // console.log(element);
                     if (element.userEmail === this.props.userEmail) {
-                        var Page1 = element.projects[1];
-                        // console.log(element);
-
+                        var Page1 = element.projects[13];
                         Page1.map(item => {
                             if (item.data === "Header-0") {
                                 this.setState({
@@ -206,7 +201,7 @@ class Container1 extends Component {
                                     headerLink4: item.info.headerLink4,
                                     headerLink5: item.info.headerLink5,
                                     headerLink6: item.info.headerLink6,
-                                    phoneNumber: item.info.phoneNumber
+                                    phoneNumber:item.info.phoneNumber
                                 })
                             } else if (item.data === "Header-2") {
                                 this.setState({
@@ -217,7 +212,7 @@ class Container1 extends Component {
                                     headerLink4: item.info.headerLink4,
                                     headerLink5: item.info.headerLink5,
                                     headerLink6: item.info.headerLink6,
-                                    phoneNumber: item.info.phoneNumber
+                                    phoneNumber:item.info.phoneNumber
                                 })
                             } else if (item.data === "Intro-0") {
                                 this.setState({
@@ -239,7 +234,7 @@ class Container1 extends Component {
                                     introSubtext: item.info.introSubtext,
                                     introButton1: item.info.introButton1,
                                     introButton2: item.info.introButton2,
-                                    introImage: item.info.introImage
+                                    introImage:item.info.introImage
                                 })
                             } else if (item.data === "Intro-3") {
                                 this.setState({
@@ -259,14 +254,14 @@ class Container1 extends Component {
                                     content0Heading: item.info.content0Heading,
                                     content0SubHeading: item.info.content0SubHeading,
                                     content0Text: item.info.content0Text,
-                                    content0Image: item.info.content0Image
+                                    content0Image:item.info.content0Image
                                 })
                             } else if (item.data === "Content-1") {
                                 this.setState({
                                     content1Heading: item.info.content1Heading,
                                     content1SubHeading: item.info.content1SubHeading,
                                     content1Text: item.info.content1Text,
-                                    content1Image: item.info.content1Image
+                                    content1Image:item.info.content1Image
 
                                 })
                             } else if (item.data === "Content-2") {
@@ -285,33 +280,33 @@ class Container1 extends Component {
                                     galleryImage1Desc: item.info.galleryImage1Desc,
                                     galleryImage2Desc: item.info.galleryImage2Desc,
                                     galleryImage3Desc: item.info.galleryImage3Desc,
-                                    galleryImage1: item.info.galleryImage1,
-                                    galleryImage2: item.info.galleryImage2,
-                                    galleryImage3: item.info.galleryImage3,
+                                    galleryImage1:item.info.galleryImage1,
+                                    galleryImage2:item.info.galleryImage2,
+                                    galleryImage3:item.info.galleryImage3,
                                 })
                             } else if (item.data === "Gallery-1") {
                                 this.setState({
                                     galleryHeading: item.info.galleryHeading,
                                     gallerySubtext: item.info.gallerySubtext,
-                                    galleryImage1: item.info.galleryImage1,
-                                    galleryImage2: item.info.galleryImage2,
-                                    galleryImage3: item.info.galleryImage3,
-                                    galleryImage4: item.info.galleryImage4,
-                                    galleryImage5: item.info.galleryImage5,
-                                    galleryImage6: item.info.galleryImage6,
+                                    galleryImage1:item.info.galleryImage1,
+                                    galleryImage2:item.info.galleryImage2,
+                                    galleryImage3:item.info.galleryImage3,
+                                    galleryImage4:item.info.galleryImage4,
+                                    galleryImage5:item.info.galleryImage5,
+                                    galleryImage6:item.info.galleryImage6,
                                 })
                             } else if (item.data === "Gallery-2") {
                                 this.setState({
-                                    galleryImage1: item.info.galleryImage1,
-                                    galleryImage2: item.info.galleryImage2,
-                                    galleryImage3: item.info.galleryImage3,
-                                    galleryImage4: item.info.galleryImage4,
-                                    galleryImage5: item.info.galleryImage5,
-                                    galleryImage6: item.info.galleryImage6,
-                                    galleryImage7: item.info.galleryImage7,
-                                    galleryImage8: item.info.galleryImage8,
-                                    galleryImage9: item.info.galleryImage9,
-                                    galleryImage10: item.info.galleryImage10
+                                    galleryImage1:item.info.galleryImage1,
+                                    galleryImage2:item.info.galleryImage2,
+                                    galleryImage3:item.info.galleryImage3,
+                                    galleryImage4:item.info.galleryImage4,
+                                    galleryImage5:item.info.galleryImage5,
+                                    galleryImage6:item.info.galleryImage6,
+                                    galleryImage7:item.info.galleryImage7,
+                                    galleryImage8:item.info.galleryImage8,
+                                    galleryImage9:item.info.galleryImage9,
+                                    galleryImage10:item.info.galleryImage10
                                 })
                             } else if (item.data === "Features-0") {
                                 this.setState({
@@ -544,8 +539,8 @@ class Container1 extends Component {
     }
 
     getImage = (event) => {
-        var column = event.target.parentElement.parentElement.parentElement
-        // console.log(column);
+        var column = event.target.parentElement.parentElement
+        // console.log(column.children[1].src);
 
         window.cloudinary.createUploadWidget({
             cloudName: "dallas",
@@ -759,7 +754,7 @@ class Container1 extends Component {
             this.setState({ headerLink5: link5 })
         } else if (link6 !== undefined) {
             this.setState({ headerLink6: link6 })
-        } else if (phoneNumber !== undefined) {
+        }else if (phoneNumber !== undefined) {
             this.setState({ phoneNumber: phoneNumber })
         }
 
@@ -964,7 +959,6 @@ class Container1 extends Component {
         var headerButton = this.state.headerButton;
         var phoneNumber = this.state.phoneNumber;
         var companyLogo = this.state.companyLogo;
-
         // Calling Intro Block Info
         var introHeading = this.state.introHeading;
         var introSubHeading = this.state.introSubHeading;
@@ -973,7 +967,6 @@ class Container1 extends Component {
         var introButton1 = this.state.introButton1;
         var introButton2 = this.state.introButton2;
         var introBackgroundImage = this.state.introBackgroundImage;
-
         // Calling Content Block Info
         var content0Heading = this.state.content0Heading;
         var content0SubHeading = this.state.content0SubHeading
@@ -986,7 +979,6 @@ class Container1 extends Component {
         var content2Heading = this.state.content2Heading;
         var content2SubHeading = this.state.content2SubHeading
         var content2Text = this.state.content2Text;
-
         // Calling Gallery Block Info
         var galleryHeading = this.state.galleryHeading;
         var gallerySubtext = this.state.gallerySubtext;
@@ -1006,7 +998,6 @@ class Container1 extends Component {
         var galleryImage8 = this.state.galleryImage8;
         var galleryImage9 = this.state.galleryImage9;
         var galleryImage10 = this.state.galleryImage10;
-
         // Calling Features Block Info
         var featureHeading = this.state.featureHeading
         var featureSubHeading = this.state.featureSubHeading
@@ -1024,7 +1015,6 @@ class Container1 extends Component {
         var featureH36 = this.state.featureH36
         var featureSubtext6 = this.state.featureSubtext6
         var featureButton = this.state.featureButton
-        
         // Calling Team Block Info 
         var teamHeading = this.state.teamHeading
         var teamSubheading = this.state.teamSubheading
@@ -1085,23 +1075,12 @@ class Container1 extends Component {
                     dropPlaceholderAnimationDuration={200}>
                     {
                         this.props.generateItems.map((p, i) => {
-                            // console.log(p.data);
-
                             if (p.data === "Header-0") {
                                 p.info = { headerLink1, headerLink2, headerLink3, headerLink4, headerLink5, headerLink6, companyLogo }
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="draggable-item">
-                                            <Header0
-                                                getImage={this.getImage}
-                                                getHeaderInfo={this.getHeaderInfo}
-                                                headerLink1={p.info.headerLink1}
-                                                headerLink2={p.info.headerLink2}
-                                                headerLink3={p.info.headerLink3}
-                                                headerLink4={p.info.headerLink4}
-                                                headerLink5={p.info.headerLink5}
-                                                headerLink6={p.info.headerLink6}
-                                                companyLogo={p.info.companyLogo} />
+                                            <Header0 getImage={this.getImage} getHeaderInfo={this.getHeaderInfo} headerLink1={p.info.headerLink1} headerLink2={p.info.headerLink2} headerLink3={p.info.headerLink3} headerLink4={p.info.headerLink4} headerLink5={p.info.headerLink5} headerLink6={p.info.headerLink6} companyLogo={p.info.companyLogo} />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -1110,22 +1089,11 @@ class Container1 extends Component {
                                     </Draggable>
                                 )
                             } else if (p.data === "Header-1") {
-                                p.info = { headerLink1, headerLink2, headerLink3, headerLink4, headerLink5, headerLink6, headerButton, companyLogo, phoneNumber }
+                                p.info = { headerLink1, headerLink2, headerLink3, headerLink4, headerLink5, headerLink6, headerButton, companyLogo, phoneNumber}
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="draggable-item">
-                                            <Header1
-                                                getImage={this.getImage}
-                                                getHeaderInfo={this.getHeaderInfo}
-                                                headerLink1={p.info.headerLink1}
-                                                headerLink2={p.info.headerLink2}
-                                                headerLink3={p.info.headerLink3}
-                                                headerLink4={p.info.headerLink4}
-                                                headerLink5={p.info.headerLink5}
-                                                headerLink6={p.info.headerLink6}
-                                                headerButton={p.info.headerButton}
-                                                companyLogo={p.info.companyLogo}
-                                                phoneNumber={p.info.phoneNumber} />
+                                            <Header1 getImage={this.getImage} getHeaderInfo={this.getHeaderInfo} headerLink1={p.info.headerLink1} headerLink2={p.info.headerLink2} headerLink3={p.info.headerLink3} headerLink4={p.info.headerLink4} headerLink5={p.info.headerLink5} headerLink6={p.info.headerLink6} headerButton={p.info.headerButton} companyLogo={p.info.companyLogo} phoneNumber={p.info.phoneNumber} />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -1138,17 +1106,7 @@ class Container1 extends Component {
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="draggable-item">
-                                            <Header2
-                                                getImage={this.getImage}
-                                                getHeaderInfo={this.getHeaderInfo}
-                                                headerLink1={p.info.headerLink1}
-                                                headerLink2={p.info.headerLink2}
-                                                headerLink3={p.info.headerLink3}
-                                                headerLink4={p.info.headerLink4}
-                                                headerLink5={p.info.headerLink5}
-                                                headerLink6={p.info.headerLink6}
-                                                companyLogo={p.info.companyLogo}
-                                                phoneNumber={p.info.phoneNumber} />
+                                            <Header2 getImage={this.getImage} getHeaderInfo={this.getHeaderInfo} headerLink1={p.info.headerLink1} headerLink2={p.info.headerLink2} headerLink3={p.info.headerLink3} headerLink4={p.info.headerLink4} headerLink5={p.info.headerLink5} headerLink6={p.info.headerLink6} companyLogo={p.info.companyLogo} phoneNumber={p.info.phoneNumber} />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -1161,12 +1119,7 @@ class Container1 extends Component {
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="draggable-item">
-                                            <Intro0
-                                                getIntroInfo={this.getIntroInfo}
-                                                introHeading={p.info.introHeading}
-                                                introSubHeading={p.info.introSubHeading}
-                                                introSubtext={p.info.introSubtext}
-                                                introButton1={p.info.introButton1} />
+                                            <Intro0 getIntroInfo={this.getIntroInfo} introHeading={p.info.introHeading} introSubHeading={p.info.introSubHeading} introSubtext={p.info.introSubtext} introButton1={p.info.introButton1} />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -1179,11 +1132,8 @@ class Container1 extends Component {
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="draggable-item">
-                                            <Intro1
-                                                getIntroInfo={this.getIntroInfo}
-                                                introHeading={p.info.introHeading}
-                                                introSubHeading={p.info.introSubHeading}
-                                                introSubtext={p.info.introSubtext} />
+                                            <Intro1 getIntroInfo={this.getIntroInfo} introHeading={p.info.introHeading}
+                                                introSubHeading={p.info.introSubHeading} introSubtext={p.info.introSubtext} />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -1196,15 +1146,8 @@ class Container1 extends Component {
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="draggable-item">
-                                            <Intro2
-                                                getImage={this.getImage}
-                                                getIntroInfo={this.getIntroInfo}
-                                                introHeading={p.info.introHeading}
-                                                introSubHeading={p.info.introSubHeading}
-                                                introSubtext={p.info.introSubtext}
-                                                introButton1={p.info.introButton1}
-                                                introButton2={p.info.introButton2}
-                                                introImage={p.info.introImage} />
+                                            <Intro2 getImage={this.getImage} getIntroInfo={this.getIntroInfo} introHeading={p.info.introHeading}
+                                                introSubHeading={p.info.introSubHeading} introSubtext={p.info.introSubtext} introButton1={p.info.introButton1} introButton2={p.info.introButton2} introImage={p.info.introImage} />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -1217,12 +1160,7 @@ class Container1 extends Component {
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="draggable-item">
-                                            <Intro3
-                                                getImage={this.getImage}
-                                                getIntroInfo={this.getIntroInfo}
-                                                introBackgroundImage={introBackgroundImage}
-                                                introHeading={p.info.introHeading}
-                                                introSubHeading={p.info.introSubHeading} />
+                                            <Intro3 getImage={this.getImage} getIntroInfo={this.getIntroInfo} introBackgroundImage={introBackgroundImage} introHeading={p.info.introHeading} introSubHeading={p.info.introSubHeading} />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -1235,10 +1173,7 @@ class Container1 extends Component {
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="draggable-item">
-                                            <Intro4
-                                                getIntroInfo={this.getIntroInfo}
-                                                introHeading={p.info.introHeading}
-                                                introSubtext={p.info.introSubtext}
+                                            <Intro4 getIntroInfo={this.getIntroInfo} introHeading={p.info.introHeading} introSubtext={p.info.introSubtext}
                                                 introSubHeading={p.info.introSubHeading} />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
@@ -1252,13 +1187,7 @@ class Container1 extends Component {
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="component draggable-item" data-element={p.data}>
-                                            <Content0
-                                                getImage={this.getImage}
-                                                getContentInfo={this.getContentInfo}
-                                                content0Heading={p.info.content0Heading}
-                                                content0SubHeading={p.info.content0SubHeading}
-                                                content0Text={p.info.content0Text}
-                                                content0Image={p.info.content0Image} />
+                                            <Content0 getImage={this.getImage} getContentInfo={this.getContentInfo} content0Heading={p.info.content0Heading} content0SubHeading={p.info.content0SubHeading} content0Text={p.info.content0Text} content0Image={p.info.content0Image} />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -1271,13 +1200,8 @@ class Container1 extends Component {
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="component draggable-item">
-                                            <Content1
-                                                getImage={this.getImage}
-                                                getContentInfo={this.getContentInfo}
-                                                content1Heading={p.info.content1Heading}
-                                                content1SubHeading={p.info.content1SubHeading}
-                                                content1Text={p.info.content1Text}
-                                                content1Image={p.info.content1Image} />
+                                            <Content1 getImage={this.getImage} getContentInfo={this.getContentInfo} content1Heading={p.info.content1Heading}
+                                                content1SubHeading={p.info.content1SubHeading} content1Text={p.info.content1Text} content1Image={p.info.content1Image} />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
                                                 <XButton removeElement={this.props.removeElement} handleXButton={this.handleXButton} />
@@ -1290,9 +1214,7 @@ class Container1 extends Component {
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="component draggable-item">
-                                            <Content2
-                                                getContentInfo={this.getContentInfo}
-                                                content2Heading={p.info.content2Heading}
+                                            <Content2 getContentInfo={this.getContentInfo} content2Heading={content2Heading}
                                                 content2SubHeading={p.info.content2SubHeading}
                                                 content2Text={p.info.content2Text} />
                                             <div className="button-wrap">
@@ -1524,30 +1446,30 @@ class Container1 extends Component {
                                             <Team1
                                                 getImage={this.getImage}
                                                 getTeamInfo={this.getTeamInfo}
-                                                teamH31={p.info.teamH31}
-                                                job1={p.info.job1}
-                                                teamSubtext1={p.info.teamSubtext1}
-                                                teamH32={p.info.teamH32}
-                                                job2={p.info.job2}
-                                                teamSubtext2={p.info.teamSubtext2}
-                                                teamH33={p.info.teamH33}
-                                                job3={p.info.job3}
-                                                teamSubtext3={p.info.teamSubtext3}
-                                                teamH34={p.info.teamH34}
-                                                job4={p.info.job4}
-                                                teamSubtext4={p.info.teamSubtext4}
-                                                teamH35={p.info.teamH35}
-                                                job5={p.info.job5}
-                                                teamSubtext5={p.info.teamSubtext5}
-                                                teamH36={p.info.teamH36}
-                                                job6={p.info.job6}
-                                                teamSubtext6={p.info.teamSubtext6}
-                                                teamImage1={p.info.teamImage1}
-                                                teamImage2={p.info.teamImage2}
-                                                teamImage3={p.info.teamImage3}
-                                                teamImage4={p.info.teamImage4}
-                                                teamImage5={p.info.teamImage5}
-                                                teamImage6={p.info.teamImage6}
+                                                teamH31={teamH31}
+                                                job1={job1}
+                                                teamSubtext1={teamSubtext1}
+                                                teamH32={teamH32}
+                                                job2={job2}
+                                                teamSubtext2={teamSubtext2}
+                                                teamH33={teamH33}
+                                                job3={job3}
+                                                teamSubtext3={teamSubtext3}
+                                                teamH34={teamH34}
+                                                job4={job4}
+                                                teamSubtext4={teamSubtext4}
+                                                teamH35={teamH35}
+                                                job5={job5}
+                                                teamSubtext5={teamSubtext5}
+                                                teamH36={teamH36}
+                                                job6={job6}
+                                                teamSubtext6={teamSubtext6}
+                                                teamImage1={teamImage1}
+                                                teamImage2={teamImage2}
+                                                teamImage3={teamImage3}
+                                                teamImage4={teamImage4}
+                                                teamImage5={teamImage5}
+                                                teamImage6={teamImage6}
                                             />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
@@ -1564,30 +1486,30 @@ class Container1 extends Component {
                                             <Team2
                                                 getImage={this.getImage}
                                                 getTeamInfo={this.getTeamInfo}
-                                                teamH31={p.info.teamH31}
-                                                job1={p.info.job1}
-                                                teamSubtext1={p.info.teamSubtext1}
-                                                teamH32={p.info.teamH32}
-                                                job2={p.info.job2}
-                                                teamSubtext2={p.info.teamSubtext2}
-                                                teamH33={p.info.teamH33}
-                                                job3={p.info.job3}
-                                                teamSubtext3={p.info.teamSubtext3}
-                                                teamH34={p.info.teamH34}
-                                                job4={p.info.job4}
-                                                teamSubtext4={p.info.teamSubtext4}
-                                                teamH35={p.info.teamH35}
-                                                job5={p.info.job5}
-                                                teamSubtext5={p.info.teamSubtext5}
-                                                teamH36={p.info.teamH36}
-                                                job6={p.info.job6}
-                                                teamSubtext6={p.info.teamSubtext6}
-                                                teamImage1={p.info.teamImage1}
-                                                teamImage2={p.info.teamImage2}
-                                                teamImage3={p.info.teamImage3}
-                                                teamImage4={p.info.teamImage4}
-                                                teamImage5={p.info.teamImage5}
-                                                teamImage6={p.info.teamImage6}
+                                                teamH31={teamH31}
+                                                job1={job1}
+                                                teamSubtext1={teamSubtext1}
+                                                teamH32={teamH32}
+                                                job2={job2}
+                                                teamSubtext2={teamSubtext2}
+                                                teamH33={teamH33}
+                                                job3={job3}
+                                                teamSubtext3={teamSubtext3}
+                                                teamH34={teamH34}
+                                                job4={job4}
+                                                teamSubtext4={teamSubtext4}
+                                                teamH35={teamH35}
+                                                job5={job5}
+                                                teamSubtext5={teamSubtext5}
+                                                teamH36={teamH36}
+                                                job6={job6}
+                                                teamSubtext6={teamSubtext6}
+                                                teamImage1={teamImage1}
+                                                teamImage2={teamImage2}
+                                                teamImage3={teamImage3}
+                                                teamImage4={teamImage4}
+                                                teamImage5={teamImage5}
+                                                teamImage6={teamImage6}
                                             />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
@@ -1604,32 +1526,32 @@ class Container1 extends Component {
                                             <Team3
                                                 getImage={this.getImage}
                                                 getTeamInfo={this.getTeamInfo}
-                                                teamHeading={p.info.teamHeading}
-                                                teamSubheading={p.info.teamSubheading}
-                                                teamH31={p.info.teamH31}
-                                                job1={p.info.job1}
-                                                teamSubtext1={p.info.teamSubtext1}
-                                                teamH32={p.info.teamH32}
-                                                job2={p.info.job2}
-                                                teamSubtext2={p.info.teamSubtext2}
-                                                teamH33={p.info.teamH33}
-                                                job3={p.info.job3}
-                                                teamSubtext3={p.info.teamSubtext3}
-                                                teamH34={p.info.teamH34}
-                                                job4={p.info.job4}
-                                                teamSubtext4={p.info.teamSubtext4}
-                                                teamH35={p.info.teamH35}
-                                                job5={p.info.job5}
-                                                teamSubtext5={p.info.teamSubtext5}
-                                                teamH36={p.info.teamH36}
-                                                job6={p.info.job6}
-                                                teamSubtext6={p.info.teamSubtext6}
-                                                teamImage1={p.info.teamImage1}
-                                                teamImage2={p.info.teamImage2}
-                                                teamImage3={p.info.teamImage3}
-                                                teamImage4={p.info.teamImage4}
-                                                teamImage5={p.info.teamImage5}
-                                                teamImage6={p.info.teamImage6}
+                                                teamHeading={teamHeading}
+                                                teamSubheading={teamSubheading}
+                                                teamH31={teamH31}
+                                                job1={job1}
+                                                teamSubtext1={teamSubtext1}
+                                                teamH32={teamH32}
+                                                job2={job2}
+                                                teamSubtext2={teamSubtext2}
+                                                teamH33={teamH33}
+                                                job3={job3}
+                                                teamSubtext3={teamSubtext3}
+                                                teamH34={teamH34}
+                                                job4={job4}
+                                                teamSubtext4={teamSubtext4}
+                                                teamH35={teamH35}
+                                                job5={job5}
+                                                teamSubtext5={teamSubtext5}
+                                                teamH36={teamH36}
+                                                job6={job6}
+                                                teamSubtext6={teamSubtext6}
+                                                teamImage1={teamImage1}
+                                                teamImage2={teamImage2}
+                                                teamImage3={teamImage3}
+                                                teamImage4={teamImage4}
+                                                teamImage5={teamImage5}
+                                                teamImage6={teamImage6}
                                             />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
@@ -1645,17 +1567,17 @@ class Container1 extends Component {
                                         <div id={p.data} className="component draggable-item">
                                             <Testimonial0
                                                 getTestimonialInfo={this.getTestimonialInfo}
-                                                testimonialHeading={p.info.testimonialHeading}
-                                                testimonialSubHeading={p.info.testimonialSubHeading}
-                                                name1={p.info.name1}
-                                                name1Desc={p.info.name1Desc}
-                                                quote1={p.info.quote1}
-                                                name2={p.info.name2}
-                                                name2Desc={p.info.name2Desc}
-                                                quote2={p.info.quote2}
-                                                name3={p.info.name3}
-                                                name3Desc={p.info.name3Desc}
-                                                quote3={p.info.quote3}
+                                                testimonialHeading={testimonialHeading}
+                                                testimonialSubHeading={testimonialSubHeading}
+                                                name1={name1}
+                                                name1Desc={name1Desc}
+                                                quote1={quote1}
+                                                name2={name2}
+                                                name2Desc={name2Desc}
+                                                quote2={quote2}
+                                                name3={name3}
+                                                name3Desc={name3Desc}
+                                                quote3={quote3}
                                             />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
@@ -1671,17 +1593,17 @@ class Container1 extends Component {
                                         <div id={p.data} className="component draggable-item">
                                             <Testimonial1
                                                 getTestimonialInfo={this.getTestimonialInfo}
-                                                testimonialHeading={p.info.testimonialHeading}
-                                                testimonialSubHeading={p.info.testimonialSubHeading}
-                                                name1={p.info.name1}
-                                                name1Desc={p.info.name1Desc}
-                                                quote1={p.info.quote1}
-                                                name2={p.info.name2}
-                                                name2Desc={p.info.name2Desc}
-                                                quote2={p.info.quote2}
-                                                name3={p.info.name3}
-                                                name3Desc={p.info.name3Desc}
-                                                quote3={p.info.quote3}
+                                                testimonialHeading={testimonialHeading}
+                                                testimonialSubHeading={testimonialSubHeading}
+                                                name1={name1}
+                                                name1Desc={name1Desc}
+                                                quote1={quote1}
+                                                name2={name2}
+                                                name2Desc={name2Desc}
+                                                quote2={quote2}
+                                                name3={name3}
+                                                name3Desc={name3Desc}
+                                                quote3={quote3}
                                             />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
@@ -1698,8 +1620,8 @@ class Container1 extends Component {
                                         <div id={p.data} className="component draggable-item">
                                             <Contact0
                                                 getContactInfo={this.getContactInfo}
-                                                contactHeading={p.info.contactHeading}
-                                                contactSubText={p.info.contactSubText}
+                                                contactHeading={contactHeading}
+                                                contactSubText={contactSubText}
                                             />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
@@ -1715,8 +1637,8 @@ class Container1 extends Component {
                                         <div id={p.data} className="component draggable-item">
                                             <Contact1
                                                 getContactInfo={this.getContactInfo}
-                                                contactHeading={p.info.contactHeading}
-                                                contactSubText={p.info.contactSubText}
+                                                contactHeading={contactHeading}
+                                                contactSubText={contactSubText}
                                             />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
@@ -1732,11 +1654,11 @@ class Container1 extends Component {
                                         <div id={p.data} className="component draggable-item">
                                             <Contact2
                                                 getContactInfo={this.getContactInfo}
-                                                contactHeading={p.info.contactHeading}
-                                                contactSubText={p.info.contactSubText}
-                                                address={p.info.address}
-                                                email={p.info.email}
-                                                phoneNumber={p.info.phoneNumber}
+                                                contactHeading={contactHeading}
+                                                contactSubText={contactSubText}
+                                                address={address}
+                                                email={email}
+                                                phoneNumber={phoneNumber}
                                             />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
@@ -1752,8 +1674,8 @@ class Container1 extends Component {
                                         <div id={p.data} className="component draggable-item">
                                             <Contact3
                                                 getContactInfo={this.getContactInfo}
-                                                contactHeading={p.info.contactHeading}
-                                                contactSubText={p.info.contactSubText}
+                                                contactHeading={contactHeading}
+                                                contactSubText={contactSubText}
                                             />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
@@ -1843,5 +1765,5 @@ class Container1 extends Component {
 }
 
 
-export default Container1;
+export default Container11;
 

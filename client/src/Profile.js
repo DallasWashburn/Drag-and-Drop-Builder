@@ -5,6 +5,9 @@ import ProfilfeNav from "./Components/Profile-Nav/Profile-Nav"
 import ProjectPreview from "./Components/Project-Preview/Project-Preview"
 import UserPreview from "./Components/User-Preview/User-Preview"
 import PDFGenerate from "./Components/PDF-Generate/PDF-Generate"
+import FinalizeDesign from "./Components/Finalize-Design/Finalize-Design";
+import ToggleButton from "./Components/Toggle-Button/Toggle-Button";
+import ProfilePreview from "./Components/Profile-Preview/Profile-Preview"
 
 
 class Profile extends Component {
@@ -32,11 +35,30 @@ class Profile extends Component {
             Page9: [""],
             Page10Title: [""],
             Page10: [""],
+            Page11Title: [""],
+            Page11: [""],
+            Page12Title: [""],
+            Page12: [""],
+            Page13Title: [""],
+            Page13: [""],
+            Page14Title: [""],
+            Page14: [""],
+            Page15Title: [""],
+            Page15: [""],
+            Page16Title: [""],
+            Page16: [""],
+            Page17Title: [""],
+            Page17: [""],
+            Page18Title: [""],
+            Page18: [""],
+            Page19Title: [""],
+            Page19: [""],
+            Page20Title: [""],
+            Page20: [""],
             email: this.props.user.email,
             AllUsers: [""],
-            allProjects: [""]
-
-
+            allProjects: [""],
+            checked: false
 
         }
     }
@@ -46,12 +68,23 @@ class Profile extends Component {
         this.getId()
     }
 
+    finalizeDesign = (id) => {
+        // event.preventDefault()
+        API.updateUserDesignStatus(id, true)
+        console.log(id);
+
+    }
+
+    setToggle = (id, check) => {
+        this.setState({ checked: !this.state.checked })
+        API.updateUserDesignStatus(id, check)
+
+    }
+
     getId = () => {
         API.getUsers()
             .then(users => {
                 var theUsers = users.data
-                // console.log(theUsers);
-                // var userProjects = []
                 if (this.state.email === 'admin@cybermark.com') {
                     this.setState({
                         AllUsers: theUsers
@@ -60,21 +93,16 @@ class Profile extends Component {
                     for (let i = 0; i < users.length; i++) {
                         let userProjects = []
                         const element = users[i];
-                        // console.log(element.projects);
                         let allProjects = element.projects
                         this.setState({
                             allProjects: allProjects
                         })
-                        // console.log(this.state.allProjects);
                     }
                     return
                 }
                 for (let i = 0; i < theUsers.length; i++) {
                     const element = theUsers[i];
-                    // console.log(element);
                     if (element.userEmail === this.props.user.email) {
-                        // console.log(element.projects);
-                        // console.log(this.props.user.email);
                         var Page1Title = element.projects[0];
                         var Page1 = element.projects[1];
                         var Page2Title = element.projects[2];
@@ -95,7 +123,26 @@ class Profile extends Component {
                         var Page9 = element.projects[17];
                         var Page10Title = element.projects[18]
                         var Page10 = element.projects[19];
-                        // console.log(Page2Title[0].data);
+                        var Page11Title = element.projects[20]
+                        var Page11 = element.projects[21];
+                        var Page12Title = element.projects[22]
+                        var Page12 = element.projects[23];
+                        var Page13Title = element.projects[24]
+                        var Page13 = element.projects[25];
+                        var Page14Title = element.projects[26]
+                        var Page14 = element.projects[27];
+                        var Page15Title = element.projects[28]
+                        var Page15 = element.projects[29];
+                        var Page16Title = element.projects[30]
+                        var Page16 = element.projects[31];
+                        var Page17Title = element.projects[32]
+                        var Page17 = element.projects[33];
+                        var Page18Title = element.projects[34]
+                        var Page18 = element.projects[35];
+                        var Page19Title = element.projects[36]
+                        var Page19 = element.projects[37];
+                        var Page20Title = element.projects[38]
+                        var Page20 = element.projects[39];
                         if (Page2Title[0].data === "+") {
                             Page2Title = [""]
                         }
@@ -123,6 +170,36 @@ class Profile extends Component {
                         if (Page10Title[0].data === "+") {
                             Page10Title = [""]
                         }
+                        if (Page11Title[0].data === "+") {
+                            Page11Title = [""]
+                        }
+                        if (Page12Title[0].data === "+") {
+                            Page12Title = [""]
+                        }
+                        if (Page13Title[0].data === "+") {
+                            Page13Title = [""]
+                        }
+                        if (Page14Title[0].data === "+") {
+                            Page14Title = [""]
+                        }
+                        if (Page15Title[0].data === "+") {
+                            Page15Title = [""]
+                        }
+                        if (Page16Title[0].data === "+") {
+                            Page16Title = [""]
+                        }
+                        if (Page17Title[0].data === "+") {
+                            Page17Title = [""]
+                        }
+                        if (Page18Title[0].data === "+") {
+                            Page18Title = [""]
+                        }
+                        if (Page19Title[0].data === "+") {
+                            Page19Title = [""]
+                        }
+                        if (Page20Title[0].data === "+") {
+                            Page20Title = [""]
+                        }
                         this.setState({
                             Page1Title: Page1Title,
                             Page1: Page1,
@@ -143,7 +220,27 @@ class Profile extends Component {
                             Page9Title: Page9Title,
                             Page9: Page9,
                             Page10Title: Page10Title,
-                            Page10: Page10
+                            Page10: Page10,
+                            Page11Title: Page11Title,
+                            Page11: Page11,
+                            Page12Title: Page12Title,
+                            Page12: Page12,
+                            Page13Title: Page13Title,
+                            Page13: Page13,
+                            Page14Title: Page14Title,
+                            Page14: Page14,
+                            Page15Title: Page15Title,
+                            Page15: Page15,
+                            Page16Title: Page16Title,
+                            Page16: Page16,
+                            Page17Title: Page17Title,
+                            Page17: Page17,
+                            Page18Title: Page18Title,
+                            Page18: Page18,
+                            Page19Title: Page19Title,
+                            Page19: Page19,
+                            Page20Title: Page20Title,
+                            Page20: Page20,
                         })
                     }
 
@@ -167,56 +264,129 @@ class Profile extends Component {
                         <hr />
                         <div className="row">
                             {this.state.AllUsers.map(user => {
-                                if(!user.projects){
+                                if (!user.projects) {
                                     return <span>Loading ...</span>
                                 }
-                                // console.log(user.projects[6][0].data);
-                                if(user.projects[2][0].data != "+"){
+                                if (user.projects[2][0].data != "+") {
                                     pageTitles.push(user.projects[2][0].data)
                                 }
-                                if(user.projects[4][0].data != "+"){
+                                if (user.projects[4][0].data != "+") {
                                     pageTitles.push(user.projects[4][0].data)
                                 }
-                                if(user.projects[6][0].data != "+"){
+                                if (user.projects[6][0].data != "+") {
                                     pageTitles.push(user.projects[6][0].data)
                                 }
-                                if(user.projects[8][0].data != "+"){
+                                if (user.projects[8][0].data != "+") {
                                     pageTitles.push(user.projects[8][0].data)
                                 }
-                                if(user.projects[10][0].data != "+"){
+                                if (user.projects[10][0].data != "+") {
                                     pageTitles.push(user.projects[10][0].data)
                                 }
-                                if(user.projects[12][0].data != "+"){
+                                if (user.projects[12][0].data != "+") {
                                     pageTitles.push(user.projects[12][0].data)
                                 }
-                                if(user.projects[14][0].data != "+"){
+                                if (user.projects[14][0].data != "+") {
                                     pageTitles.push(user.projects[14][0].data)
                                 }
-                                if(user.projects[16][0].data != "+"){
+                                if (user.projects[16][0].data != "+") {
                                     pageTitles.push(user.projects[16][0].data)
                                 }
-                                if(user.projects[18][0].data != "+"){
+                                if (user.projects[18][0].data != "+") {
                                     pageTitles.push(user.projects[18][0].data)
                                 }
+                                if (user.projects[20][0].data != "+") {
+                                    pageTitles.push(user.projects[20][0].data)
+                                }
+                                if (user.projects[22][0].data != "+") {
+                                    pageTitles.push(user.projects[22][0].data)
+                                }
+                                if (user.projects[24][0].data != "+") {
+                                    pageTitles.push(user.projects[24][0].data)
+                                }
+                                if (user.projects[26][0].data != "+") {
+                                    pageTitles.push(user.projects[26][0].data)
+                                }
+                                if (user.projects[28][0].data != "+") {
+                                    pageTitles.push(user.projects[28][0].data)
+                                }
+                                if (user.projects[30][0].data != "+") {
+                                    pageTitles.push(user.projects[30][0].data)
+                                }
+                                if (user.projects[32][0].data != "+") {
+                                    pageTitles.push(user.projects[32][0].data)
+                                }
+                                if (user.projects[34][0].data != "+") {
+                                    pageTitles.push(user.projects[34][0].data)
+                                }
+                                if (user.projects[36][0].data != "+") {
+                                    pageTitles.push(user.projects[36][0].data)
+                                }
+                                if (user.projects[38][0].data != "+") {
+                                    pageTitles.push(user.projects[38][0].data)
+                                }
                                 return (
-                                    <div className="col-6 user-preview">
-
+                                    // <ProjectPreview
+                                    //     projects={user.projects}
+                                    //     company={user.companyName}
+                                    //     email={user.userEmail}
+                                    //     url={user.url}
+                                    //     dataFromContainer1={user.projects[1]}
+                                    //     dataFromContainer2={user.projects[3]}
+                                    //     dataFromContainer3={user.projects[5]}
+                                    //     dataFromContainer4={user.projects[7]}
+                                    //     dataFromContainer5={user.projects[9]}
+                                    //     dataFromContainer6={user.projects[11]}
+                                    //     dataFromContainer7={user.projects[13]}
+                                    //     dataFromContainer8={user.projects[15]}
+                                    //     dataFromContainer9={user.projects[17]}
+                                    //     dataFromContainer10={user.projects[19]}
+                                    //     dataFromContainer11={user.projects[21]}
+                                    //     dataFromContainer12={user.projects[23]}
+                                    //     dataFromContainer13={user.projects[25]}
+                                    //     dataFromContainer14={user.projects[27]}
+                                    //     dataFromContainer15={user.projects[29]}
+                                    //     dataFromContainer16={user.projects[31]}
+                                    //     dataFromContainer17={user.projects[33]}
+                                    //     dataFromContainer18={user.projects[35]}
+                                    //     dataFromContainer19={user.projects[37]}
+                                    //     dataFromContainer20={user.projects[39]}
+                                    //     pageTitles={pageTitles}
+                                    //     toggleId={user._id}
+                                    //     designFinalized={user.designFinalized}
+                                    //     handleToggle={this.handleToggle}
+                                    // />
+                                    <div className="col-6 user-preview" key={user._id}>
                                         <UserPreview projects={user.projects} company={user.companyName} email={user.userEmail} url={user.url} />
-                                        <PDFGenerate 
-                                        userEmail={user.email} 
-                                        dataFromContainer1={user.projects[1]} 
-                                        dataFromContainer2={user.projects[3]} 
-                                        dataFromContainer3={user.projects[5]} 
-                                        dataFromContainer4={user.projects[7]} 
-                                        dataFromContainer5={user.projects[9]}
-                                        dataFromContainer6={user.projects[11]}
-                                        dataFromContainer7={user.projects[13]}
-                                        dataFromContainer8={user.projects[15]}
-                                        dataFromContainer9={user.projects[17]}
-                                        dataFromContainer10={user.projects[19]}
-                                        pageTitles={pageTitles}
+                                        <PDFGenerate
+                                            userEmail={user.email}
+                                            dataFromContainer1={user.projects[1]}
+                                            dataFromContainer2={user.projects[3]}
+                                            dataFromContainer3={user.projects[5]}
+                                            dataFromContainer4={user.projects[7]}
+                                            dataFromContainer5={user.projects[9]}
+                                            dataFromContainer6={user.projects[11]}
+                                            dataFromContainer7={user.projects[13]}
+                                            dataFromContainer8={user.projects[15]}
+                                            dataFromContainer9={user.projects[17]}
+                                            dataFromContainer10={user.projects[19]}
+                                            dataFromContainer11={user.projects[21]}
+                                            dataFromContainer12={user.projects[23]}
+                                            dataFromContainer13={user.projects[25]}
+                                            dataFromContainer14={user.projects[27]}
+                                            dataFromContainer15={user.projects[29]}
+                                            dataFromContainer16={user.projects[31]}
+                                            dataFromContainer17={user.projects[33]}
+                                            dataFromContainer18={user.projects[35]}
+                                            dataFromContainer19={user.projects[37]}
+                                            dataFromContainer20={user.projects[39]}
+                                            pageTitles={pageTitles}
                                         />
-
+                                        <div>
+                                            <h4>Finalize Design</h4>
+                                            <ToggleButton toggleId={user._id} isOn={user.designFinalized} handleToggle={() => this.handleToggle} onColor="#EF476F" />
+                                            <h4>Finalize Project</h4>
+                                            <ToggleButton toggleId={user._id} isOn={user.finalized} handleToggle={() => this.handleToggle} onColor="#EF476F" />
+                                        </div>
                                     </div>
                                 )
                             })}
@@ -354,6 +524,136 @@ class Profile extends Component {
                             <div className="col-6 projectCard" id="page10">
                                 <h3>{this.state.Page10Title[0].data}</h3>
                                 {this.state.Page10.map(project => {
+                                    return (
+
+                                        <div key={project.id}><ProjectPreview
+                                            divId={project.data}
+                                        />
+                                        </div>
+
+                                    )
+                                })}
+                            </div>
+                            <div className="col-6 projectCard" id="page11">
+                                <h3>{this.state.Page11Title[0].data}</h3>
+                                {this.state.Page11.map(project => {
+                                    return (
+
+                                        <div key={project.id}><ProjectPreview
+                                            divId={project.data}
+                                        />
+                                        </div>
+
+                                    )
+                                })}
+                            </div>
+                            <div className="col-6 projectCard" id="page12">
+                                <h3>{this.state.Page12Title[0].data}</h3>
+                                {this.state.Page12.map(project => {
+                                    return (
+
+                                        <div key={project.id}><ProjectPreview
+                                            divId={project.data}
+                                        />
+                                        </div>
+
+                                    )
+                                })}
+                            </div>
+                            <div className="col-6 projectCard" id="page13">
+                                <h3>{this.state.Page13Title[0].data}</h3>
+                                {this.state.Page13.map(project => {
+                                    return (
+
+                                        <div key={project.id}><ProjectPreview
+                                            divId={project.data}
+                                        />
+                                        </div>
+
+                                    )
+                                })}
+                            </div>
+                            <div className="col-6 projectCard" id="page14">
+                                <h3>{this.state.Page14Title[0].data}</h3>
+                                {this.state.Page14.map(project => {
+                                    return (
+
+                                        <div key={project.id}><ProjectPreview
+                                            divId={project.data}
+                                        />
+                                        </div>
+
+                                    )
+                                })}
+                            </div>
+                            <div className="col-6 projectCard" id="page15">
+                                <h3>{this.state.Page15Title[0].data}</h3>
+                                {this.state.Page15.map(project => {
+                                    return (
+
+                                        <div key={project.id}><ProjectPreview
+                                            divId={project.data}
+                                        />
+                                        </div>
+
+                                    )
+                                })}
+                            </div>
+                            <div className="col-6 projectCard" id="page16">
+                                <h3>{this.state.Page16Title[0].data}</h3>
+                                {this.state.Page16.map(project => {
+                                    return (
+
+                                        <div key={project.id}><ProjectPreview
+                                            divId={project.data}
+                                        />
+                                        </div>
+
+                                    )
+                                })}
+                            </div>
+                            <div className="col-6 projectCard" id="page17">
+                                <h3>{this.state.Page17Title[0].data}</h3>
+                                {this.state.Page17.map(project => {
+                                    return (
+
+                                        <div key={project.id}><ProjectPreview
+                                            divId={project.data}
+                                        />
+                                        </div>
+
+                                    )
+                                })}
+                            </div>
+                            <div className="col-6 projectCard" id="page18">
+                                <h3>{this.state.Page18Title[0].data}</h3>
+                                {this.state.Page18.map(project => {
+                                    return (
+
+                                        <div key={project.id}><ProjectPreview
+                                            divId={project.data}
+                                        />
+                                        </div>
+
+                                    )
+                                })}
+                            </div>
+                            <div className="col-6 projectCard" id="page19">
+                                <h3>{this.state.Page19Title[0].data}</h3>
+                                {this.state.Page19.map(project => {
+                                    return (
+
+                                        <div key={project.id}><ProjectPreview
+                                            divId={project.data}
+                                        />
+                                        </div>
+
+                                    )
+                                })}
+                            </div>
+                            <div className="col-6 projectCard" id="page20">
+                                <h3>{this.state.Page20Title[0].data}</h3>
+                                {this.state.Page20.map(project => {
                                     return (
 
                                         <div key={project.id}><ProjectPreview

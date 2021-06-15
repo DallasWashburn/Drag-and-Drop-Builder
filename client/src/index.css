@@ -591,6 +591,46 @@ textarea {
   visibility: hidden;
 }
 
+#link-11 {
+  visibility: hidden;
+}
+
+#link-12 {
+  visibility: hidden;
+}
+
+#link-13 {
+  visibility: hidden;
+}
+
+#link-14 {
+  visibility: hidden;
+}
+
+#link-15 {
+  visibility: hidden;
+}
+
+#link-16 {
+  visibility: hidden;
+}
+
+#link-17 {
+  visibility: hidden;
+}
+
+#link-18 {
+  visibility: hidden;
+}
+
+#link-19 {
+  visibility: hidden;
+}
+
+#link-20 {
+  visibility: hidden;
+}
+
 .long {
   width: 90%;
 }
@@ -6367,6 +6407,20 @@ a:not([href]):hover {
   left: 0;
   right: 0;
   background-color: red;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  z-index: 99;
+  visibility: hidden;
+  text-transform: uppercase;
+}
+
+#designBanner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: blue;
   color: #fff;
   display: flex;
   justify-content: center;

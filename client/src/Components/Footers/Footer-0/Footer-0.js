@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import InlineEdit from "../../inlineEdit"
-import ImageButton from "../../imageButton/imageButton"
+
 
 class Footer0 extends Component {
     render() {
@@ -11,7 +11,7 @@ class Footer0 extends Component {
                         <div class="col-md-6 offset-md-3 text-center mb-3">
                             <div class="footer-branding">
                                 <a  rel="home">
-                                    <img src="https://www.cybermark.com/wp-content/uploads/2018/08/mainLogo.png" alt="" />
+                                    <img src={this.props.companyLogo} alt="" />
 
                                 </a>
                             </div>

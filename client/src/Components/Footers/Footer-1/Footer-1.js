@@ -13,7 +13,7 @@ class Footer1 extends Component {
                         <div className="col-lg-6">
                             <div className="footer-branding mb-3">
                                 <a rel="home">
-                                    <img src="https://www.cybermark.com/wp-content/uploads/2018/08/mainLogo.png" alt="" />
+                                    <img src={this.props.companyLogo} alt="" />
 
                                 </a>
                             </div>

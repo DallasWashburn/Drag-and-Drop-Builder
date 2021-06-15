@@ -9,9 +9,8 @@ class Footer2 extends Component {
                 <div class="container-fluid">
                     <div class="footer__3-wrapper">
                         <div class="footer-branding">
-                            <a href="http://localhost/SMB/" rel="home">
-                                <img src="https://www.cybermark.com/wp-content/uploads/2018/08/mainLogo.png" alt="" />
-
+                            <a  rel="home">
+                                <img src={this.props.companyLogo} alt="" />
                             </a>
                         </div>
                         <nav class="footer-navigation">

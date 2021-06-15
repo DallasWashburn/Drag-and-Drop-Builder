@@ -1,5 +1,3 @@
-
-
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
@@ -10,6 +8,7 @@ const userSchema = new Schema({
   url: { type: String, required:true },
   projects: { type: [[]] },
   date: { type: Date, default: Date.now },
+  designFinalized: {type:Boolean, default:false},
   finalized: {type:Boolean, default:false}
 });
 

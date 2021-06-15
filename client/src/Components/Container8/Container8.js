@@ -1702,7 +1702,7 @@ class Container8 extends Component {
                                     </Draggable>
                                 )
                             } else if (p.data === "Footer-1") {
-                                p.info = { headerLink1, headerLink2, headerLink3, headerLink4, headerLink5, headerLink6, footerSubText }
+                                p.info = { headerLink1, headerLink2, headerLink3, headerLink4, headerLink5, headerLink6, footerSubText, companyLogo }
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="component draggable-item">
@@ -1715,6 +1715,7 @@ class Container8 extends Component {
                                                 headerLink4={p.info.headerLink4}
                                                 headerLink5={p.info.headerLink5}
                                                 headerLink6={p.info.headerLink6}
+                                                companyLogo={p.info.companyLogo}
                                             />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />
@@ -1724,7 +1725,7 @@ class Container8 extends Component {
                                     </Draggable>
                                 )
                             } else if (p.data === "Footer-2") {
-                                p.info = { headerLink1, headerLink2, headerLink3, headerLink4, headerLink5, headerLink6 }
+                                p.info = { headerLink1, headerLink2, headerLink3, headerLink4, headerLink5, headerLink6, companyLogo }
                                 return (
                                     <Draggable key={i}>
                                         <div id={p.data} className="component draggable-item">
@@ -1735,6 +1736,7 @@ class Container8 extends Component {
                                                 headerLink4={p.info.headerLink4}
                                                 headerLink5={p.info.headerLink5}
                                                 headerLink6={p.info.headerLink6}
+                                                companyLogo={p.info.companyLogo}
                                             />
                                             <div className="button-wrap">
                                                 <DuplicateButton duplicateElement={this.props.duplicateElement} />

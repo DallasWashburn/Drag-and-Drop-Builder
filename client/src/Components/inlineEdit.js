@@ -61,6 +61,7 @@ function InlineEdit(props) {
   const handleInputChange = useCallback(
     event => {
       // sanitize the input a little
+      event.stopPropagation();
       setInputValue(DOMPurify.sanitize(event.target.value));
     },
     [setInputValue]
