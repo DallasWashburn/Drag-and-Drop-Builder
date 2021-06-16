@@ -8,6 +8,7 @@ import PDFGenerate from "./Components/PDF-Generate/PDF-Generate"
 import FinalizeDesign from "./Components/Finalize-Design/Finalize-Design";
 import ToggleButton from "./Components/Toggle-Button/Toggle-Button";
 import ProfilePreview from "./Components/Profile-Preview/Profile-Preview"
+import ProjectEdit from "./Components/Project-Edit/Project-Edit";
 
 
 class Profile extends Component {
@@ -381,11 +382,19 @@ class Profile extends Component {
                                             dataFromContainer20={user.projects[39]}
                                             pageTitles={pageTitles}
                                         />
-                                        <div>
-                                            <h4>Finalize Design</h4>
-                                            <ToggleButton toggleId={user._id} isOn={user.designFinalized} handleToggle={() => this.handleToggle} onColor="#EF476F" />
-                                            <h4>Finalize Project</h4>
-                                            <ToggleButton toggleId={user._id} isOn={user.finalized} handleToggle={() => this.handleToggle} onColor="#EF476F" />
+                                        <div id="toggleButtons">
+                                            <div className="togglebtn">
+                                                <p>Finalize Design</p>
+                                                <ToggleButton toggleId={user._id} isOn={user.designFinalized} handleToggle={() => this.handleToggle} onColor="#ce9e7c" />
+                                            </div>
+                                            <div className="togglebtn">
+                                                <p>Finalize Project</p>
+                                                <ToggleButton toggleId={user._id} isOn={user.finalized} handleToggle={() => this.handleToggle} onColor="#ce9e7c" />
+                                            </div>
+                                            <div id="projectEdit" className="">
+                                                <ProjectEdit userId={user._id} />
+                                            </div>
+
                                         </div>
                                     </div>
                                 )

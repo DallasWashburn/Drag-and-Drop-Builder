@@ -15,6 +15,7 @@
     border-radius: 100px;
     position: relative;
     transition: background-color .2s;
+    margin: auto;
   }
   
   .react-switch-label .react-switch-button {
@@ -38,3 +39,9 @@
   .react-switch-label:active .react-switch-button {
     width: 60px;
   }
+
+  #toggleButtons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
