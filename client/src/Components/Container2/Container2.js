@@ -546,7 +546,6 @@ class Container2 extends Component {
     getImage = (event) => {
         var column = event.target.parentElement.parentElement.parentElement
         // console.log(column.children[1].src);
-        console.log(column);
         window.cloudinary.createUploadWidget({
             cloudName: "dallas",
             uploadPreset: "bpdpgvfm",

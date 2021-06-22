@@ -345,6 +345,9 @@ class ContainerTabs extends Component {
             var link10New = document.getElementById("link-10")
             var link10Child = link10New.childNodes[0]
             link10Child.setAttribute("data-clicks", 1);
+            document.getElementById("homePage").style.justifyContent="space-around";
+            document.getElementById("sub-menu-btn").style.zIndex= "1"
+
         }
         if (this.state.pageName11.length > 1) {
             var link12 = document.getElementById("link-12")
@@ -1989,6 +1992,18 @@ class ContainerTabs extends Component {
         this.setState({ items21: applyDrag(this.state.items21, e) })
     }
 
+    handleSubMenu =(event) => {
+        event.preventDefault();
+        var subMenu= document.getElementById("home-sub-menu");
+        var custom = window.getComputedStyle(subMenu)
+        var zu = custom.zIndex
+        if (zu === "-1"){
+            subMenu.style.zIndex = "1"
+        } else {
+            subMenu.style.zIndex = "-1"
+        }
+    }
+
     render() {
         return (
             <>
@@ -2251,246 +2266,250 @@ class ContainerTabs extends Component {
                                         </div>
                                     </TabLink>
                                 </li>
-                                <li className="nav-item" id="link-11">
-                                    <TabLink style={styles.notActive} data-clicks={0} onClick={this.modalOpen} to="tab11">
-                                        <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName11}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
+                                <button onClick={this.handleSubMenu} id="sub-menu-btn" class="btn"><i class="far fa-caret-square-down"></i></button>
+                                <ul id="home-sub-menu" class="sub-menu">
+                                    
+                                    <li className="nav-item" id="link-11">
+                                        <TabLink style={styles.notActive} data-clicks={0} onClick={this.modalOpen} to="tab11">
+                                            <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName11}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
 
-                                        <div id="modal10" className={this.state.isHidden10 ? "hidden" : "visible"}>
-                                            <Modal modalClose={this.modalClose}>
-                                                <div className="form-group">
-                                                    <label>Enter Page Name:</label>
-                                                    <input
-                                                        type="text"
-                                                        name={this.state.pageName11}
-                                                        onChange={e => this.handleChange(e)}
-                                                        className="form-control"
-                                                    />
-                                                </div>
-                                                <div className="form-group">
-                                                    <span className="btn form-btn" type="button" onClick={this.handleSubmit}>
-                                                        Save
-                                                    </span>
-                                                </div>
-                                            </Modal>
-                                        </div>
-                                    </TabLink>
-                                </li>
-                                <li className="nav-item" id="link-12">
-                                    <TabLink style={styles.notActive} data-clicks={0} onClick={this.modalOpen} to="tab12">
-                                        <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName12}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
+                                            <div id="modal10" className={this.state.isHidden10 ? "hidden" : "visible"}>
+                                                <Modal modalClose={this.modalClose}>
+                                                    <div className="form-group">
+                                                        <label>Enter Page Name:</label>
+                                                        <input
+                                                            type="text"
+                                                            name={this.state.pageName11}
+                                                            onChange={e => this.handleChange(e)}
+                                                            className="form-control"
+                                                        />
+                                                    </div>
+                                                    <div className="form-group">
+                                                        <span className="btn form-btn" type="button" onClick={this.handleSubmit}>
+                                                            Save
+                                                        </span>
+                                                    </div>
+                                                </Modal>
+                                            </div>
+                                        </TabLink>
+                                    </li>
+                                    <li className="nav-item" id="link-12">
+                                        <TabLink style={styles.notActive} data-clicks={0} onClick={this.modalOpen} to="tab12">
+                                            <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName12}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
 
-                                        <div id="modal11" className={this.state.isHidden11 ? "hidden" : "visible"}>
-                                            <Modal modalClose={this.modalClose}>
-                                                <div className="form-group">
-                                                    <label>Enter Page Name:</label>
-                                                    <input
-                                                        type="text"
-                                                        name={this.state.pageName12}
-                                                        onChange={e => this.handleChange(e)}
-                                                        className="form-control"
-                                                    />
-                                                </div>
-                                                <div className="form-group">
-                                                    <span className="btn form-btn" type="button" onClick={this.handleSubmit}>
-                                                        Save
-                                                    </span>
-                                                </div>
-                                            </Modal>
-                                        </div>
-                                    </TabLink>
-                                </li>
-                                <li className="nav-item" id="link-13">
-                                    <TabLink style={styles.notActive} data-clicks={0} onClick={this.modalOpen} to="tab13">
-                                        <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName13}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
+                                            <div id="modal11" className={this.state.isHidden11 ? "hidden" : "visible"}>
+                                                <Modal modalClose={this.modalClose}>
+                                                    <div className="form-group">
+                                                        <label>Enter Page Name:</label>
+                                                        <input
+                                                            type="text"
+                                                            name={this.state.pageName12}
+                                                            onChange={e => this.handleChange(e)}
+                                                            className="form-control"
+                                                        />
+                                                    </div>
+                                                    <div className="form-group">
+                                                        <span className="btn form-btn" type="button" onClick={this.handleSubmit}>
+                                                            Save
+                                                        </span>
+                                                    </div>
+                                                </Modal>
+                                            </div>
+                                        </TabLink>
+                                    </li>
+                                    <li className="nav-item" id="link-13">
+                                        <TabLink style={styles.notActive} data-clicks={0} onClick={this.modalOpen} to="tab13">
+                                            <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName13}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
 
-                                        <div id="modal12" className={this.state.isHidden12 ? "hidden" : "visible"}>
-                                            <Modal modalClose={this.modalClose}>
-                                                <div className="form-group">
-                                                    <label>Enter Page Name:</label>
-                                                    <input
-                                                        type="text"
-                                                        name={this.state.pageName13}
-                                                        onChange={e => this.handleChange(e)}
-                                                        className="form-control"
-                                                    />
-                                                </div>
-                                                <div className="form-group">
-                                                    <span className="btn form-btn" type="button" onClick={this.handleSubmit}>
-                                                        Save
-                                                    </span>
-                                                </div>
-                                            </Modal>
-                                        </div>
-                                    </TabLink>
-                                </li>
-                                <li className="nav-item" id="link-14">
-                                    <TabLink style={styles.notActive} data-clicks={0} onClick={this.modalOpen} to="tab14">
-                                        <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName14}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
+                                            <div id="modal12" className={this.state.isHidden12 ? "hidden" : "visible"}>
+                                                <Modal modalClose={this.modalClose}>
+                                                    <div className="form-group">
+                                                        <label>Enter Page Name:</label>
+                                                        <input
+                                                            type="text"
+                                                            name={this.state.pageName13}
+                                                            onChange={e => this.handleChange(e)}
+                                                            className="form-control"
+                                                        />
+                                                    </div>
+                                                    <div className="form-group">
+                                                        <span className="btn form-btn" type="button" onClick={this.handleSubmit}>
+                                                            Save
+                                                        </span>
+                                                    </div>
+                                                </Modal>
+                                            </div>
+                                        </TabLink>
+                                    </li>
+                                    <li className="nav-item" id="link-14">
+                                        <TabLink style={styles.notActive} data-clicks={0} onClick={this.modalOpen} to="tab14">
+                                            <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName14}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
 
-                                        <div id="modal13" className={this.state.isHidden13 ? "hidden" : "visible"}>
-                                            <Modal modalClose={this.modalClose}>
-                                                <div className="form-group">
-                                                    <label>Enter Page Name:</label>
-                                                    <input
-                                                        type="text"
-                                                        name={this.state.pageName14}
-                                                        onChange={e => this.handleChange(e)}
-                                                        className="form-control"
-                                                    />
-                                                </div>
-                                                <div className="form-group">
-                                                    <span className="btn form-btn" type="button" onClick={this.handleSubmit}>
-                                                        Save
-                                                    </span>
-                                                </div>
-                                            </Modal>
-                                        </div>
-                                    </TabLink>
-                                </li>
-                                <li className="nav-item" id="link-15">
-                                    <TabLink style={styles.notActive} data-clicks={0} onClick={this.modalOpen} to="tab15">
-                                        <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName15}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
+                                            <div id="modal13" className={this.state.isHidden13 ? "hidden" : "visible"}>
+                                                <Modal modalClose={this.modalClose}>
+                                                    <div className="form-group">
+                                                        <label>Enter Page Name:</label>
+                                                        <input
+                                                            type="text"
+                                                            name={this.state.pageName14}
+                                                            onChange={e => this.handleChange(e)}
+                                                            className="form-control"
+                                                        />
+                                                    </div>
+                                                    <div className="form-group">
+                                                        <span className="btn form-btn" type="button" onClick={this.handleSubmit}>
+                                                            Save
+                                                        </span>
+                                                    </div>
+                                                </Modal>
+                                            </div>
+                                        </TabLink>
+                                    </li>
+                                    <li className="nav-item" id="link-15">
+                                        <TabLink style={styles.notActive} data-clicks={0} onClick={this.modalOpen} to="tab15">
+                                            <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName15}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
 
-                                        <div id="modal14" className={this.state.isHidden14 ? "hidden" : "visible"}>
-                                            <Modal modalClose={this.modalClose}>
-                                                <div className="form-group">
-                                                    <label>Enter Page Name:</label>
-                                                    <input
-                                                        type="text"
-                                                        name={this.state.pageName15}
-                                                        onChange={e => this.handleChange(e)}
-                                                        className="form-control"
-                                                    />
-                                                </div>
-                                                <div className="form-group">
-                                                    <span className="btn form-btn" type="button" onClick={this.handleSubmit}>
-                                                        Save
-                                                    </span>
-                                                </div>
-                                            </Modal>
-                                        </div>
-                                    </TabLink>
-                                </li>
-                                <li className="nav-item" id="link-16">
-                                    <TabLink style={styles.notActive} data-clicks={0} onClick={this.modalOpen} to="tab16">
-                                        <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName16}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
+                                            <div id="modal14" className={this.state.isHidden14 ? "hidden" : "visible"}>
+                                                <Modal modalClose={this.modalClose}>
+                                                    <div className="form-group">
+                                                        <label>Enter Page Name:</label>
+                                                        <input
+                                                            type="text"
+                                                            name={this.state.pageName15}
+                                                            onChange={e => this.handleChange(e)}
+                                                            className="form-control"
+                                                        />
+                                                    </div>
+                                                    <div className="form-group">
+                                                        <span className="btn form-btn" type="button" onClick={this.handleSubmit}>
+                                                            Save
+                                                        </span>
+                                                    </div>
+                                                </Modal>
+                                            </div>
+                                        </TabLink>
+                                    </li>
+                                    <li className="nav-item" id="link-16">
+                                        <TabLink style={styles.notActive} data-clicks={0} onClick={this.modalOpen} to="tab16">
+                                            <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName16}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
 
-                                        <div id="modal15" className={this.state.isHidden15 ? "hidden" : "visible"}>
-                                            <Modal modalClose={this.modalClose}>
-                                                <div className="form-group">
-                                                    <label>Enter Page Name:</label>
-                                                    <input
-                                                        type="text"
-                                                        name={this.state.pageName16}
-                                                        onChange={e => this.handleChange(e)}
-                                                        className="form-control"
-                                                    />
-                                                </div>
-                                                <div className="form-group">
-                                                    <span className="btn form-btn" type="button" onClick={this.handleSubmit}>
-                                                        Save
-                                                    </span>
-                                                </div>
-                                            </Modal>
-                                        </div>
-                                    </TabLink>
-                                </li>
-                                <li className="nav-item" id="link-17">
-                                    <TabLink style={styles.notActive} data-clicks={0} onClick={this.modalOpen} to="tab17">
-                                        <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName17}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
+                                            <div id="modal15" className={this.state.isHidden15 ? "hidden" : "visible"}>
+                                                <Modal modalClose={this.modalClose}>
+                                                    <div className="form-group">
+                                                        <label>Enter Page Name:</label>
+                                                        <input
+                                                            type="text"
+                                                            name={this.state.pageName16}
+                                                            onChange={e => this.handleChange(e)}
+                                                            className="form-control"
+                                                        />
+                                                    </div>
+                                                    <div className="form-group">
+                                                        <span className="btn form-btn" type="button" onClick={this.handleSubmit}>
+                                                            Save
+                                                        </span>
+                                                    </div>
+                                                </Modal>
+                                            </div>
+                                        </TabLink>
+                                    </li>
+                                    <li className="nav-item" id="link-17">
+                                        <TabLink style={styles.notActive} data-clicks={0} onClick={this.modalOpen} to="tab17">
+                                            <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName17}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
 
-                                        <div id="modal16" className={this.state.isHidden16 ? "hidden" : "visible"}>
-                                            <Modal modalClose={this.modalClose}>
-                                                <div className="form-group">
-                                                    <label>Enter Page Name:</label>
-                                                    <input
-                                                        type="text"
-                                                        name={this.state.pageName17}
-                                                        onChange={e => this.handleChange(e)}
-                                                        className="form-control"
-                                                    />
-                                                </div>
-                                                <div className="form-group">
-                                                    <span className="btn form-btn" type="button" onClick={this.handleSubmit}>
-                                                        Save
-                                                    </span>
-                                                </div>
-                                            </Modal>
-                                        </div>
-                                    </TabLink>
-                                </li>
-                                <li className="nav-item" id="link-18">
-                                    <TabLink style={styles.notActive} data-clicks={0} onClick={this.modalOpen} to="tab18">
-                                        <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName18}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
+                                            <div id="modal16" className={this.state.isHidden16 ? "hidden" : "visible"}>
+                                                <Modal modalClose={this.modalClose}>
+                                                    <div className="form-group">
+                                                        <label>Enter Page Name:</label>
+                                                        <input
+                                                            type="text"
+                                                            name={this.state.pageName17}
+                                                            onChange={e => this.handleChange(e)}
+                                                            className="form-control"
+                                                        />
+                                                    </div>
+                                                    <div className="form-group">
+                                                        <span className="btn form-btn" type="button" onClick={this.handleSubmit}>
+                                                            Save
+                                                        </span>
+                                                    </div>
+                                                </Modal>
+                                            </div>
+                                        </TabLink>
+                                    </li>
+                                    <li className="nav-item" id="link-18">
+                                        <TabLink style={styles.notActive} data-clicks={0} onClick={this.modalOpen} to="tab18">
+                                            <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName18}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
 
-                                        <div id="modal17" className={this.state.isHidden17 ? "hidden" : "visible"}>
-                                            <Modal modalClose={this.modalClose}>
-                                                <div className="form-group">
-                                                    <label>Enter Page Name:</label>
-                                                    <input
-                                                        type="text"
-                                                        name={this.state.pageName18}
-                                                        onChange={e => this.handleChange(e)}
-                                                        className="form-control"
-                                                    />
-                                                </div>
-                                                <div className="form-group">
-                                                    <span className="btn form-btn" type="button" onClick={this.handleSubmit}>
-                                                        Save
-                                                    </span>
-                                                </div>
-                                            </Modal>
-                                        </div>
-                                    </TabLink>
-                                </li>
-                                <li className="nav-item" id="link-19">
-                                    <TabLink style={styles.notActive} data-clicks={0} onClick={this.modalOpen} to="tab19">
-                                        <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName19}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
+                                            <div id="modal17" className={this.state.isHidden17 ? "hidden" : "visible"}>
+                                                <Modal modalClose={this.modalClose}>
+                                                    <div className="form-group">
+                                                        <label>Enter Page Name:</label>
+                                                        <input
+                                                            type="text"
+                                                            name={this.state.pageName18}
+                                                            onChange={e => this.handleChange(e)}
+                                                            className="form-control"
+                                                        />
+                                                    </div>
+                                                    <div className="form-group">
+                                                        <span className="btn form-btn" type="button" onClick={this.handleSubmit}>
+                                                            Save
+                                                        </span>
+                                                    </div>
+                                                </Modal>
+                                            </div>
+                                        </TabLink>
+                                    </li>
+                                    <li className="nav-item" id="link-19">
+                                        <TabLink style={styles.notActive} data-clicks={0} onClick={this.modalOpen} to="tab19">
+                                            <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName19}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
 
-                                        <div id="modal18" className={this.state.isHidden17 ? "hidden" : "visible"}>
-                                            <Modal modalClose={this.modalClose}>
-                                                <div className="form-group">
-                                                    <label>Enter Page Name:</label>
-                                                    <input
-                                                        type="text"
-                                                        name={this.state.pageName19}
-                                                        onChange={e => this.handleChange(e)}
-                                                        className="form-control"
-                                                    />
-                                                </div>
-                                                <div className="form-group">
-                                                    <span className="btn form-btn" type="button" onClick={this.handleSubmit}>
-                                                        Save
-                                                    </span>
-                                                </div>
-                                            </Modal>
-                                        </div>
-                                    </TabLink>
-                                </li>
-                                <li className="nav-item" id="link-20">
-                                    <TabLink style={styles.notActive} data-clicks={0} onClick={this.modalOpen} to="tab20">
-                                        <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName20}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
+                                            <div id="modal18" className={this.state.isHidden17 ? "hidden" : "visible"}>
+                                                <Modal modalClose={this.modalClose}>
+                                                    <div className="form-group">
+                                                        <label>Enter Page Name:</label>
+                                                        <input
+                                                            type="text"
+                                                            name={this.state.pageName19}
+                                                            onChange={e => this.handleChange(e)}
+                                                            className="form-control"
+                                                        />
+                                                    </div>
+                                                    <div className="form-group">
+                                                        <span className="btn form-btn" type="button" onClick={this.handleSubmit}>
+                                                            Save
+                                                        </span>
+                                                    </div>
+                                                </Modal>
+                                            </div>
+                                        </TabLink>
+                                    </li>
+                                    <li className="nav-item" id="link-20">
+                                        <TabLink style={styles.notActive} data-clicks={0} onClick={this.modalOpen} to="tab20">
+                                            <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName20}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
 
-                                        <div id="modal19" className={this.state.isHidden17 ? "hidden" : "visible"}>
-                                            <Modal modalClose={this.modalClose}>
-                                                <div className="form-group">
-                                                    <label>Enter Page Name:</label>
-                                                    <input
-                                                        type="text"
-                                                        name={this.state.pageName20}
-                                                        onChange={e => this.handleChange(e)}
-                                                        className="form-control"
-                                                    />
-                                                </div>
-                                                <div className="form-group">
-                                                    <span className="btn form-btn" type="button" onClick={this.handleSubmit}>
-                                                        Save
-                                                    </span>
-                                                </div>
-                                            </Modal>
-                                        </div>
-                                    </TabLink>
-                                </li>
+                                            <div id="modal19" className={this.state.isHidden17 ? "hidden" : "visible"}>
+                                                <Modal modalClose={this.modalClose}>
+                                                    <div className="form-group">
+                                                        <label>Enter Page Name:</label>
+                                                        <input
+                                                            type="text"
+                                                            name={this.state.pageName20}
+                                                            onChange={e => this.handleChange(e)}
+                                                            className="form-control"
+                                                        />
+                                                    </div>
+                                                    <div className="form-group">
+                                                        <span className="btn form-btn" type="button" onClick={this.handleSubmit}>
+                                                            Save
+                                                        </span>
+                                                    </div>
+                                                </Modal>
+                                            </div>
+                                        </TabLink>
+                                    </li>
+                                </ul>
                             </ul>
                         </div>
 

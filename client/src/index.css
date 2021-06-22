@@ -510,6 +510,9 @@ a:not([href]) {
   margin: 0;
   padding: 0;
   display: flex;
+  position: relative;
+  /* justify-content: space-around; */
+  width: 100%;
 }
 
 #homePage li button {
@@ -629,6 +632,50 @@ textarea {
 
 #link-20 {
   visibility: hidden;
+}
+
+#homePage .sub-menu{
+  position: absolute;
+  right: 10px;
+  top: 30px;
+  background: #3c3c3c;
+
+}
+
+#homePage .sub-menu li {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.fa-caret-square-down{
+  color: #FFF;
+
+}
+
+#sub-menu-btn{
+  background-color: transparent;
+  border: none;
+  height: 25px;
+  margin-top: -10px;
+  z-index: -1;
+}
+
+#sub-menu-btn:hover{
+
+}
+
+#home-sub-menu{
+  z-index: -1;
+}
+
+#sub-menu-btn:hover .fa-caret-square-down{
+  color: var(--primaryColor);
+  pointer-events: none;
+}
+
+#sub-menu-btn:hover #home-sub-menu{
+  z-index: 1;
+  pointer-events: visible;
 }
 
 .long {

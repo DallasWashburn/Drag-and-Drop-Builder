@@ -174,6 +174,13 @@ class Container1 extends Component {
         this.getProject();
     }
 
+    getOccurance = (array, value) => {
+        var count = 0;
+        array.forEach((v) => (v.data === value && count++));
+        console.log(count);
+        return count;
+    }
+
     // Get current projects and set content based on their saved information
     getProject = () => {
 
@@ -185,7 +192,17 @@ class Container1 extends Component {
                     if (element.userEmail === this.props.userEmail) {
                         var Page1 = element.projects[1];
                         // console.log(element);
-
+                        var content0Count = this.getOccurance(Page1, "Content-0")
+                        this.getOccurance(Page1, "Content-1")
+                        if(content0Count > 1){
+                            console.log("more than one");
+                            var content0class = document.getElementsByClassName("content_2");
+                            console.log(content0class);
+                        } else {
+                            console.log("one or less");
+                            var content0class = document.getElementById("tabpanel-tab1").getElementsByClassName("content_2");
+                            console.log(content0class);
+                        }
                         Page1.map(item => {
                             if (item.data === "Header-0") {
                                 this.setState({
@@ -524,7 +541,11 @@ class Container1 extends Component {
                     }
                 }
 
+            }).then(() => {
+
             })
+
+
     }
 
 
@@ -1072,7 +1093,6 @@ class Container1 extends Component {
         var email = this.state.email;
         // Calling Footer Block Info
         var footerSubText = this.state.footerSubText;
-
 
         return (
             <>
