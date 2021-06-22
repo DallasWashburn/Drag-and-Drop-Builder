@@ -539,7 +539,7 @@ class Container18 extends Component {
     }
 
     getImage = (event) => {
-        var column = event.target.parentElement.parentElement
+        var column = event.target.parentElement.parentElement.parentElement
         // console.log(column.children[1].src);
 
         window.cloudinary.createUploadWidget({
