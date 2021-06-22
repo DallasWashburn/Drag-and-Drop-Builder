@@ -12,6 +12,8 @@ import Intros from "./Components/Intros/Intros-Container/Intros-Container"
 import Header from "./Components/Header/Header"
 import NewClientForm from "./Components/New-Client-Form/New-Client-Form"
 import API from "./utils/API"
+import Modal from "./Components/Modal/Modal";
+import AdminEdit from "./Components/Admin-Edit/Admin-Edit";
 
 
 class Copy extends React.Component {
@@ -19,7 +21,7 @@ class Copy extends React.Component {
         super(props)
 
         this.state = {
-            closed:false,
+            closed: false,
             userId: props.user.sub,
             userEmail: props.user.email,
             companyName: "",
@@ -28,6 +30,7 @@ class Copy extends React.Component {
             login: 1,
             dbId: "",
             dataContent: "",
+            allUsers: []
         }
     }
 
@@ -66,6 +69,7 @@ class Copy extends React.Component {
         API.getUsers()
             .then(users => {
                 var theUsers = users.data
+                this.setState({ allUsers: [theUsers] })
                 // console.log(theUsers);
                 for (let i = 0; i < theUsers.length; i++) {
                     const element = theUsers[i];
@@ -148,14 +152,24 @@ class Copy extends React.Component {
 
     }
 
+    handleChange = (event) => {
+        const target = event.target;
+        const value = target.value;
+        this.setState({
+
+        })
+
+
+    }
+
     getContent = (event) => {
         var content = event.target.parentElement.getAttribute("data-content")
         this.setState({
-            dataContent:content
+            dataContent: content
         })
-        }
+    }
 
-    setContent= () => {
+    setContent = () => {
         if (this.state.dataContent !== "") {
             var contentBlock = document.querySelectorAll(`[data-element=${this.state.dataContent}]`);
             var pTag1 = contentBlock[0].getElementsByTagName("p")[0].innerText
@@ -163,8 +177,8 @@ class Copy extends React.Component {
             var subHeading = contentBlock[0].getElementsByTagName("h3")[0].innerText
             var imageBlock = contentBlock[0].getElementsByTagName("img")
             this.setState({
-                h3Heading:subHeading,
-                pFirst:pTag1
+                h3Heading: subHeading,
+                pFirst: pTag1
             })
         }
 
@@ -179,25 +193,27 @@ class Copy extends React.Component {
 
     fullScreen = () => {
         document.getElementById("container1").style.visibility = "hidden";
-        document.getElementById("container2").style.minWidth="99%"
-        document.getElementById("webBox").style.minWidth="110%"
-        document.getElementById("container2").style.marginRight="280px"
-        document.getElementById("menuArrow").style.visibility="hidden"
-        } 
+        document.getElementById("container2").style.minWidth = "99%"
+        document.getElementById("webBox").style.minWidth = "110%"
+        document.getElementById("container2").style.marginRight = "280px"
+        document.getElementById("menuArrow").style.visibility = "hidden"
+    }
 
     closeScreen = () => {
-            document.getElementById("container1").style.visibility = "visible";
-            document.getElementById("container2").style.minWidth="80%"
-            document.getElementById("webBox").style.minWidth="120%"
-            document.getElementById("container2").style.marginRight="20px"
-            document.getElementById("menuArrow").style.visibility="visible"
+        document.getElementById("container1").style.visibility = "visible";
+        document.getElementById("container2").style.minWidth = "80%"
+        document.getElementById("webBox").style.minWidth = "120%"
+        document.getElementById("container2").style.marginRight = "20px"
+        document.getElementById("menuArrow").style.visibility = "visible"
 
     }
-    
+
 
     closeEdit = () => {
         document.getElementById("mySidebar").style.width = "0";
     }
+
+
     render() {
         if (this.state.nickname === 1 && this.state.login === 1) {
             return <NewClientForm
@@ -205,7 +221,7 @@ class Copy extends React.Component {
                 handleChange={this.handleInputChange}
             />
 
-        } else {
+        }  else {
 
             return (
                 <>
@@ -225,7 +241,6 @@ class Copy extends React.Component {
                             <Gallery />
                             <Features />
                             <Team />
-                            {/* <Pricing /> */}
                             <Testimonials />
                             <ContactContainer />
                             <Footers />
@@ -259,3 +274,52 @@ class Copy extends React.Component {
 
 
 export default Copy;
+
+
+
+// else if (this.state.userEmail === 'admin@cybermark.com') {
+
+
+//     return (
+//         <>
+
+//             <Header name={this.state.userId} email={this.state.userEmail} nickname={this.state.nickname} />
+//             <div id="reviewBanner">Your project is in review</div>
+//             <div id="designBanner">Your project is now in content edit mode</div>
+//             <div id="wrapper" >
+//                 <div className="container1 fixed" id="container1">
+//                     <img src="https://www.cybermark.com/wp-content/uploads/2018/08/mainLogo.png" height="45" alt="cybermark logo" />
+//                     <br></br>
+//                     <h5 className="content-blocks">Content Blocks</h5>
+//                     <Headers />
+//                     <Intros />
+//                     <ContentContainer />
+//                     <Gallery />
+//                     <Features />
+//                     <Team />
+//                     <Testimonials />
+//                     <ContactContainer />
+//                     <Footers />
+//                 </div>
+
+
+//                 <div id="container2">
+//                     <ContainerTabs
+//                         openEdit={this.openEdit}
+//                         name={this.state.userId}
+//                         email={this.state.userEmail}
+//                         userId={this.state.userId}
+//                         dbId={this.state.dbId}
+//                         getId={this.getId}
+//                         handleSubmit={this.handleSubmit}
+//                         handleInputChange={this.handleInputChange}
+//                         dataContent={this.state.dataContent}
+//                         closeEdit={this.closeEdit}
+//                     />
+//                 </div>
+
+
+//             </div>
+//         </>
+//     )
+// }

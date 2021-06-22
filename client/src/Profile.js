@@ -326,77 +326,36 @@ class Profile extends Component {
                                     pageTitles.push(user.projects[38][0].data)
                                 }
                                 return (
-                                    // <ProjectPreview
-                                    //     projects={user.projects}
-                                    //     company={user.companyName}
-                                    //     email={user.userEmail}
-                                    //     url={user.url}
-                                    //     dataFromContainer1={user.projects[1]}
-                                    //     dataFromContainer2={user.projects[3]}
-                                    //     dataFromContainer3={user.projects[5]}
-                                    //     dataFromContainer4={user.projects[7]}
-                                    //     dataFromContainer5={user.projects[9]}
-                                    //     dataFromContainer6={user.projects[11]}
-                                    //     dataFromContainer7={user.projects[13]}
-                                    //     dataFromContainer8={user.projects[15]}
-                                    //     dataFromContainer9={user.projects[17]}
-                                    //     dataFromContainer10={user.projects[19]}
-                                    //     dataFromContainer11={user.projects[21]}
-                                    //     dataFromContainer12={user.projects[23]}
-                                    //     dataFromContainer13={user.projects[25]}
-                                    //     dataFromContainer14={user.projects[27]}
-                                    //     dataFromContainer15={user.projects[29]}
-                                    //     dataFromContainer16={user.projects[31]}
-                                    //     dataFromContainer17={user.projects[33]}
-                                    //     dataFromContainer18={user.projects[35]}
-                                    //     dataFromContainer19={user.projects[37]}
-                                    //     dataFromContainer20={user.projects[39]}
-                                    //     pageTitles={pageTitles}
-                                    //     toggleId={user._id}
-                                    //     designFinalized={user.designFinalized}
-                                    //     handleToggle={this.handleToggle}
-                                    // />
-                                    <div className="col-6 user-preview" key={user._id}>
-                                        <UserPreview projects={user.projects} company={user.companyName} email={user.userEmail} url={user.url} />
-                                        <PDFGenerate
-                                            userEmail={user.email}
-                                            dataFromContainer1={user.projects[1]}
-                                            dataFromContainer2={user.projects[3]}
-                                            dataFromContainer3={user.projects[5]}
-                                            dataFromContainer4={user.projects[7]}
-                                            dataFromContainer5={user.projects[9]}
-                                            dataFromContainer6={user.projects[11]}
-                                            dataFromContainer7={user.projects[13]}
-                                            dataFromContainer8={user.projects[15]}
-                                            dataFromContainer9={user.projects[17]}
-                                            dataFromContainer10={user.projects[19]}
-                                            dataFromContainer11={user.projects[21]}
-                                            dataFromContainer12={user.projects[23]}
-                                            dataFromContainer13={user.projects[25]}
-                                            dataFromContainer14={user.projects[27]}
-                                            dataFromContainer15={user.projects[29]}
-                                            dataFromContainer16={user.projects[31]}
-                                            dataFromContainer17={user.projects[33]}
-                                            dataFromContainer18={user.projects[35]}
-                                            dataFromContainer19={user.projects[37]}
-                                            dataFromContainer20={user.projects[39]}
-                                            pageTitles={pageTitles}
-                                        />
-                                        <div id="toggleButtons">
-                                            <div className="togglebtn">
-                                                <p>Finalize Design</p>
-                                                <ToggleButton toggleId={user._id} isOn={user.designFinalized} handleToggle={() => this.handleToggle} onColor="#ce9e7c" />
-                                            </div>
-                                            <div className="togglebtn">
-                                                <p>Finalize Project</p>
-                                                <ToggleButton toggleId={user._id} isOn={user.finalized} handleToggle={() => this.handleToggle} onColor="#ce9e7c" />
-                                            </div>
-                                            <div id="projectEdit" className="">
-                                                <ProjectEdit userId={user._id} />
-                                            </div>
-
-                                        </div>
-                                    </div>
+                                    <ProfilePreview
+                                        projects={user.projects}
+                                        company={user.companyName}
+                                        email={user.userEmail}
+                                        url={user.url}
+                                        dataFromContainer1={user.projects[1]}
+                                        dataFromContainer2={user.projects[3]}
+                                        dataFromContainer3={user.projects[5]}
+                                        dataFromContainer4={user.projects[7]}
+                                        dataFromContainer5={user.projects[9]}
+                                        dataFromContainer6={user.projects[11]}
+                                        dataFromContainer7={user.projects[13]}
+                                        dataFromContainer8={user.projects[15]}
+                                        dataFromContainer9={user.projects[17]}
+                                        dataFromContainer10={user.projects[19]}
+                                        dataFromContainer11={user.projects[21]}
+                                        dataFromContainer12={user.projects[23]}
+                                        dataFromContainer13={user.projects[25]}
+                                        dataFromContainer14={user.projects[27]}
+                                        dataFromContainer15={user.projects[29]}
+                                        dataFromContainer16={user.projects[31]}
+                                        dataFromContainer17={user.projects[33]}
+                                        dataFromContainer18={user.projects[35]}
+                                        dataFromContainer19={user.projects[37]}
+                                        dataFromContainer20={user.projects[39]}
+                                        pageTitles={pageTitles}
+                                        toggleId={user._id}
+                                        designFinalized={user.designFinalized}
+                                        handleToggle={this.handleToggle}
+                                    />
                                 )
                             })}
                         </div>

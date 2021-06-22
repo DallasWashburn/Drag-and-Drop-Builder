@@ -2,17 +2,27 @@ import React, { Component } from "react";
 import UserPreview from "../User-Preview/User-Preview";
 import PDFGenerate from "../PDF-Generate/PDF-Generate";
 import ToggleButton from "../Toggle-Button/Toggle-Button";
+import API from "../../utils/API"
 
 class ProjectPreview extends Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+            checked: false
+        }
+    }
+
+
+    setToggle = () => {
+        this.setState({ checked: !this.state.checked })
+        API.updateUserDesignStatus(this.props.toggleId, this.state.checked)
+       
     }
     render() {
         return (
             <>
                 <div className="col-6 user-preview" key={this.props.toggleId}>
-                    <UserPreview projects={this.props.projects} company={this.props.companyName} email={this.props.email} url={this.props.url} />
+                    <UserPreview projects={this.props.projects} company={this.props.company} email={this.props.email} url={this.props.url} />
                     <PDFGenerate
                         userEmail={this.props.email}
                         dataFromContainer1={this.props.dataFromContainer1}
@@ -37,11 +47,17 @@ class ProjectPreview extends Component {
                         dataFromContainer20={this.props.dataFromContainer20}
                         pageTitles={this.props.pageTitles}
                     />
-                    <div>
-                        <h4>Finalize Design</h4>
-                        <ToggleButton toggleId={this.props.toggleId} isOn={this.props.designFinalized} handleToggle={() => this.handleToggle} onColor="#EF476F" />
-                        <h4>Finalize Project</h4>
-                        <ToggleButton toggleId={this.props.toggleId} isOn={this.props.designFinalized} handleToggle={() => this.handleToggle} onColor="#EF476F" />
+                    <div id="toggleButtons">
+                        <div className="togglebtn">
+                            <p>Finalize Design</p>
+                            <ToggleButton toggleId={this.props.toggleId} isOn={this.props.designFinalized} setToggle={this.setToggle} onColor="#ce9e7c" />
+                        </div>
+                        <div className="togglebtn">
+                            <p>Finalize Project</p>
+                            <ToggleButton toggleId={this.props.toggleId} isOn={this.props.finalized} setToggle={this.setToggle} onColor="#ce9e7c" />
+                        </div>
+                        
+
                     </div>
                 </div>
             </>

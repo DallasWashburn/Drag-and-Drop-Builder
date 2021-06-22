@@ -2255,7 +2255,7 @@ class ContainerTabs extends Component {
                                     <TabLink style={styles.notActive} data-clicks={0} onClick={this.modalOpen} to="tab11">
                                         <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName11}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
 
-                                        <div id="modal9" className={this.state.isHidden10 ? "hidden" : "visible"}>
+                                        <div id="modal10" className={this.state.isHidden10 ? "hidden" : "visible"}>
                                             <Modal modalClose={this.modalClose}>
                                                 <div className="form-group">
                                                     <label>Enter Page Name:</label>
@@ -2279,7 +2279,7 @@ class ContainerTabs extends Component {
                                     <TabLink style={styles.notActive} data-clicks={0} onClick={this.modalOpen} to="tab12">
                                         <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName12}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
 
-                                        <div id="modal9" className={this.state.isHidden11 ? "hidden" : "visible"}>
+                                        <div id="modal11" className={this.state.isHidden11 ? "hidden" : "visible"}>
                                             <Modal modalClose={this.modalClose}>
                                                 <div className="form-group">
                                                     <label>Enter Page Name:</label>
@@ -2303,7 +2303,7 @@ class ContainerTabs extends Component {
                                     <TabLink style={styles.notActive} data-clicks={0} onClick={this.modalOpen} to="tab13">
                                         <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName13}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
 
-                                        <div id="modal9" className={this.state.isHidden12 ? "hidden" : "visible"}>
+                                        <div id="modal12" className={this.state.isHidden12 ? "hidden" : "visible"}>
                                             <Modal modalClose={this.modalClose}>
                                                 <div className="form-group">
                                                     <label>Enter Page Name:</label>
@@ -2327,7 +2327,7 @@ class ContainerTabs extends Component {
                                     <TabLink style={styles.notActive} data-clicks={0} onClick={this.modalOpen} to="tab14">
                                         <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName14}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
 
-                                        <div id="modal9" className={this.state.isHidden13 ? "hidden" : "visible"}>
+                                        <div id="modal13" className={this.state.isHidden13 ? "hidden" : "visible"}>
                                             <Modal modalClose={this.modalClose}>
                                                 <div className="form-group">
                                                     <label>Enter Page Name:</label>
@@ -2351,7 +2351,7 @@ class ContainerTabs extends Component {
                                     <TabLink style={styles.notActive} data-clicks={0} onClick={this.modalOpen} to="tab15">
                                         <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName15}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
 
-                                        <div id="modal9" className={this.state.isHidden14 ? "hidden" : "visible"}>
+                                        <div id="modal14" className={this.state.isHidden14 ? "hidden" : "visible"}>
                                             <Modal modalClose={this.modalClose}>
                                                 <div className="form-group">
                                                     <label>Enter Page Name:</label>
@@ -2375,7 +2375,7 @@ class ContainerTabs extends Component {
                                     <TabLink style={styles.notActive} data-clicks={0} onClick={this.modalOpen} to="tab16">
                                         <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName16}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
 
-                                        <div id="modal9" className={this.state.isHidden15 ? "hidden" : "visible"}>
+                                        <div id="modal15" className={this.state.isHidden15 ? "hidden" : "visible"}>
                                             <Modal modalClose={this.modalClose}>
                                                 <div className="form-group">
                                                     <label>Enter Page Name:</label>
@@ -2399,7 +2399,7 @@ class ContainerTabs extends Component {
                                     <TabLink style={styles.notActive} data-clicks={0} onClick={this.modalOpen} to="tab17">
                                         <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName17}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
 
-                                        <div id="modal9" className={this.state.isHidden16 ? "hidden" : "visible"}>
+                                        <div id="modal16" className={this.state.isHidden16 ? "hidden" : "visible"}>
                                             <Modal modalClose={this.modalClose}>
                                                 <div className="form-group">
                                                     <label>Enter Page Name:</label>
@@ -2423,7 +2423,7 @@ class ContainerTabs extends Component {
                                     <TabLink style={styles.notActive} data-clicks={0} onClick={this.modalOpen} to="tab18">
                                         <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName18}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
 
-                                        <div id="modal9" className={this.state.isHidden17 ? "hidden" : "visible"}>
+                                        <div id="modal17" className={this.state.isHidden17 ? "hidden" : "visible"}>
                                             <Modal modalClose={this.modalClose}>
                                                 <div className="form-group">
                                                     <label>Enter Page Name:</label>
@@ -2447,7 +2447,7 @@ class ContainerTabs extends Component {
                                     <TabLink style={styles.notActive} data-clicks={0} onClick={this.modalOpen} to="tab19">
                                         <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName19}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
 
-                                        <div id="modal9" className={this.state.isHidden17 ? "hidden" : "visible"}>
+                                        <div id="modal18" className={this.state.isHidden17 ? "hidden" : "visible"}>
                                             <Modal modalClose={this.modalClose}>
                                                 <div className="form-group">
                                                     <label>Enter Page Name:</label>
@@ -2471,7 +2471,7 @@ class ContainerTabs extends Component {
                                     <TabLink style={styles.notActive} data-clicks={0} onClick={this.modalOpen} to="tab20">
                                         <span className="pageSpan" onMouseOver={this.checkPageTitle} onClick={this.modalOpen}>{this.state.pageName20}<span className="tabX" onClick={this.deleteTab}>X</span> </span>
 
-                                        <div id="modal9" className={this.state.isHidden17 ? "hidden" : "visible"}>
+                                        <div id="modal19" className={this.state.isHidden17 ? "hidden" : "visible"}>
                                             <Modal modalClose={this.modalClose}>
                                                 <div className="form-group">
                                                     <label>Enter Page Name:</label>

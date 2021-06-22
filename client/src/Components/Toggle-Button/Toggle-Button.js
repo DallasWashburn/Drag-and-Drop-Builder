@@ -3,16 +3,6 @@ import "./Toggle-Button.css"
 import API from "../../utils/API"
 
 class ToggleButton extends Component {
-    state = {
-        checked: false
-    }
-
-
-    setToggle = () => {
-        this.setState({ checked: !this.state.checked })
-        API.updateUserDesignStatus(this.props.toggleId, this.state.checked)
-       
-    }
 
 
     render() {
@@ -20,7 +10,7 @@ class ToggleButton extends Component {
             <>
                 <input
                     checked={this.props.isOn}
-                    onChange={this.setToggle}
+                    onChange={this.props.setToggle}
                     className="react-switch-checkbox"
                     id={this.props.toggleId}
                     type="checkbox"

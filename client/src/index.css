@@ -6444,3 +6444,7 @@ a:not([href]):hover {
 .during-edit {
   pointer-events: none;
 }
+
+#toggleButtons .togglebtn p {
+  margin-bottom: -20px;
+}
