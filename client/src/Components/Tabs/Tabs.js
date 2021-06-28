@@ -117,11 +117,40 @@ class ContainerTabs extends Component {
         }
     }
 
-
     componentDidMount() {
         this.getProject()
     }
 
+    getOccurance = (array, value) => {
+        var count = 0;
+        array.forEach((v) => {
+            (v.data === value && count++)
+
+        });
+        
+        console.log(count);
+        return count;
+    }
+
+    getDuplicates = () => {
+        var array = [...this.state.items2];
+        var contentCount = this.getOccurance(array, "Content-0")
+        var corrected = []
+        window.setTimeout(() => {
+        var elementPosition = array.map((x) => {
+            if(contentCount > 1 && x.data === "Content-0"){
+                console.log("plzzzzzzzz");
+                x.data ="Content-0" + 1
+                console.log(x);
+                this.setState({items2:array})
+            } else {
+                console.log("no");
+            }
+            return x.data
+        })
+    }, 1000)
+        // this.setState({items2:array})
+    }
 
     getProject = () => {
 
@@ -448,6 +477,10 @@ class ContainerTabs extends Component {
 
         window.alert("Thank you, Your Project Has Been Saved")
 
+    }
+
+    passUp = (items) => {
+        this.setState({items2:items})
     }
 
 
@@ -2522,6 +2555,8 @@ class ContainerTabs extends Component {
                                 removeElement={this.removeElement1}
                                 duplicateElement={this.duplicateElement1}
                                 userEmail={this.state.userEmail}
+                                getDuplicates={this.getDuplicates}
+                                passUp={this.passUp}
                             />
                         </TabContent>
                         <TabContent for="tab2">

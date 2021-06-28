@@ -15,7 +15,7 @@
 }
 
 
-.projectPreviewWrap #Content-0{
+.projectPreviewWrap #Content-0, .projectPreviewWrap #Content-01, .projectPreviewWrap #Content-02, .projectPreviewWrap #Content-03{
   background-image: url("../../../images/Content/content-0.png");
   min-height: 200px;
   background-size: 100%;
@@ -23,7 +23,7 @@
 
 }
 
-.projectPreviewWrap #Content-1{
+.projectPreviewWrap #Content-1, .projectPreviewWrap #Content-11, .projectPreviewWrap #Content-12, .projectPreviewWrap #Content-13{
   background-image: url("../../../images/Content/content-1.png");
   min-height: 200px;
   background-size: cover;

@@ -24,6 +24,15 @@ export default {
       .catch(err => console.log("error: ", err));
     return response;
   },
+
+  updateProject:  async function (id, index, items) {
+    let response = axios.put("/api/users/" + id, {
+      projects: items
+    })
+      .then(x => console.log("the response from updating the user is", x))
+      .catch(err => console.log("error: ", err));
+    return response;
+  },
   // update the user with the given id
   updateUserStatus: async function (id, answer) {
     let response = axios.put("/api/users/" + id, {

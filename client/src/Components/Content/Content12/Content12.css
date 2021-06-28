@@ -1,0 +1,7 @@
+.content2 h3{
+    font-size: 25px;
+    font-weight: 800;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    color: var(--primaryColor);
+}
