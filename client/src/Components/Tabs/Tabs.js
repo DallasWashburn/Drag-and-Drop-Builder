@@ -1073,92 +1073,92 @@ class ContainerTabs extends Component {
             document.getElementById("tabpanel-tab2").remove()
         }
         if (tab.id === "tab-tab3") {
-            var tab = event.target.parentElement.parentElement
+            
             this.setState({ pageName3: "" })
             document.getElementById("tabpanel-tab3").remove()
         }
         if (tab.id === "tab-tab4") {
-            var tab = event.target.parentElement.parentElement
+            
             this.setState({ pageName4: "" })
             document.getElementById("tabpanel-tab4").remove()
         }
         if (tab.id === "tab-tab5") {
-            var tab = event.target.parentElement.parentElement
+            
             this.setState({ pageName5: "" })
             document.getElementById("tabpanel-tab5").remove()
         }
         if (tab.id === "tab-tab6") {
-            var tab = event.target.parentElement.parentElement
+            
             this.setState({ pageName6: "" })
             document.getElementById("tabpanel-tab6").remove()
         }
         if (tab.id === "tab-tab7") {
-            var tab = event.target.parentElement.parentElement
+            
             this.setState({ pageName7: "" })
             document.getElementById("tabpanel-tab7").remove()
         }
         if (tab.id === "tab-tab8") {
-            var tab = event.target.parentElement.parentElement
+            
             this.setState({ pageName8: "" })
             document.getElementById("tabpanel-tab8").remove()
         }
         if (tab.id === "tab-tab9") {
-            var tab = event.target.parentElement.parentElement
+            
             this.setState({ pageName9: "" })
             document.getElementById("tabpanel-tab9").remove()
         }
         if (tab.id === "tab-tab10") {
-            var tab = event.target.parentElement.parentElement
+            
             this.setState({ pageName10: "" })
             document.getElementById("tabpanel-tab10").remove()
         }
         if (tab.id === "tab-tab11") {
-            var tab = event.target.parentElement.parentElement
+            
             this.setState({ pageName11: "" })
             document.getElementById("tabpanel-tab11").remove()
         }
         if (tab.id === "tab-tab12") {
-            var tab = event.target.parentElement.parentElement
+            
             this.setState({ pageName12: "" })
             document.getElementById("tabpanel-tab12").remove()
         }
         if (tab.id === "tab-tab13") {
-            var tab = event.target.parentElement.parentElement
+            
             this.setState({ pageName13: "" })
             document.getElementById("tabpanel-tab13").remove()
         }
         if (tab.id === "tab-tab14") {
-            var tab = event.target.parentElement.parentElement
+            
             this.setState({ pageName14: "" })
             document.getElementById("tabpanel-tab14").remove()
         }
         if (tab.id === "tab-tab15") {
-            var tab = event.target.parentElement.parentElement
+            
             this.setState({ pageName15: "" })
             document.getElementById("tabpanel-tab15").remove()
         }
         if (tab.id === "tab-tab16") {
-            var tab = event.target.parentElement.parentElement
+            
             this.setState({ pageName16: "" })
             document.getElementById("tabpanel-tab16").remove()
         }
         if (tab.id === "tab-tab17") {
-            var tab = event.target.parentElement.parentElement
+            
             this.setState({ pageName17: "" })
             document.getElementById("tabpanel-tab17").remove()
         }
         if (tab.id === "tab-tab18") {
-            var tab = event.target.parentElement.parentElement
+            
             this.setState({ pageName18: "" })
             document.getElementById("tabpanel-tab18").remove()
         }
         if (tab.id === "tab-tab19") {
-            var tab = event.target.parentElement.parentElement
+            
             this.setState({ pageName19: "" })
             document.getElementById("tabpanel-tab19").remove()
         }
         if (tab.id === "tab-tab20") {
-            var tab = event.target.parentElement.parentElement
+            
             this.setState({ pageName20: "" })
             document.getElementById("tabpanel-tab20").remove()
         }

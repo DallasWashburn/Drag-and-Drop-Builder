@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PDFGenerate from "../PDF-Generate/PDF-Generate"
+
 import Tooltip from "../Tooltip/Tooltip"
 
 class UserPreview extends Component {
@@ -9,7 +9,7 @@ class UserPreview extends Component {
 
     render() {
         // console.log(this.props.projects);
-        let userProjects = this.props.projects
+
         // console.log(JSON.stringify(userProjects));
 
         return (

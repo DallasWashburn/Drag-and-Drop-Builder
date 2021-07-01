@@ -1,7 +1,7 @@
 import React from "react"
 import jsPDF from 'jspdf'
 import Axios from "axios";
-import Tooltip from "../Tooltip/Tooltip"
+
 
 class PDFGenerate extends React.Component {
 

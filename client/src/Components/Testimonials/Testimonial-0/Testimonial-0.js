@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import InlineEdit from "../../inlineEdit"
-import ImageButton from "../../imageButton/imageButton"
+
 
 class Testimonial0 extends Component {
     render() {

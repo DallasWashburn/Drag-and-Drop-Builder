@@ -21,7 +21,7 @@ class Gallery2 extends Component {
                                 <div className="gallery__item">
                                     <div className="column gallery_3_column mb-0">
                                         <div className="column-img mb-0">
-                                            <a className="fancybox" rel="gallery3">
+                                            <a href="#" className="fancybox" rel="gallery3">
                                                 <div className="Gallery-2-1">
                                                 <ImageButton getImage={this.props.getImage} />
 
@@ -34,7 +34,7 @@ class Gallery2 extends Component {
                                 <div className="gallery__item">
                                     <div className="column gallery_3_column mb-0">
                                         <div className="column-img mb-0">
-                                            <a className="fancybox" rel="gallery3">
+                                            <a href="#" className="fancybox" rel="gallery3">
                                                 <div className="Gallery-2-2">
                                                 <ImageButton getImage={this.props.getImage} />
 
@@ -47,7 +47,7 @@ class Gallery2 extends Component {
                                 <div className="gallery__item">
                                     <div className="column gallery_3_column mb-0">
                                         <div className="column-img mb-0">
-                                            <a className="fancybox" rel="gallery3">
+                                            <a href="#" className="fancybox" rel="gallery3">
                                                 <div className="Gallery-2-3">
                                                 <ImageButton getImage={this.props.getImage} />
 
@@ -60,7 +60,7 @@ class Gallery2 extends Component {
                                 <div className="gallery__item">
                                     <div className="column gallery_3_column mb-0">
                                         <div className="column-img mb-0">
-                                            <a className="fancybox" rel="gallery3">
+                                            <a href="#" className="fancybox" rel="gallery3">
                                                 <div className="Gallery-2-4">
                                                 <ImageButton getImage={this.props.getImage} />
 
@@ -73,7 +73,7 @@ class Gallery2 extends Component {
                                 <div className="gallery__item">
                                     <div className="column gallery_3_column mb-0">
                                         <div className="column-img mb-0">
-                                            <a className="fancybox" rel="gallery3">
+                                            <a href="#" className="fancybox" rel="gallery3">
                                                 <div className="Gallery-2-5">
                                                 <ImageButton getImage={this.props.getImage} />
 
@@ -87,7 +87,7 @@ class Gallery2 extends Component {
                                 <div className="gallery__item">
                                     <div className="column gallery_3_column mb-0">
                                         <div className="column-img mb-0">
-                                            <a className="fancybox" rel="gallery3">
+                                            <a href="#" className="fancybox" rel="gallery3">
                                                 <div className="Gallery-2-6">
                                                 <ImageButton getImage={this.props.getImage} />
 
@@ -100,7 +100,7 @@ class Gallery2 extends Component {
                                 <div className="gallery__item">
                                     <div className="column gallery_3_column mb-0">
                                         <div className="column-img mb-0">
-                                            <a className="fancybox" rel="gallery3">
+                                            <a  href="#" className="fancybox" rel="gallery3">
                                                 <div className="Gallery-2-7">
                                                 <ImageButton getImage={this.props.getImage} />
 
@@ -113,7 +113,7 @@ class Gallery2 extends Component {
                                 <div className="gallery__item">
                                     <div className="column gallery_3_column mb-0">
                                         <div className="column-img mb-0">
-                                            <a className="fancybox" rel="gallery3">
+                                            <a href="#" className="fancybox" rel="gallery3">
                                                 <div className="Gallery-2-8">
                                                 <ImageButton getImage={this.props.getImage} />
 
@@ -139,7 +139,7 @@ class Gallery2 extends Component {
                                 <div className="gallery__item">
                                     <div className="column gallery_3_column mb-0">
                                         <div className="column-img mb-0">
-                                            <a className="fancybox" rel="gallery3">
+                                            <a href="#" className="fancybox" rel="gallery3">
                                                 <div className="Gallery-2-10">
                                                 <ImageButton getImage={this.props.getImage} />
 

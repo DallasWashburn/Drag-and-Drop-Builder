@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import InlineEdit from "../../inlineEdit"
-import ImageButton from "../../imageButton/imageButton"
 
 class Feature3 extends Component {
     render() {
@@ -14,7 +13,7 @@ class Feature3 extends Component {
                                     <h2><InlineEdit text={this.props.featureHeading} onSetText={text => this.props.getFeaturesInfo(text)}/></h2>
                                     <InlineEdit text={this.props.featuresSubHeadingText} onSetText={text => this.props.getFeaturesInfo(undefined,undefined, text)}/>
                                     <div className="section__button">
-                                        <a className="btn primary-btn"><InlineEdit text={this.props.featureButton} onSetText={text => this.props.getFeaturesInfo(undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined, text)}/></a>
+                                        <a href="#" className="btn primary-btn"><InlineEdit text={this.props.featureButton} onSetText={text => this.props.getFeaturesInfo(undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined, text)}/></a>
                                     </div>
                                 </div>
                             </div>

@@ -150,15 +150,7 @@ class Copy extends React.Component {
         evt.preventDefault();
     }
 
-    handleChange = (event) => {
-        const target = event.target;
-        const value = target.value;
-        this.setState({
 
-        })
-
-
-    }
 
     getContent = (event) => {
         var content = event.target.parentElement.getAttribute("data-content")
@@ -173,7 +165,6 @@ class Copy extends React.Component {
             var pTag1 = contentBlock[0].getElementsByTagName("p")[0].innerText
             // var mainHeading = contentBlock[0].getElementsByTagName("h1")
             var subHeading = contentBlock[0].getElementsByTagName("h3")[0].innerText
-            var imageBlock = contentBlock[0].getElementsByTagName("img")
             this.setState({
                 h3Heading: subHeading,
                 pFirst: pTag1

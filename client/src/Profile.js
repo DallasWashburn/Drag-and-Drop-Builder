@@ -3,12 +3,8 @@ import API from "./utils/API";
 import ProfilfeNav from "./Components/Profile-Nav/Profile-Nav"
 // import { Link } from "react-router-dom"
 import ProjectPreview from "./Components/Project-Preview/Project-Preview"
-import UserPreview from "./Components/User-Preview/User-Preview"
-import PDFGenerate from "./Components/PDF-Generate/PDF-Generate"
-import FinalizeDesign from "./Components/Finalize-Design/Finalize-Design";
-import ToggleButton from "./Components/Toggle-Button/Toggle-Button";
 import ProfilePreview from "./Components/Profile-Preview/Profile-Preview"
-import ProjectEdit from "./Components/Project-Edit/Project-Edit";
+
 
 
 class Profile extends Component {

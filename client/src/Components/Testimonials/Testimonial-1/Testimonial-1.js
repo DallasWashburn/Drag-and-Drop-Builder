@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import InlineEdit from "../../inlineEdit"
-import ImageButton from "../../imageButton/imageButton"
 import Slider from "react-slick";
 
 

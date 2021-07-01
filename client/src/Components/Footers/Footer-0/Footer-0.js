@@ -10,7 +10,7 @@ class Footer0 extends Component {
                     <div className="row">
                         <div className="col-md-6 offset-md-3 text-center mb-3">
                             <div className="footer-branding">
-                                <a  rel="home">
+                                <a href="#" rel="home">
                                     <img src={this.props.companyLogo} alt="" />
 
                                 </a>
@@ -24,10 +24,10 @@ class Footer0 extends Component {
                         <div className="col-md-6 offset-md-3 text-center mb-3">
                             <div className="footer-social">
                                 <ul className="social-list">
-                                    <li><a title="Facebook"><span className="fab fa-facebook-f"></span></a></li>
-                                    <li><a title="Twitter"><span className="fab fa-twitter"></span></a></li>
-                                    <li><a title="LinkedIn"><span className="fab fa-linkedin"></span></a></li>
-                                    <li><a title="Instagram"><span className="fab fa-instagram"></span></a></li>
+                                    <li><a href="#" title="Facebook"><span className="fab fa-facebook-f"></span></a></li>
+                                    <li><a href="#" title="Twitter"><span className="fab fa-twitter"></span></a></li>
+                                    <li><a href="#" title="LinkedIn"><span className="fab fa-linkedin"></span></a></li>
+                                    <li><a href="#" title="Instagram"><span className="fab fa-instagram"></span></a></li>
 
                                 </ul>
                             </div>
