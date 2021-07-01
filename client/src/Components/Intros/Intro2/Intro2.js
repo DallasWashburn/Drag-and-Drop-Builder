@@ -24,7 +24,7 @@ class Intro2 extends Component {
                                 <div className="section__content">
                                     <h2><InlineEdit text={this.props.introHeading} onSetText={text => this.props.getIntroInfo(text)}/></h2>
                                     <h3><InlineEdit text={this.props.introSubHeading} onSetText={text => this.props.getIntroInfo(undefined, text)}/></h3>
-                                    <p><InlineEdit text={this.props.introSubtext} onSetText={text => this.props.getIntroInfo(undefined, undefined,  text)}/></p>
+                                    <InlineEdit text={this.props.introSubtext} onSetText={text => this.props.getIntroInfo(undefined, undefined,  text)}/>
                                     <div className="section__button ">
                                         <a className="btn primary-btn"><InlineEdit text={this.props.introButton1} onSetText={text => this.props.getIntroInfo(undefined, undefined, undefined, text)}/></a>
                                         <a className="btn primary-btn clear-btn"><InlineEdit text={this.props.introButton2} onSetText={text => this.props.getIntroInfo(undefined, undefined, undefined, undefined, text)}/></a>

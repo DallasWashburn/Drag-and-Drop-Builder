@@ -246,7 +246,7 @@ class ContainerTabs extends Component {
                                 }
                                 for (let d = 0; d < dragDisable.length; d++) {
                                     const element = dragDisable[d];
-                                    console.log(element.children[0].classList.remove("smooth-dnd-container"));
+                                    element.children[0].classList.remove("smooth-dnd-container");
                                 }
                                 for (let k = 0; k < buttonDisable.length; k++) {
                                     const element = buttonDisable[k];
@@ -2299,8 +2299,8 @@ class ContainerTabs extends Component {
                                         </div>
                                     </TabLink>
                                 </li>
-                                <button onClick={this.handleSubMenu} id="sub-menu-btn" class="btn"><i class="far fa-caret-square-down"></i></button>
-                                <ul id="home-sub-menu" class="sub-menu">
+                                <button onClick={this.handleSubMenu} id="sub-menu-btn" className="btn"><i className="far fa-caret-square-down"></i></button>
+                                <ul id="home-sub-menu" className="sub-menu">
                                     
                                     <li className="nav-item" id="link-11">
                                         <TabLink style={styles.notActive} data-clicks={0} onClick={this.modalOpen} to="tab11">

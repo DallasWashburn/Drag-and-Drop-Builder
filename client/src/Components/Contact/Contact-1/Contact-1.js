@@ -9,7 +9,7 @@ class Contact1 extends Component {
                 <div className="container">
                     <div className="section__heading text-center">
                         <h2><InlineEdit text={this.props.contactHeading} onSetText={text => this.props.getContactInfo(text)} /></h2>
-                        <p><InlineEdit text={this.props.contactSubText} onSetText={text => this.props.getContactInfo(undefined, text)} /></p>
+                        <InlineEdit text={this.props.contactSubText} onSetText={text => this.props.getContactInfo(undefined, text)} />
                     </div>
                     <div className="row align-items-center flex-row-reverse">
                         <div className="col-md-6">

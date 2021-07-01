@@ -16,7 +16,7 @@ class Content01 extends Component {
                                 <div className="section__content">
                                     <h2><InlineEdit text={this.props.content01Heading} onSetText={text => this.props.getContentInfo(undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined, text)}/></h2>
                                     <h3><InlineEdit text={this.props.content01SubHeading} onSetText={text => this.props.getContentInfo(undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,)}/></h3>
-                                    <p><InlineEdit text={this.props.content01Text} onSetText={text => this.props.getContentInfo(undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined, text)}/></p>
+                                    <InlineEdit text={this.props.content01Text} onSetText={text => this.props.getContentInfo(undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined, text)}/>
                                     <div className="section__button ">
                                         <a className="btn primary-btn" >Learn More</a>
                                     </div>

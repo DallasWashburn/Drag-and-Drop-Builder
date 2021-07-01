@@ -614,6 +614,8 @@ class Container14 extends Component {
                                     contactHeading: item.info.contactHeading,
                                     contactSubText: item.info.contactSubText,
                                 })
+                            }  else {
+                                return
                             }
 
                         })
@@ -1267,7 +1269,6 @@ class Container14 extends Component {
         var contactHeading = this.state.contactHeading;
         var contactSubText = this.state.contactSubText;
         var address = this.state.address;
-        var email = this.state.email;
         // Calling Footer Block Info
         var footerSubText = this.state.footerSubText;
 

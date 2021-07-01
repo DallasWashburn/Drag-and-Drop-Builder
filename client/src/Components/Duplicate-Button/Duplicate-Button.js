@@ -8,7 +8,7 @@ function DuplicateButton(props) {
     return (
         <div className="duplicateContainer">
             <button className="duplicate" onClick={props.duplicateElement}>
-            <span class="btn-text">Duplicate</span>
+            <span className="btn-text">Duplicate</span>
             </button>
         </div>
     )

@@ -12,9 +12,9 @@ class dropDown extends Component {
     
     render() {
         return (
-            <div class="dropDown">
+            <div className="dropDown">
                 <button className="dropbtn" onClick={this.dropDownMenu} type="button" id="dropDownMenu"><i className="fas fa-lg fa-bars"></i></button>
-                <div id="myDropdown" class="dropdown-content">
+                <div id="myDropdown" className="dropdown-content">
                     <ProfileButton/>
                     <LogoutButton/>
                 </div>

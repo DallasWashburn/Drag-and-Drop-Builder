@@ -12,8 +12,8 @@ import Intros from "./Components/Intros/Intros-Container/Intros-Container"
 import Header from "./Components/Header/Header"
 import NewClientForm from "./Components/New-Client-Form/New-Client-Form"
 import API from "./utils/API"
-import Modal from "./Components/Modal/Modal";
-import AdminEdit from "./Components/Admin-Edit/Admin-Edit";
+// import Modal from "./Components/Modal/Modal";
+// import AdminEdit from "./Components/Admin-Edit/Admin-Edit";
 
 
 class Copy extends React.Component {
@@ -138,7 +138,6 @@ class Copy extends React.Component {
                         url: this.state.URL,
                         projects: allPages
                     }
-                    // [this.state.items3][this.state.items4][this.state.items5][this.state.items6][this.state.items7][this.state.items8]
                     API.saveUser(project)
                     this.setState({ nickname: 2 })
                     this.getId()
@@ -149,7 +148,6 @@ class Copy extends React.Component {
 
     handleSubmit = (evt) => {
         evt.preventDefault();
-
     }
 
     handleChange = (event) => {

@@ -10,7 +10,7 @@ class Feature0 extends Component {
                     <div className="section__heading">
                         <h2><InlineEdit text={this.props.featureHeading} onSetText={text => this.props.getFeaturesInfo(text)}/></h2>
                         <h3><InlineEdit text={this.props.featureSubHeading} onSetText={text => this.props.getFeaturesInfo(undefined, text)}/></h3>
-                        <p><InlineEdit text={this.props.featuresSubHeadingText} onSetText={text => this.props.getFeaturesInfo(undefined,undefined, text)}/></p>
+                        <InlineEdit text={this.props.featuresSubHeadingText} onSetText={text => this.props.getFeaturesInfo(undefined,undefined, text)}/>
                     </div>
                     <div className="row justify-content-center">
 
@@ -18,7 +18,7 @@ class Feature0 extends Component {
                             <div className="column">
                                 <div className="column-text">
                                     <h4><InlineEdit text={this.props.featureH31} onSetText={text => this.props.getFeaturesInfo(undefined,undefined,undefined, text)}/></h4>
-                                    <p><InlineEdit text={this.props.featureSubtext1} onSetText={text => this.props.getFeaturesInfo(undefined,undefined,undefined,undefined, text)}/></p>
+                                    <InlineEdit text={this.props.featureSubtext1} onSetText={text => this.props.getFeaturesInfo(undefined,undefined,undefined,undefined, text)}/>
                                 </div>
                             </div>
                         </div>
@@ -27,7 +27,7 @@ class Feature0 extends Component {
                             <div className="column">
                                 <div className="column-text">
                                     <h4><InlineEdit text={this.props.featureH32} onSetText={text => this.props.getFeaturesInfo(undefined,undefined,undefined,undefined,undefined, text)}/></h4>
-                                    <p><InlineEdit text={this.props.featureSubtext2} onSetText={text => this.props.getFeaturesInfo(undefined,undefined,undefined,undefined,undefined,undefined, text)}/></p>
+                                    <InlineEdit text={this.props.featureSubtext2} onSetText={text => this.props.getFeaturesInfo(undefined,undefined,undefined,undefined,undefined,undefined, text)}/>
                                 </div>
                             </div>
                         </div>
@@ -36,7 +36,7 @@ class Feature0 extends Component {
                             <div className="column">
                                 <div className="column-text">
                                     <h4><InlineEdit text={this.props.featureH33} onSetText={text => this.props.getFeaturesInfo(undefined,undefined,undefined,undefined,undefined,undefined,undefined, text)}/></h4>
-                                    <p><InlineEdit text={this.props.featureSubtext3} onSetText={text => this.props.getFeaturesInfo(undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined, text)}/></p>
+                                    <InlineEdit text={this.props.featureSubtext3} onSetText={text => this.props.getFeaturesInfo(undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined, text)}/>
                                 </div>
                             </div>
                         </div>
@@ -45,7 +45,7 @@ class Feature0 extends Component {
                             <div className="column">
                                 <div className="column-text">
                                     <h4><InlineEdit text={this.props.featureH34} onSetText={text => this.props.getFeaturesInfo(undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined, text)}/></h4>
-                                    <p><InlineEdit text={this.props.featureSubtext4} onSetText={text => this.props.getFeaturesInfo(undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined, text)}/></p>
+                                    <InlineEdit text={this.props.featureSubtext4} onSetText={text => this.props.getFeaturesInfo(undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined, text)}/>
                                 </div>
                             </div>
                         </div>

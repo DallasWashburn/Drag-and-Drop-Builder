@@ -13,7 +13,7 @@ class Gallery1 extends Component {
                 <div className="container">
                     <div className="section__heading text-center">
                         <h2><InlineEdit text={this.props.galleryHeading} onSetText={text => this.props.getGalleryInfo(text)} /></h2>
-                        <p><InlineEdit text={this.props.gallerySubtext} onSetText={text => this.props.getGalleryInfo(undefined, text)} /></p>
+                        <InlineEdit text={this.props.gallerySubtext} onSetText={text => this.props.getGalleryInfo(undefined, text)} />
                     </div>
                     <div className="section__container columns gallery_columns">
                         <div className="row justify-content-center">

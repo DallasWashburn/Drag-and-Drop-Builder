@@ -12,7 +12,7 @@ class Intro4 extends Component {
                         <div className="section__content">
                             <h2><InlineEdit text={this.props.introHeading} onSetText={text => this.props.getIntroInfo(text)} /></h2>
                             <h3><InlineEdit text={this.props.introSubHeading} onSetText={text => this.props.getIntroInfo(undefined, text)} /></h3>
-                            <p><InlineEdit text={this.props.introSubtext} onSetText={text => this.props.getIntroInfo(undefined, undefined, text)} /></p>
+                            <InlineEdit text={this.props.introSubtext} onSetText={text => this.props.getIntroInfo(undefined, undefined, text)} />
                         </div>
                     </div>
                     <div className="section__form">

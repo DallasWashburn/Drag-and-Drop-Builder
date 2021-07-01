@@ -14,11 +14,10 @@ class Footer1 extends Component {
                             <div className="footer-branding mb-3">
                                 <a rel="home">
                                     <img src={this.props.companyLogo} alt="" />
-
                                 </a>
                             </div>
                             <div className="footer-content">
-                                <p><InlineEdit text={this.props.footerSubText} onSetText={text => this.props.getFooterInfo(text)}/></p>
+                                <InlineEdit text={this.props.footerSubText} onSetText={text => this.props.getFooterInfo(text)}/>
                             </div>
                         </div>
                         <div className="col-lg-6 text-right">
@@ -31,7 +30,6 @@ class Footer1 extends Component {
                                         <li id="menu-item-262" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a>{this.props.headerLink4}</a></li>
                                         <li id="menu-item-263" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a>{this.props.headerLink5}</a></li>
                                         <li id="menu-item-264" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a>{this.props.headerLink6}</a></li>
-
                                     </ul>
                                 </div>
                             </nav>
@@ -41,7 +39,6 @@ class Footer1 extends Component {
                                     <li><a title="Twitter"><span className="fab fa-twitter"></span></a></li>
                                     <li><a title="LinkedIn"><span className="fab fa-linkedin"></span></a></li>
                                     <li><a title="Instagram"><span className="fab fa-instagram"></span></a></li>
-
                                 </ul>
                             </div>
                         </div>

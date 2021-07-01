@@ -14,44 +14,44 @@ class Testimonial1 extends Component {
             slidesToScroll: 1
         };
         return (
-            <section class="testimonials_2 section__wrapper">
-                <div class="container">
-                    <div class="section__heading text-center quotes">
+            <section className="testimonials_2 section__wrapper">
+                <div className="container">
+                    <div className="section__heading text-center quotes">
                         <h2><InlineEdit text={this.props.testimonialHeading} onSetText={text => this.props.getTestimonialInfo(text)} /></h2>
                     </div>
 
-                    <div class="testimonial-container">
+                    <div className="testimonial-container">
                         <Slider {...settings}>
-                            <div class="testimonial-slide">
-                                <div class="testimonial-content">
-                                    <blockquote><p><InlineEdit text={this.props.quote1} onSetText={text => this.props.getTestimonialInfo(undefined, undefined, undefined, undefined, text)} /></p>
+                            <div className="testimonial-slide">
+                                <div className="testimonial-content">
+                                    <blockquote><InlineEdit text={this.props.quote1} onSetText={text => this.props.getTestimonialInfo(undefined, undefined, undefined, undefined, text)} />
                                     </blockquote>
                                 </div>
-                                <div class="testimonial-author">
-                                    <span class="h3 customer-title d-block"><InlineEdit text={this.props.name1} onSetText={text => this.props.getTestimonialInfo(undefined, undefined, text)} /></span>
-                                    <span class="h4 customer-details d-block"><InlineEdit text={this.props.name1Desc} onSetText={text => this.props.getTestimonialInfo(undefined, undefined, undefined, text)} /></span>
+                                <div className="testimonial-author">
+                                    <span className="h3 customer-title d-block"><InlineEdit text={this.props.name1} onSetText={text => this.props.getTestimonialInfo(undefined, undefined, text)} /></span>
+                                    <span className="h4 customer-details d-block"><InlineEdit text={this.props.name1Desc} onSetText={text => this.props.getTestimonialInfo(undefined, undefined, undefined, text)} /></span>
                                 </div>
                             </div>
 
-                            <div class="testimonial-slide">
-                                <div class="testimonial-content">
-                                    <blockquote><p><InlineEdit text={this.props.quote2} onSetText={text => this.props.getTestimonialInfo(undefined, undefined, undefined, undefined, undefined, undefined, undefined, text)} /></p>
+                            <div className="testimonial-slide">
+                                <div className="testimonial-content">
+                                    <blockquote><InlineEdit text={this.props.quote2} onSetText={text => this.props.getTestimonialInfo(undefined, undefined, undefined, undefined, undefined, undefined, undefined, text)} />
                                     </blockquote>
                                 </div>
-                                <div class="testimonial-author">
-                                    <span class="h3 customer-title d-block"><InlineEdit text={this.props.name2} onSetText={text => this.props.getTestimonialInfo(undefined, undefined, undefined, undefined, undefined, text)} /></span>
-                                    <span class="h4 customer-details d-block"><InlineEdit text={this.props.name2Desc} onSetText={text => this.props.getTestimonialInfo(undefined, undefined, undefined, undefined, undefined, undefined, text)} /></span>
+                                <div className="testimonial-author">
+                                    <span className="h3 customer-title d-block"><InlineEdit text={this.props.name2} onSetText={text => this.props.getTestimonialInfo(undefined, undefined, undefined, undefined, undefined, text)} /></span>
+                                    <span className="h4 customer-details d-block"><InlineEdit text={this.props.name2Desc} onSetText={text => this.props.getTestimonialInfo(undefined, undefined, undefined, undefined, undefined, undefined, text)} /></span>
                                 </div>
                             </div>
 
-                            <div class="testimonial-slide">
-                                <div class="testimonial-content">
-                                    <blockquote><p><InlineEdit text={this.props.quote3} onSetText={text => this.props.getTestimonialInfo(undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, text)} /></p>
+                            <div className="testimonial-slide">
+                                <div className="testimonial-content">
+                                    <blockquote><InlineEdit text={this.props.quote3} onSetText={text => this.props.getTestimonialInfo(undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, text)} />
                                     </blockquote>
                                 </div>
-                                <div class="testimonial-author">
-                                    <span class="h3 customer-title d-block"><InlineEdit text={this.props.name3} onSetText={text => this.props.getTestimonialInfo(undefined, undefined, undefined, undefined, undefined, undefined, undefined, text)} /></span>
-                                    <span class="h4 customer-details d-block"><InlineEdit text={this.props.name3Desc} onSetText={text => this.props.getTestimonialInfo(undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, text)} /></span>
+                                <div className="testimonial-author">
+                                    <span className="h3 customer-title d-block"><InlineEdit text={this.props.name3} onSetText={text => this.props.getTestimonialInfo(undefined, undefined, undefined, undefined, undefined, undefined, undefined, text)} /></span>
+                                    <span className="h4 customer-details d-block"><InlineEdit text={this.props.name3Desc} onSetText={text => this.props.getTestimonialInfo(undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, text)} /></span>
                                 </div>
                             </div>
                         </Slider>

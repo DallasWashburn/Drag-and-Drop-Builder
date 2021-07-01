@@ -8,7 +8,7 @@ function XButton(props) {
     return (
         <div className="XContainer">
                 <button className="xButton" onClick={props.removeElement}>
-            <span class="btn-text">Delete</span></button>
+            <span className="btn-text">Delete</span></button>
         </div>
     )
 }

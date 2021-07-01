@@ -9,7 +9,7 @@ class Team0 extends Component {
                 <div className="container">
                     <div className="section__heading text-center">
                         <h2><InlineEdit text={this.props.teamHeading} onSetText={text => this.props.getTeamInfo(text)} /></h2>
-                        <p><InlineEdit text={this.props.teamSubheading} onSetText={text => this.props.getTeamInfo(undefined, text)} /></p>
+                        <InlineEdit text={this.props.teamSubheading} onSetText={text => this.props.getTeamInfo(undefined, text)} />
                     </div>
                     <div className="team__wrapper">
                         <div className="row justify-content-center">
@@ -26,7 +26,7 @@ class Team0 extends Component {
                                     <div className="team-bio-content">
                                         <span className="h3 emp-title d-block"><InlineEdit text={this.props.teamH31} onSetText={text => this.props.getTeamInfo(undefined, undefined, text)} /></span>
                                         <span className="h4 emp-position d-block"><InlineEdit text={this.props.job1} onSetText={text => this.props.getTeamInfo(undefined, undefined, undefined, text)} /></span>
-                                        <p><InlineEdit text={this.props.teamSubtext1} onSetText={text => this.props.getTeamInfo(undefined, undefined, undefined, undefined, text)} /></p>
+                                        <InlineEdit text={this.props.teamSubtext1} onSetText={text => this.props.getTeamInfo(undefined, undefined, undefined, undefined, text)} />
                                     </div>
                                 </div>
                             </div>
@@ -43,7 +43,7 @@ class Team0 extends Component {
                                     <div className="team-bio-content">
                                         <span className="h3 emp-title d-block"><InlineEdit text={this.props.teamH32} onSetText={text => this.props.getTeamInfo(undefined, undefined, undefined, undefined, undefined, text)} /></span>
                                         <span className="h4 emp-position d-block"><InlineEdit text={this.props.job2} onSetText={text => this.props.getTeamInfo(undefined, undefined, undefined, undefined, undefined, undefined, text)} /></span>
-                                        <p><InlineEdit text={this.props.teamSubtext2} onSetText={text => this.props.getTeamInfo(undefined, undefined, undefined, undefined, undefined, undefined, undefined, text)} /></p>
+                                        <InlineEdit text={this.props.teamSubtext2} onSetText={text => this.props.getTeamInfo(undefined, undefined, undefined, undefined, undefined, undefined, undefined, text)} />
                                     </div>
                                 </div>
                             </div>
@@ -60,7 +60,7 @@ class Team0 extends Component {
                                     <div className="team-bio-content">
                                         <span className="h3 emp-title d-block"><InlineEdit text={this.props.teamH33} onSetText={text => this.props.getTeamInfo(undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, text)} /></span>
                                         <span className="h4 emp-position d-block"><InlineEdit text={this.props.job3} onSetText={text => this.props.getTeamInfo(undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, text)} /></span>
-                                        <p><InlineEdit text={this.props.teamSubtext3} onSetText={text => this.props.getTeamInfo(undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, text)} /></p>
+                                        <InlineEdit text={this.props.teamSubtext3} onSetText={text => this.props.getTeamInfo(undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, text)} />
                                     </div>
                                 </div>
                             </div>
