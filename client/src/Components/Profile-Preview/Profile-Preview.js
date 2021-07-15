@@ -8,21 +8,17 @@ class ProjectPreview extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            checked: false
+            designCheck: this.props.designFinalized,
+            finalized: this.props.finalized
         }
     }
 
 
-    setToggle = () => {
-        this.setState({ checked: !this.state.checked })
-        API.updateUserDesignStatus(this.props.toggleId, this.state.checked)
-       
-    }
     render() {
         return (
             <>
                 <div className="col-6 user-preview" key={this.props.toggleId}>
-                    <UserPreview projects={this.props.projects} company={this.props.company} email={this.props.email} url={this.props.url} />
+                    <UserPreview designCheck={this.state.designCheck} projects={this.props.projects} company={this.props.company} email={this.props.email} url={this.props.url} />
                     <PDFGenerate
                         userEmail={this.props.email}
                         dataFromContainer1={this.props.dataFromContainer1}
@@ -50,11 +46,11 @@ class ProjectPreview extends Component {
                     <div id="toggleButtons">
                         <div className="togglebtn">
                             <p>Finalize Design</p>
-                            <ToggleButton toggleId={this.props.toggleId} isOn={this.props.designFinalized} setToggle={this.setToggle} onColor="#ce9e7c" />
+                            <ToggleButton toggleId={this.props.toggleId} designCheck={this.state.designCheck} onColor="#ce9e7c" />
                         </div>
                         <div className="togglebtn">
                             <p>Finalize Project</p>
-                            <ToggleButton toggleId={this.props.toggleId} isOn={this.props.finalized} setToggle={this.setToggle} onColor="#ce9e7c" />
+                            <ToggleButton toggleId={this.props.toggleId} finalized={this.state.finalized} onColor="#ce9e7c" />
                         </div>
                         
 

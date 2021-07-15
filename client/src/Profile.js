@@ -72,11 +72,6 @@ class Profile extends Component {
 
     }
 
-    setToggle = (id, check) => {
-        this.setState({ checked: !this.state.checked })
-        API.updateUserDesignStatus(id, check)
-
-    }
 
     getId = () => {
         API.getUsers()
@@ -350,7 +345,8 @@ class Profile extends Component {
                                         pageTitles={pageTitles}
                                         toggleId={user._id}
                                         designFinalized={user.designFinalized}
-                                        handleToggle={this.handleToggle}
+                                        finalized={user.finalized}
+
                                     />
                                 )
                             })}
