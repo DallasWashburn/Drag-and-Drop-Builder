@@ -40,6 +40,7 @@ import Contact3 from "../Contact/Contact-3/Contact-3"
 import Footer0 from "../Footers/Footer-0/Footer-0"
 import Footer1 from "../Footers/Footer-1/Footer-1"
 import Footer2 from "../Footers/Footer-2/Footer-2"
+import Loading from "../Loading/Loading"
 
 
 class Container1 extends Component {
@@ -622,8 +623,12 @@ class Container1 extends Component {
                     }
                 }
 
-            })
+            }).then(()=> {
+                setTimeout(function() {
+                    document.getElementsByClassName("loader")[0].style.visibility ="hidden"
 
+                }, 10000);
+            })
 
     }
 
@@ -1282,6 +1287,7 @@ class Container1 extends Component {
                         className: 'drop-preview'
                     }}
                     dropPlaceholderAnimationDuration={200}>
+                        <Loading/>
                     {
                         this.props.generateItems.map((p, i) => {
                             if (p.data === "Header-0") {

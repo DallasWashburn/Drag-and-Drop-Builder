@@ -1,4 +1,6 @@
-import React, { Component, useReducer } from 'react';
+import React, { Component } from 'react';
+import "./Admin-Drop-Down.css"
+
 import API from '../../utils/API';
 
 class AdminDropDown extends Component {
@@ -14,10 +16,8 @@ class AdminDropDown extends Component {
         API.getUsers()
             .then(users => {
                 var theUsers = users.data
-                console.log(theUsers);
-                this.setState({allEmails:theUsers}, () => {
-                    console.log(this.state.allEmails);
-                    })
+                // console.log(theUsers);
+                this.setState({allEmails:theUsers})
             })
     }
 
@@ -28,14 +28,14 @@ class AdminDropDown extends Component {
     render() {
         return (
             <>
-                <div class="admindropdown text-center">
-                    <button  class="btn btn-secondary dropdownBtn" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        What project would you like to work on? <i class="fas fa-angle-down"></i>
+                <div className="admindropdown text-center">
+                    <button  className="btn btn-secondary dropdownBtn" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Client Projects <i className="fas fa-angle-down"></i>
                     </button>
-                    <div  class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <div  className="dropdown-menu" aria-labelledby="dropdownMenu2">
                     {this.state.allEmails.map(user => {
                         return (
-                            <button data-idenity={user._id} value={user.userEmail} onClick={this.props.handleSelect} class="dropdown-item" type="button">{user.userEmail}</button>
+                            <button key={user.userEmail} data-idenity={user._id} value={user.userEmail} onClick={this.props.handleSelect} className="dropdown-item" type="button">{user.userEmail}</button>
                         )
                     })
                 }
