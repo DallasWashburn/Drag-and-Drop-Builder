@@ -6457,7 +6457,7 @@ a:not([href]):hover {
   color: #fff;
   display: flex;
   justify-content: center;
-  z-index: 99;
+  z-index: 999;
   visibility: hidden;
   text-transform: uppercase;
 }

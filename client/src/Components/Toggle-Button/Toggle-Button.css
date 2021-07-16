@@ -34,7 +34,7 @@
   .react-switch-checkbox:checked + .react-switch-label .react-switch-button {
     left: calc(100% - 2px);
     transform: translateX(-100%);
-    background: var(--primaryColor);
+    background: grey;
   }
   
   .react-switch-label:active .react-switch-button {
@@ -44,6 +44,6 @@
   #toggleButtons {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-end;
     margin-bottom: 40px;
 }

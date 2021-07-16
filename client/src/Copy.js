@@ -12,6 +12,8 @@ import Intros from "./Components/Intros/Intros-Container/Intros-Container"
 import Header from "./Components/Header/Header"
 import NewClientForm from "./Components/New-Client-Form/New-Client-Form"
 import API from "./utils/API"
+import AdminDropDown from "./Components/Admin-Drop-Down/Admin-Drop-Down";
+import AuthForProjects from "./Components/AuthForProjects/AuthForProjects";
 // import Modal from "./Components/Modal/Modal";
 // import AdminEdit from "./Components/Admin-Edit/Admin-Edit";
 
@@ -21,7 +23,6 @@ class Copy extends React.Component {
         super(props)
 
         this.state = {
-            closed: false,
             userId: props.user.sub,
             userEmail: props.user.email,
             companyName: "",
@@ -29,7 +30,6 @@ class Copy extends React.Component {
             nickname: props.user.nickname,
             login: 1,
             dbId: "",
-            dataContent: "",
             allUsers: []
         }
     }
@@ -59,11 +59,6 @@ class Copy extends React.Component {
         // console.log(allUsers);
 
     }
-
-    onUpload = (event) => {
-        this.setState({ images: EventTarget })
-    }
-
 
     getId = () => {
         API.getUsers()
@@ -150,58 +145,16 @@ class Copy extends React.Component {
         evt.preventDefault();
     }
 
-
-
-    getContent = (event) => {
-        var content = event.target.parentElement.getAttribute("data-content")
+    handleSelect = (event) => {
+        console.log(event.target);
+        var selectedValue = event.target.value
+        var selectedData = event.target.dataset.idenity
+        console.log(selectedData);
         this.setState({
-            dataContent: content
+            userEmail:selectedValue,
+            dbId:selectedData
         })
     }
-
-    setContent = () => {
-        if (this.state.dataContent !== "") {
-            var contentBlock = document.querySelectorAll(`[data-element=${this.state.dataContent}]`);
-            var pTag1 = contentBlock[0].getElementsByTagName("p")[0].innerText
-            // var mainHeading = contentBlock[0].getElementsByTagName("h1")
-            var subHeading = contentBlock[0].getElementsByTagName("h3")[0].innerText
-            this.setState({
-                h3Heading: subHeading,
-                pFirst: pTag1
-            })
-        }
-
-
-    }
-
-    openEdit = (event) => {
-        setTimeout(this.setContent, 1000)
-        document.getElementById("mySidebar").style.width = "249px";
-
-    }
-
-    fullScreen = () => {
-        document.getElementById("container1").style.visibility = "hidden";
-        document.getElementById("container2").style.minWidth = "99%"
-        document.getElementById("webBox").style.minWidth = "110%"
-        document.getElementById("container2").style.marginRight = "280px"
-        document.getElementById("menuArrow").style.visibility = "hidden"
-    }
-
-    closeScreen = () => {
-        document.getElementById("container1").style.visibility = "visible";
-        document.getElementById("container2").style.minWidth = "80%"
-        document.getElementById("webBox").style.minWidth = "120%"
-        document.getElementById("container2").style.marginRight = "20px"
-        document.getElementById("menuArrow").style.visibility = "visible"
-
-    }
-
-
-    closeEdit = () => {
-        document.getElementById("mySidebar").style.width = "0";
-    }
-
 
     render() {
         if (this.state.nickname === 1 && this.state.login === 1) {
@@ -210,7 +163,55 @@ class Copy extends React.Component {
                 handleChange={this.handleInputChange}
             />
 
-        }  else {
+          }  else if (this.state.userEmail === 'admin@cybermark.com') {
+
+
+                 return (
+                     <>
+            
+                         <Header name={this.state.userId} email={this.state.userEmail} nickname={this.state.nickname} />
+                         <div id="reviewBanner">Your project is in review</div>
+                         <div id="designBanner">Your project is now in content edit mode</div>
+                         <div id="wrapper" >
+                             <div className="container1 fixed" id="container1">
+                                 <img src="https://www.cybermark.com/wp-content/uploads/2018/08/mainLogo.png" height="45" alt="cybermark logo" />
+                                 <br></br>
+
+                                 <h5 className="content-blocks">Content Blocks</h5>
+                                 <Headers />
+                                 <Intros />
+                                 <ContentContainer />
+                                 <Gallery />
+                                 <Features />
+                                 <Team />
+                                 <Testimonials />
+                                 <ContactContainer />
+                                 <Footers />
+                             </div>
+            
+            
+                             <div id="container2">
+                                 <AdminDropDown handleSelect={this.handleSelect} />
+
+                                 <br></br>
+                                 <ContainerTabs
+                                     openEdit={this.openEdit}
+                                     name={this.state.userId}
+                                     email={this.state.userEmail}
+                                     userId={this.state.userId}
+                                     dbId={this.state.dbId}
+                                     getId={this.getId}
+                                     handleSubmit={this.handleSubmit}
+                                     handleInputChange={this.handleInputChange}
+                                     closeEdit={this.closeEdit}
+                                 />
+                             </div>
+            
+            
+                         </div>
+                     </>
+                 )
+             }  else {
 
             return (
                 <>
@@ -218,8 +219,6 @@ class Copy extends React.Component {
                     <div id="reviewBanner">Your project is in review</div>
                     <div id="designBanner">Your project is now in content edit mode</div>
                     <div id="wrapper" >
-                        {/* <span id="menuArrow" className="menuArrow"><i onClick={this.fullScreen} className="fas fa-lg fa-angle-left"></i></span> */}
-                        {/* <span id="openArrow"><i onClick={this.closeScreen} className="fas fa-lg fa-angle-left"></i></span> */}
                         <div className="container1 fixed" id="container1">
                             <img src="https://www.cybermark.com/wp-content/uploads/2018/08/mainLogo.png" height="45" alt="cybermark logo" />
                             <br></br>
@@ -238,7 +237,6 @@ class Copy extends React.Component {
 
                         <div id="container2">
                             <ContainerTabs
-                                openEdit={this.openEdit}
                                 name={this.state.userId}
                                 email={this.state.userEmail}
                                 userId={this.state.userId}
@@ -246,8 +244,6 @@ class Copy extends React.Component {
                                 getId={this.getId}
                                 handleSubmit={this.handleSubmit}
                                 handleInputChange={this.handleInputChange}
-                                dataContent={this.state.dataContent}
-                                closeEdit={this.closeEdit}
                             />
 
                         </div>
@@ -266,49 +262,3 @@ export default Copy;
 
 
 
-// else if (this.state.userEmail === 'admin@cybermark.com') {
-
-
-//     return (
-//         <>
-
-//             <Header name={this.state.userId} email={this.state.userEmail} nickname={this.state.nickname} />
-//             <div id="reviewBanner">Your project is in review</div>
-//             <div id="designBanner">Your project is now in content edit mode</div>
-//             <div id="wrapper" >
-//                 <div className="container1 fixed" id="container1">
-//                     <img src="https://www.cybermark.com/wp-content/uploads/2018/08/mainLogo.png" height="45" alt="cybermark logo" />
-//                     <br></br>
-//                     <h5 className="content-blocks">Content Blocks</h5>
-//                     <Headers />
-//                     <Intros />
-//                     <ContentContainer />
-//                     <Gallery />
-//                     <Features />
-//                     <Team />
-//                     <Testimonials />
-//                     <ContactContainer />
-//                     <Footers />
-//                 </div>
-
-
-//                 <div id="container2">
-//                     <ContainerTabs
-//                         openEdit={this.openEdit}
-//                         name={this.state.userId}
-//                         email={this.state.userEmail}
-//                         userId={this.state.userId}
-//                         dbId={this.state.dbId}
-//                         getId={this.getId}
-//                         handleSubmit={this.handleSubmit}
-//                         handleInputChange={this.handleInputChange}
-//                         dataContent={this.state.dataContent}
-//                         closeEdit={this.closeEdit}
-//                     />
-//                 </div>
-
-
-//             </div>
-//         </>
-//     )
-// }

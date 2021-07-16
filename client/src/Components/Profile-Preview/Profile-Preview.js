@@ -17,7 +17,7 @@ class ProjectPreview extends Component {
     render() {
         return (
             <>
-                <div className="col-6 user-preview" key={this.props.toggleId}>
+                <div className="col-6 user-preview text-center" key={this.props.toggleId}>
                     <UserPreview designCheck={this.state.designCheck} projects={this.props.projects} company={this.props.company} email={this.props.email} url={this.props.url} />
                     <PDFGenerate
                         userEmail={this.props.email}
@@ -46,18 +46,15 @@ class ProjectPreview extends Component {
                     <div id="toggleButtons">
                         <div className="togglebtn">
                             <p>Finalize Design</p>
-                            <ToggleButton toggleId={this.props.toggleId} designCheck={this.state.designCheck} onColor="#ce9e7c" />
+                            <ToggleButton dataCheck={"design"} toggleId={this.props.toggleId} checked={this.state.designCheck} onColor="#ce9e7c" />
                         </div>
                         <div className="togglebtn">
                             <p>Finalize Project</p>
-                            <ToggleButton toggleId={this.props.toggleId} finalized={this.state.finalized} onColor="#ce9e7c" />
+                            <ToggleButton dataCheck={"final"} toggleId={this.props.toggleId + " final"} checked={this.state.finalized} onColor="#ce9e7c" />
                         </div>
-                        
-
                     </div>
                 </div>
             </>
-
         );
     }
 }
